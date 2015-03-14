@@ -132,3 +132,7 @@ body {
     margin-top: 5px;
   }
 }
+
+.noMargin {
+  margin-bottom: 0;
+}
