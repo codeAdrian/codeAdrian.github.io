@@ -15,6 +15,8 @@
         <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
         <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
         <script src="./index_files/ie-emulation-modes-warning.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="./bootstrap-3.3.2-dist/js/menuHideShow.js"></script>
         <style type="text/css"></style>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
                     <!--[if lt IE 9]>
@@ -52,13 +54,12 @@
         </nav>
 
         <div class="jumbotron noMargin">
-            <div class="container">
-                <h3>Summary</h3><br />
-                <h4>Programming languages</h4>
-                <div class="list-group">
+            <div class="container"><br/>
+                <h5 id="proLang">Programming languages &nbsp<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h5>
+                <div class="list-group" id="proLang_group">
                     <div class="row">
                         <div class="col-md-4">
-                            <h6><a href="#C_Cpp">C / C++</a></h6>
+                            <h5><a href="#C_Cpp">C / C++</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
  Highly Profficient / Expert
@@ -67,7 +68,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#Csharp">C# & .NET Framework</a></h6>
+                            <h5><a href="#Csharp">C# and .NET Framework</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
  Highly Profficient / Expert
@@ -75,7 +76,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <h6><a href="#">HTML & CSS</a></h6>
+                            <h5><a href="#">HTML and CSS</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
  Highly Profficient / Expert
@@ -85,7 +86,7 @@
 
 
                         <div class="col-md-4">
-                            <h6><a href="#">Javascript & JQuery</a></h6>
+                            <h5><a href="#">Javascript and JQuery</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
  Profficient
@@ -94,7 +95,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#">PHP</a></h6>
+                            <h5><a href="#">PHP</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
  Profficient
@@ -102,7 +103,7 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <h6><a href="#">Matlab</a></h6>
+                            <h5><a href="#">Matlab</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
  Profficient
@@ -112,7 +113,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h6><a href="#">ASP .NET MVC</a></h6>
+                        <h5><a href="#">ASP .NET MVC</a></h5>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
  Familiar
@@ -121,7 +122,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h6><a href="#">Frontend development</a></h6>
+                        <h5><a href="#">Frontend development</a></h5>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
  Highly Profficient
@@ -130,7 +131,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <h6><a href="#">Backend development</a></h6>
+                        <h5><a href="#">Backend development</a></h5>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
  Profficient
@@ -141,11 +142,11 @@
             </div>
 
             <div class="container">
-                <h4>Programming-related skills</h4>
-                <div class="list-group">
+                <h5 id="proLangRel">Programming-related skills &nbsp<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h5>
+                <div class="list-group" id="proLangRel_group">
                     <div class="row">
                         <div class="col-md-4">
-                            <h6><a href="#">Graphical Design & Animation (Photoshop)</a></h6>
+                            <h5><a href="#">Graphics Design (Photoshop)</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
  Highly Profficient / Expert
@@ -154,7 +155,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#">Wireframing (Balsamiq Mockups)</a></h6>
+                            <h5><a href="#">Wireframing (Balsamiq Mockups)</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
  Profficient
@@ -163,7 +164,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#">Github / SVN</a></h6>
+                            <h5><a href="#">Github / SVN</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
 Familiar
@@ -175,11 +176,11 @@ Familiar
             </div>
 
              <div class="container">
-                <h4>Other Technical Skills</h4>
-                <div class="list-group">
+                <h5 id="techSkills">Other Technical Skills &nbsp<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h5>
+                <div class="list-group" id="techSkills_group">
                     <div class="row">
                         <div class="col-md-4">
-                            <h6><a href="#">Industrial programming (VHDL & Step7)</a></h6>
+                            <h5><a href="#">Industrial coding (VHDL & Step7)</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;">
 Familiar
@@ -188,7 +189,7 @@ Familiar
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#">Robotics and computer vision</a></h6>
+                            <h5><a href="#">Robotics and computer vision</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
  Highly Profficient
@@ -197,7 +198,7 @@ Familiar
                         </div>
 
                         <div class="col-md-4">
-                            <h6><a href="#">Game design</a></h6>
+                            <h5><a href="#">Game design</a></h5>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
 Basic / Familiar
@@ -209,9 +210,9 @@ Basic / Familiar
             </div>
 
 
-            <div class="container">
-                <h4>Other skills</h4>
-                <div class="list-group">
+            <div class="container" id="otherSkills">
+                <h5>Other skills &nbsp<span class="glyphicon glyphicon-menu-up" aria-hidden="true"></span></h5>
+                <div class="list-group" id="otherSkills_group">
                     <div class="row">
                         <b>
                         Basic Leadership skills, Cooperation and teamwork skills, Highly motivated for work and learning new skills, Familiar with economics and project management, Good soft-skills and presentation skills.

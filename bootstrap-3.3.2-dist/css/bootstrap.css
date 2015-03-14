@@ -19,6 +19,10 @@
     font-weight: normal;  
 }
 
+#proLang:hover,#otherSkills:hover,#techSkills:hover,#proLangRel:hover{
+    cursor: pointer; 
+}
+
 
 
 /*Bar chart*/
