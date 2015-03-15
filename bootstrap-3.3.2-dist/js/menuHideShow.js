@@ -67,4 +67,23 @@ $(document).ready(function () {
         scrollTop: $("#Matlab").offset().top-50}, 500);
     });
 
+    $("#a_ASP_MVC").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#ASP_MVC").offset().top-50}, 500);
+    });
+
+    $("#a_frontend").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#frontend_dev").offset().top-50}, 500);
+    });
+
+    $("#a_backend").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#backend_dev").offset().top-50}, 500);
+    });
+
+    $(".a_programming_related").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#programming_related").offset().top-50}, 500);
+    });
 });

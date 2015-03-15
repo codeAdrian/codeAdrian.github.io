@@ -19,10 +19,6 @@
     font-weight: normal;  
 }
 
-#proLang:hover,#otherSkills:hover,#techSkills:hover,#proLangRel:hover,{
-    cursor: pointer; 
-}
-
 #otherSkills_group,#techSkills_group,#proLangRel_group{
     display: none;
 }
@@ -36,9 +32,18 @@
     margin: 0;
 }
 
-#a_C_Cpp:hover, #a_Csharp:hover,#a_HTML_CSS:hover,#a_JS_JQ:hover,#a_skills_top,#a_PHP_lang:hover,#a_MySQL_DB:hover,#a_Matlab:hover{
+#a_C_Cpp:hover, #a_Csharp:hover, #a_HTML_CSS:hover, #a_JS_JQ:hover, #a_skills_top, #a_PHP_lang:hover, #a_MySQL_DB:hover, #a_Matlab:hover, #a_ASP_MVC:hover, #a_frontend:hover, #a_backend:hover, .a_programming_related:hover{
     cursor: pointer;
 }
+
+.container-circles {
+text-align: center;
+}
+
+.skills-text{
+    text-align: justify;
+}
+
 
 .container-full {
   margin: 0 auto;
@@ -64,7 +69,9 @@
     color: white;
 }
 
-
+#proLang:hover, #otherSkills:hover, #techSkills:hover, #proLangRel:hover{
+    cursor: pointer; 
+}
 
 /* Bootstrap CSS*/
 
@@ -4588,7 +4595,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 }
 .navbar-inverse .navbar-toggle:hover,
 .navbar-inverse .navbar-toggle:focus {
-  background-color: #fff;
+  background-color: #eee;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
   background-color: #1e568f; /*moja plava*/
