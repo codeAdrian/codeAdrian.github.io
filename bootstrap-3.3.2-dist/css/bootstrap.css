@@ -4660,7 +4660,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   border-bottom-color: rgb(173, 185, 194);
   z-index: 20;
   font-family:fffForward;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 }
@@ -6422,14 +6422,12 @@ button.close {
 }
 .carousel-caption {
   position: absolute;
-  right: 5%;
-  bottom: 15px;
-  left: 5%;
+  right: 8%;
+  left: 8%;
   z-index: 10;
   /*padding-top: 20px;*/
   /*padding-bottom: 20px;*/
   color: #fff;
-  text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
 }
 .carousel-caption .btn {
@@ -6454,9 +6452,9 @@ button.close {
     margin-right: -15px;
   }
   .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
+    right: 8%;
+    left: 8%;
+    padding-bottom: 10px;
   }
   .carousel-indicators {
     bottom: 20px;
