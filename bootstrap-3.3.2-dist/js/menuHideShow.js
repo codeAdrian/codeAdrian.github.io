@@ -27,6 +27,11 @@ $(document).ready(function () {
         });
     });
 
+        $("#a_skills_top").click(function() {
+    $('html, body').animate({
+        scrollTop: 0}, 500);
+    });
+
     $("#a_C_Cpp").click(function() {
     $('html, body').animate({
         scrollTop: $("#C_Cpp").offset().top-50}, 500);
@@ -41,5 +46,11 @@ $(document).ready(function () {
     $('html, body').animate({
         scrollTop: $("#HTML_CSS").offset().top-50}, 500);
     });
+
+    $("#a_JS_JQ").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#JS_JQ").offset().top-50}, 500);
+    });
+
 
 });
