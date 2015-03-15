@@ -52,5 +52,19 @@ $(document).ready(function () {
         scrollTop: $("#JS_JQ").offset().top-50}, 500);
     });
 
+    $("#a_PHP_lang").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#PHP_lang").offset().top-50}, 500);
+    });
+
+    $("#a_MySQL_DB").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#MySQL_DB").offset().top-50}, 500);
+    });
+
+    $("#a_Matlab").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#Matlab").offset().top-50}, 500);
+    });
 
 });

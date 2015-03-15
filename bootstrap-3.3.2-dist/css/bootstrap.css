@@ -19,7 +19,7 @@
     font-weight: normal;  
 }
 
-#proLang:hover,#otherSkills:hover,#techSkills:hover,#proLangRel:hover{
+#proLang:hover,#otherSkills:hover,#techSkills:hover,#proLangRel:hover,{
     cursor: pointer; 
 }
 
@@ -36,7 +36,7 @@
     margin: 0;
 }
 
-#a_C_Cpp:hover, #a_Csharp:hover,#a_HTML_CSS:hover,#a_JS_JQ:hover,#a_skills_top{
+#a_C_Cpp:hover, #a_Csharp:hover,#a_HTML_CSS:hover,#a_JS_JQ:hover,#a_skills_top,#a_PHP_lang:hover,#a_MySQL_DB:hover,#a_Matlab:hover{
     cursor: pointer;
 }
 
@@ -1322,6 +1322,7 @@ h1,
 h2,
 .h2 {
   font-size: 30px;
+  line-height: 1.7;
 }
 h3,
 .h3 {
