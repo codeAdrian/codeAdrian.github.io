@@ -27,4 +27,19 @@ $(document).ready(function () {
         });
     });
 
+    $("#a_C_Cpp").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#C_Cpp").offset().top-50}, 500);
+    });
+
+    $("#a_Csharp").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#Csharp").offset().top-50}, 500);
+    });
+
+    $("#a_HTML_CSS").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#HTML_CSS").offset().top-50}, 500);
+    });
+
 });

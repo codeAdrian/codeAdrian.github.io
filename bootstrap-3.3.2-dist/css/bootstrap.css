@@ -23,7 +23,22 @@
     cursor: pointer; 
 }
 
+#otherSkills_group,#techSkills_group,#proLangRel_group{
+    display: none;
+}
 
+.centered{
+    text-align: center;
+}
+
+.hr_gray{
+    border: 1px solid #cccccc;
+    margin: 0;
+}
+
+#a_C_Cpp:hover, #a_Csharp:hover,#a_HTML_CSS:hover{
+    cursor: pointer;
+}
 
 /*Bar chart*/
 
@@ -1237,7 +1252,7 @@ html {
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857143;
   color: #333;
   background-color: #fff;
@@ -6408,11 +6423,11 @@ button.close {
 .carousel-caption {
   position: absolute;
   right: 5%;
-  bottom: 20px;
+  bottom: 15px;
   left: 5%;
   z-index: 10;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  /*padding-top: 20px;*/
+  /*padding-bottom: 20px;*/
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
@@ -6743,3 +6758,8 @@ button.close {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
+.jumbotron_skills
+{
+    margin-top: 10px;
+    padding: 35px 0;
+}
