@@ -86,14 +86,9 @@ $(document).ready(function () {
     $('html, body').animate({
     scrollTop: $("#programming_related").offset().top-50}, 500);
     });
-});
 
-$(window).scroll(function () {
-    $('[id^="box"]').each(function () {
-        if (($(this).offset().top - $(window).scrollTop()) < 50) {
-            $(this).scrollRight( 300 );
-        } else {
-
-        }
+        $(".a_technical_skills").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#technical_skills").offset().top-50}, 500);
     });
 });
