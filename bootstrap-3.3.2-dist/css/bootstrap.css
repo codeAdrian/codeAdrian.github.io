@@ -29,7 +29,7 @@
 
 .myglyph{
   font-size: 1.3em;
-  padding-right: 5px;
+  padding-right: 3px;
 }
 
 .hr_gray{
@@ -3944,7 +3944,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav > li > a {
   position: relative;
   display: block;
-  padding: 15px 10px;
+  padding-left: 20px;
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
