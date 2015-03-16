@@ -34,22 +34,22 @@ $(document).ready(function () {
 
     $("#a_C_Cpp").click(function() {
     $('html, body').animate({
-        scrollTop: $("#C_Cpp").offset().top-50}, 500);
+        scrollTop: $("#box_C_Cpp").offset().top-50}, 500);
     });
 
     $("#a_Csharp").click(function() {
     $('html, body').animate({
-        scrollTop: $("#Csharp").offset().top-50}, 500);
+        scrollTop: $("#box_Csharp").offset().top-50}, 500);
     });
 
     $("#a_HTML_CSS").click(function() {
     $('html, body').animate({
-        scrollTop: $("#HTML_CSS").offset().top-50}, 500);
+        scrollTop: $("#box_HTML_CSS").offset().top-50}, 500);
     });
 
     $("#a_JS_JQ").click(function() {
     $('html, body').animate({
-        scrollTop: $("#JS_JQ").offset().top-50}, 500);
+        scrollTop: $("#box_JS_JQ").offset().top-50}, 500);
     });
 
     $("#a_PHP_lang").click(function() {
@@ -85,5 +85,15 @@ $(document).ready(function () {
     $(".a_programming_related").click(function() {
     $('html, body').animate({
     scrollTop: $("#programming_related").offset().top-50}, 500);
+    });
+});
+
+$(window).scroll(function () {
+    $('[id^="box"]').each(function () {
+        if (($(this).offset().top - $(window).scrollTop()) < 50) {
+            $(this).scrollRight( 300 );
+        } else {
+
+        }
     });
 });
