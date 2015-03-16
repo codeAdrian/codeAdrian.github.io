@@ -69,8 +69,6 @@ padding-left: 15px;
 
 }
 
-
-
 .container-blue{
     background-color: #337ab7;
     color: white;
@@ -79,6 +77,14 @@ padding-left: 15px;
 .container-blue h1{
 text-align: center;
 }
+
+.container-gray h2{
+text-shadow: 3px 3px #555;
+} 
+
+.container-blue h2{
+text-shadow: 3px 3px #06589f;
+} 
 
 .container-gray{
     background-color: #888;
