@@ -37,7 +37,7 @@
     margin: 0;
 }
 
-#a_C_Cpp:hover, #a_Csharp:hover, #a_HTML_CSS:hover, #a_JS_JQ:hover, #a_skills_top, #a_PHP_lang:hover, #a_MySQL_DB:hover, #a_Matlab:hover, #a_ASP_MVC:hover, #a_frontend:hover, #a_backend:hover, .a_programming_related:hover{
+#a_C_Cpp:hover, #a_Csharp:hover, #a_HTML_CSS:hover, #a_JS_JQ:hover, #a_skills_top, #a_PHP_lang:hover, #a_MySQL_DB:hover, #a_Matlab:hover, #a_ASP_MVC:hover, #a_frontend:hover, #a_backend:hover, .a_programming_related:hover, .a_technical_skills:hover{
     cursor: pointer;
 }
 
@@ -67,6 +67,12 @@ text-align: center;
 padding-left: 15px;
 }
 
+}
+
+.iconContainer
+{
+    vertical-align: bottom;
+    margin-top: 15px;
 }
 
 .container-blue{
@@ -1207,8 +1213,7 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  max-width: 100%;
-  height: auto;
+   max-width: 100%;
 }
 .img-rounded {
   border-radius: 6px;
@@ -5837,7 +5842,7 @@ button.close {
   -webkit-transform: translate(0, 0);
       -ms-transform: translate(0, 0);
        -o-transform: translate(0, 0);
-          transform: translate(0, 0);
+          transform: translate(0, 50px);
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -5855,7 +5860,7 @@ button.close {
           background-clip: padding-box;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: 6px;
+  border-radius: 10px;
   outline: 0;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, .5);

@@ -1,0 +1,10 @@
+
+.thumbnail {
+    margin: 0;
+    margin-bottom:6px;
+}
+
+.lightbox-a:hover
+{
+    cursor: pointer;
+}
