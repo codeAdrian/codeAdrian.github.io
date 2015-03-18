@@ -56,13 +56,6 @@ text-align: center;
   padding: 20px 100px 20px 100px;
 }
 
-@media (max-width: 800px){
-.container-full {
-  margin: 0 auto;
-  width: 100%;
-  padding: 10px 30px 10px 30px;
-}
-
 .navbar-brand {
 padding-left: 15px;
 }
@@ -100,6 +93,16 @@ text-shadow: 3px 3px #06589f; /*Sjena za plavu*/
 #proLang:hover, #otherSkills:hover, #techSkills:hover, #proLangRel:hover{
     cursor: pointer; 
 }
+
+@media (max-width: 768px) 
+{
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 20px 10px 20px;
+}
+}
+
 
 /* Bootstrap CSS*/
 
@@ -5920,7 +5923,7 @@ button.close {
 }
 @media (min-width: 768px) {
   .modal-dialog {
-    width: 600px;
+    width: 720px;
     margin: 30px auto;
   }
   .modal-content {
