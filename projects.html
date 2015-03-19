@@ -1,13 +1,13 @@
-    <!--
-    
-             ██████╗ ██████╗ ██████╗ ███████╗   █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗
-            ██╔════╝██╔═══██╗██╔══██╗██╔════╝  ██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║
-            ██║     ██║   ██║██║  ██║█████╗    ███████║██║  ██║██████╔╝██║███████║██╔██╗ ██║
-            ██║     ██║   ██║██║  ██║██╔══╝    ██╔══██║██║  ██║██╔══██╗██║██╔══██║██║╚██╗██║
-            ╚██████╗╚██████╔╝██████╔╝███████╗  ██║  ██║██████╔╝██║  ██║██║██║  ██║██║ ╚████║
-             ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝  ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
-                                       Adrian Bece, 2015.
-    -->
+<!--
+
+  ██████╗ ██████╗ ██████╗ ███████╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗
+ ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║
+ ██║     ██║   ██║██║  ██║█████╗  ███████║██║  ██║██████╔╝██║███████║██╔██╗ ██║
+ ██║     ██║   ██║██║  ██║██╔══╝  ██╔══██║██║  ██║██╔══██╗██║██╔══██║██║╚██╗██║
+ ╚██████╗╚██████╔╝██████╔╝███████╗██║  ██║██████╔╝██║  ██║██║██║  ██║██║ ╚████║
+  ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+                            Adrian Bece, 2015.
+-->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -16,7 +16,7 @@
         <meta property="og:title" content="Adrian Bece's Online Portfolio">
         <meta property="og:image" content="http://codeadrian.github.io/resources/images/ca_fb_logo.jpg">
         <meta property="og:site_name" content="Code Adrian">
-        <meta property="og:description" content="Adrian Bece's online portfolio and project showcase. Programming, design, science, robotics, computer vision and more.">
+<meta property="og:description" content="Adrian Bece's online portfolio and project showcase. Frontend development, Backend development, design, science, robotics, computer vision and more.">
         <!-- Facebook meta info end -->
         <!-- Default meta info-->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,6 +35,7 @@
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link href="./bootstrap-3.3.2-dist/css/lightbox.css" rel="stylesheet" media="screen">
         <script src="./bootstrap-3.3.2-dist/js/lightbox.js"></script>
+        <script src="./bootstrap-3.3.2-dist/js/codeAdrianJS.js"></script>
         <style type="text/css"></style>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -77,7 +78,7 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Computer vision projects</li>
+                                    <li><a class="a_computerVision">Computer vision projects</a></li>
                                     <li>[Coming soon]</li>
                                 </ul>
                             </div>
@@ -88,11 +89,11 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Omnivision - IP camera manager</li>
-                                    <li>Hexagonal Melody - Drums</li>
-                                    <li>Image To ASCII art</li>
-                                    <li>Block Runner Rampage</li>
-                                    <li>Foodly Desktop App</li>
+                                    <li><a id="a_omnivision">Omnivision - IP camera manager</a></li>
+                                    <li><a id="a_hexagonal">Hexagonal Melody - Drums</a></li>
+                                    <li><a id="a_imageToASCII">Image To ASCII art</a></li>
+                                    <li><a id="a_blockRunnerRampage">Block Runner Rampage</a></li>
+                                    <li><a id="a_foodlyApp">Foodly Desktop App</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -102,10 +103,9 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Foodly Website</li>
-                                    <li>Easy Learn Website</li>
-                                    <li>CodeAdrian Website</li>
-                                    <li>Project 4</li>
+                                    <li><a id="a_foodlyWeb">Foodly Website</a></li>
+                                    <li><a id="a_easyLearn">Easy Learn Website</a></li>
+                                    <li><a id="a_codeAdrianWeb">CodeAdrian Website</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -118,8 +118,8 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Kernel-based Image Filter</li>
-                                    <li>Robotics Projects</li>
+                                    <li><a id="a_kernelFlter">Kernel-based Image Filter</a></li>
+                                    <li><a class="a_roboticsProjects">Robotics Projects</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -129,11 +129,11 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Direct Kinematics model</li>
-                                    <li>Inverse Kinematics model</li>
-                                    <li>Trajectory Planning</li>
-                                    <li>Robot Vision</li>
-                                    <li>Mobile Robot model</li>
+                                    <li><a class="a_roboticsProjects">Direct Kinematics model</a></li>
+                                    <li><a class="a_roboticsProjects">Inverse Kinematics model</a></li>
+                                    <li><a class="a_roboticsProjects">Trajectory Planning</a></li>
+                                    <li><a class="a_roboticsProjects">Robot Vision</a></li>
+                                    <li><a class="a_roboticsProjects">Mobile Robot model</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -143,20 +143,21 @@
                             <hr class="hr_gray"><br />
                             <div>
                                 <ul>
-                                    <li>Template Matching</li>
-                                    <li>Hough Transform</li>
-                                    <li>SIFT and RANSAC</li>
-                                    <li>3D camera project</li>
+                                    <li><a class="a_computerVision">Template Matching</a></li>
+                                    <li><a class="a_computerVision">Hough Transform</a></li>
+                                    <li><a class="a_computerVision">SIFT and RANSAC</a></li>
+                                    <li><a class="a_computerVision">3D camera project</a></li>
+                                    <li><a id="a_histogram">Histogram-based Image search</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div> <!-- container end -->
             </div> <!-- jumbotron end-->
-            <div class="container-full container-blue">
+            <div class="container-full container-blue" id="g_omnivision">
                 <div class="row">
                     <h2>Omnivision</h2>
-                    <h5>IP Camera manager</h5>
+                    <h5>IP Camera manager.</h5>
                     <hr />
                     <div class="col-lg-2">
                         <h4>Basic info: </h4>
@@ -164,7 +165,7 @@
                         <p><b>Technology:</b><br />C#, AForge.NET</p>
                         <p><b>Software:</b><br />Visual Studio, Adobe Photoshop</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-default" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-default" href="http://github.com/codeAdrian/Omnivision" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
@@ -183,7 +184,7 @@
             </div>
 
 
-            <div class="container-full container-gray">
+            <div class="container-full container-gray" id="g_hexagonal">
                 <div class="row">
                     <h2>Hexagonal Melody - Drums</h2>
                     <h5>It's a Simon says game... but with drums!</h5>
@@ -194,7 +195,7 @@
                         <p><b>Technology:</b><br />C#, SharpDX, MySQL .NET Connector</p>
                         <p><b>Software:</b><br />Visual Studio, Adobe Photoshop, Audacity, XAMPP</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-primary" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-primary" href="http://github.com/codeAdrian/HexagonalMelody" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
@@ -212,10 +213,10 @@
                 </div>
             </div>
 
-            <div class="container-full container-blue">
+            <div class="container-full container-blue" id="g_imageToASCII">
                 <div class="row">
                     <h2>Image To ASCII</h2>
-                    <h5>Simple image to ASCII art converter with text editing based on image editing</h5>
+                    <h5>Simple image to ASCII art converter with text editing based on image editing.</h5>
                     <hr />
                     <div class="col-lg-2">
                         <h4>Basic info: </h4>
@@ -223,7 +224,7 @@
                         <p><b>Technology:</b><br />C#</p>
                         <p><b>Software:</b><br />Visual Studio</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-default" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-default" href="http://github.com/codeAdrian/ImageToASCIIart" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
@@ -255,10 +256,10 @@
             </div>
 
 
-            <div class="container-full container-gray">
+            <div class="container-full container-gray" id="g_blockRunnerRampage">
                 <div class="row">
                     <h2>Block Runner Rampage</h2>
-                    <h5>Using buttons controller as makeshift graphics and "pixels"!</h5>
+                    <h5>Using buttons as makeshift graphics and "pixels"!</h5>
                     <hr />
                     <div class="col-lg-2">
                         <h4>Basic info: </h4>
@@ -266,7 +267,7 @@
                         <p><b>Technology:</b><br />C#</p>
                         <p><b>Software:</b><br />Visual Studio, Adobe Photoshop</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-primary" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-primary" href="http://github.com/codeAdrian/Block-Runner-Rampage" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
@@ -284,7 +285,7 @@
                 </div>
             </div>
 
-            <div class="container-full container-blue">
+            <div class="container-full container-blue" id="g_foodlyApp">
                 <div class="row">
                     <h2>Foodly Desktop Application</h2>
                     <h5>Project for Software Startup Academy 2014./2015.</h5>
@@ -295,14 +296,14 @@
                         <p><b>Technology:</b><br />C#, MySQL .NET Connector</p>
                         <p><b>Software:</b><br />Visual Studio, Adobe Photoshop, XAMPP</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-default" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-default" href="http://github.com/codeAdrian/FoodlyApp" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
                     <div class="col-lg-10">
                         <h4>Details: </h4>
                         <p>"Foodly" is one of my most versatile and challenging projects so far. "Foodly" is a system for ordering personalized food online from various restaurants. Desktop app was made to display user's orders and details of an order. Screenshots feature two different versions of the application with various implemented features.</p>
-
+                        <p><b>Note: </b>Application requires XAMPP and the specific database which can be imported from the project folder.</p>
                         <div class="row">
                             <h4>Screenshots: </h4>
                             <div class="col-lg-3"><a class="lightbox-a" title="Login Window"><img src="./projects/images/FoodlyApp_01.JPG" class="thumbnail img-responsive"></a></div>
@@ -314,7 +315,7 @@
             </div>
 
 
-            <div class="container-full container-gray">
+            <div class="container-full container-gray" id="g_foodlyWeb">
                 <div class="row">
                     <h2>Foodly Website</h2>
                     <h5>Project for Software Startup Academy 2014./2015.</h5>
@@ -325,7 +326,7 @@
                         <p><b>Technology:</b><br />HTML, CSS, Javascript, JQuery, PHP, MySQL</p>
                         <p><b>Software:</b><br />Microsoft Expression, Adobe Photoshop, XAMPP</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-primary" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-primary" href="http://github.com/codeAdrian/Foodly" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
@@ -338,13 +339,14 @@
                             <div class="col-lg-3"><a class="lightbox-a" title="Restaurant picker"><img src="./projects/images/FoodlyWeb_03.gif" class="thumbnail img-responsive"></a></div>
                             <div class="col-lg-3"><a class="lightbox-a" title="Webshop"><img src="./projects/images/FoodlyWeb_02.gif" class="thumbnail img-responsive"></a></div>
                             <div class="col-lg-3"><a class="lightbox-a" title="Pizza Customization"><img src="./projects/images/FoodlyWeb_01.gif" class="thumbnail img-responsive"></a></div>
+                            <p><b>Note: </b>Some features requires XAMPP and the specific database which can be imported from the project folder.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div class="container-full container-blue">
+            <div class="container-full container-blue" id="g_easyLearn">
                 <div class="row">
                     <h2>Easy Learn Website</h2>
                     <h5>Work in progress. Project for Microsoft's Imagine Cup 2015.</h5>
@@ -373,27 +375,29 @@
             </div>
 
 
-            <div class="container-full container-gray">
+            <div class="container-full container-gray" id="g_codeAdrianWeb">
                 <div class="row">
                     <h2>CodeAdrian Website</h2>
-                    <h5>Website for my online portfolio</h5>
+                    <h5>My online portfolio.</h5>
                     <hr />
                     <div class="col-lg-2">
                         <h4>Basic info: </h4>
                         <p><b>Created on:</b><br />2015.</p>
                         <p><b>Technology:</b><br />HTML, CSS, Javascript, JQuery, Bootstrap</p>
                         <p><b>Software:</b><br />Microsoft WebMatrix, Adobe Photoshop</p>
+                        <p><b>Project:</b></p>
+                        <p><a class="btn btn-primary" href="http://github.com/codeAdrian/codeAdrian.github.io" target="_blank" role="button">Github link »</a></p>
                         <br />
                     </div>
 
                     <div class="col-lg-10">
                         <h4>Details: </h4>
-                        <p>During 2015. I was planning to make my own online portolio of my programming, scientific and design work that I've done over the last few years. This website is also a showcase of my current Frontend and design knowledge, featuring a minimalistic design which focuses on the both general information on my work and details.</p>
+                        <p>During 2014. and 2015. I was thinking about making a website that would feature my programming work (frontend and backend) and design work. I used to have some basic websites in the past (hosted on and made in Wix editor) but I wanted to make my own site and write my own code and design it from scratch using only basic frameworks and templates (Bootstrap) to make it more modern and responsive.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="container-full container-blue">
+            <div class="container-full container-blue" id="g_kernelFlter">
                 <div class="row">
                     <h2>Kernel-based Image filter</h2>
                     <h5>Image filter implemented in Matlab.</h5>
@@ -404,7 +408,7 @@
                         <p><b>Technology:</b><br />Matlab m-script</p>
                         <p><b>Software:</b><br />Matlab</p>
                         <p><b>Project:</b></p>
-                        <p><a class="btn btn-default" href="#" role="button">Github link »</a></p>
+                        <p><a class="btn btn-default" href="./projects/files/Kernel-based-filter.zip" role="button">Download link »</a></p>
                         <br />
                     </div>
 
@@ -422,12 +426,99 @@
                 </div>
             </div>
 
+            <div class="container-full container-gray" id="g_roboticsProjects">
+                <div class="row">
+                    <h2>Robotics Projects</h2>
+                    <h5>Matlab models and simulations.</h5>
+                    <hr />
+                    <div class="col-lg-2">
+                        <h4>Basic info: </h4>
+                        <p><b>Created on:</b><br />2014.</p>
+                        <p><b>Technology:</b><br />Matlab m-script</p>
+                        <p><b>Software:</b><br />Matlab</p>
+                        <p><b>Project: </b></p>
+                         <p><a class="btn btn-default" href="./projects/files/Robotics.zip" role="button">Download link »</a></p>
+                        <br />
+                    </div>
+
+                    <div class="col-lg-10">
+                        <h4>Details: </h4>
+                        <p>During 2014. I've had to make a Matlab model and simulation for a specific robotic manipulator. Project includes: direct kinematics, inverse kinematics, trajectory planning, object detection, mobile robot simulation, etc.</p>
+                   <div class="row">
+                            <h4>Screenshots: </h4>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Robotic Manipulator"><img src="./projects/images/Robot_01.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Trajectory Simulation"><img src="./projects/images/Robot_02.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Object Detection"><img src="./projects/images/Robot_03.JPG" class="thumbnail img-responsive"></a></div>
+                        </div>
+                         </div>
+                </div>
+            </div>
+
+<div class="container-full container-blue" id="g_computerVision">
+                <div class="row">
+                    <h2>Computer Vision</h2>
+                    <h5>Line detection, object detection, 3D cameras and more!</h5>
+                    <hr />
+                    <div class="col-lg-2">
+                        <h4>Basic info: </h4>
+                        <p><b>Created on:</b><br />2014. / 2015.</p>
+                        <p><b>Technology:</b><br />Visual C++, OpenCV</p>
+                        <p><b>Software:</b><br />Visual Studio</p>
+                        <p><b>Project:</b></p>
+                        <p><a class="btn btn-default" href="http://github.com/codeAdrian/ComputerVision" target="_blank" role="button">Github link »</a></p>
+                        <br />
+                    </div>
+
+                    <div class="col-lg-10">
+                        <h4>Details: </h4>
+                        <p>During the semester, I've had to implement various computer vision algorithms - Template matching, Hough Transform, SIFT, RANSAC, Object Detection, Object Position Detection, processing images from a 3D camera, etc. This is a very complex field of study and it's very challenging in programming sense and algebra sense.</p>
+
+                        <div class="row">
+                            <h4>Screenshots: </h4>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Line detection"><img src="./projects/images/Vision_01.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Position detection"><img src="./projects/images/Vision_02.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Object detection"><img src="./projects/images/Vision_03.JPG" class="thumbnail img-responsive"></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-full container-gray" id="g_histogram">
+                <div class="row">
+                    <h2>Histogram-based Image search</h2>
+                    <h5>Work in progress. Thesis for my Master's degree.</h5>
+                    <hr />
+                    <div class="col-lg-2">
+                        <h4>Basic info: </h4>
+                        <p><b>Created on:</b><br />2014. / 2015.</p>
+                        <p><b>Technology:</b><br />C#, MySQL, MySQL .NET Connector</p>
+                        <p><b>Software:</b><br />Visual Studio, XAMPP</p>
+                        <p><b>Project: </b></p>
+                         <p><a class="btn btn-default" href="http://github.com/codeAdrian/Histogram-based-image-search" target="_blank" role="button">Github link »</a></p>
+                        <br />
+                    </div>
+
+                    <div class="col-lg-10">
+                        <h4>Details: </h4>
+                        <p>Project created for my master's degree. Project is to create an image search algorithm based on histograms that retrieves an image from the database which is visually most similar. I was given permission from Metropolitan museum in New York to use images from their collection for this project. This method allows fast and robust searches, regardless of image's rotation, size changes or even blur. This project is still in development and testing and it will be finished during the year.</p>
+                        <p><b>Note: </b>Application requires XAMPP and the specific database which can be imported from the project folder.</p>
+                   <div class="row">
+                            <h4>Screenshots: </h4>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Database search"><img src="./projects/images/Histogram_01.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Database search - rotated blurred image"><img src="./projects/images/Histogram_02.JPG" class="thumbnail img-responsive"></a></div>
+                            <div class="col-lg-3"><a class="lightbox-a" title="Histograms"><img src="./projects/images/Histogram_03.JPG" class="thumbnail img-responsive"></a></div>
+                        </div>
+                         </div>
+                </div>
+            </div>
+
             <div class="container marketing">
                 <!-- /END THE FEATURETTES -->
                 <!-- FOOTER -->
                 <footer>
                     <hr>
-                    <p class="pull-right"><a href="#">Back to top</a></p>
+                    <p class="pull-right"><a id="a_projects_top">Back to top</a></p>
                     <p>© 2015 Adrian Bece </p>
                 </footer>
             </div>

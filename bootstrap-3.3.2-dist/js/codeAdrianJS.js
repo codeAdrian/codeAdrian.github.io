@@ -1,4 +1,7 @@
 $(document).ready(function () {
+
+    $("#img-intro").fadeTo( 1500 , 1);
+
     $("#proLang").click(function () {
         $("#proLang_group").toggle("slow", function() {
         if ($("#proLang_group").css('display') == 'none') { $("#proLang span").attr('class', 'glyphicon glyphicon-menu-down'); }
@@ -28,6 +31,11 @@ $(document).ready(function () {
     });
 
         $("#a_skills_top").click(function() {
+    $('html, body').animate({
+        scrollTop: 0}, 500);
+    });
+
+        $("#a_projects_top").click(function() {
     $('html, body').animate({
         scrollTop: 0}, 500);
     });
@@ -87,8 +95,68 @@ $(document).ready(function () {
     scrollTop: $("#programming_related").offset().top-50}, 500);
     });
 
-        $(".a_technical_skills").click(function() {
+    $(".a_technical_skills").click(function() {
     $('html, body').animate({
     scrollTop: $("#technical_skills").offset().top-50}, 500);
+    });
+
+    $("#a_omnivision").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_omnivision").offset().top-50}, 500);
+    });
+
+    $("#a_hexagonal").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_hexagonal").offset().top-50}, 500);
+    });
+
+    $(".a_computerVision").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_computerVision").offset().top-50}, 500);
+    });
+
+    $("#a_imageToASCII").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_imageToASCII").offset().top-50}, 500);
+    });
+
+    $("#a_blockRunnerRampage").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_blockRunnerRampage").offset().top-50}, 500);
+    });
+
+    $("#a_foodlyApp").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_foodlyApp").offset().top-50}, 500);
+    });
+
+    $("#a_foodlyWeb").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_foodlyWeb").offset().top-50}, 500);
+    });
+
+    $("#a_easyLearn").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_easyLearn").offset().top-50}, 500);
+    });
+
+    $("#a_codeAdrianWeb").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_codeAdrianWeb").offset().top-50}, 500);
+    });
+
+    $("#a_kernelFlter").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_kernelFlter").offset().top-50}, 500);
+    });
+
+    $(".a_roboticsProjects").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_roboticsProjects").offset().top-50}, 500);
+    });
+
+    $("#a_histogram").click(function() {
+    $('html, body').animate({
+    scrollTop: $("#g_histogram").offset().top-50}, 500);
     });
 });
