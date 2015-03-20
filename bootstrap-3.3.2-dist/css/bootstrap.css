@@ -108,7 +108,7 @@
 .bs-glyphicons {
     margin: 0;
     overflow: hidden;
-    padding-bottom:25px;
+    padding-bottom: 25px;
 }
 
 .bs-glyphicons-list {
@@ -166,7 +166,7 @@
 .bs-glyphicons .glyphicon {
     margin-top: 5px;
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 36px;
     color: #000;
     margin-left: auto;
     margin-right: auto;
@@ -1693,6 +1693,7 @@ h4, .h4 {
 
 h5, .h5 {
     font-size: 14px;
+    line-height: 2;
 }
 
 h6, .h6 {
