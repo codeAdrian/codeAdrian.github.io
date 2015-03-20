@@ -67,8 +67,6 @@
     padding-left: 15px;
 }
 
-}
-
 .iconContainer {
     vertical-align: bottom;
     margin-top: 15px;
@@ -100,9 +98,6 @@
     cursor: pointer;
 }
 
-
-
-
 @media (min-width: 768px) {
     .bs-glyphicons {
         margin-right: 0;
@@ -111,13 +106,15 @@
 }
 
 .bs-glyphicons {
-    margin: 0 -10px 20px;
+    margin: 0;
     overflow: hidden;
+    padding-bottom:25px;
 }
 
 .bs-glyphicons-list {
-    padding-left: 0;
     list-style: none;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -127,37 +124,42 @@
     }
 }
 
-@media(min-width:768px){
-.hobbiesCol
-{
-    padding-right: 20px;
-}}
 
+.hobbiesGroup {
+    padding: 10px 10px 10px 10px;
+    margin: 0;
+}
 
 .bs-glyphicons li {
     float: left;
     width: 13%;
-    height: 115px;
+    height: 100px;
     padding: 10px;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 1.4;
     text-align: center;
     background-color: #f9f9f9;
-    border: 1px solid #fff;
+    border: 2px solid #f9f9f9;
+    border-radius: 10px;
+    margin-left: 8px;
 }
 
 
 @media(max-width:768px){
 .bs-glyphicons li {
   float: left;
-  width: 25%;
+  width:28%;
   height: 115px;
   padding: 10px;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.4;
   text-align: center;
   background-color: #f9f9f9;
-  border: 1px solid #fff;
+    border: 2px solid #f9f9f9;
+        border-radius: 10px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom:8px;
 }
 }
 
@@ -165,17 +167,18 @@
     margin-top: 5px;
     margin-bottom: 10px;
     font-size: 24px;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bs-glyphicons .glyphicon-class {
     display: block;
     text-align: center;
     word-wrap: break-word;
-}
-
-.bs-glyphicons li:hover {
-    color: #fff;
-    background-color: #1e568f;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #img-intro {
@@ -185,8 +188,7 @@
     opacity: 0;
 }
 
-.img-bgnd
-{
+.img-bgnd {
     background-image: url("ca_logo_index.jpg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -205,6 +207,14 @@
     border-radius: 10px;
 }
 
+@media(min-width:768px){
+.centeredColumns
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+}
 /* Bootstrap CSS*/
 
 html {
