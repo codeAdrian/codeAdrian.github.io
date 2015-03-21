@@ -13,14 +13,23 @@
     font-weight: normal;
 }
 
+#skills_boxes li{
+    color: #000;
+}
+
+#skills_boxes li:hover{
+    cursor: pointer;
+    background-color: #337ab7;
+    color: #fff;
+}
+
+
 .skillsContainer{
     padding: 15px 0;
-    color: black;
 }
 
 .skillsContainerTwoRow{
         padding: 5px 0;
-    color: black;
 }
 
 @font-face {
@@ -62,14 +71,14 @@
 .container-full {
     margin: 0 auto;
     width: 100%;
-    padding: 20px 100px 20px 100px;
+    padding: 40px 100px 40px 100px;
 }
 
 @media (max-width: 768px) {
     .container-full {
         margin: 0 auto;
         width: 100%;
-        padding: 10px 20px 10px 20px;
+        padding: 40px 20px 40px 20px;
     }
 }
 
@@ -142,7 +151,7 @@
 
 .bs-glyphicons li {
     float: left;
-    width: 23%;
+    width: 23.2%;
     height: 100px;
     padding: 5px;
     font-size: 11px;
@@ -155,11 +164,10 @@
     margin-top: 10px;
 }
 
-
 @media(max-width:768px){
 .bs-glyphicons li {
   float: left;
-  width:30%;
+  width:31%;
   height: 115px;
   padding: 0px;
   font-size: 12px;
@@ -1700,6 +1708,7 @@ h3, .h3 {
 
 h4, .h4 {
     font-size: 18px;
+    line-height: 1.8;
 }
 
 h5, .h5 {
