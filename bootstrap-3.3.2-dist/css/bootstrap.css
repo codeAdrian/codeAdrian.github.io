@@ -13,6 +13,16 @@
     font-weight: normal;
 }
 
+.skillsContainer{
+    padding: 15px 0;
+    color: black;
+}
+
+.skillsContainerTwoRow{
+        padding: 5px 0;
+    color: black;
+}
+
 @font-face {
     font-family: fffForward;
     src: url("../fonts/FFFFORWA.TTF");
@@ -113,8 +123,8 @@
 
 .bs-glyphicons-list {
     list-style: none;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 @media (min-width: 768px) {
@@ -132,25 +142,26 @@
 
 .bs-glyphicons li {
     float: left;
-    width: 13%;
+    width: 23%;
     height: 100px;
-    padding: 10px;
+    padding: 5px;
     font-size: 11px;
     line-height: 1.4;
     text-align: center;
     background-color: #f9f9f9;
     border: 2px solid #f9f9f9;
     border-radius: 10px;
-    margin-left: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
 }
 
 
 @media(max-width:768px){
 .bs-glyphicons li {
   float: left;
-  width:28%;
+  width:30%;
   height: 115px;
-  padding: 10px;
+  padding: 0px;
   font-size: 12px;
   line-height: 1.4;
   text-align: center;
