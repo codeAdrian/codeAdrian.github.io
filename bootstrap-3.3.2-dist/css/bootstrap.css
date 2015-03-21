@@ -13,23 +13,23 @@
     font-weight: normal;
 }
 
-#skills_boxes li{
+#skills_boxes li {
     color: #000;
 }
 
-#skills_boxes li:hover{
+#skills_boxes li:hover {
     cursor: pointer;
     background-color: #337ab7;
     color: #fff;
 }
 
 
-.skillsContainer{
+.skillsContainer {
     padding: 15px 0;
 }
 
-.skillsContainerTwoRow{
-        padding: 5px 0;
+.skillsContainerTwoRow {
+    padding: 5px 0;
 }
 
 @font-face {
@@ -234,6 +234,21 @@
     width: 100%;
 }
 }
+
+
+#gallery_jm,#gallery_ieee,#gallery_misc {
+    display: none;
+}
+
+#a_gallery_jm:hover,#a_gallery_ieee:hover,#a_gallery_misc:hover {
+    cursor: pointer;
+}
+
+.gallery-thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
 /* Bootstrap CSS*/
 
 html {
@@ -6388,8 +6403,8 @@ button.close {
 
 .modal-dialog {
     position: relative;
-    width: auto;
-    margin: 10px;
+    width: 82%;
+    margin: -45px auto 45px auto;
 }
 
 .modal-content {
@@ -6426,7 +6441,6 @@ button.close {
 .modal-header {
     min-height: 16.42857143px;
     padding: 15px;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .modal-header .close {
@@ -6472,8 +6486,8 @@ button.close {
 
 @media (min-width: 768px) {
     .modal-dialog {
-        width: 720px;
-        margin: 30px auto;
+        width: 50%;
+        margin: 0px auto 45px auto;
     }
 
     .modal-content {

@@ -2,6 +2,27 @@ $(document).ready(function () {
 
     $("#img-intro").fadeTo( 1500 , 1);
 
+    $("#a_gallery_jm").click(function () {
+        $("#gallery_jm").toggle("slow", function() {
+        if ($("#gallery_jm").css('display') == 'none') { $("#a_gallery_jm span").attr('class', 'glyphicon glyphicon-menu-down'); }
+        else { $("#a_gallery_jm span").attr('class', 'glyphicon glyphicon-menu-up'); }
+        });
+    });
+
+    $("#a_gallery_ieee").click(function () {
+        $("#gallery_ieee").toggle("slow", function() {
+        if ($("#gallery_ieee").css('display') == 'none') { $("#a_gallery_ieee span").attr('class', 'glyphicon glyphicon-menu-down'); }
+        else { $("#a_gallery_ieee span").attr('class', 'glyphicon glyphicon-menu-up'); }
+        });
+    });
+
+    $("#a_gallery_misc").click(function () {
+        $("#gallery_misc").toggle("slow", function() {
+        if ($("#gallery_misc").css('display') == 'none') { $("#a_gallery_misc span").attr('class', 'glyphicon glyphicon-menu-down'); }
+        else { $("#a_gallery_misc span").attr('class', 'glyphicon glyphicon-menu-up'); }
+        });
+    });
+
     $("#proLang").click(function () {
         $("#proLang_group").toggle("slow", function() {
         if ($("#proLang_group").css('display') == 'none') { $("#proLang span").attr('class', 'glyphicon glyphicon-menu-down'); }

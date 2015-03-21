@@ -2,6 +2,8 @@
 .thumbnail {
     margin: 0;
     margin-bottom:6px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .lightbox-a:hover
