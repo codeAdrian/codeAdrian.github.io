@@ -86,7 +86,10 @@
 
 .expDate, .eduDate {
     width: 23%;
+    font-size: 0.85em;
+    text-align: right;
 }
+
 
 .eduTable, .expTable {
     width: 97%;
