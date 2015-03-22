@@ -19,31 +19,9 @@
     font-weight: normal;
 }
 
-#skills_boxes li {
-    color: #000;
-}
-
-#skills_boxes li:hover {
-    cursor: pointer;
-    background-color: #337ab7;
-    color: #fff;
-}
-
-
-.skillsContainer {
-    padding: 15px 0;
-}
-
-.skillsContainerTwoRow {
-    padding: 5px 0;
-}
-
-
-.expDate, .eduDate
-{
+.expDate, .eduDate {
     width: 23%;
 }
-
 
 .eduTable, .expTable {
     width: 97%;
@@ -166,12 +144,6 @@
     }
 }
 
-
-.hobbiesGroup {
-    padding: 10px 10px 10px 10px;
-    margin: 0;
-}
-
 .bs-glyphicons li {
     float: left;
     width: 23.2%;
@@ -197,11 +169,11 @@
   line-height: 1.4;
   text-align: center;
   background-color: #f9f9f9;
-    border: 2px solid #f9f9f9;
-        border-radius: 10px;
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom:8px;
+  border: 2px solid #f9f9f9;
+  border-radius: 10px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom:8px;
 }
 }
 
@@ -243,12 +215,6 @@
 }
 }
 
-.myPortrait {
-    background-color: #eee;
-    border: 1px solid #eee;
-    border-radius: 10px;
-}
-
 @media(min-width:768px){
 .centeredColumns
 {
@@ -257,7 +223,6 @@
     width: 100%;
 }
 }
-
 
 #gallery_jm, #gallery_ieee, #gallery_misc {
     display: none;
