@@ -13,6 +13,12 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: fffForward;
+    src: url("../fonts/FFFFORWA.TTF");
+    font-weight: normal;
+}
+
 #skills_boxes li {
     color: #000;
 }
@@ -32,10 +38,27 @@
     padding: 5px 0;
 }
 
-@font-face {
-    font-family: fffForward;
-    src: url("../fonts/FFFFORWA.TTF");
-    font-weight: normal;
+
+.expDate, .eduDate
+{
+    width: 23%;
+}
+
+
+.eduTable, .expTable {
+    width: 97%;
+}
+
+.eduTable tr td, .expTable tr td {
+    padding: 10px;
+    border: 0px solid #fff;
+    text-align: left;
+}
+
+.noPadding {
+    padding: 0;
+    margin: 5px 0px 5px 0px;
+    line-height: 2;
 }
 
 #otherSkills_group, #techSkills_group, #proLangRel_group {
@@ -236,11 +259,11 @@
 }
 
 
-#gallery_jm,#gallery_ieee,#gallery_misc {
+#gallery_jm, #gallery_ieee, #gallery_misc {
     display: none;
 }
 
-#a_gallery_jm:hover,#a_gallery_ieee:hover,#a_gallery_misc:hover {
+#a_gallery_jm:hover, #a_gallery_ieee:hover, #a_gallery_misc:hover {
     cursor: pointer;
 }
 
