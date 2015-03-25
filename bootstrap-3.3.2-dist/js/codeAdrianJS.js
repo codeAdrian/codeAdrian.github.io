@@ -1,5 +1,11 @@
 $(document).ready(function () {
 
+    //  - - - - - - - - - Preload images - - - - - - - - - 
+    $('<img/>')[0].src = "./resources/images/ca_intro_01.png";
+    $('<img/>')[0].src = "./resources/images/ca_intro_02.png";
+    $('<img/>')[0].src = "./resources/images/ca_intro_03.png";
+
+
     //  - - - - - - - - - Infinite loop of 3 images fade-in and fade-out - - - - - - - - - 
     function fadeIntroImages() {
         $("#img-intro").fadeTo(1200, 1).delay(3000).fadeTo(1200, 0, function () {
