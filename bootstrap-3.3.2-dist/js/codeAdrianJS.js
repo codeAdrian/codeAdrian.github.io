@@ -144,6 +144,11 @@ $(document).ready(function () {
         }, 500);
     });
 
+    $("#a_magento").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#magento").offset().top - 50
+        }, 500);
+    });
     $(".a_programming_related").click(function () {
         $('html, body').animate({
             scrollTop: $("#programming_related").offset().top - 50
