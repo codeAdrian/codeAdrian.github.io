@@ -1,0 +1,42 @@
+header {
+    background-color: $background-variation;
+    color: $color-variation;
+    font-family: $heading-font-family;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    @include breakpoint-min(tablet-portrait){
+        top: 0;
+    }
+
+    .logo {
+        flex: 1 100%;
+        @include ms-respond(font-size, 2);
+        @include ms-respond(padding, -3);
+        @include breakpoint-min(mobile-landscape){
+            flex: 1 25%;
+        }
+    }
+
+    nav {
+        flex: 1 100%;
+        @include breakpoint-min(mobile-landscape){
+            flex: 3 75%;
+        }
+    }
+
+    ul {
+        @include breakpoint-min(mobile-landscape){
+            justify-content: flex-end;
+        }
+    }
+
+    li {
+        padding: 1em 0.5em;
+
+        @include breakpoint-min(desktop-medium) {
+            padding: 1em;
+        }
+    }
+}

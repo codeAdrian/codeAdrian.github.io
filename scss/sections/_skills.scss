@@ -1,0 +1,17 @@
+.section-skills {
+    li {
+        padding: 0.5em;
+
+        @include breakpoint-min(desktop-small){
+            padding: 1em;
+        }
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    svg {
+        max-width: px-to-em(100px, $base-font-size);
+    }
+}

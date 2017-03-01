@@ -1,0 +1,54 @@
+/*------------------------------------------------------------*\
+                   TYPOGRAPHY BASIC SETTINGS
+\*------------------------------------------------------------*/
+
+/*
+ * https://github.com/modularscale/modularscale-sass
+ *
+ * MODULAR-SCALE SETTINGS
+ *
+ * To se ems change $ms-base: 1rem; to $ms-base: 1em;
+ * To use pixels change $ms-base: 1rem; to $ms-base: $base-font-size;
+ */
+
+$heading-font-family: 'Audiowide', cursive;
+$text-font-family: 'Open Sans', sans-serif;
+
+$main-font-family: $text-font-family;
+$base-font-size: 20px;
+$base-line-height: 1.5;
+
+/*
+ * SCALES REFERENCE
+ *
+ * $minor-second:     1.067;
+ * $major-second:     1.125;
+ * $minor-third:      1.2;
+ * $major-third:      1.25;
+ * $perfect-fourth:   1.333;
+ * $augmented-fourth: 1.414;
+ * $perfect-fifth:    1.5;
+ * $minor-sixth:      1.6;
+ * $golden:           1.618;
+ * $major-sixth:      1.667;
+ * $minor-seventh:    1.778;
+ * $major-seventh:    1.875;
+ * $octave:           2;
+ * $major-tenth:      2.5;
+ * $major-eleventh:   2.667;
+ * $major-twelfth:    3;
+ * $double-octave:    4;
+ */
+
+$ms-base:  1rem;
+$ms-ratio: 1.25;
+
+/*
+ *   Notes on rem support to keep in mind
+ *   ------------------------------------
+ * - IE 9 & IE 10 do not support rem units when used in the font shorthand property (the entire declaration is ignored)
+ *   or when used on pseudo elements.
+ * - Borders sized in "rem" disappear when the page is zoomed out in Chrome.
+ * - IE 9, 10 and 11 do not support rem units when used in the "line-height" property when used on :before and :after
+ *   pseudo elements
+ */

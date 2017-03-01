@@ -1,0 +1,75 @@
+/*------------------------------------------------------------*\
+                       GENERAL MIXINS
+\*------------------------------------------------------------*/
+
+/*
+ * Mixin to drop micro clearfix into a selector. Further reading:
+ * http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+ */
+
+@mixin clearfix() {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+/*------------------------------------------------------------*\
+                   POSITION MIXINS
+\*------------------------------------------------------------*/
+
+/*
+ * Generic position mixin for better CSS markup
+ * Used by other mixins
+ */
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+/*
+ * Shorthand mixin for absolute positioning
+ * Serves as an alias for `position(absolute, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+/*
+ * Shorthand mixin for fixed positioning
+ * Serves as an alias for `position(fixed, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+/*------------------------------------------------------------*\
+                     VENDOR PREFIX MIXIN
+\*------------------------------------------------------------*/
+
+/*
+ * Use http://caniuse.com/ and http://shouldiprefix.com/ to determine which
+ * prefixes should be used in the mixins to avoid code bloat.
+ * @author Hugo Giraudel
+ * Sample use: @include prefix(property, value, prefix1 prefix2 prefix3);
+ * Sample use: @include prefix(transform, rotate(45deg), webkit ms);
+ * Use this mixin to build your own vendor prefixes mixin
+ */
+
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
