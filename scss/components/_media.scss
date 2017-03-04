@@ -8,7 +8,8 @@
  */
 
 img {
-    max-width: 100%; /* [1] */
+    width: 100%; /* [1] */
+    max-width: 100%;
     font-style: italic; /* [2] */
     vertical-align: middle; /* [3] */
     -ms-interpolation-mode: bicubic; /* [4] */

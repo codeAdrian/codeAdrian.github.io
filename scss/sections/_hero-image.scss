@@ -1,0 +1,27 @@
+.container-hero {
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: px-to-em(-280px, 20px);
+    width: (968px/1920px)*100%;
+    text-align: right;
+
+    ul {
+        @include ms-respond(font-size, 3);
+        @include ms-respond(line-height, 5);
+        font-weight: bold;
+        @include ms-respond(padding-bottom, 3);
+    }
+}
+
+.hero-title {
+    @include ms-respond(font-size, 7);
+    @include ms-respond(line-height, 7);
+    text-transform: uppercase;
+}

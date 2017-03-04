@@ -1,0 +1,12 @@
+button,
+.button {
+    text-decoration: none;
+    background: $cta;
+    color: $color-variation;
+    padding: 1em 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: px-to-em(320px);
+    text-align: center;
+    display: inline-block;
+}

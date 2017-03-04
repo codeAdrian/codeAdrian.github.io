@@ -5,12 +5,13 @@ header {
     position: fixed;
     left: 0;
     right: 0;
+    z-index: 2;
 
     @include breakpoint-min(tablet-portrait){
         top: 0;
     }
 
-    .logo {
+    .title {
         flex: 1 100%;
         @include ms-respond(font-size, 2);
         @include ms-respond(padding, -3);

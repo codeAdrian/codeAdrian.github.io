@@ -1,4 +1,4 @@
-.section-skills {
+.container-skills {
     li {
         padding: 0.5em;
 
@@ -13,5 +13,18 @@
 
     svg {
         max-width: px-to-em(100px, $base-font-size);
+    }
+}
+
+.skills-logos {
+    @include ms-respond(padding-bottom, 0);
+}
+
+.skills-list {
+    @include ms-respond(padding-bottom, 2);
+    li {
+       // width: 49%;
+        //display: inline-block;
+        padding: 0;
     }
 }

@@ -1,0 +1,19 @@
+h2 {
+    font-family: $heading-font-family;
+    @include ms-respond(font-size, 5);
+    @include ms-respond(line-height, 5);
+    @include ms-respond(padding-top, 3);
+    @include ms-respond(padding-bottom, 2);
+}
+
+p{
+    @include ms-respond(padding-bottom, 0);
+}
+
+b {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}

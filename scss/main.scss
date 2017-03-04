@@ -34,10 +34,11 @@
 @import "vendor/breakpointEngine";
 
 /*------------------------------------------------------------*\
-                     RESET / NORMALIZE
+                       BASE INCLUDES
 \*------------------------------------------------------------*/
 
 @import "base/reset";
+@import "base/typography";
 
 /*------------------------------------------------------------*\
                        THEME FILES
@@ -48,6 +49,7 @@
 @import "components/page";
 @import "components/tables";
 @import "components/header";
+@import "components/buttons";
 
 /*------------------------------------------------------------*\
                       LAYOUT INCLUDES
@@ -58,3 +60,4 @@
 \*------------------------------------------------------------*/
 
 @import "sections/skills";
+@import "sections/hero-image";

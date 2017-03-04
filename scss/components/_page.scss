@@ -55,6 +55,11 @@ main {
     margin: 0 auto;
 }
 
+.container-alt {
+    background-color: $background-variation;
+    color: $color-variation
+}
+
 .fluid-container {
     max-width: 100%;
 }
@@ -63,11 +68,6 @@ main {
     @include breakpoint-min(mobile-landscape){
         display: flex;
     }
-}
-
-.height-container {
-    max-height: 100%;
-    overflow: hidden;
 }
 
 .narrow-container {

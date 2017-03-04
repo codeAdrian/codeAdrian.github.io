@@ -30,7 +30,7 @@
         $base: $base * 1px;
     }
 
-    @return $px-value/$base*1rem;
+    @return $px-value/$base*1em;
 }
 
 /*
