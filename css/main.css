@@ -1,2 +1,831 @@
-html,body,div,span,h1,h2,h3,h4,h5,h6,p,pre,a,address,em,img,small,strong,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,footer,header,menu,nav,section{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}h2{font-family:"Audiowide",cursive;font-size:3.05176rem;line-height:3.05176rem;padding-top:1.95313rem;padding-bottom:1.5625rem}p{padding-bottom:1rem}b{font-weight:bold}.text-center{text-align:center}textarea{resize:vertical}img{width:100%;max-width:100%;font-style:italic;vertical-align:middle;-ms-interpolation-mode:bicubic;height:auto}audio,canvas,iframe,svg,video{vertical-align:middle}svg{width:100%}object,video{max-width:100%}html,body{width:100%;height:100%}html{box-sizing:border-box;font-family:"Open Sans",sans-serif;font-size:20px;overflow-y:scroll;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-text-size-adjust:none;-webkit-text-size-adjust:none}body{line-height:1.5;background-color:#f3f3f3;color:#0f1628}main{height:100%}*,*:before,*:after{box-sizing:inherit}.container{max-width:80rem;padding:0 1rem;margin:0 auto}.container-alt{background-color:#0f1628;color:#f3f3f3}.fluid-container{max-width:100%}@media (min-width: 30em){.flex-container{display:flex}}.narrow-container{max-width:48rem;padding:0 1rem;margin:0 auto}table{width:100%;border-collapse:collapse;border-spacing:0}header{background-color:#0f1628;color:#f3f3f3;font-family:"Audiowide",cursive;position:fixed;left:0;right:0;z-index:2}@media (min-width: 48em){header{top:0}}header .title{flex:1 100%;font-size:1.5625rem;padding:.512rem}@media (min-width: 30em){header .title{flex:1 25%}}header nav{flex:1 100%}@media (min-width: 30em){header nav{flex:3 75%}}@media (min-width: 30em){header ul{justify-content:flex-end}}header li{padding:1em 0.5em}@media (min-width: 80em){header li{padding:1em}}button,.button{text-decoration:none;background:#ff533d;color:#f3f3f3;padding:1em 2em;font-weight:bold;text-transform:uppercase;min-width:20em;text-align:center;display:inline-block}.container-skills li{padding:0.5em}@media (min-width: 64em){.container-skills li{padding:1em}}.container-skills .flex-container{justify-content:space-between}.container-skills svg{max-width:5em}.skills-logos{padding-bottom:1rem}.skills-list{padding-bottom:1.5625rem}.skills-list li{padding:0}.container-hero{max-height:100%;overflow:hidden;position:relative}.hero-text{position:absolute;top:50%;left:0;margin-top:-14em;width:50.41667%;text-align:right}.hero-text ul{font-size:1.95313rem;line-height:3.05176rem;font-weight:bold;padding-bottom:1.95313rem}.hero-title{font-size:4.76837rem;line-height:4.76837rem;text-transform:uppercase}
+@charset "UTF-8";
+/*
+ *  ______     _             _______          _ _    _ _
+ * |  ____|   | |           |__   __|        | | |  (_) |
+ * | |__   ___| |__   ___      | | ___   ___ | | | ___| |_
+ * |  __| / __| '_ \ / _ \     | |/ _ \ / _ \| | |/ / | __|
+ * | |___| (__| | | | (_) |    | | (_) | (_) | |   <| | |_
+ * |______\___|_| |_|\___/     |_|\___/ \___/|_|_|\_\_|\__|  v 1.0
+ *
+ *                                  Echo Team Frontend Toolkit
+ *                                  By: Adrian Bece
+ *
+ *                                      adrian.bece@inchoo.net
+ *                                      @AdrianBDesigns
+ */
+/*------------------------------------------------------------*\
+                      HELPERS INCLUDES
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                         BASIC CONFIG
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                HTML5 RESET FOR OLDER BROWSERS
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                  ELEMENT-SPECIFIC RESETS
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                   TYPOGRAPHY BASIC SETTINGS
+\*------------------------------------------------------------*/
+/*
+ * https://github.com/modularscale/modularscale-sass
+ *
+ * MODULAR-SCALE SETTINGS
+ *
+ * To se ems change $ms-base: 1rem; to $ms-base: 1em;
+ * To use pixels change $ms-base: 1rem; to $ms-base: $base-font-size;
+ */
+/*
+ * SCALES REFERENCE
+ *
+ * $minor-second:     1.067;
+ * $major-second:     1.125;
+ * $minor-third:      1.2;
+ * $major-third:      1.25;
+ * $perfect-fourth:   1.333;
+ * $augmented-fourth: 1.414;
+ * $perfect-fifth:    1.5;
+ * $minor-sixth:      1.6;
+ * $golden:           1.618;
+ * $major-sixth:      1.667;
+ * $minor-seventh:    1.778;
+ * $major-seventh:    1.875;
+ * $octave:           2;
+ * $major-tenth:      2.5;
+ * $major-eleventh:   2.667;
+ * $major-twelfth:    3;
+ * $double-octave:    4;
+ */
+/*
+ *   Notes on rem support to keep in mind
+ *   ------------------------------------
+ * - IE 9 & IE 10 do not support rem units when used in the font shorthand property (the entire declaration is ignored)
+ *   or when used on pseudo elements.
+ * - Borders sized in "rem" disappear when the page is zoomed out in Chrome.
+ * - IE 9, 10 and 11 do not support rem units when used in the "line-height" property when used on :before and :after
+ *   pseudo elements
+ */
+/*------------------------------------------------------------*\
+                          BREAKPOINTS
+\*------------------------------------------------------------*/
+/*
+ * Add Breakpoints to the list
+ * Include breakpoints as:
+ * @include bp-min(desktop-small); // min width
+ * @include bp-min-max(desktop-small $desktop-large); // min width and max-width
+ */
+/*
+ * Enable px to em conversion for breakpoints
+ */
+/*
+ * Enable CSS-To-JS connection
+ * If enabled, remember to include js/EchoToolkitEngine/breakpointParser.js in your project
+ * If disabled, remember to remove it or exclude it from your project
+ */
+/*
+ * Enable CSS-To-JS connection
+ * Which version of breakpointParser should be used
+ * 1 - simple parser - stores current breakpoint
+ * 2 - expanded parser - stores current breakpoint but splits it into array with length of 2
+ * 3 - value parser - stores current breakpoint in numerical format (converts it to px if em is used)
+ */
+/*------------------------------------------------------------*\
+                    UNIT CONVERT FUNCTIONS
+\*------------------------------------------------------------*/
+/*
+ * Convert px value to rem value based on the default font size
+ */
+/*
+ * Convert px value to em value based on the root font size
+ */
+/*
+ * Remove the unit of a length
+ * @param {Number} $number - Number to remove unit from
+ * @return {Number} - Unitless number
+ */
+/*------------------------------------------------------------*\
+                       GENERAL MIXINS
+\*------------------------------------------------------------*/
+/*
+ * Mixin to drop micro clearfix into a selector. Further reading:
+ * http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+ */
+/*------------------------------------------------------------*\
+                   POSITION MIXINS
+\*------------------------------------------------------------*/
+/*
+ * Generic position mixin for better CSS markup
+ * Used by other mixins
+ */
+/*
+ * Shorthand mixin for absolute positioning
+ * Serves as an alias for `position(absolute, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+/*
+ * Shorthand mixin for fixed positioning
+ * Serves as an alias for `position(fixed, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+/*------------------------------------------------------------*\
+                     VENDOR PREFIX MIXIN
+\*------------------------------------------------------------*/
+/*
+ * Use http://caniuse.com/ and http://shouldiprefix.com/ to determine which
+ * prefixes should be used in the mixins to avoid code bloat.
+ * @author Hugo Giraudel
+ * Sample use: @include prefix(property, value, prefix1 prefix2 prefix3);
+ * Sample use: @include prefix(transform, rotate(45deg), webkit ms);
+ * Use this mixin to build your own vendor prefixes mixin
+ */
+/*------------------------------------------------------------*\
+                      SUSY CONFIG AND MAPS
+\*------------------------------------------------------------*/
+/*
+ * Default Susy config with default values
+ * Use this as a template for adding more maps and configurations.
+ * It can be edited or removed if defaults won't be changed.
+ *
+ * More info: http://susydocs.oddbird.net/en/latest/settings/
+ */
+/*------------------------------------------------------------*\
+                      CUSTOM SUSY MAPS
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                      VENDOR INCLUDES
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+            GENERATE CSS-TO-JS PSEUDO-CLASS HINTS
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                       MIN-WIDTH BREAKPOINT
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                 MIN-WIDTH AND MAX-WIDTH BREAKPOINT
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+           MIN-WIDTH BREAKPOINT WITH SUSY GRID
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                       BASE INCLUDES
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                               RESET
+\*------------------------------------------------------------*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, pre, a, address, em, img, small, strong, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h2 {
+  font-family: "Audiowide", cursive;
+  font-size: 3.05176rem;
+  line-height: 3.05176rem;
+  padding-top: 3.05176rem;
+  padding-bottom: 2.44141rem; }
+
+h3 {
+  font-family: "Audiowide", cursive;
+  font-size: 1.95313rem;
+  line-height: 1.95313rem;
+  padding-top: 1.5625rem;
+  padding-bottom: 1.25rem; }
+
+p {
+  padding-bottom: 1rem; }
+
+b {
+  font-weight: bold; }
+
+.text-center {
+  text-align: center; }
+
+/*------------------------------------------------------------*\
+                       THEME FILES
+\*------------------------------------------------------------*/
+/*
+ * Allow only vertical resizing of textarea element
+ */
+textarea {
+  resize: vertical; }
+
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ * 4. Improve IE's resizing of images: css-tricks.com/ie-fix-bicubic-scaling-for-images
+ */
+img {
+  width: 100%;
+  /* [1] */
+  max-width: 100%;
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */
+  -ms-interpolation-mode: bicubic;
+  /* [4] */
+  height: auto; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ */
+audio,
+canvas,
+iframe,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Automatically scales images larger than the container.
+ * Consider this first: http://unstoppablerobotninja.com/entry/fluid-images/
+ */
+svg {
+  width: 100%; }
+
+object, video {
+  max-width: 100%; }
+
+/*------------------------------------------------------------*\
+                       GENERAL PAGE SETUP
+\*------------------------------------------------------------*/
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+/**
+ *
+ * 1. Set the default typography rules sourced from our default variables.
+ * 2. Force scrollbars to always be visible to prevent awkward ÔÇśjumpsÔÇÖ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Optimize font rendering
+ */
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  /* [1] */
+  font-size: 20px;
+  /* [1] */
+  overflow-y: scroll;
+  /* [2] */
+  -webkit-font-smoothing: antialiased;
+  /* [3] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [3] */
+  -ms-text-size-adjust: none;
+  /* [3] */
+  -webkit-text-size-adjust: none;
+  /* [3] */ }
+
+body {
+  line-height: 1.5;
+  /* [1] */
+  background-color: #f3f3f3;
+  color: #0f1628; }
+
+main {
+  height: 100%; }
+
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+.container {
+  max-width: 80rem;
+  padding: 0 1rem;
+  margin: 0 auto; }
+
+.container-alt {
+  background-image: url("../images/bg.png");
+  padding-bottom: 3.05176rem; }
+
+.fluid-container {
+  max-width: 100%; }
+
+@media (min-width: 30em) {
+  .flex-container {
+    display: flex; } }
+
+.narrow-container {
+  max-width: 48rem;
+  padding: 0 1rem;
+  margin: 0 auto; }
+
+/**
+ * 1. Ensure tables fill up as much space as possible.
+ */
+table {
+  width: 100%;
+  /* [1] */
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+header {
+  background-color: #0f1628;
+  color: #f3f3f3;
+  font-family: "Audiowide", cursive;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2; }
+  @media (min-width: 48em) {
+    header {
+      top: 0; } }
+  header .title {
+    flex: 1 100%;
+    font-size: 1.5625rem;
+    padding: 0.512rem; }
+    @media (min-width: 30em) {
+      header .title {
+        flex: 1 25%; } }
+  header nav {
+    flex: 1 100%; }
+    @media (min-width: 30em) {
+      header nav {
+        flex: 3 75%; } }
+  @media (min-width: 30em) {
+    header ul {
+      justify-content: flex-end; } }
+  header li {
+    padding: 1em 0.5em; }
+    @media (min-width: 80em) {
+      header li {
+        padding: 1em; } }
+
+button,
+.button {
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+  background: #ff533d;
+  color: #f3f3f3;
+  padding: 1em 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  min-width: 20em;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1rem; }
+  button:hover,
+  .button:hover {
+    background: #ff3c24; }
+  button:active,
+  .button:active {
+    background: #ff6a57; }
+
+/* --------------------------------
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  margin: 0 auto; }
+
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both; }
+
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+#cd-timeline::before {
+  /* this is the vertical line */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: #0f1628; }
+
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em; }
+
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px; } }
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0; }
+
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.cd-timeline-block:first-child {
+  margin-top: 0; }
+
+.cd-timeline-block:last-child {
+  margin-bottom: 0; }
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0; }
+
+  .cd-timeline-block:first-child {
+    margin-top: 0; }
+
+  .cd-timeline-block:last-child {
+    margin-bottom: 0; } }
+.cd-timeline-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #f3f3f3;
+  background: #0f1628; }
+
+/*
+.cd-timeline-img img {
+	display: block;
+	width: 24px;
+	height: 24px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -12px;
+	margin-top: -12px;
+}
+.cd-timeline-img.cd-picture {
+	background: #75ce66;
+}
+.cd-timeline-img.cd-movie {
+	background: #c03b44;
+}
+.cd-timeline-img.cd-location {
+	background: #f0ca45;
+}
+*/
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden; }
+
+  .cssanimations .cd-timeline-img.is-hidden {
+    visibility: hidden; }
+
+  .cssanimations .cd-timeline-img.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-1 0.6s;
+    -moz-animation: cd-bounce-1 0.6s;
+    animation: cd-bounce-1 0.6s; } }
+@-webkit-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1); } }
+@-moz-keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.5); }
+  60% {
+    opacity: 1;
+    -moz-transform: scale(1.2); }
+  100% {
+    -moz-transform: scale(1); } }
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5); }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
+.cd-timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: white;
+  border-radius: 0.25em;
+  padding: 1em;
+  box-shadow: 0 3px 0 #d7e4ed; }
+
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.cd-timeline-content h2 {
+  color: #303e49; }
+
+.cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  font-size: 13px;
+  font-size: 0.8125rem; }
+
+.cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
+  display: inline-block; }
+
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6; }
+
+.no-touch .cd-timeline-content .cd-read-more:hover {
+  background-color: #bac4cb; }
+
+.cd-timeline-content .cd-date {
+  float: left;
+  padding: .8em 0;
+  opacity: .7; }
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid white; }
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 45%; }
+
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: white; }
+
+  .cd-timeline-content .cd-read-more {
+    float: left; }
+
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 6px; }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right; }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: white; }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right; }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right; }
+
+  .cssanimations .cd-timeline-content.is-hidden {
+    visibility: hidden; }
+
+  .cssanimations .cd-timeline-content.bounce-in {
+    visibility: visible;
+    -webkit-animation: cd-bounce-2 0.6s;
+    -moz-animation: cd-bounce-2 0.6s;
+    animation: cd-bounce-2 0.6s; } }
+@media only screen and (min-width: 1170px) {
+  /* inverse bounce effect on even content blocks */
+  .cssanimations .cd-timeline-block:nth-child(even) .cd-timeline-content.bounce-in {
+    -webkit-animation: cd-bounce-2-inverse 0.6s;
+    -moz-animation: cd-bounce-2-inverse 0.6s;
+    animation: cd-bounce-2-inverse 0.6s; } }
+@-webkit-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px); }
+  100% {
+    -webkit-transform: translateX(0); } }
+@-moz-keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100px); }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(20px); }
+  100% {
+    -moz-transform: translateX(0); } }
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+    -moz-transform: translateX(-100px);
+    -ms-transform: translateX(-100px);
+    -o-transform: translateX(-100px);
+    transform: translateX(-100px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    -o-transform: translateX(20px);
+    transform: translateX(20px); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+@-webkit-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px); }
+  100% {
+    -webkit-transform: translateX(0); } }
+@-moz-keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100px); }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(-20px); }
+  100% {
+    -moz-transform: translateX(0); } }
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+    -moz-transform: translateX(100px);
+    -ms-transform: translateX(100px);
+    -o-transform: translateX(100px);
+    transform: translateX(100px); }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    -ms-transform: translateX(-20px);
+    -o-transform: translateX(-20px);
+    transform: translateX(-20px); }
+  100% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); } }
+/*------------------------------------------------------------*\
+                      LAYOUT INCLUDES
+\*------------------------------------------------------------*/
+/*------------------------------------------------------------*\
+                       PAGE INCLUDES
+\*------------------------------------------------------------*/
+.container-skills {
+  padding-bottom: 1.25rem; }
+  .container-skills li {
+    padding: 0.5em; }
+    @media (min-width: 64em) {
+      .container-skills li {
+        padding: 1em; } }
+  .container-skills .flex-container {
+    justify-content: space-between; }
+  .container-skills svg {
+    max-width: 5em; }
+
+.skills-list {
+  padding-bottom: 1.5625rem; }
+  .skills-list li {
+    display: inline-block;
+    padding: 0; }
+    .skills-list li:not(:last-child)::after {
+      content: ",";
+      padding-right: 0.1em; }
+    .skills-list li:last-child::after {
+      content: "."; }
+
+.container-hero {
+  max-height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15em;
+  width: 50.41667%;
+  text-align: right; }
+  .hero-text ul {
+    font-size: 1.95313rem;
+    line-height: 3.05176rem;
+    font-weight: bold;
+    padding-bottom: 1.95313rem; }
+
+.hero-title {
+  font-size: 4.76837rem;
+  line-height: 4.76837rem;
+  text-transform: uppercase; }
+
+.container-projects .wrapper {
+  padding-bottom: 2.44141rem; }
+.container-projects img {
+  padding-bottom: 1.25rem; }
+.container-projects ul {
+  max-width: 64rem;
+  margin: 0 auto; }
+  .container-projects ul:after {
+    content: "";
+    display: block;
+    clear: both; }
+.container-projects li {
+  color: #f3f3f3;
+  position: relative;
+  padding-bottom: 3.8147rem; }
+  @media (min-width: 48em) {
+    .container-projects li {
+      width: 48%;
+      float: left;
+      margin-right: 4%; }
+      .container-projects li:nth-child(even) {
+        margin-right: 0; } }
+  .container-projects li a {
+    text-decoration: none;
+    color: #f3f3f3;
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 0 1em; }
+  .container-projects li img {
+    padding: 0 1em; }
+  .container-projects li:after {
+    content: "";
+    background: #0f1628;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 37%;
+    z-index: 0; }
+  .container-projects li .hover-text {
+    display: none; }
+
 /*# sourceMappingURL=main.css.map */

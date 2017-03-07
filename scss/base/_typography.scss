@@ -2,8 +2,16 @@ h2 {
     font-family: $heading-font-family;
     @include ms-respond(font-size, 5);
     @include ms-respond(line-height, 5);
-    @include ms-respond(padding-top, 3);
-    @include ms-respond(padding-bottom, 2);
+    @include ms-respond(padding-top, 5);
+    @include ms-respond(padding-bottom, 4);
+}
+
+h3 {
+    font-family: $heading-font-family;
+    @include ms-respond(font-size, 3);
+    @include ms-respond(line-height, 3);
+    @include ms-respond(padding-top, 2);
+    @include ms-respond(padding-bottom, 1);
 }
 
 p{

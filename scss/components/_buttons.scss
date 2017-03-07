@@ -1,5 +1,7 @@
 button,
 .button {
+    outline: 0;
+    border: 0;
     text-decoration: none;
     background: $cta;
     color: $color-variation;
@@ -9,4 +11,15 @@ button,
     min-width: px-to-em(320px);
     text-align: center;
     display: inline-block;
+    cursor: pointer;
+    @include ms-respond(font-size, 0);
+    @include ms-respond(line-height, 0);
+
+    &:hover {
+        background: darken($cta, 5%)
+    }
+
+    &:active {
+        background: lighten($cta, 5%)
+    }
 }

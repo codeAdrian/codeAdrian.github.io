@@ -56,8 +56,10 @@ main {
 }
 
 .container-alt {
-    background-color: $background-variation;
-    color: $color-variation
+    //background-color: $background-variation;
+    //color: $color-variation;
+    background-image: url("../images/bg.png");
+    @include ms-respond(padding-bottom, 5);
 }
 
 .fluid-container {

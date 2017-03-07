@@ -1,0 +1,60 @@
+.container-projects {
+    .wrapper {
+        @include ms-respond(padding-bottom, 4);
+    }
+
+    img {
+        @include ms-respond(padding-bottom, 1);
+    }
+
+    ul {
+         @include clearfix();
+        max-width: px-to-rem(map_get($breakpoints, desktop-medium));
+        margin: 0 auto;
+    }
+
+    li {
+        color: $color-variation;
+        position: relative;
+        @include ms-respond(padding-bottom, 6);
+
+
+        @include breakpoint-min(tablet-portrait){
+            width: 48%;
+            float: left;
+            margin-right: 4%;
+
+            &:nth-child(even){
+                margin-right: 0;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-variation;
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 0 1em;
+        }
+
+        img {
+            padding: 0 1em;
+        }
+
+        &:after {
+            content: "";
+            background: $background-variation;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 37%;
+            z-index: 0;
+        }
+
+        .hover-text {
+            display: none;
+        }
+    }
+}
