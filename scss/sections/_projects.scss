@@ -1,8 +1,4 @@
 .container-projects {
-    .wrapper {
-        @include ms-respond(padding-bottom, 4);
-    }
-
     img {
         @include ms-respond(padding-bottom, 1);
     }
@@ -36,6 +32,20 @@
             position: relative;
             z-index: 1;
             padding: 0 1em;
+
+            &:hover {
+                .main-text {
+                    display: none;
+                }
+                .description {
+                    display: block;
+                }
+            }
+        }
+
+        .main-text,
+        .description {
+            min-height: px-to-em(122px, $base-font-size);
         }
 
         img {
@@ -53,8 +63,16 @@
             z-index: 0;
         }
 
-        .hover-text {
+        .description {
             display: none;
         }
+    }
+
+    .project-title {
+        @include ms-respond(padding-top, 0);
+        @include ms-respond(padding-bottom, -2);
+        @include ms-respond(font-size, 2);
+        @include ms-respond(line-height, 3);
+
     }
 }

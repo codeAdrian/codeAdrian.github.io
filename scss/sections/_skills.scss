@@ -1,5 +1,5 @@
 .container-skills {
-    @include ms-respond(padding-bottom, 1);
+    @include ms-respond(padding-bottom, 0);
     li {
         padding: 0.5em;
 

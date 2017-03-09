@@ -59,7 +59,7 @@ main {
     //background-color: $background-variation;
     //color: $color-variation;
     background-image: url("../images/bg.png");
-    @include ms-respond(padding-bottom, 5);
+    @include ms-respond(padding-bottom, 4);
 }
 
 .fluid-container {
