@@ -1,8 +1,4 @@
 .container-projects {
-    img {
-        @include ms-respond(padding-bottom, 1);
-    }
-
     ul {
          @include clearfix();
         max-width: px-to-rem(map_get($breakpoints, desktop-medium));
@@ -46,10 +42,6 @@
         .main-text,
         .description {
             min-height: px-to-em(122px, $base-font-size);
-        }
-
-        img {
-            padding: 0 1em;
         }
 
         &:after {

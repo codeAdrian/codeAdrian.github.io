@@ -20,7 +20,7 @@
 .skills-list {
     @include ms-respond(padding-bottom, 2);
     li {
-        display: inline-block;
+        display: inline;
         padding: 0;
 
         &:not(:last-child){
