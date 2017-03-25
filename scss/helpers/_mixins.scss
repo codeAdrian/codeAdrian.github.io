@@ -67,9 +67,13 @@
  * Use this mixin to build your own vendor prefixes mixin
  */
 
-@mixin prefix($property, $value, $prefixes: ()) {
+@mixin vendor-prefix($property, $value, $prefixes: ()) {
     @each $prefix in $prefixes {
         #{'-' + $prefix + '-' + $property}: $value;
     }
     #{$property}: $value;
+}
+
+@mixin box-shadow($value) {
+    @include vendor-prefix(box-shadow, $value, moz webkit);
 }

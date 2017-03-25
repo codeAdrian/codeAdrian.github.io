@@ -6,6 +6,7 @@
 
 #cd-timeline {
 	position: relative;
+	@include ms-respond(padding-bottom, 4);
 }
 #cd-timeline::before {
 	/* this is the vertical line */
@@ -13,7 +14,7 @@
 	position: absolute;
 	top: 0;
 	left: 18px;
-	height: 100%;
+	height: 90%;
 	width: 0.2em;
 	background: $background-variation;
 }

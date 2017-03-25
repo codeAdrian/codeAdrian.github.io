@@ -14,9 +14,15 @@ header {
     .title {
         flex: 1 100%;
         @include ms-respond(font-size, 2);
-        @include ms-respond(padding, -3);
         @include breakpoint-min(mobile-landscape){
             flex: 1 25%;
+        }
+
+        a {
+            display: block;
+            @include ms-respond(padding, -3);
+            text-decoration: none;
+            color: $background-default;
         }
     }
 
@@ -33,11 +39,26 @@ header {
         }
     }
 
-    li {
-        padding: 1em 0.5em;
+    .link-container {
+        a {
+            display: block;
+            padding: 1em 0.5em;
+            text-decoration: none;
+            color: $background-default;
+            @include box-shadow(inset 0 0 0 0 $leather);
+            transition: box-shadow 0.3s ease;
 
-        @include breakpoint-min(desktop-medium) {
-            padding: 1em;
+            @include breakpoint-min(desktop-medium) {
+                padding: 1em;
+            }
+
+            &:hover {
+                @include box-shadow(inset 0 -0.3em 0 0 $leather);
+            }
+
+            &.active {
+                @include box-shadow(inset 0 -5em 0 0 $leather);
+            }
         }
     }
 }

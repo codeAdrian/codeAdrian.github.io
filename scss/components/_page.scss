@@ -33,10 +33,6 @@ body {
     color: $color-main;
 }
 
-main {
-    height: 100%;
-}
-
 /**
  * More sensible default box-sizing:
  * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
@@ -50,7 +46,7 @@ main {
 }
 
 .container {
-    max-width: px-to-rem(map_get($breakpoints, desktop-large));
+    max-width: px-to-rem(map_get($breakpoints, desktop-medium));
     padding: 0 px-to-rem(20px);
     margin: 0 auto;
 }
@@ -76,4 +72,14 @@ main {
     max-width: px-to-rem(map_get($breakpoints, tablet-landscape));
     padding: 0 px-to-rem(20px);
     margin: 0 auto;
+}
+
+.reduced:not(.active){
+    li:nth-child(n+5) {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none;
 }

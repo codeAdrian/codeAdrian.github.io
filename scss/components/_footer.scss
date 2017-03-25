@@ -1,0 +1,22 @@
+footer {
+    background-color: $background-variation;
+    color: $color-variation;
+    @include ms-respond(padding-top, 2);
+    @include ms-respond(padding-bottom, 2);
+
+    small {
+        a {
+            text-decoration: none;
+            font-weight: bold;
+
+            &:visited {
+                color: $color-variation;
+            }
+
+            &:hover, &:active {
+                border-bottom: 0.1em solid $leather;
+                color: $leather;
+            }
+        }
+    }
+}
