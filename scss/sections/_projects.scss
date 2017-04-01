@@ -9,7 +9,7 @@
         color: $color-variation;
         position: relative;
         @include ms-respond(margin-bottom, 6);
-
+        min-height: (595px/1240px)*100%;
         &:hover {
             &:after {
                 background-color: lighten($background-variation, 8%);

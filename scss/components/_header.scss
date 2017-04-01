@@ -1,7 +1,6 @@
 header {
     background-color: $background-variation;
     color: $color-variation;
-    font-family: $heading-font-family;
     position: fixed;
     left: 0;
     right: 0;
@@ -12,10 +11,40 @@ header {
     }
 
     .title {
-        flex: 1 100%;
         @include ms-respond(font-size, 2);
-        @include breakpoint-min(mobile-landscape){
-            flex: 1 25%;
+        font-family: $heading-font-family;
+
+        .no-flexbox & {
+                width: 20%;
+                display: table-cell;
+
+            @include breakpoint-min(phablet-landscape){
+                width: 10%;
+            }
+
+            @include breakpoint-min(tablet-portrait){
+                width: 20%;
+            }
+        }
+
+        .flexbox & {
+            flex: 1 20%;
+
+            @include breakpoint-min(phablet-landscape){
+                flex: 1 10%;
+            }
+
+            @include breakpoint-min(tablet-portrait){
+                flex: 1 25%;
+            }
+        }
+
+        .title-text {
+            display: none;
+
+            @include breakpoint-min(tablet-portrait){
+                display: inline-block;
+            }
         }
 
         a {
@@ -23,23 +52,66 @@ header {
             @include ms-respond(padding, -3);
             text-decoration: none;
             color: $background-default;
+
+            @include breakpoint-min-max(mobile-minimum, tablet-portrait){
+                background-image: url("../images/codeAdrian_logo.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: px-to-rem(40px);
+                @include ms-respond(margin-top, -1);
+            }
         }
     }
 
     nav {
-        flex: 1 100%;
-        @include breakpoint-min(mobile-landscape){
-            flex: 3 75%;
+        text-transform: uppercase;
+
+        .no-flexbox & {
+            width: 80%;
+            display: table-cell;
+            text-align: right;
+
+            @include breakpoint-min(phablet-landscape){
+                width: 90%;
+            }
+
+            @include breakpoint-min(tablet-portrait){
+                width: 80%;
+            }
+        }
+
+        .flexbox &  {
+            flex: 4 80%;
+
+            @include breakpoint-min(phablet-landscape){
+                flex: 9 90%;
+            }
+
+            @include breakpoint-min(tablet-portrait){
+                flex: 3 75%;
+            }
         }
     }
 
     ul {
-        @include breakpoint-min(mobile-landscape){
+        .flexbox & {
             justify-content: flex-end;
+        }
+
+        .no-flexbox & {
+            display: block;
+            width: 100%;
+
+            li {
+                display: inline-block;
+            }
         }
     }
 
     .link-container {
+        font-weight: lighter;
+        letter-spacing: px-to-em(1px, $base-font-size);
+
         a {
             display: block;
             padding: 1em 0.5em;
@@ -47,6 +119,11 @@ header {
             color: $background-default;
             @include box-shadow(inset 0 0 0 0 $leather);
             transition: box-shadow 0.3s ease;
+
+            @include breakpoint-min-max(mobile-minimum, tablet-landscape){
+                padding: 1.5em 1em;
+                @include ms-respond(font-size, -1);
+            }
 
             @include breakpoint-min(desktop-medium) {
                 padding: 1em;
@@ -58,6 +135,19 @@ header {
 
             &.active {
                 @include box-shadow(inset 0 -5em 0 0 $leather);
+            }
+        }
+
+        &:last-child {
+            text-transform: capitalize;
+            letter-spacing: 0;
+
+            a {
+                @include box-shadow(inset 0 0 0 0 $cta);
+
+                &:hover {
+                    @include box-shadow(inset 0 -0.3em 0 0 $cta);
+                }
             }
         }
     }

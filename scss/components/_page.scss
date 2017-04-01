@@ -47,7 +47,8 @@ body {
 
 .container {
     max-width: px-to-rem(map_get($breakpoints, desktop-medium));
-    padding: 0 px-to-rem(20px);
+    padding-left: px-to-rem(20px);
+    padding-right: px-to-rem(20px);
     margin: 0 auto;
 }
 
@@ -62,9 +63,15 @@ body {
     max-width: 100%;
 }
 
-.flex-container {
-    @include breakpoint-min(mobile-landscape){
+.flexbox {
+    .flex-container {
         display: flex;
+    }
+}
+
+.no-flexbox {
+    .flex-container {
+        display: table;
     }
 }
 
@@ -73,9 +80,16 @@ body {
     padding: 0 px-to-rem(20px);
     margin: 0 auto;
 }
+.js {
+    .reduced:not(.active){
+        li:nth-child(n+5) {
+            display: none;
+        }
+    }
+}
 
-.reduced:not(.active){
-    li:nth-child(n+5) {
+.no-js {
+    .button-container {
         display: none;
     }
 }

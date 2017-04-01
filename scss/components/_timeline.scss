@@ -4,11 +4,11 @@
 	clear: both;
 }
 
-#cd-timeline {
+.cd-container {
 	position: relative;
 	@include ms-respond(padding-bottom, 4);
 }
-#cd-timeline::before {
+.cd-container::before {
 	/* this is the vertical line */
 	content: '';
 	position: absolute;

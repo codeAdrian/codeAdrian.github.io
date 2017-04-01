@@ -8,8 +8,22 @@
         }
     }
 
-    .flex-container {
-        justify-content: space-between;
+    .flexbox & {
+        .flex-container {
+            justify-content: space-between;
+        }
+
+        .no-flexbox & {
+            .flex-container {
+                width: 100%;
+            }
+        }
+    }
+
+    .no-flexbox & {
+        .flex-container li {
+            display: table-cell;
+        }
     }
 
     svg {
@@ -26,7 +40,7 @@
         &:not(:last-child){
             &::after{
                 content:",";
-                padding-right: 0.1em;
+                margin-right: 0.5em;
             }
         }
 
