@@ -1,10 +1,14 @@
 header {
     background-color: $background-variation;
     color: $color-variation;
-    position: fixed;
-    left: 0;
-    right: 0;
+    @include fixed($top: 0, $left: 0, $right: 0);
     z-index: 2;
+
+    @include breakpoint-min-max(mobile-minimum, mobile-landscape){
+        > .container {
+            padding: 0;
+        }
+    }
 
     @include breakpoint-min(tablet-portrait){
         top: 0;
@@ -13,6 +17,11 @@ header {
     .title {
         @include ms-respond(font-size, 2);
         font-family: $heading-font-family;
+        display: none;
+
+        @include breakpoint-min(mobile-landscape){
+            display: block;
+        }
 
         .no-flexbox & {
                 width: 20%;
@@ -59,6 +68,16 @@ header {
                 background-size: contain;
                 height: px-to-rem(40px);
                 @include ms-respond(margin-top, -1);
+
+                @include breakpoint-min-max(mobile-minimum, mobile-landscape){
+                    height: px-to-rem(25px);
+                    @include ms-respond(margin-top, -4);
+                }
+
+                @include breakpoint-min-max(mobile-landscape, tablet-landscape){
+                    height: px-to-rem(30px);
+                    @include ms-respond(margin-top, -3);
+                }
             }
         }
     }
@@ -95,7 +114,10 @@ header {
 
     ul {
         .flexbox & {
-            justify-content: flex-end;
+            justify-content: space-around;
+            @include breakpoint-min(mobile-landscape){
+                justify-content: flex-end;
+            }
         }
 
         .no-flexbox & {
@@ -120,8 +142,25 @@ header {
             @include box-shadow(inset 0 0 0 0 $leather);
             transition: box-shadow 0.3s ease;
 
-            @include breakpoint-min-max(mobile-minimum, tablet-landscape){
-                padding: 1.5em 1em;
+            @include breakpoint-min-max(mobile-minimum, phablet-portrait) {
+                text-transform: uppercase;
+
+                span {
+                    display: none;
+                }
+            }
+
+            @include breakpoint-min-max(mobile-minimum, mobile-landscape){
+                padding: 1em 0.5em;
+            }
+
+            @include breakpoint-min-max(mobile-minimum, tablet-portrait){
+                padding: 1.25em 0.75em;
+                @include ms-respond(font-size, -2);
+            }
+
+            @include breakpoint-min-max(tablet-portrait, desktop-small){
+                padding: 1.5em 0.75em;
                 @include ms-respond(font-size, -1);
             }
 

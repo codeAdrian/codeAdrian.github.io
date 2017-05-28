@@ -47,14 +47,17 @@ body {
 
 .container {
     max-width: px-to-rem(map_get($breakpoints, desktop-medium));
-    padding-left: px-to-rem(20px);
-    padding-right: px-to-rem(20px);
     margin: 0 auto;
+    padding-left: px-to-rem(10px);
+    padding-right: px-to-rem(10px);
+
+    @include breakpoint-min(mobile-landscape){
+        padding-left: px-to-rem(20px);
+        padding-right: px-to-rem(20px);
+    }
 }
 
 .container-alt {
-    //background-color: $background-variation;
-    //color: $color-variation;
     background-image: url("../images/bg.png");
     @include ms-respond(padding-bottom, 4);
 }
@@ -77,8 +80,15 @@ body {
 
 .narrow-container {
     max-width: px-to-rem(map_get($breakpoints, tablet-landscape));
-    padding: 0 px-to-rem(20px);
     margin: 0 auto;
+
+    padding-left: px-to-rem(10px);
+    padding-right: px-to-rem(10px);
+
+    @include breakpoint-min(mobile-landscape){
+        padding-left: px-to-rem(20px);
+        padding-right: px-to-rem(20px);
+    }
 }
 .js {
     .reduced:not(.active){

@@ -30,22 +30,3 @@
         max-width: px-to-em(100px, $base-font-size);
     }
 }
-
-.skills-list {
-    @include ms-respond(padding-bottom, 2);
-    li {
-        display: inline;
-        padding: 0;
-
-        &:not(:last-child){
-            &::after{
-                content:",";
-                margin-right: 0.5em;
-            }
-        }
-
-        &:last-child::after{
-            content:".";
-        }
-    }
-}

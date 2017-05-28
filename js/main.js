@@ -1,14 +1,9 @@
 function toggleContainerClassAndHideButton(a, b) {
-    toggleContainerClass(a), hideButton(b)
+    toggleContainerClass(a); hideButton(b)
 }
 function toggleContainerClass(a) {
     var b = document.getElementById(a);
     b.className += " active";
-
-    var lazyLoad = new Blazy({
-        selector: 'img',
-        offset: 0
-    });
 }
 
 function hideButton(a) {

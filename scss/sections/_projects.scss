@@ -1,4 +1,13 @@
 .container-projects {
+
+    img {
+        // TODO: add more breakpoints
+        max-height: px-to-em(386px, $base-font-size);
+        @include breakpoint-min(tablet-portrait){
+            max-height: px-to-em(323px, $base-font-size);
+        }
+    }
+
     ul {
         @include clearfix();
         max-width: px-to-rem(map_get($breakpoints, desktop-medium));
