@@ -1,5 +1,6 @@
 .container-hero {
     section {
+        background-color: $fallback-color;
         background-image: url("../images/bg.png");
         @include ms-respond(padding-top, 4);
         @include ms-respond(padding-bottom, 3);
@@ -39,6 +40,12 @@
     ul {
         @include ms-respond(line-height, 3);
         @include ms-respond(padding-bottom, 3);
+        font-weight: bold;
+
+        @include breakpoint-min-max(mobile-minimum, mobile-landscape) {
+            @include ms-respond(font-size, -1);
+            @include ms-respond(line-height, 2);
+        }
 
         @include breakpoint-min(desktop-small) {
             @include ms-respond(font-size, 1);
@@ -47,14 +54,25 @@
             @include ms-respond(font-size, 3);
             @include ms-respond(line-height, 5);
         }
-        font-weight: bold;
     }
 }
 
 .hero-title {
+    text-transform: uppercase;
+
+    @include breakpoint-min-max(mobile-minimum, mobile-landscape) {
+        @include ms-respond(font-size, 2);
+        @include ms-respond(line-height, 2);
+    }
+
+
+    @include breakpoint-min-max(mobile-landscape, phablet-portrait) {
+        @include ms-respond(font-size, 4);
+        @include ms-respond(line-height, 4);
+    }
+
     @include breakpoint-min(desktop-large) {
         @include ms-respond(font-size, 7);
         @include ms-respond(line-height, 7);
     }
-    text-transform: uppercase;
 }

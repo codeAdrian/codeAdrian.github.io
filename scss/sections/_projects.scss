@@ -50,12 +50,14 @@
             z-index: 1;
             padding: 0 1em;
 
-            &:hover {
-                .main-text {
-                    display: none;
-                }
-                .description {
-                    display: block;
+            @include breakpoint-min(desktop-small){
+                &:hover {
+                    .main-text {
+                        display: none;
+                    }
+                    .description {
+                        display: block;
+                    }
                 }
             }
         }

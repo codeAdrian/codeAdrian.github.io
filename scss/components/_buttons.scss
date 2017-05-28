@@ -8,12 +8,17 @@ button,
     padding: 1em 2em;
     font-weight: bold;
     text-transform: uppercase;
-    min-width: px-to-em(320px);
     text-align: center;
     display: inline-block;
     cursor: pointer;
     @include ms-respond(font-size, 0);
     @include ms-respond(line-height, 0);
+    width: 100%;
+
+    @include breakpoint-min(mobile-landscape){
+        min-width: px-to-em(320px);
+        width: auto;
+    }
 
     &:hover {
         background: darken($cta, 5%)

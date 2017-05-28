@@ -58,6 +58,7 @@ body {
 }
 
 .container-alt {
+    background-color: $fallback-color;
     background-image: url("../images/bg.png");
     @include ms-respond(padding-bottom, 4);
 }
