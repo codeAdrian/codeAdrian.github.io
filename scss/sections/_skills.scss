@@ -1,0 +1,40 @@
+.container-skills {
+    @include ms-respond(padding-bottom, 0);
+    li {
+        padding: 0.75em;
+        flex: 1 25%;
+        text-align: center;
+
+        @include breakpoint-min(mobile-landscape){
+            padding: 0.5em;
+            flex: 1;
+        }
+
+        @include breakpoint-min(desktop-small){
+            padding: 1em;
+        }
+    }
+
+    .flexbox & {
+        .flex-container {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .no-flexbox & {
+            .flex-container {
+                width: 100%;
+            }
+        }
+    }
+
+    .no-flexbox & {
+        .flex-container li {
+            display: table-cell;
+        }
+    }
+
+    svg {
+        max-width: px-to-em(100px, $base-font-size);
+    }
+}

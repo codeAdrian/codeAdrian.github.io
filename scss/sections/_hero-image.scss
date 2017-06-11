@@ -1,0 +1,95 @@
+.container-hero {
+    section {
+        background-color: $fallback-color;
+        background-image: url("../images/bg.png");
+        @include ms-respond(padding-top, 4);
+        @include ms-respond(padding-bottom, 1);
+        padding-left: 1em;
+        padding-right: 1em;
+
+        @include breakpoint-min(desktop-small) {
+            @include ms-respond(padding-bottom, 3);
+            @include ms-respond(padding-top, 7);
+            @include ms-respond(padding-bottom, 7);
+            background-image: url("../images/hero-image.png");
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: right;
+            background-size: cover;
+        }
+
+        @include breakpoint-min(desktop-medium) {
+            @include ms-respond(padding-top, 9);
+            @include ms-respond(padding-bottom, 9);
+        }
+
+        @media screen and (min-width: 1366px) and (max-height: 968px), screen and (orientation: landscape) and (min-width: 1024px) and (max-height: 720px){
+            min-height: 100vh;
+        }
+    }
+}
+
+.hero-text {
+    text-align: center;
+
+    @include breakpoint-min(desktop-small) {
+        width: (968px/1920px)*100%;
+        text-align: right;
+    }
+
+    .social-links {
+        padding-bottom: 0;
+        @include ms-respond(padding-top, -2);
+
+        a {
+            color: $color-main;
+            text-decoration: none;
+            font-weight: bold;
+
+            &:hover,
+            &:active {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .hero-list {
+        @include ms-respond(line-height, 3);
+        @include ms-respond(padding-bottom, 3);
+        font-weight: bold;
+
+        @include breakpoint-min-max(mobile-minimum, mobile-landscape) {
+            @include ms-respond(font-size, -1);
+            @include ms-respond(line-height, 2);
+        }
+
+        @include breakpoint-min(desktop-small) {
+            @include ms-respond(font-size, 1);
+        }
+        @include breakpoint-min(desktop-large) {
+            @include ms-respond(font-size, 3);
+            @include ms-respond(line-height, 5);
+        }
+    }
+}
+
+.hero-title {
+    text-transform: uppercase;
+
+    @include breakpoint-min-max(mobile-minimum, mobile-landscape) {
+        @include ms-respond(font-size, 2);
+        @include ms-respond(line-height, 2);
+        @include ms-respond(padding-top, 0);
+    }
+
+
+    @include breakpoint-min-max(mobile-landscape, phablet-portrait) {
+        @include ms-respond(font-size, 4);
+        @include ms-respond(line-height, 4);
+    }
+
+    @include breakpoint-min(desktop-large) {
+        @include ms-respond(font-size, 7);
+        @include ms-respond(line-height, 7);
+    }
+}

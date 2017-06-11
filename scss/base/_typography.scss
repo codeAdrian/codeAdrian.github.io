@@ -1,0 +1,60 @@
+h2,
+.h2 {
+    font-family: $heading-font-family;
+
+    @include ms-respond(font-size, 3);
+    @include ms-respond(line-height, 3);
+    @include ms-respond(padding-top, 3);
+    @include ms-respond(padding-bottom, 2);
+
+    @include breakpoint-min(mobile-landscape) {
+        @include ms-respond(font-size, 5);
+        @include ms-respond(line-height, 5);
+        @include ms-respond(padding-top, 5);
+        @include ms-respond(padding-bottom, 4);
+    }
+}
+
+h3 {
+    font-family: $heading-font-family;
+    @include ms-respond(font-size, 1);
+    @include ms-respond(line-height, 1);
+    @include ms-respond(padding-top, 0);
+    @include ms-respond(padding-bottom, -1);
+
+    @include breakpoint-min(mobile-landscape) {
+        @include ms-respond(font-size, 3);
+        @include ms-respond(line-height, 3);
+        @include ms-respond(padding-top, 2);
+        @include ms-respond(padding-bottom, 1);
+    }
+}
+
+p {
+    @include ms-respond(padding-bottom, 0);
+
+    @include breakpoint-min-max(mobile-minimum, mobile-landscape) {
+        @include ms-respond(font-size, -1);
+        @include ms-respond(line-height, 1);
+        @include ms-respond(padding-bottom, -1);
+    }
+
+}
+
+b {
+    font-weight: bold;
+}
+
+small {
+    display: block;
+    @include ms-respond(font-size, -1);
+    @include ms-respond(line-height, 2);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
