@@ -13,27 +13,6 @@ footer {
         }
     }
 
-    .social-links {
-        @include ms-respond(padding-bottom, 0);
-        @include ms-respond(font-size, -1);
-        li {
-            display: inline-block;
-            vertical-align: middle;
-
-            &:not(:last-child):after{
-                content: "|";
-                display: inline-block;
-                vertical-align: middle;
-                margin: 0 0.25em;
-            }
-        }
-
-        a {
-            display: inline-block;
-            vertical-align: middle;
-        }
-    }
-
     small {
         a {
             text-decoration: none;
@@ -58,5 +37,26 @@ footer {
     svg {
         max-width: px-to-em(128px, $base-font-size);
         @include ms-respond(padding-bottom, 0);
+    }
+}
+
+.social-links {
+    @include ms-respond(padding-bottom, 0);
+    @include ms-respond(font-size, -1);
+    li {
+        display: inline-block;
+        vertical-align: middle;
+
+        &:not(:last-child):after{
+            content: "|";
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0.25em;
+        }
+    }
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
     }
 }

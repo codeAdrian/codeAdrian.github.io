@@ -5,7 +5,7 @@ button,
     text-decoration: none;
     background: $cta;
     color: $color-variation;
-    padding: 1em 2em;
+    padding: 1em;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
@@ -17,6 +17,8 @@ button,
 
     @include breakpoint-min(mobile-landscape){
         min-width: px-to-em(320px);
+        padding-left: 2em;
+        padding-right: 2em;
         width: auto;
     }
 

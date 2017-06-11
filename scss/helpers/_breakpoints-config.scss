@@ -10,17 +10,19 @@
  */
 
 $breakpoints: (
-        mobile-minimum:     0px,
-        mobile-portrait:    320px,
-        mobile-landscape:   480px,
-        phablet-portrait:   540px,
-        phablet-landscape:  680px,
-        tablet-portrait:    768px,
-        tablet-landscape:   960px,
-        desktop-small:      1024px,
-        desktop-medium:     1280px,
-        desktop-large:      1600px,
-        desktop-hd:         1920px
+        mobile-minimum:             0px,
+        mobile-portrait:            320px,
+        mobile-portrait-custom:     410px,
+        mobile-landscape:           480px,
+        phablet-portrait:           540px,
+        phablet-landscape:          680px,
+        tablet-portrait:            768px,
+        tablet-landscape:           960px,
+        desktop-small:              1024px,
+        desktop-medium:             1280px,
+        desktop-custom:             1440px,
+        desktop-large:              1600px,
+        desktop-hd:                 1920px
 );
 
 /*

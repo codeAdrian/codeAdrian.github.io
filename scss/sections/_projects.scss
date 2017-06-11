@@ -17,7 +17,7 @@
     li {
         color: $color-variation;
         position: relative;
-        @include ms-respond(margin-bottom, 6);
+        @include ms-respond(margin-bottom, 3);
         min-height: (595px/1240px)*100%;
         &:hover {
             &:after {
@@ -33,6 +33,7 @@
 
 
         @include breakpoint-min(tablet-portrait){
+            @include ms-respond(margin-bottom, 5);
             width: 48%;
             float: left;
             margin-right: 4%;

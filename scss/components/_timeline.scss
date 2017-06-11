@@ -6,15 +6,13 @@
 
 .cd-container {
 	position: relative;
-	@include ms-respond(padding-bottom, 4);
 }
 .cd-container::before {
-	/* this is the vertical line */
 	content: '';
 	position: absolute;
 	top: 0;
 	left: 18px;
-	height: 90%;
+	height: 95%;
 	width: 0.2em;
 	background: $background-variation;
 }
