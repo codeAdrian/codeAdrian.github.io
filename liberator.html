@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liberator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <script type="text/javascript" src="js/liberator.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+<section class="container">
+    <article>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h1>😸 Liberator 🐺</h1>
+        <h5>Disconnect from the Internet. Reconnect to Yourself.</h5>
+        <h6>How to use:</h6>
+        <ul>
+            <li>Set time when you want to be reminded to stop browsing.</li>
+            <li>Keep this tab open while browsing the Internet.</li>
+        </ul>
+        <hr/>
+        <form>
+            <p>When do you want me to interrupt your digital adventure?</p>
+            <input id="form_hours" type="number" min="0" max="23" value="12" onchange = "calculateApprox(getFormData(), getCurrentTime())" />
+            <input id="form_minutes" type="number" min="0" max="59" value="00" onchange = "calculateApprox(getFormData(), getCurrentTime())" />
+            <button type="button" class="button button-primary" onclick="enableTimer()">Set time</button>
+            <div>
+                <input class="" type="checkbox" id="alarm" checked="checked" />
+                <span>Play audio alarm</span>
+            </div>
+        </form>
+        <div id="message" style="display: none">
+            <p>Timer has been set. Enjoy 😄</p>
+        </div>
+        <div id="approx"></div>
+    </article>
+</section>
+</body>
+</html>
