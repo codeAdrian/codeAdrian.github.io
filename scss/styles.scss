@@ -32,20 +32,23 @@
 @import "helpers/breakpoints-config";
 @import "helpers/functions";
 @import "helpers/mixins";
+@import "helpers/colors";
 
 /*------------------------------------------------------------*\
                        THEME FILES
 \*------------------------------------------------------------*/
-
-@import "components/forms";
+@import "components/typography";
 @import "components/media";
 @import "components/page";
-@import "components/tables";
+@import "components/list";
+@import "components/containers";
 
 /*------------------------------------------------------------*\
                       LAYOUT INCLUDES
 \*------------------------------------------------------------*/
+@import "layout/header";
 
 /*------------------------------------------------------------*\
                        PAGE INCLUDES
 \*------------------------------------------------------------*/
+@import "pages/main";

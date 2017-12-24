@@ -1,0 +1,21 @@
+header {
+  justify-content: space-between;
+  @include fixed($top: 0, $left: 0, $right: 0);
+  background-color: $backgroundPrimary;
+  z-index: 9;
+  ul {
+    li {
+      &:not(:first-child) {
+        padding-left: 2em;
+      }
+    }
+
+    &.social-media-links {
+      li {
+        &:not(:first-child) {
+          padding-left: .5em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+body {
+  color: $fontColorPrimary;
+  background-color: $backgroundPrimary;
+  font-family: $fontPrimary;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fontSecondary;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h1 {
+  @include adjust-font-size-to(42px);
+  @include padding-trailer(1);
+}
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  @include padding-trailer(1);
+}

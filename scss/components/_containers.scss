@@ -1,0 +1,55 @@
+.container-flex {
+  display: flex;
+}
+
+.container-hero {
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+
+  article {
+    flex: 1;
+    text-align: right;
+  }
+
+  .image-container {
+    align-self: flex-end;
+    position: relative;
+  }
+
+  div{
+    transform: rotate(45deg);
+    transform-origin: 100%;
+
+    &:before,
+    &:after {
+      content: "";
+    }
+
+    &,&:before,&:after {
+      @include absolute($bottom: -20em, $right: 0);
+      background-color: $elementColor;
+      width: 50em;
+      height: 8em;
+      z-index: -1;
+    }
+
+    &:before {
+      bottom: 8em;
+      width: 58em;
+    }
+
+    &:after {
+      bottom: 16em;
+      width: 63em;
+    }
+  }
+
+  img {
+    margin-left: auto;
+    margin-right: 0;
+    max-height: calc(100vh - 5em);
+  }
+
+}
