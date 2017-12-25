@@ -12,28 +12,23 @@
  *                                      adrian.bece@inchoo.net
  *                                      @AdrianBDesigns
  */
-
 /*------------------------------------------------------------*\
                      RESET / NORMALIZE
 \*------------------------------------------------------------*/
-
 @import "base/normalize";
-
 /*------------------------------------------------------------*\
                       VENDOR INCLUDES
 \*------------------------------------------------------------*/
 @import '../node_modules/libsass-compass-vertical-rhythm/lib/compass_rhythm';
-
 /*------------------------------------------------------------*\
                       HELPERS INCLUDES
 \*------------------------------------------------------------*/
-
 @import "helpers/typography-config";
 @import "helpers/breakpoints-config";
 @import "helpers/functions";
 @import "helpers/mixins";
 @import "helpers/colors";
-
+@import "helpers/animations";
 /*------------------------------------------------------------*\
                        THEME FILES
 \*------------------------------------------------------------*/
@@ -42,6 +37,7 @@
 @import "components/page";
 @import "components/list";
 @import "components/containers";
+@import "components/buttons";
 
 /*------------------------------------------------------------*\
                       LAYOUT INCLUDES
@@ -51,4 +47,3 @@
 /*------------------------------------------------------------*\
                        PAGE INCLUDES
 \*------------------------------------------------------------*/
-@import "pages/main";

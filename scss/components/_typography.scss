@@ -1,7 +1,10 @@
 body {
-  color: $fontColorPrimary;
-  background-color: $backgroundPrimary;
-  font-family: $fontPrimary;
+    color: $fontColorPrimary;
+    background-color: $backgroundPrimary;
+    font-family: $fontPrimary;
+    @include adjust-font-size-to($base-font-size, 6);
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 h1,
@@ -10,19 +13,30 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $fontSecondary;
-  margin-top: 0;
-  margin-bottom: 0;
+    font-family: $fontSecondary;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 h1 {
-  @include adjust-font-size-to(42px);
-  @include padding-trailer(1);
+    @include adjust-font-size-to(120px);
+    color: $ctaColor;
 }
 
-
 p {
-  margin-top: 0;
-  margin-bottom: 0;
-  @include padding-trailer(1);
+    margin-top: 0;
+    margin-bottom: 0;
+    @include padding-trailer(1);
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid $ctaColor;
+    color: $ctaColor;
+    transition: color .3s ease;
+
+    &:hover {
+        color: darken($ctaColor,10%);
+        border-bottom-color: darken($ctaColor,10%);
+    }
 }

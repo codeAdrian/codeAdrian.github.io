@@ -1,0 +1,26 @@
+.button {
+    display: inline-block;
+    color: $fontColorSecondary;
+    background-color: $ctaColor;
+    @include rhythm-padding(2,1);
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: $fontSecondary;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    @include adjust-font-size-to(24px);
+    text-align: center;
+    letter-spacing: 1px;
+
+    .icon {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: .25em;
+        @include adjust-font-size-to(18px);
+    }
+
+    &:hover {
+        color: $fontColorSecondary;
+        background-color: darken($ctaColor,10%);
+    }
+}

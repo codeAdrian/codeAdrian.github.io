@@ -1,5 +1,5 @@
 $base-font-size: 16px;
-$base-line-height: 24px;
+$base-line-height: 4px;
 $rhythm-unit: "rem";
 $debug-vertical-rhythm: false;
 $rem-with-px-fallback: false;
@@ -9,3 +9,8 @@ $Teko: 'Teko', sans-serif;
 
 $fontPrimary: $Montserrat;
 $fontSecondary: $Teko;
+
+$light: 200;
+$normal: 400;
+$semiBold: 600;
+$bold: 800;

@@ -1,55 +1,66 @@
 .container-flex {
-  display: flex;
+    display: flex;
 }
 
 .container-hero {
-  justify-content: flex-end;
-  align-items: center;
-  height: 100vh;
-  overflow: hidden;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
 
-  article {
-    flex: 1;
-    text-align: right;
-  }
-
-  .image-container {
-    align-self: flex-end;
-    position: relative;
-  }
-
-  div{
-    transform: rotate(45deg);
-    transform-origin: 100%;
-
-    &:before,
-    &:after {
-      content: "";
+    ul {
+        @include adjust-font-size-to(30px, 14);
+        @include padding-trailer(6);
+        font-weight: $semiBold;
     }
 
-    &,&:before,&:after {
-      @include absolute($bottom: -20em, $right: 0);
-      background-color: $elementColor;
-      width: 50em;
-      height: 8em;
-      z-index: -1;
+    .button {
+        @include adjust-font-size-to(30px, 12);
     }
 
-    &:before {
-      bottom: 8em;
-      width: 58em;
+    article {
+        flex: 1;
+        text-align: right;
     }
 
-    &:after {
-      bottom: 16em;
-      width: 63em;
+    .image-container {
+        align-self: flex-end;
+        position: relative;
     }
-  }
 
-  img {
-    margin-left: auto;
-    margin-right: 0;
-    max-height: calc(100vh - 5em);
-  }
+    div {
+        transform: rotate(45deg);
+        transform-origin: 100%;
+        backface-visibility: hidden;
+
+        &:before,
+        &:after {
+            content: "";
+        }
+
+        &, &:before, &:after {
+            @include absolute($bottom: -20em, $right: 0);
+            background-color: $elementColor;
+            width: 52em;
+            height: 8em;
+            z-index: -1;
+        }
+
+        &:before {
+            bottom: 8em;
+            width: 58em;
+        }
+
+        &:after {
+            bottom: 16em;
+            width: 62em;
+        }
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: 0;
+        max-height: calc(100vh - 4em);
+    }
 
 }

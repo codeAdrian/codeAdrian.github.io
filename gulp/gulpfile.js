@@ -15,7 +15,7 @@ var jsSkinInput = '../js/_dev-files/**/*.js';
 var jsSkinOutput = '../js/';
 
 // Js min task
-gulp.task('skin-scripts', function() {
+gulp.task('skin-scripts', function () {
     return gulp.src(jsSkinInput)
         .pipe(uglify())
         .pipe(rename({
@@ -40,22 +40,22 @@ gulp.task('sass', function () {
 });
 
 // Sass file watcher
-gulp.task('sass-watch', function() {
+gulp.task('sass-watch', function () {
     return gulp
-        .watch([cssInput, cssOutput],['sass'])
+        .watch([cssInput, cssOutput], ['sass'])
         // When there is a change, log a message in the console
-        .on('change', function(event) {
+        .on('change', function (event) {
             console.log('Css File ' + event.path + ' was ' + event.type + ', running tasks...');
         })
 });
 
 // Js file watcher
-gulp.task('skin-scripts-watch', function() {
+gulp.task('skin-scripts-watch', function () {
     return gulp
     // Watch the js input folder for change
-        .watch([jsSkinInput,jsSkinOutput], ['skin-scripts'])
+        .watch([jsSkinInput, jsSkinOutput], ['skin-scripts'])
         // log a message in the console
-        .on('change', function(event) {
+        .on('change', function (event) {
             console.log('Js File ' + event.path + ' was ' + event.type + ', running tasks...');
         });
 });

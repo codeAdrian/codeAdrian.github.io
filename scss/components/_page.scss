@@ -7,13 +7,11 @@ body {
     height: 100%;
 }
 
-@if($debug-vertical-rhythm){
-    body{
+@if ($debug-vertical-rhythm) {
+    body {
         @include debug-vertical-alignment;
     }
 }
-
-@include establish-baseline;
 
 /**
  * More sensible default box-sizing:
