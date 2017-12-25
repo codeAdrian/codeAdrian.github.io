@@ -1,6 +1,6 @@
 header {
     justify-content: space-between;
-    border-bottom: 1px solid $backgroundSeconary;
+    border-bottom: 1px solid $backgroundTertiary;
     @include fixed($top: 0, $left: 0, $right: 0);
     background-color: $backgroundPrimary;
     z-index: 9;

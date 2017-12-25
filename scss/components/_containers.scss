@@ -62,5 +62,20 @@
         margin-right: 0;
         max-height: calc(100vh - 4em);
     }
+}
 
+.container-secondary {
+    background-color: $backgroundSecondary;
+}
+
+.container-pattern {
+    background-image: url("../images/pattern.jpg");
+}
+
+.container-subtitle {
+    text-align: center;
+    @include adjust-font-size-to(48px, 18);
+    max-width: 768px;
+    margin: 0 auto;
+    @include rhythm-padding(10, 20);
 }
