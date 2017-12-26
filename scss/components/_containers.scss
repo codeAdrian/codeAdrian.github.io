@@ -84,6 +84,7 @@
     max-width: px-to-em(768px, 48);
     margin: 0 auto;
     @include rhythm-padding(10, 20);
+    font-weight: $normal;
 }
 
 .containerFeatures {
@@ -144,7 +145,7 @@
     }
 
     &__textContainer {
-        @include rhythm-padding(10);
+        @include rhythm-padding(8, 4);
         flex: 7;
 
         div {
@@ -157,4 +158,43 @@
 .containerWork {
     @include padding-trailer(20);
     text-align: center;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: px-to-em(1024px, $base-font-size);
+    }
+
+    &__card {
+        flex: 1 50%;
+        max-width: 48%;
+        padding-bottom: 14%;
+        @include margin-trailer(15);
+
+        a {
+            display: block;
+            height: 100%;
+            border-bottom-width: 0;
+            color: $fontColorPrimary;
+
+            &:hover {
+                .containerSecondary {
+                    box-shadow: inset 0 0 0 15em rgba(darken($backgroundSecondary,50%),.3);
+                }
+            }
+        }
+
+        div {
+            box-shadow: inset 0 0 0 15em rgba(darken($backgroundSecondary,50%),0);
+            transition: box-shadow 0.3s ease;
+            @include padding-leader(5);
+            min-height: 100%;
+        }
+
+        img {
+            margin-top: -27%;
+        }
+    }
 }

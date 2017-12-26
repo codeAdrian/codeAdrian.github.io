@@ -1,0 +1,21 @@
+.footer {
+    @include rhythm-padding(10);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        max-width: px-to-em(1024px, $base-font-size);
+        margin: 0 auto;
+        @include padding-trailer(15);
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__title {
+        @include adjust-font-size-to(24px);
+        @include padding-trailer(2);
+        @include margin-trailer(3);
+    }
+}

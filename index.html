@@ -7,7 +7,6 @@
     <meta name="description"
           content="My name is Adrian Bece. I am a Frontend Developer specializing in eCommerce. I am currently working at Inchoo - a full service eCommerce agency. This website contains info about me, my bio, my CV and projects I've worked on.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="./images/favicons/apple-touch-icon-57x57.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./images/favicons/apple-touch-icon-114x114.png"/>
@@ -28,7 +27,7 @@
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Teko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Teko" rel="stylesheet">
 </head>
 <body>
 <header class="header">
@@ -107,7 +106,7 @@
         <article class="containerAbout__imagesContainer">
             <div><img src="images/about-me.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></div>
         </article>
-        <article class="containerSecondary containerSecondary containerAbout__textContainer">
+        <article class="containerSecondary containerAbout__textContainer">
             <div>
                 <h2 class="containerAbout__title">About me</h2>
                 <p>My name is Adrian Bece. I am a Frontend Web Developer specializing in eCommerce. I am currently
@@ -127,18 +126,55 @@
     </section>
     <section class="containerWork">
         <h2 class="containerWork__title">Featured Professional Work And Personal Projects</h2>
-        <article>
-            <div></div>
+        <article class="containerWork__wrapper">
+            <ul class="containerWork__list">
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3>Zee & Co</h3>
+                            <p>Inchoo Project</p>
+                        </div>
+                        <img src="images/project-zee.png" />
+                    </a>
+                </li>
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3>Zee & Co</h3>
+                            <p>Inchoo Project</p>
+                        </div>
+                        <img src="images/project-zee.png" />
+                    </a>
+                </li>
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3>Zee & Co</h3>
+                            <p>Inchoo Project</p>
+                        </div>
+                        <img src="images/project-zee.png" />
+                    </a>
+                </li>
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3>Zee & Co</h3>
+                            <p>Inchoo Project</p>
+                        </div>
+                        <img src="images/project-zee.png" />
+                    </a>
+                </li>
+            </ul>
         </article>
-        <article>
-            <a href="#"></a>
+        <article class="containerWork__buttonWrapper">
+            <a class="button" href="#">Load projects</a>
         </article>
     </section>
 </main>
-<footer>
-    <div class="container-flex">
+<footer class="footer containerSecondary containerSecondary--pattern">
+    <div class="footer__wrapper">
         <div>
-            <h2>Get In Touch</h2>
+            <h2 class="footer__title">Get In Touch</h2>
             <ul>
                 <li>LinkedIn</li>
                 <li>Twitter</li>
@@ -148,7 +184,7 @@
             </ul>
         </div>
         <div>
-            <h2>Get In Touch</h2>
+            <h2 class="footer__title">Get In Touch</h2>
             <ul>
                 <li>LinkedIn</li>
                 <li>Twitter</li>
@@ -158,17 +194,7 @@
             </ul>
         </div>
         <div>
-            <h2>My Latest Articles</h2>
-            <ul>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>Email</li>
-                <li>Inchoo Blog</li>
-            </ul>
-        </div>
-        <div>
-            <h2>My Latest Articles</h2>
+            <h2 class="footer__title">My Latest Articles</h2>
             <ul>
                 <li>LinkedIn</li>
                 <li>Twitter</li>
@@ -178,13 +204,13 @@
             </ul>
         </div>
     </div>
-    <div>
-        <div>
+    <div class="footer__info">
+        <p>
             Designed and made with <3 by Adrian Bece
-        </div>
-        <div>
+        </p>
+        <p>
             Created using HTML, CSS, Sass, JS.
-        </div>
+        </p>
     </div>
 </footer>
 <script src=""></script>
