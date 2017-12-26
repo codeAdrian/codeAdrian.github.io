@@ -23,10 +23,21 @@ h1 {
     color: $ctaColor;
 }
 
+h2 {
+    @include adjust-font-size-to(48px);
+    @include margin-trailer(5);
+    display: inline-block;
+    border-bottom: 2px solid $ctaColor;
+}
+
+h3 {
+    @include adjust-font-size-to(24px);
+}
+
 p {
     margin-top: 0;
     margin-bottom: 0;
-    @include padding-trailer(1);
+    @include padding-trailer(4);
 }
 
 a {

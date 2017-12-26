@@ -1,0 +1,9 @@
+$mobile-portrait: breakpointToEm(320px);
+$mobile-landscape: breakpointToEm(568px);
+
+$tablet-portrait: breakpointToEm(768px);
+
+$desktop-small: breakpointToEm(1024px);
+$desktop-medium: breakpointToEm(1280px);
+$desktop-large: breakpointToEm(1440px);
+$desktop-largest: breakpointToEm(1920px);

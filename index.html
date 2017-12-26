@@ -31,14 +31,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Teko" rel="stylesheet">
 </head>
 <body>
-<header class="container-flex">
-    <ul class="container-flex">
+<header class="header">
+    <ul class="header__linksList">
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Work</a></li>
         <li><a href="#">Contact</a></li>
     </ul>
-    <ul class="container-flex social-media-links">
+    <ul class="header__linksList header__linksList--socialMedia">
         <li><a href="#">Twitter</a></li>
         <li><a href="#">LinkedIn</a></li>
         <li><a href="#">GitHub</a></li>
@@ -46,10 +46,10 @@
     </ul>
 </header>
 <main>
-    <section class="container-flex container-hero">
-        <article>
-            <h1>ADRIAN BECE</h1>
-            <ul>
+    <section class="containerHero">
+        <article class="containerHero__wrapper containerHero__wrapper--text">
+            <h1 class="containerHero__title">ADRIAN BECE</h1>
+            <ul class="containerHero__list">
                 <li>Frontend Developer</li>
                 <li>Certified Magento Developer</li>
                 <li>Loves Rock and Metal Music</li>
@@ -57,60 +57,76 @@
                 <li>Adores Calvin & Hobbes Comics</li>
                 <li>Aspiring Air Pistol Marksman</li>
             </ul>
-            <a class="button" href="#">Read My CV <span class="icon">►</span></a>
+            <a class="button containerHero__button" href="#">Read My CV <span class="button__icon">►</span></a>
         </article>
-        <article class="image-container">
-            <div></div>
-            <img src="images/hero/hero-image-d1x.png" alt="Adrian Bece Photo"/>
+        <article class="containerHero__wrapper containerHero__wrapper--imageContainer">
+            <div class="containerHero__background"></div>
+            <img class="containerHero__image" src="images/hero/hero-image-d1x.png" alt="Adrian Bece Photo"/>
         </article>
     </section>
-    <section class="container-secondary container-pattern">
-        <article class="container-subtitle">
+    <section class="containerSecondary containerSecondary--pattern">
+        <article class="containerSubtitle">
             <p>
-                Hi, my name is Adrian. I’m passionate about creating <strong>beautiful</strong> and <strong>functional</strong> websites and I focus on
+                Hi, my name is Adrian. I’m passionate about creating <strong>beautiful</strong> and
+                <strong>functional</strong> websites and I focus on
                 writing <strong>clean</strong> and <strong>efficient</strong> code.
             </p>
         </article>
     </section>
-    <section class="container-flex">
-        <article><span>Icon</span>
-            <h3>Column 1</h3>
-            <div>Content</div>
+    <section class="containerFeatures">
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+            <h3 class="containerFeatures__title">eCommerce Development</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
+                gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
+            </div>
         </article>
-        <article><span>Icon</span>
-            <h3>Column 2</h3>
-            <div>Content</div>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+            <h3 class="containerFeatures__title">Frontend Development</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
+                gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
+            </div>
         </article>
-        <article><span>Icon</span>
-            <h3>Column 3</h3>
-            <div>Content</div>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+            <h3 class="containerFeatures__title">Javascript Development</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
+                gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
+            </div>
         </article>
-        <article><span>Icon</span>
-            <h3>Column 4</h3>
-            <div>Content</div>
-        </article>
-    </section>
-    <section>
-        <article>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </article>
-        <article>
-            <h2>About me</h2>
-            <p>My name is Adrian Bece. I am a Frontend Web Developer specializing in eCommerce. I am currently working
-                at Inchoo - a full service eCommerce agency. I live in Osijek, Croatia. I graduated at Faculty of
-                Electrical Engineering in Osijek in 2015 where I've earned the Master's degree in computer science. In
-                2016 I have became a Certified Magento Frontend Developer.</p>
-            <p>I have worked at several notable projects for high-profile clients while working at Inchoo. So far, I've
-                worked with Magento 1, Magento 2 and Wordpress. Previously, I have worked on several notable personal
-                projects ranging from website specializing of ordering customized pizza to various simple games and
-                image-processing software.</p>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+            <h3 class="containerFeatures__title">Frontend &amp; UX Audits</h3>
+            <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
+                gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
+            </div>
         </article>
     </section>
-    <section>
-        <h2>Featured Professional Work And Personal Projects</h2>
+    <section class="containerAbout">
+        <article class="containerAbout__imagesContainer">
+            <div><img src="images/about-me.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></div>
+        </article>
+        <article class="containerSecondary containerSecondary containerAbout__textContainer">
+            <div>
+                <h2 class="containerAbout__title">About me</h2>
+                <p>My name is Adrian Bece. I am a Frontend Web Developer specializing in eCommerce. I am currently
+                    working
+                    at Inchoo - a full service eCommerce agency. I live in Osijek, Croatia. I graduated at Faculty of
+                    Electrical Engineering in Osijek in 2015 where I've earned the Master's degree in computer science.
+                    In
+                    2016 I have became a Certified Magento Frontend Developer.</p>
+                <p>I have worked at several notable projects for high-profile clients while working at Inchoo. So far,
+                    I've
+                    worked with Magento 1, Magento 2 and Wordpress. Previously, I have worked on several notable
+                    personal
+                    projects ranging from website specializing of ordering customized pizza to various simple games and
+                    image-processing software.</p>
+            </div>
+        </article>
+    </section>
+    <section class="containerWork">
+        <h2 class="containerWork__title">Featured Professional Work And Personal Projects</h2>
         <article>
             <div></div>
         </article>

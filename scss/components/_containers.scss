@@ -1,34 +1,37 @@
-.container-flex {
+.containerHero {
     display: flex;
-}
-
-.container-hero {
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
     overflow: hidden;
 
-    ul {
+    &__list {
         @include adjust-font-size-to(30px, 14);
         @include padding-trailer(6);
         font-weight: $semiBold;
     }
 
-    .button {
+    &__button {
         @include adjust-font-size-to(30px, 12);
     }
 
-    article {
+    &__wrapper {
         flex: 1;
         text-align: right;
+
+        &--imageContainer {
+            align-self: flex-end;
+            position: relative;
+        }
     }
 
-    .image-container {
-        align-self: flex-end;
-        position: relative;
+    &__image {
+        margin-left: auto;
+        margin-right: 0;
+        max-height: calc(100vh - 4em);
     }
 
-    div {
+    &__background {
         transform: rotate(45deg);
         transform-origin: 100%;
         backface-visibility: hidden;
@@ -39,6 +42,11 @@
         }
 
         &, &:before, &:after {
+            animation: fade-in-out;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
             @include absolute($bottom: -20em, $right: 0);
             background-color: $elementColor;
             width: 52em;
@@ -49,33 +57,104 @@
         &:before {
             bottom: 8em;
             width: 58em;
+            animation-delay: .7s;
+            animation-duration: 1.641s;
         }
 
         &:after {
             bottom: 16em;
             width: 62em;
+            animation-delay: 1.13s;
+            animation-duration: 1.217s;
+        }
+    }
+}
+
+.containerSecondary {
+    background-color: $backgroundSecondary;
+
+    &--pattern {
+        background-image: url("../images/pattern.jpg");
+    }
+}
+
+.containerSubtitle {
+    text-align: center;
+    @include adjust-font-size-to(48px, 18);
+    max-width: px-to-em(768px, 48);
+    margin: 0 auto;
+    @include rhythm-padding(10, 20);
+}
+
+.containerFeatures {
+    display: flex;
+    justify-content: center;
+    @include padding-trailer(30);
+    margin-top: px-to-em(-55px, $base-font-size);
+    max-width: px-to-em(1024px, $base-font-size);
+    margin-left: auto;
+    margin-right: auto;
+
+    &__title {
+        text-align: center;
+        @include padding-trailer(2);
+        @include margin-trailer(3);
+        border-bottom: 2px solid $ctaColor;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &:not(:first-child){
+            padding-left: 2em;
+        }
+
+        &:after {
+            content: "";
+            @include absolute($bottom:0,$left:0,$right:0);
+            width:75%;
+            height: .5em;
+            margin: 0 auto;
+            box-shadow: 0 2.5em 15px 1px rgba($Nero,.1);
+            border-radius: 100%;
         }
     }
 
-    img {
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-left: auto;
-        margin-right: 0;
-        max-height: calc(100vh - 4em);
+        margin-right: auto;
+        @include margin-trailer(2);
+        width: px-to-em(110px, $base-font-size);
+        height: px-to-em(110px, $base-font-size);
+        border-radius: 100%;
+        background-color: $backgroundPrimary;
     }
 }
 
-.container-secondary {
-    background-color: $backgroundSecondary;
+.containerAbout {
+    display: flex;
+    align-items: center;
+    @include padding-trailer(20);
+
+    &__imagesContainer {
+        flex: 5;
+    }
+
+    &__textContainer {
+        @include rhythm-padding(10);
+        flex: 7;
+
+        div {
+            padding-left: 4em;
+            max-width: px-to-em(768px, $base-font-size);
+        }
+    }
 }
 
-.container-pattern {
-    background-image: url("../images/pattern.jpg");
-}
-
-.container-subtitle {
+.containerWork {
+    @include padding-trailer(20);
     text-align: center;
-    @include adjust-font-size-to(48px, 18);
-    max-width: 768px;
-    margin: 0 auto;
-    @include rhythm-padding(10, 20);
 }
