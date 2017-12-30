@@ -3,7 +3,6 @@
     justify-content: flex-end;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 
     &__list {
         @include adjust-font-size-to(30px, 14);
@@ -47,23 +46,23 @@
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
             animation-direction: alternate;
-            @include absolute($bottom: -20em, $right: 0);
+            @include absolute($bottom: -50%, $right: 0);
             background-color: $elementColor;
-            width: 52em;
-            height: 8em;
+            width: 104%;
+            height: 45%;
             z-index: -1;
         }
 
         &:before {
-            bottom: 8em;
-            width: 58em;
+            bottom: 45%;
+            width: 110%;
             animation-delay: .7s;
             animation-duration: 1.641s;
         }
 
         &:after {
-            bottom: 16em;
-            width: 62em;
+            bottom: 90%;
+            width: 118%;
             animation-delay: 1.13s;
             animation-duration: 1.217s;
         }
@@ -105,6 +104,7 @@
 
     &__wrapper {
         position: relative;
+        flex: 1;
 
         &:not(:first-child){
             padding-left: 2em;
@@ -141,9 +141,9 @@
 }
 
 .containerAbout {
+    @include padding-trailer(10);
     display: flex;
     align-items: center;
-    @include padding-trailer(20);
 
     &__imagesContainer {
         flex: 5;
@@ -161,26 +161,42 @@
 }
 
 .containerWork {
-    @include padding-trailer(20);
+    @include padding-leader(10);
+    @include padding-trailer(15);
     text-align: center;
 
+    &__containerToggle:not(&__containerToggle--extended) {
+        .containerWork__list {
+            li:nth-child(n+7){
+                display: none;
+            }
+        }
+    }
+
     &__title {
-        @include margin-trailer(10);
+        @include margin-trailer(12);
     }
 
     &__list {
+        padding: 0 1.5em;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 0 auto;
-        max-width: px-to-em(1024px, $base-font-size);
+        @include margin-trailer(3);
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__card {
-        flex: 1 50%;
-        max-width: 48%;
-        padding-bottom: 14%;
-        @include margin-trailer(15);
+        flex: 1 33.333%;
+        max-width: 32%;
+        padding-bottom: 9%;
+        @include margin-trailer(10);
+
+        &Title{
+            @include adjust-font-size-to(36px);
+            @include margin-trailer(2);
+        }
 
         a {
             display: block;
@@ -203,7 +219,9 @@
         }
 
         img {
-            margin-top: -27%;
+            margin-top: -29%;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }

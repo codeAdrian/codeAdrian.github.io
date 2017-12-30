@@ -19,7 +19,7 @@ header {
             border-bottom-width: 0;
             color: $fontColorPrimary;
             box-shadow: inset 0 0 0 0 $sectionHoverColor;
-            transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease, color .3s ease;
 
             &:hover {
                 box-shadow: inset 0 -3px 0 0 $sectionHoverColor;
@@ -29,6 +29,11 @@ header {
             &--active:hover {
                 color: $sectionActiveColor;
                 box-shadow: inset 0 -3px 0 0 $sectionActiveColor;
+            }
+
+            &--scrolling:not(.navigation__link--active),
+            &--scrolling:not(.navigation__link--active):hover {
+                box-shadow: inset 0 -3px 0 0 $sectionHoverColor;
             }
         }
 
