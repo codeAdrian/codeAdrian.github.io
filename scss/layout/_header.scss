@@ -1,32 +1,49 @@
-.header {
-    display: flex;
-    justify-content: space-between;
+header {
     border-bottom: 1px solid $backgroundSecondary;
     @include fixed($top: 0, $left: 0, $right: 0);
     background-color: $backgroundPrimary;
     z-index: 9;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
 
     &__linksList {
         display: flex;
+        justify-content: center;
 
-        a {
-            padding: 1em 1.5em;
+        .navigation__link {
+            padding: 1rem 1.5rem;
             display: block;
             border-bottom-width: 0;
             color: $fontColorPrimary;
-            box-shadow: inset 0 0 0 0 $ctaColor;
+            box-shadow: inset 0 0 0 0 $sectionHoverColor;
             transition: box-shadow 0.3s ease;
 
             &:hover {
-                color: $ctaColor;
-                box-shadow: inset 0 -3px 0 0 $ctaColor;
+                box-shadow: inset 0 -3px 0 0 $sectionHoverColor;
+            }
+
+            &--active,
+            &--active:hover {
+                color: $sectionActiveColor;
+                box-shadow: inset 0 -3px 0 0 $sectionActiveColor;
             }
         }
 
         &--socialMedia {
-            a {
-                padding: 1em .5em;
+            .navigation__link {
+                padding: .85rem .75rem;
+
+                &:hover {
+                    color: $sectionActiveColor;
+                    box-shadow: inset 0 -3px 0 0 $sectionActiveColor;
+                }
             }
         }
+    }
+    &__icon {
+        @include adjust-font-size-to(24px);
     }
 }

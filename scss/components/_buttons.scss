@@ -1,26 +1,36 @@
+button {
+    border-width: 0;
+    outline: 0;
+}
+
 .button {
     display: inline-block;
-    color: $fontColorSecondary;
-    background-color: $ctaColor;
     @include rhythm-padding(2,1);
     padding-left: 1em;
     padding-right: 1em;
     font-family: $fontSecondary;
     text-transform: uppercase;
     transition: background-color .3s ease;
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(36px);
     text-align: center;
     letter-spacing: 1px;
+    cursor: pointer;
+    border-bottom-width: 0;
 
-    .icon {
+    &__icon {
         display: inline-block;
         vertical-align: middle;
         padding-left: .25em;
-        @include adjust-font-size-to(18px);
+        @include adjust-font-size-to(24px);
     }
 
     &:hover {
         color: $fontColorSecondary;
         background-color: darken($ctaColor,10%);
+    }
+
+    &-cta {
+        color: $fontColorSecondary;
+        background-color: $ctaColor;
     }
 }

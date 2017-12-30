@@ -121,7 +121,7 @@
         }
     }
 
-    &__icon {
+    &__iconWrapper {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -132,6 +132,11 @@
         height: px-to-em(110px, $base-font-size);
         border-radius: 100%;
         background-color: $backgroundPrimary;
+
+        .icon {
+            color: $ctaColor;
+            @include adjust-font-size-to(48px);
+        }
     }
 }
 
@@ -158,6 +163,10 @@
 .containerWork {
     @include padding-trailer(20);
     text-align: center;
+
+    &__title {
+        @include margin-trailer(10);
+    }
 
     &__list {
         display: flex;

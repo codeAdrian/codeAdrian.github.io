@@ -30,22 +30,24 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Teko" rel="stylesheet">
 </head>
 <body>
-<header class="header">
-    <ul class="header__linksList">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-    <ul class="header__linksList header__linksList--socialMedia">
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Mail</a></li>
-    </ul>
+<header id="header">
+    <nav class="navigation">
+        <ul class="navigation__linksList" id="mainNavigation">
+            <li><a class="navigation__link navigation__link--active" href="#section__hero">Home</a></li>
+            <li><a class="navigation__link" href="#section__skills">Skills</a></li>
+            <li><a class="navigation__link" href="#section__about">About</a></li>
+            <li><a class="navigation__link" href="#section__work">Work</a></li>
+        </ul>
+        <ul class="navigation__linksList navigation__linksList--socialMedia">
+            <li><a class="navigation__link" href="#"><span class="navigation__icon icon">&#xf099;</span></a></li>
+            <li><a class="navigation__link" href="#"><span class="navigation__icon icon">&#xf0e1;</span></a></li>
+            <li><a class="navigation__link" href="#"><span class="navigation__icon icon">&#xf09b;</span></a></li>
+            <li><a class="navigation__link" href="#"><span class="navigation__icon icon">&#xf0e0;</span></a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-    <section class="containerHero">
+    <section class="section containerHero" id="section__hero">
         <article class="containerHero__wrapper containerHero__wrapper--text">
             <h1 class="containerHero__title">ADRIAN BECE</h1>
             <ul class="containerHero__list">
@@ -56,14 +58,14 @@
                 <li>Adores Calvin & Hobbes Comics</li>
                 <li>Aspiring Air Pistol Marksman</li>
             </ul>
-            <a class="button containerHero__button" href="#">Read My CV <span class="button__icon">►</span></a>
+            <a class="button button-cta containerHero__button" href="#">Read My CV <span class="icon button__icon">&#xe800;</span></a>
         </article>
         <article class="containerHero__wrapper containerHero__wrapper--imageContainer">
             <div class="containerHero__background"></div>
             <img class="containerHero__image" src="images/hero/hero-image-d1x.png" alt="Adrian Bece Photo"/>
         </article>
     </section>
-    <section class="containerSecondary containerSecondary--pattern">
+    <section class="section containerSecondary containerSecondary--pattern" id="section__skills">
         <article class="containerSubtitle">
             <p>
                 Hi, my name is Adrian. I’m passionate about creating <strong>beautiful</strong> and
@@ -73,28 +75,28 @@
         </article>
     </section>
     <section class="containerFeatures">
-        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__iconWrapper"><span class="icon">&#xe802;</span></span>
             <h3 class="containerFeatures__title">eCommerce Development</h3>
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
                 gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
             </div>
         </article>
-        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__iconWrapper"><span class="icon">&#xf2d0;</span></span>
             <h3 class="containerFeatures__title">Frontend Development</h3>
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
                 gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
             </div>
         </article>
-        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__iconWrapper"><span class="icon">&#xf2d0;</span></span>
             <h3 class="containerFeatures__title">Javascript Development</h3>
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
                 gravida eget erat. Fusce lacinia tincidunt nulla, quis pulvinar purus commodo sit amet.
             </div>
         </article>
-        <article class="containerFeatures__wrapper"><span class="containerFeatures__icon">Icon</span>
+        <article class="containerFeatures__wrapper"><span class="containerFeatures__iconWrapper"><span class="icon">&#xe803;</span></span>
             <h3 class="containerFeatures__title">Frontend &amp; UX Audits</h3>
             <div>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est ipsum, consectetur non egestas vitae,
@@ -102,7 +104,7 @@
             </div>
         </article>
     </section>
-    <section class="containerAbout">
+    <section class="section containerAbout" id="section__about">
         <article class="containerAbout__imagesContainer">
             <div><img src="images/about-me.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></div>
         </article>
@@ -124,7 +126,7 @@
             </div>
         </article>
     </section>
-    <section class="containerWork">
+    <section class="section containerWork" id="section__work">
         <h2 class="containerWork__title">Featured Professional Work And Personal Projects</h2>
         <article class="containerWork__wrapper">
             <ul class="containerWork__list">
@@ -167,7 +169,7 @@
             </ul>
         </article>
         <article class="containerWork__buttonWrapper">
-            <a class="button" href="#">Load projects</a>
+            <button class="button button-cta">Show more projects <span class="icon button__icon">&#xe801;</span></button>
         </article>
     </section>
 </main>
@@ -206,14 +208,18 @@
     </div>
     <div class="footer__info">
         <p>
-            Designed and made with <3 by Adrian Bece
+            Designed and made with <span class="icon">&#xe804;</span> by Adrian Bece
         </p>
         <p>
             Created using HTML, CSS, Sass, JS.
         </p>
     </div>
 </footer>
-<script src=""></script>
-<script src=""></script>
+<script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+        crossorigin="anonymous"></script>
+<script src="./js/smoothWheel.min.js"></script>
+<script src="./js/scrollPosition.min.js"></script>
 </body>
 </html>

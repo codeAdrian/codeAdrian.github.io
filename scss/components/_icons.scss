@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.eot?2163724');
+    src: url('../font/fontello.eot?2163724#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff?2163724') format('woff'),
+    url('../font/fontello.ttf?2163724') format('truetype'),
+    url('../font/fontello.svg?2163724#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
