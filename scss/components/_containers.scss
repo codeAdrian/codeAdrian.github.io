@@ -1,16 +1,25 @@
 .containerHero {
-    @media screen and (min-width: $desktop-small) {
+    @media screen and (min-width: $tablet-portrait) {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        min-height: 100vh;
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        min-height: 0;
         height: 100vh;
     }
     overflow: hidden;
 
     &__list {
+        @media screen and (min-width: $tablet-portrait) {
+            @include adjust-font-size-to(24px, 10);
+        }
         @media screen and (min-width: $desktop-small) {
             @include adjust-font-size-to(30px, 14);
         }
+
         @include padding-trailer(6);
         font-weight: $semiBold;
     }
@@ -20,13 +29,13 @@
     }
 
     &__wrapper {
-        @media screen and (min-width: $desktop-small) {
+        @media screen and (min-width: $tablet-portrait) {
             text-align: right;
             flex: 1;
         }
 
         &--imageContainer {
-            @media screen and (min-width: $desktop-small) {
+            @media screen and (min-width: $tablet-portrait) {
                 align-self: flex-end;
             }
             position: relative;
@@ -209,8 +218,18 @@
         }
     }
 
+    &__buttonWrapper{
+       display: none;
+
+        @media screen and (min-width: $desktop-small) {
+            display: block;
+        }
+    }
+
     &__title {
         @include margin-trailer(12);
+        margin-left: .5em;
+        margin-right: .5em;
     }
 
     &__list {
