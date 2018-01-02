@@ -91,7 +91,7 @@
     @include adjust-font-size-to(32px, 12);
     padding-left: 1em;
     padding-right: 1em;
-    max-width: px-to-em(768px, 48);
+    max-width: px-to-em(868px, 48);
     margin: 0 auto;
     @include rhythm-padding(10, 20);
     font-weight: $normal;
@@ -164,7 +164,7 @@
     }
 }
 
-.containerAbout{
+.containerAbout {
     @media screen and (min-width: $desktop-small) {
         @include padding-trailer(13);
         display: flex;
