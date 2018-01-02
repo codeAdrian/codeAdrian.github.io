@@ -1,0 +1,145 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    display: block;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    display: flex;
+    left: 0;
+    top: 0;
+
+    @include clearfix();
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    height: 100%;
+    min-height: 1px;
+    display: none;
+    padding: 0 1em;
+
+    &:focus {
+        outline: none;
+    }
+
+    img {
+        display: block;
+    }
+    &.slick-loading img {
+        display: none;
+    }
+
+    &.dragging img {
+        pointer-events: none;
+    }
+
+    .slick-initialized & {
+        display: block;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+
+    .slick-vertical & {
+        display: block;
+        height: auto;
+        border: 1px solid transparent;
+    }
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    display: block;
+    height: 24px;
+    width: 24px;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    top: 50%;
+    margin-top: -15px;
+    padding: 0;
+    border: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    line-height: 1;
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.slick-dots {
+    @include rhythm-padding(8);
+    @include margin-trailer(4);
+    text-align: center;
+
+    li {
+        display: inline-block;
+        border-radius: 100%;
+        width: 1em;
+        height: 1em;
+        overflow: hidden;
+        background-color: $lightGray;
+        transition: background-color .3s ease;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 1.25em;
+        }
+
+        &.slick-active {
+            background-color: $ctaColor;
+        }
+    }
+
+    button {
+        visibility: hidden;
+        border-width: 0;
+        display: block;
+    }
+}

@@ -1,11 +1,16 @@
 .containerHero {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh;
+    @media screen and (min-width: $desktop-small) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100vh;
+    }
+    overflow: hidden;
 
     &__list {
-        @include adjust-font-size-to(30px, 14);
+        @media screen and (min-width: $desktop-small) {
+            @include adjust-font-size-to(30px, 14);
+        }
         @include padding-trailer(6);
         font-weight: $semiBold;
     }
@@ -15,11 +20,15 @@
     }
 
     &__wrapper {
-        flex: 1;
-        text-align: right;
+        @media screen and (min-width: $desktop-small) {
+            text-align: right;
+            flex: 1;
+        }
 
         &--imageContainer {
-            align-self: flex-end;
+            @media screen and (min-width: $desktop-small) {
+                align-self: flex-end;
+            }
             position: relative;
         }
     }
@@ -79,21 +88,31 @@
 
 .containerSubtitle {
     text-align: center;
-    @include adjust-font-size-to(48px, 18);
+    @include adjust-font-size-to(32px, 12);
+    padding-left: 1em;
+    padding-right: 1em;
     max-width: px-to-em(768px, 48);
     margin: 0 auto;
     @include rhythm-padding(10, 20);
     font-weight: $normal;
+
+    @media screen and (min-width: $desktop-small) {
+        @include adjust-font-size-to(48px, 18);
+    }
 }
 
 .containerFeatures {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    @include padding-trailer(30);
     margin-top: px-to-em(-55px, $base-font-size);
     max-width: px-to-em(1024px, $base-font-size);
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: $desktop-small) {
+        @include padding-trailer(30);
+    }
 
     &__title {
         text-align: center;
@@ -104,10 +123,15 @@
 
     &__wrapper {
         position: relative;
-        flex: 1;
+        flex: 1 49%;
+        outline: none;
 
-        &:not(:first-child){
-            padding-left: 2em;
+        @media screen and (min-width: $desktop-small) {
+            flex: 1;
+
+            &:not(:first-child){
+                padding-left: 2em;
+            }
         }
 
         &:after {
@@ -140,35 +164,47 @@
     }
 }
 
-.containerAbout {
-    @include padding-trailer(10);
-    display: flex;
-    align-items: center;
+.containerAbout{
+    @media screen and (min-width: $desktop-small) {
+        @include padding-trailer(13);
+        display: flex;
+        align-items: center;
 
-    &__imagesContainer {
-        flex: 5;
+        &__imagesContainer {
+            flex: 5;
+        }
     }
 
     &__textContainer {
         @include rhythm-padding(8, 4);
-        flex: 7;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
+        @media screen and (min-width: $desktop-small) {
+            padding-right: 1.5em;
+            flex: 7;
+        }
 
         div {
-            padding-left: 4em;
+            @media screen and (min-width: $desktop-small) {
+                padding-left: 1.5em;
+            }
             max-width: px-to-em(768px, $base-font-size);
         }
     }
 }
 
 .containerWork {
-    @include padding-leader(10);
+    @include padding-leader(7);
     @include padding-trailer(15);
     text-align: center;
 
-    &__containerToggle:not(&__containerToggle--extended) {
-        .containerWork__list {
-            li:nth-child(n+7){
-                display: none;
+    @media screen and (min-width: $desktop-small) {
+        &__containerToggle:not(&__containerToggle--extended) {
+            .containerWork__list {
+                li:nth-child(n+7) {
+                    display: none;
+                }
             }
         }
     }
@@ -178,20 +214,27 @@
     }
 
     &__list {
-        padding: 0 1.5em;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        @include margin-trailer(3);
-        margin-left: auto;
-        margin-right: auto;
+
+        @media screen and (min-width: $desktop-small) {
+            @include margin-trailer(3);
+            padding: 0 1.5em;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     &__card {
-        flex: 1 33.333%;
-        max-width: 32%;
-        padding-bottom: 9%;
-        @include margin-trailer(10);
+        outline: none;
+
+         @media screen and (min-width: $desktop-small) {
+             flex: 1 33.333%;
+             max-width: 32%;
+             padding-bottom: 9%;
+             @include margin-trailer(10);
+         }
 
         &Title{
             @include adjust-font-size-to(36px);
@@ -215,7 +258,12 @@
             box-shadow: inset 0 0 0 15em rgba(darken($backgroundSecondary,50%),0);
             transition: box-shadow 0.3s ease;
             @include padding-leader(5);
+            padding-bottom: 29%;
             min-height: 100%;
+
+            @media screen and (min-width: $desktop-small) {
+                padding-bottom: 0;
+            }
         }
 
         img {

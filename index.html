@@ -80,7 +80,7 @@
             </p>
         </article>
     </section>
-    <section class="containerFeatures">
+    <section class="containerFeatures" id="containerFeatures">
         <article class="containerFeatures__wrapper"><span class="containerFeatures__iconWrapper"><span class="icon">&#xe802;</span></span>
             <h3 class="containerFeatures__title">eCommerce Development</h3>
             <div>
@@ -135,7 +135,7 @@
     <section class="section containerWork" id="section__work">
         <h2 class="containerWork__title">Featured Professional Work And Personal Projects</h2>
         <article class="containerWork__wrapper containerWork__containerToggle">
-            <ul class="containerWork__list">
+            <ul class="containerWork__list" id="containerWork">
                 <li class="containerWork__card">
                     <a href="#">
                         <div class="containerSecondary containerSecondary--pattern">
@@ -181,6 +181,17 @@
                         <img src="images/project-inchoo.png"/>
                     </a>
                 </li>
+
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3 class="containerWork__cardTitle">AntiAgression</h3>
+                            <p>Inchoo Project | Magento</p>
+                        </div>
+                        <img src="images/project-aa.png"/>
+                    </a>
+                </li>
+
                 <li class="containerWork__card">
                     <a href="#">
                         <div class="containerSecondary containerSecondary--pattern">
@@ -212,16 +223,37 @@
                 <li class="containerWork__card">
                     <a href="#">
                         <div class="containerSecondary containerSecondary--pattern">
+                            <h3 class="containerWork__cardTitle">Block Runner Rampage</h3>
+                            <p>Personal Project | C#</p>
+                        </div>
+                        <img src="images/project-block.png"/>
+                    </a>
+                </li>
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
+                            <h3 class="containerWork__cardTitle">Computer Vision Projects</h3>
+                            <p>Personal Project | C++</p>
+                        </div>
+                        <img src="images/project-vision.png"/>
+                    </a>
+                </li>
+                <li class="containerWork__card">
+                    <a href="#">
+                        <div class="containerSecondary containerSecondary--pattern">
                             <h3 class="containerWork__cardTitle">Foodly</h3>
-                            <p>Personal Project | HTML, CSS, JS, PHP</p>
+                            <p>Personal Project | Web</p>
                         </div>
                         <img src="images/project-foodly.png"/>
                     </a>
                 </li>
             </ul>
             <div class="containerWork__buttonWrapper">
-                <button onclick="codeAdrianShowMore.toggle(this);" class="button button-cta">Show more projects <span
-                        class="icon button__icon">&#xe801;</span></button>
+                <button onclick="codeAdrianShowMore.toggle(this);" class="button button-cta">
+                    Show <span class="button__text--default">more</span> <span class="button__text--default">less</span> projects
+                    <span class="icon button__text--default button__icon">&#xe801;</span>
+                    <span class="icon button__text--default button__icon">&#xe801;</span>
+                </button>
             </div>
         </article>
     </section>
@@ -231,31 +263,31 @@
         <div>
             <h2 class="footer__title">Get In Touch</h2>
             <ul>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>Email</li>
-                <li>Inchoo Blog</li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Email</a></li>
+                <li><a href="http://inchoo.net/author/adrian-bece/profile/">My Articles</a></li>
             </ul>
         </div>
         <div>
-            <h2 class="footer__title">Get In Touch</h2>
+            <h2 class="footer__title">Featured Work</h2>
             <ul>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>Email</li>
-                <li>Inchoo Blog</li>
+                <li><a href="#">Zee & Co</a></li>
+                <li><a href="#">KEH Camera</a></li>
+                <li><a href="#">O'Neills</a></li>
+                <li><a href="#">AntiAgression</a></li>
+                <li><a href="http://inchoo.net/author/adrian-bece/profile/">My Articles</a></li>
             </ul>
         </div>
         <div>
             <h2 class="footer__title">My Latest Articles</h2>
             <ul>
-                <li>LinkedIn</li>
-                <li>Twitter</li>
-                <li>GitHub</li>
-                <li>Email</li>
-                <li>Inchoo Blog</li>
+                <li><a href="http://inchoo.net/magento-2/adding-voice-search-to-magento-2/">Adding Voice Search</a></li>
+                <li><a href="http://inchoo.net/magento-2/bypassing-magento-2-layout-update-restrictions-admin/">Magento 2 admin restrictions</a></li>
+                <li><a href="http://inchoo.net/ecommerce/installing-orocommerce-b2b-application/">Installing OroCommerce</a></li>
+                <li><a href="http://inchoo.net/magento-2/organizing-cms-blocks/">Organizing CMS blocks</a></li>
+                <li><a href="http://inchoo.net/magento-2/improving-accessibility/">eCommerce Accessibility</a></li>
             </ul>
         </div>
     </div>
@@ -276,5 +308,7 @@
 <script src="./js/scrollPosition.min.js"></script>
 <script src="./js/smoothScroll.min.js"></script>
 <script src="./js/showMore.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<script src="./js/main.min.js"></script>
 </body>
 </html>

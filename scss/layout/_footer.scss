@@ -1,12 +1,21 @@
 .footer {
     @include rhythm-padding(10);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 
     &__wrapper {
         display: flex;
-        justify-content: space-around;
-        max-width: px-to-em(1024px, $base-font-size);
+        max-width: px-to-em(768px, $base-font-size);
         margin: 0 auto;
-        @include padding-trailer(15);
+        @include padding-trailer(10);
+        justify-content: space-between;
+
+        a {
+            @include adjust-font-size-to(16px, 8);
+            border-bottom: 0;
+            font-weight: $semiBold;
+            color: $fontColorPrimary;
+        }
     }
 
     &__info {

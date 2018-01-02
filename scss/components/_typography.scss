@@ -20,8 +20,13 @@ h6 {
 }
 
 h1 {
-    @include adjust-font-size-to(120px);
+    @include adjust-font-size-to(72px);
+    @include padding-leader(20);
     color: $ctaColor;
+    @media screen and (min-width: $desktop-small) {
+        padding-top: 0;
+        @include adjust-font-size-to(120px);
+    }
 }
 
 h2 {
@@ -46,6 +51,7 @@ a {
     border-bottom: 1px solid $ctaColor;
     color: $ctaColor;
     transition: color .3s ease;
+    outline: none;
 
     &:hover {
         color: darken($ctaColor,10%);
