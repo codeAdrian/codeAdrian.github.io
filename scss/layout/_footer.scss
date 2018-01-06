@@ -4,11 +4,15 @@
     padding-right: 1.5em;
 
     &__wrapper {
-        display: flex;
         max-width: px-to-em(768px, $base-font-size);
         margin: 0 auto;
-        @include padding-trailer(10);
         justify-content: space-between;
+        @include padding-trailer(10);
+        display: none;
+
+        @media screen and (min-width: $mobile-landscape) {
+            display: flex;
+        }
 
         a {
             @include adjust-font-size-to(16px, 8);

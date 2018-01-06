@@ -7,6 +7,7 @@ codeAdrianMain = (function($) {
         slidesToScroll: 1,
         dots: true,
         mobileFirst: true,
+        arrows: false,
         responsive: [
             {
                 breakpoint: 768,

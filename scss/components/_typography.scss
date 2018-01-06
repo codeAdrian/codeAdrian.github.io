@@ -24,21 +24,26 @@ h1 {
     @include padding-leader(20);
     color: $ctaColor;
 
-    @media screen and (min-width: $desktop-small) {
-        @include adjust-font-size-to(72px);
+    @media screen and (min-width: $tablet-portrait) {
+        @include adjust-font-size-to(84px);
     }
 
     @media screen and (min-width: $desktop-small) {
         padding-top: 0;
-        @include adjust-font-size-to(120px);
+        @include adjust-font-size-to(110px);
     }
 }
 
 h2 {
-    @include adjust-font-size-to(48px);
+    @include adjust-font-size-to(34px);
     @include margin-trailer(5);
     display: inline-block;
     border-bottom: 2px solid $ctaColor;
+
+    @media screen and (min-width: $mobile-landscape) {
+        @include adjust-font-size-to(48px);
+    }
+
 }
 
 h3 {
