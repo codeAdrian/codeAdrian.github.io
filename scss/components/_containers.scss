@@ -242,9 +242,6 @@
 }
 
 .containerAbout {
-
-
-
     @media screen and (min-width: $desktop-small) {
         background-color: $backgroundSecondary;
         @include margin-trailer(13);
@@ -294,8 +291,31 @@
         }
     }
 
+    .button__text,
+    .button__icon {
+        &--extended {
+            display: none;
+        }
+    }
+
+    .button--active{
+        .button__text,
+        .button__icon {
+            &--default {
+                display: none;
+            }
+            &--extended {
+                display: inline-block;
+            }
+        }
+    }
+
     &__buttonWrapper{
        display: none;
+
+        .icon {
+            padding-left: .25em;
+        }
 
         @media screen and (min-width: $desktop-small) {
             display: block;

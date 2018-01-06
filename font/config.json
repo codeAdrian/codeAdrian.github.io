@@ -43,18 +43,6 @@
       "src": "fontawesome"
     },
     {
-      "uid": "9affc98d652b86628d650ee58dbf0357",
-      "css": "basket",
-      "code": 59394,
-      "src": "fontawesome"
-    },
-    {
-      "uid": "07f0832c07f3d9713fffb06c8bffa027",
-      "css": "window",
-      "code": 62160,
-      "src": "fontawesome"
-    },
-    {
       "uid": "6a06892e76b81e023da6ddfb38a26b37",
       "css": "doc",
       "code": 59395,
@@ -65,6 +53,36 @@
       "css": "heart",
       "code": 59396,
       "src": "fontawesome"
+    },
+    {
+      "uid": "e99461abfef3923546da8d745372c995",
+      "css": "cog",
+      "code": 59397,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9dc654095085167524602c9acc0c5570",
+      "css": "left-dir",
+      "code": 59399,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "80cd1022bd9ea151d554bec1fa05f2de",
+      "css": "up-dir",
+      "code": 59400,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "01c946ce2ed5500e0a918f2b3a7d1923",
+      "css": "css3",
+      "code": 61756,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e0d15ef5945000f5f264acc35494002f",
+      "css": "basket",
+      "code": 59394,
+      "src": "typicons"
     }
   ]
 }
