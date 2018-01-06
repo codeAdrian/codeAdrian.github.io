@@ -70,7 +70,7 @@
         </article>
         <article class="containerHero__wrapper containerHero__wrapper--imageContainer">
             <div class="containerHero__background"></div>
-            <img class="containerHero__image" src="images/hero/hero-image-d1x.png" alt="Adrian Bece Photo"/>
+            <img class="containerHero__image" src="images/hero/hero-image-d1x-min.png" alt="Adrian Bece Photo"/>
         </article>
     </section>
     <section class="section containerSecondary containerSecondary--pattern" id="section__skills">
@@ -125,7 +125,11 @@
     </section>
     <section class="section containerAbout" id="section__about">
         <article class="containerAbout__imagesContainer">
-            <div><img src="images/about-me.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></div>
+            <ul id="aboutImageContainer">
+                <li><img src="images/about-me-1.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                <li><img src="images/about-me-2.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                <li><img src="images/about-me-3.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+            </ul>
         </article>
         <article class="containerSecondary containerAbout__textContainer">
             <div>
@@ -288,8 +292,8 @@
             <div class="containerWork__buttonWrapper">
                 <button onclick="codeAdrianShowMore.toggle(this);" class="button button-cta">
                     Show <span class="button__text--default">more</span> <span class="button__text--extended">less</span> projects
-                    <span class="icon button__text--default button__icon--default icon-down-dir"></span>
-                    <span class="icon button__text--default button__icon--extended icon-up-dir"></span>
+                    <span class="button__icon button__icon--default icon-down-dir"></span>
+                    <span class="button__icon button__icon--extended icon-up-dir"></span>
                 </button>
             </div>
         </article>
@@ -341,6 +345,7 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+<script src="./js/responsivelyLazy.min.js"></script>
 <script src="./js/smoothWheel.min.js"></script>
 <script src="./js/scrollPosition.min.js"></script>
 <script src="./js/smoothScroll.min.js"></script>

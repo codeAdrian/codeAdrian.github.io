@@ -1,6 +1,6 @@
 var codeAdrianMain;
 codeAdrianMain = (function($) {
-    var $containerFeatures, $containerWork;
+    var $containerFeatures, $containerWork, $containerAbout;
     var containerFeaturesSlick = {
         infinite: false,
         slidesToShow: 1,
@@ -44,10 +44,25 @@ codeAdrianMain = (function($) {
         ]
     };
 
+    var containerAboutSlick = {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        autoplay: true,
+        mobileFirst: true,
+        infinite: true,
+        speed: 500,
+        autoplaySpeed: 20000,
+        fade: true,
+        cssEase: 'linear'
+    };
+
     $(function() {
         _cacheDom();
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerWork, containerWorkSlick);
+        initializeSlick($containerAbout, containerAboutSlick);
     });
 
     $(window).on('resize orientationchange', function() {
@@ -62,6 +77,7 @@ codeAdrianMain = (function($) {
     function _cacheDom(){
         $containerFeatures = $("#containerFeatures");
         $containerWork = $("#containerWork");
+        $containerAbout = $("#aboutImageContainer");
     }
 
 })(jQuery);
