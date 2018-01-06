@@ -1,0 +1,24 @@
+@keyframes jump {
+    0%, 100% {  animation-timing-function: cubic-bezier(0.45, 0, 0.9, 0.55);  }
+    0% {  transform: translate(0, 0);  }
+    50% {
+        transform: translate(0, 2em);
+        animation-timing-function: cubic-bezier(0, 0.45, 0.55, 0.9);
+    }
+    100% {  transform: translate(0, 0);  }
+}
+
+.loader {
+    position: relative;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1em;
+        height: 1em;
+        border-radius: 100%;
+        background: $backgroundSecondary;
+        animation: jump 1s linear infinite;
+    }
+}

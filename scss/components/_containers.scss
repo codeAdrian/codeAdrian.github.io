@@ -329,6 +329,8 @@
     @include padding-trailer(17);
     @include margin-trailer(10);
     text-align: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 
     @media screen and (min-width: $mobile-landscape) {
         @include padding-leader(7);
@@ -336,45 +338,13 @@
     }
 
     @media screen and (min-width: $desktop-small) {
-        @include padding-trailer(17);
+        overflow-x: hidden;
         margin-bottom: 0;
-        &__containerToggle:not(&__containerToggle--extended) {
-            .containerWork__list {
-                li:nth-child(n+7) {
-                    display: none;
-                }
-            }
-        }
-    }
 
-    .button__text,
-    .button__icon {
-        &--extended {
-            display: none;
-        }
-    }
-
-    .button--active{
-        .button__text,
-        .button__icon {
-            &--default {
-                display: none;
-            }
-            &--extended {
-                display: inline-block;
-            }
-        }
-    }
-
-    &__buttonWrapper{
-       display: none;
-
-        .icon {
-            padding-left: .25em;
-        }
-
-        @media screen and (min-width: $desktop-small) {
-            display: block;
+        &__wrapper {
+            padding: 0;
+            margin-left: -27%;
+            margin-right: -27%;
         }
     }
 
@@ -388,24 +358,10 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-
-        @media screen and (min-width: $desktop-small) {
-            @include margin-trailer(3);
-            padding: 0 1.5em;
-            margin-left: auto;
-            margin-right: auto;
-        }
     }
 
     &__card {
         outline: none;
-
-         @media screen and (min-width: $desktop-small) {
-             flex: 1 33.333%;
-             max-width: 32%;
-             padding-bottom: 9%;
-             @include margin-trailer(10);
-         }
 
         &Title{
             @include adjust-font-size-to(36px);
@@ -431,20 +387,65 @@
             @include padding-leader(5);
             padding-bottom: 29%;
             min-height: 100%;
-
-            @media screen and (min-width: $desktop-small) {
-                padding-bottom: 0;
-            }
         }
     }
 
     &__imageWrapper {
+        display: inline-block;
         margin-top: -29%;
-        margin-left: auto;
-        margin-right: auto;
         background-image: url("../images/project-bg.png");
-        padding: percentage(27/691) percentage(89/691) percentage(57/691);
+        padding: percentage(25/691) percentage(82/691) percentage(57/691);
         background-repeat: no-repeat;
         background-size: contain;
+    }
+
+    .slick-list {
+        margin-left: -2.5em;
+        margin-right: -2.5em;
+    }
+
+    .slick-slide {
+        transform: scale(.88);
+        padding: 0;
+        transform-origin: bottom center;
+        transition: transform 0.3s .2s ease,
+                    opacity 0.3s .2s ease;
+
+        img {
+            image-rendering: -moz-crisp-edges;
+            image-rendering:   -o-crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        .slick-dots {
+            padding-top: 2em;
+            padding-bottom: 0;
+        }
+
+        .slick-arrow {
+            bottom: 50%;
+            z-index: 2;
+        }
+
+        .slick-next {
+            right: 18%;
+        }
+
+        .slick-prev {
+            left: 18%;
+        }
+
+        .slick-slide:not(.slick-center) {
+            opacity: .25;
+        }
+
+        .slick-center {
+            transform: scale(1);
+        }
     }
 }

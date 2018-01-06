@@ -44,6 +44,40 @@ codeAdrianMain = (function($) {
         ]
     };
 
+    var containerWorkSlick = {
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        mobileFirst: true,
+        onBeforeChange: function() {
+            console.log("ding");
+            if (slick.currentSlide >= slick.slideCount - slick.options.slidesToShow) {
+                $('.slick-next').addClass("slick-disabled");
+            }
+        },
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 1023,
+                settings: {
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    centerPadding: "2%",
+                    centerMode: true,
+                    dots: true,
+                }
+            }
+        ]
+    };
+
     var containerAboutSlick = {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -58,11 +92,20 @@ codeAdrianMain = (function($) {
         cssEase: 'linear'
     };
 
+
     $(function() {
         _cacheDom();
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerWork, containerWorkSlick);
         initializeSlick($containerAbout, containerAboutSlick);
+        $containerWork.on("afterChange", function (event, slick) {
+            if(slick.currentSlide==0) {
+                console.log("FIRST");
+            } else if(slick.currentSlide+1==slick.slideCount) {
+                console.log("LAST");
+            }
+            console.log(slick.currentSlide);
+        });
     });
 
     $(window).on('resize orientationchange', function() {
@@ -79,5 +122,4 @@ codeAdrianMain = (function($) {
         $containerWork = $("#containerWork");
         $containerAbout = $("#aboutImageContainer");
     }
-
 })(jQuery);
