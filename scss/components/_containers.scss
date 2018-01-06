@@ -254,7 +254,6 @@
 }
 
 .containerAbout {
-    flex: 5;
     @media screen and (min-width: $desktop-small) {
         background-color: $backgroundSecondary;
         @include margin-trailer(13);
@@ -264,6 +263,12 @@
 
     @media screen and (min-width: $desktop-large) {
         background-color: transparent;
+    }
+
+    &__imagesContainer {
+        @media screen and (min-width: $desktop-large) {
+            flex: 2;
+        }
     }
 
     &__textContainer {
