@@ -16,7 +16,7 @@ codeAdrianMain = (function($) {
                 }
             },
             {
-                breakpoint: 1024,
+                breakpoint: 1023,
                 settings: "unslick"
             }
         ]
@@ -37,7 +37,7 @@ codeAdrianMain = (function($) {
                 }
             },
             {
-                breakpoint: 1024,
+                breakpoint: 1023,
                 settings: "unslick"
             }
         ]
