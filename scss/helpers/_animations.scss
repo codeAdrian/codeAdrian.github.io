@@ -1,0 +1,4 @@
+@keyframes fade-in-out {
+    from {background-color: $backgroundTertiary}
+    to {background-color:lighten($backgroundTertiary,6%)}
+}

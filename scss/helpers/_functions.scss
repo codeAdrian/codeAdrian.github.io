@@ -1,48 +1,15 @@
-/*------------------------------------------------------------*\
-                    UNIT CONVERT FUNCTIONS
-\*------------------------------------------------------------*/
-
-/*
- * Convert px value to rem value based on the default font size
- */
-@function px-to-rem($px-value, $base: $base-font-size){
-
-    @if (unitless($px-value)) {
-        $px-value: $px-value * 1px;
-    }
-
-    @if (unitless($base)) {
-        $base: $base * 1px;
-    }
-
-    @return $px-value/$base*1rem;
-}
-
-/*
- * Convert px value to em value based on the root font size
- */
-@function px-to-em($px-value, $base: 16px) {
-    @if (unitless($px-value)) {
-        $px-value: $px-value * 1px;
-    }
-
-    @if (unitless($base)) {
-        $base: $base * 1px;
-    }
-
-    @return $px-value/$base*1em;
-}
-
-/*
- * Remove the unit of a length
- * @param {Number} $number - Number to remove unit from
- * @return {Number} - Unitless number
- */
-
 @function strip-unit($number) {
     @if type-of($number) == 'number' and not unitless($number) {
         @return $number / ($number * 0 + 1);
     }
 
     @return $number;
+}
+
+@function breakpointToEm($pxValue) {
+    @return strip-unit($pxValue)/16*1em;
+}
+
+@function px-to-em($pxValue, $currentFontSize:$base-font-size) {
+    @return strip-unit($pxValue)/strip-unit($currentFontSize)*1em;
 }

@@ -1,0 +1,34 @@
+.footer {
+    @include rhythm-padding(10);
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+
+    &__wrapper {
+        max-width: px-to-em(768px, $base-font-size);
+        margin: 0 auto;
+        justify-content: space-between;
+        @include padding-trailer(10);
+        display: none;
+
+        @media screen and (min-width: $mobile-landscape) {
+            display: flex;
+        }
+
+        a {
+            @include adjust-font-size-to(16px, 8);
+            border-bottom: 0;
+            font-weight: $semiBold;
+            color: $fontColorPrimary;
+        }
+    }
+
+    &__info {
+        text-align: center;
+    }
+
+    &__title {
+        @include adjust-font-size-to(24px);
+        @include padding-trailer(2);
+        @include margin-trailer(3);
+    }
+}

@@ -1,0 +1,70 @@
+body {
+    color: $fontColorPrimary;
+    background-color: $backgroundPrimary;
+    font-family: $fontPrimary;
+    @include adjust-font-size-to($base-font-size, 6);
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    font-weight: $medium;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontSecondary;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    @include adjust-font-size-to(48px);
+    @include padding-leader(20);
+    color: $ctaColor;
+
+    @media screen and (min-width: $tablet-portrait) {
+        @include adjust-font-size-to(84px);
+    }
+
+    @media screen and (min-width: $desktop-small) {
+        padding-top: 0;
+        @include adjust-font-size-to(110px);
+    }
+}
+
+h2 {
+    @include adjust-font-size-to(34px);
+    @include margin-trailer(5);
+    display: inline-block;
+    border-bottom: 2px solid $ctaColor;
+
+    @media screen and (min-width: $mobile-landscape) {
+        @include adjust-font-size-to(48px);
+    }
+
+}
+
+h3 {
+    @include adjust-font-size-to(24px);
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+    @include padding-trailer(4);
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 1px solid $ctaColor;
+    color: $ctaColor;
+    transition: color .3s ease;
+    outline: none;
+
+    &:hover {
+        color: darken($ctaColor,10%);
+        border-bottom-color: darken($ctaColor,10%);
+    }
+}

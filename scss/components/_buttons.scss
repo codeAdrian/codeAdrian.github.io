@@ -1,32 +1,36 @@
-button,
-.button {
+button {
+    border-width: 0;
     outline: 0;
-    border: 0;
-    text-decoration: none;
-    background: $cta;
-    color: $color-variation;
-    padding: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    @include ms-respond(font-size, 0);
-    @include ms-respond(line-height, 0);
-    width: 100%;
+}
 
-    @include breakpoint-min(mobile-landscape){
-        min-width: px-to-em(320px);
-        padding-left: 2em;
-        padding-right: 2em;
-        width: auto;
+.button {
+    display: inline-block;
+    @include rhythm-padding(2,1);
+    padding-left: 1em;
+    padding-right: 1em;
+    font-family: $fontSecondary;
+    text-transform: uppercase;
+    transition: background-color .3s ease;
+    @include adjust-font-size-to(36px);
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-bottom-width: 0;
+
+    &__icon {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: .25em;
+        @include adjust-font-size-to(24px);
     }
 
     &:hover {
-        background: darken($cta, 5%)
+        color: $fontColorSecondary;
+        background-color: darken($ctaColor,10%);
     }
 
-    &:active {
-        background: lighten($cta, 5%)
+    &-cta {
+        color: $fontColorSecondary;
+        background-color: $ctaColor;
     }
 }
