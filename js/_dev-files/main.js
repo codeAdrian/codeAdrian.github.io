@@ -73,7 +73,6 @@ codeAdrianMain = (function($) {
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerAbout, containerAboutSlick);
         $containerWork.on("init", function() {
-            console.log("INIT");
             workSlickArrowNext = $containerWork.find(".slick-next");
             workSlickArrowPrev = $containerWork.find(".slick-prev");
             workSlickArrowPrev.addClass("slick-disabled");
@@ -110,5 +109,7 @@ codeAdrianMain = (function($) {
         $containerFeatures = $("#containerFeatures");
         $containerWork = $("#containerWork");
         $containerAbout = $("#aboutImageContainer");
+        workSlickArrowNext = $containerWork.find(".slick-next");
+        workSlickArrowPrev = $containerWork.find(".slick-prev");
     }
 })(jQuery);
