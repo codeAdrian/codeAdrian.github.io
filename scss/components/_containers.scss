@@ -343,15 +343,15 @@
 
         &__wrapper {
             padding: 0;
-            margin-left: -27%;
-            margin-right: -27%;
+            margin-left: -30%;
+            margin-right: -30%;
         }
     }
 
     &__title {
-        @include margin-trailer(12);
         margin-left: .5em;
         margin-right: .5em;
+        @include margin-trailer(12);
     }
 
     &__list {
@@ -394,34 +394,42 @@
         display: inline-block;
         margin-top: -29%;
         background-image: url("../images/project-bg.png");
-        padding: percentage(25/691) percentage(82/691) percentage(57/691);
         background-repeat: no-repeat;
         background-size: contain;
-    }
-
-    .slick-list {
-        margin-left: -2.5em;
-        margin-right: -2.5em;
-    }
-
-    .slick-slide {
-        transform: scale(.88);
-        padding: 0;
-        transform-origin: bottom center;
-        transition: transform 0.3s .2s ease,
-                    opacity 0.3s .2s ease;
+        width: 100%;
 
         img {
-            image-rendering: -moz-crisp-edges;
-            image-rendering:   -o-crisp-edges;
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -ms-interpolation-mode: nearest-neighbor;
+            width: 100%;
+            padding: percentage(31/812) percentage(103/812) percentage(82/812);
         }
-
     }
 
     @media screen and (min-width: $desktop-small) {
+
+        .slick-list {
+            margin-left: -2.5em;
+            margin-right: -2.5em;
+        }
+
+        .slick-slide {
+            transform: scale(.88);
+            padding: 0;
+            transform-origin: bottom center;
+            backface-visibility: hidden;
+            transition: transform 0.3s .15s ease,
+            opacity 0.3s .15s ease,
+            filter 0.3s .15s ease;
+
+            img {
+                image-rendering: -moz-crisp-edges;
+                image-rendering:   -o-crisp-edges;
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+                -ms-interpolation-mode: nearest-neighbor;
+            }
+
+        }
+
         .slick-dots {
             padding-top: 2em;
             padding-bottom: 0;
@@ -433,15 +441,17 @@
         }
 
         .slick-next {
-            right: 18%;
+            right: 19%;
         }
 
         .slick-prev {
-            left: 18%;
+            left: 19%;
         }
 
         .slick-slide:not(.slick-center) {
             opacity: .25;
+            pointer-events: none;
+            filter: grayscale(100%);
         }
 
         .slick-center {

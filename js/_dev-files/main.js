@@ -45,10 +45,10 @@ codeAdrianMain = (function($) {
                     infinite: true,
                     slidesToShow: 3,
                     slidesToScroll: 1,
-                    centerPadding: "2%",
+                    centerPadding: "0",
                     centerMode: true,
                     dots: true,
-                    draggable: false
+                    draggable: false,
                 }
             }
         ]
@@ -63,7 +63,7 @@ codeAdrianMain = (function($) {
         mobileFirst: true,
         infinite: true,
         speed: 500,
-        autoplaySpeed: 20000,
+        autoplaySpeed: 10000,
         fade: true,
         cssEase: 'linear'
     };
@@ -81,6 +81,11 @@ codeAdrianMain = (function($) {
         });
         initializeSlick($containerWork, containerWorkSlick);
         $containerWork.on("afterChange", function (event, slick) {
+            workSlickArrowNext.removeClass("slick-disabled");
+            workSlickArrowNext.removeAttr("disabled");
+            workSlickArrowPrev.removeClass("slick-disabled");
+            workSlickArrowPrev.removeAttr("disabled");
+
             if(slick.currentSlide===0) {
                 workSlickArrowPrev.addClass("slick-disabled");
                 workSlickArrowPrev.attr("disabled","disabled");
@@ -88,12 +93,6 @@ codeAdrianMain = (function($) {
                 workSlickArrowNext.addClass("slick-disabled");
                 workSlickArrowNext.attr("disabled","disabled");
 
-            } else {
-                workSlickArrowNext.removeClass("slick-disabled");
-                workSlickArrowPrev.removeAttr("disabled");
-
-                workSlickArrowPrev.removeClass("slick-disabled");
-                workSlickArrowNext.removeAttr("disabled");
             }
         });
     });
