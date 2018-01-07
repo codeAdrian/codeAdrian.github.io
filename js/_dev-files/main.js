@@ -88,6 +88,7 @@ codeAdrianMain = (function($) {
             if(slick.currentSlide===0) {
                 workSlickArrowPrev.addClass("slick-disabled");
                 workSlickArrowPrev.attr("disabled","disabled");
+
             } else if(slick.currentSlide+1===slick.slideCount) {
                 workSlickArrowNext.addClass("slick-disabled");
                 workSlickArrowNext.attr("disabled","disabled");
