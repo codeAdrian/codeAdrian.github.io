@@ -1,6 +1,8 @@
 var codeAdrianMain;
 codeAdrianMain = (function($) {
     var $containerFeatures, $containerWork, $containerAbout;
+    var workSlickArrowNext,workSlickArrowPrev;
+
     var containerFeaturesSlick = {
         infinite: false,
         slidesToShow: 1,
@@ -39,33 +41,6 @@ codeAdrianMain = (function($) {
             },
             {
                 breakpoint: 1023,
-                settings: "unslick"
-            }
-        ]
-    };
-
-    var containerWorkSlick = {
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        mobileFirst: true,
-        onBeforeChange: function() {
-            console.log("ding");
-            if (slick.currentSlide >= slick.slideCount - slick.options.slidesToShow) {
-                $('.slick-next').addClass("slick-disabled");
-            }
-        },
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 1023,
                 settings: {
                     infinite: true,
                     slidesToShow: 3,
@@ -73,6 +48,7 @@ codeAdrianMain = (function($) {
                     centerPadding: "2%",
                     centerMode: true,
                     dots: true,
+                    draggable: false
                 }
             }
         ]
@@ -92,19 +68,33 @@ codeAdrianMain = (function($) {
         cssEase: 'linear'
     };
 
-
     $(function() {
         _cacheDom();
         initializeSlick($containerFeatures, containerFeaturesSlick);
-        initializeSlick($containerWork, containerWorkSlick);
         initializeSlick($containerAbout, containerAboutSlick);
+        $containerWork.on("init", function() {
+            console.log("INIT");
+            workSlickArrowNext = $containerWork.find(".slick-next");
+            workSlickArrowPrev = $containerWork.find(".slick-prev");
+            workSlickArrowPrev.addClass("slick-disabled");
+            workSlickArrowPrev.attr("disabled","disabled");
+        });
+        initializeSlick($containerWork, containerWorkSlick);
         $containerWork.on("afterChange", function (event, slick) {
-            if(slick.currentSlide==0) {
-                console.log("FIRST");
-            } else if(slick.currentSlide+1==slick.slideCount) {
-                console.log("LAST");
+            if(slick.currentSlide===0) {
+                workSlickArrowPrev.addClass("slick-disabled");
+                workSlickArrowPrev.attr("disabled","disabled");
+            } else if(slick.currentSlide+1===slick.slideCount) {
+                workSlickArrowNext.addClass("slick-disabled");
+                workSlickArrowNext.attr("disabled","disabled");
+
+            } else {
+                workSlickArrowNext.removeClass("slick-disabled");
+                workSlickArrowPrev.removeAttr("disabled");
+
+                workSlickArrowPrev.removeClass("slick-disabled");
+                workSlickArrowNext.removeAttr("disabled");
             }
-            console.log(slick.currentSlide);
         });
     });
 
