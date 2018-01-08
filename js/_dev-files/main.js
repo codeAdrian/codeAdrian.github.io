@@ -48,7 +48,7 @@ codeAdrianMain = (function($) {
                     centerPadding: "0",
                     centerMode: true,
                     dots: true,
-                    draggable: false,
+                    draggable: false
                 }
             }
         ]

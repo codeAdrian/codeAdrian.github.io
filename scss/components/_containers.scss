@@ -259,11 +259,11 @@
 }
 
 .containerAbout {
+    background-color: $backgroundSecondary;
+
     @media screen and (min-width: $desktop-small) {
-        background-color: $backgroundSecondary;
         @include margin-trailer(13);
         display: flex;
-        align-items: center;
     }
 
     @media screen and (min-width: $desktop-large) {
@@ -274,6 +274,18 @@
         min-height: 0;
         min-width: 0;
         flex: 5;
+
+        img {
+            @media screen and (min-width: $desktop-small) {
+                min-width: 62vw;
+                margin-left: -31%;
+            }
+
+            @media screen and (min-width: $desktop-medium) {
+                min-width: 0;
+                margin-left: 0;
+            }
+        }
     }
 
     .slick-slider {
@@ -284,9 +296,9 @@
         }
 
         .slick-dots {
-            @include absolute($bottom: 0, $left: 0);
-            margin-left: .5em;
-            padding-bottom: .5em;
+            @include absolute($top: 0, $right: 0);
+            margin-right: .5em;
+            padding-top: .5em;
 
             li {
                 display: block;
@@ -304,18 +316,24 @@
         padding-right: 1.5em;
 
         @media screen and (min-width: $desktop-small) {
-            @include rhythm-padding(10);
+            padding-left: 2em;
+            padding-right: 1em;
+            @include padding-leader(5);
+            padding-bottom: 0;
             flex: 7;
         }
 
         @media screen and (min-width: $desktop-large) {
-            @include rhythm-padding(8, 4);
+            @include padding-leader(5);
         }
 
         div {
             @media screen and (min-width: $desktop-small) {
+                max-width: px-to-em(480px, $base-font-size);
+            }
+
+            @media screen and (min-width: $desktop-medium) {
                 max-width: px-to-em(768px, $base-font-size);
-                padding-left: 1.5em;
             }
         }
     }
@@ -330,13 +348,13 @@
     padding-right: 1.5em;
 
     @media screen and (min-width: $mobile-landscape) {
-        @include padding-leader(7);
-        @include padding-trailer(20);
+        @include padding-leader(5);
+        @include padding-trailer(15);
     }
 
     @media screen and (min-width: $desktop-small) {
         overflow-x: hidden;
-        margin-bottom: 0;
+        padding-bottom: 0;
 
         &__wrapper {
             padding: 0;
@@ -348,7 +366,7 @@
     &__title {
         margin-left: .5em;
         margin-right: .5em;
-        @include margin-trailer(12);
+        @include margin-trailer(10);
     }
 
     &__list {
@@ -430,7 +448,6 @@
         }
 
         .slick-dots {
-            padding-top: 2em;
             padding-bottom: 0;
         }
 
