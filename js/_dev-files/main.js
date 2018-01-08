@@ -33,14 +33,7 @@ codeAdrianMain = (function($) {
         mobileFirst: true,
         responsive: [
             {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 1023,
+                breakpoint: 767,
                 settings: {
                     infinite: true,
                     slidesToShow: 3,
@@ -100,6 +93,8 @@ codeAdrianMain = (function($) {
     $(window).on('resize orientationchange', function() {
         $($containerFeatures).slick('resize');
         $($containerWork).slick('resize');
+        workSlickArrowNext = $containerWork.find(".slick-next");
+        workSlickArrowPrev = $containerWork.find(".slick-prev");
     });
 
     function initializeSlick($slickContainer, slickOptions) {

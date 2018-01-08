@@ -352,7 +352,7 @@
         @include padding-trailer(15);
     }
 
-    @media screen and (min-width: $desktop-small) {
+    @media screen and (min-width: $tablet-portrait) {
         overflow-x: hidden;
         padding-bottom: 0;
 
@@ -419,7 +419,7 @@
         }
     }
 
-    @media screen and (min-width: $desktop-small) {
+    @media screen and (min-width: $tablet-portrait) {
         .slick-slide {
             transform: scale(.88);
             padding: 0;
@@ -467,7 +467,7 @@
         }
     }
 
-    @media screen and (min-width: $desktop-small) and (min-height: $mobile-wide) {
+    @media screen and (min-width: $tablet-portrait) and (min-height: $mobile-landscape) {
         &__wrapper {
             padding: 0;
             margin-left: -27%;
