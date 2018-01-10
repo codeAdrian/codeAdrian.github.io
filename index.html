@@ -28,6 +28,7 @@
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Teko" rel="stylesheet">
+    <script src="./js/lazyload.min.js"></script>
 </head>
 <body>
 <header id="header">
@@ -70,7 +71,14 @@
         </article>
         <article class="containerHero__wrapper containerHero__wrapper--imageContainer">
             <div class="containerHero__background"></div>
-            <img class="containerHero__image" src="images/hero/hero-image-d1x-min.png" alt="Adrian Bece Photo"/>
+
+            <picture>
+                <source data-srcset="./images/minified/hero-image-550-min.png" media="(max-width: 767px)">
+                <source data-srcset="./images/minified/hero-image-420-min.png" media="(max-width: 1023px)">
+                <source data-srcset="./images/minified/hero-image-760-min.png" media="(max-width: 1919px)">
+                <source data-srcset="./images/minified/hero-image-960-min.png">
+                <img class="containerHero__image" data-src="./images/minified/hero-image-960-min.png" alt="Adrian Bece">
+            </picture>
         </article>
     </section>
     <section class="section containerSecondary containerSecondary--pattern" id="section__skills">
@@ -127,9 +135,9 @@
         <article class="containerAbout__imagesContainer">
             <div class="imagesContainer__wrapper">
                 <ul id="aboutImageContainer">
-                    <li><img src="images/about-me-1.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img src="images/about-me-2.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img src="images/about-me-3.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                    <li><img data-src="images/minified/about-me-1-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                    <li><img data-src="images/minified/about-me-2-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                    <li><img data-src="images/minified/about-me-3-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
                 </ul>
             </div>
         </article>
@@ -162,7 +170,7 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img src="images/prj-zee.jpg"/>
+                            <img data-src="images/minified/prj-zee-min.jpg"/>
                         </div>
                     </a>
                 </li>
@@ -173,7 +181,7 @@
                             <p>Inchoo Project | Wordpress</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img src="images/prj-zeeBlog.jpg"/>
+                            <img data-src="images/minified/prj-zeeBlog-min.jpg"/>
                         </div>
                     </a>
                 </li>
@@ -184,7 +192,7 @@
                         <p>Inchoo Project | Magento</p>
                     </div>
                     <div class="containerWork__imageWrapper">
-                        <img src="images/prj-keh.jpg"/>
+                        <img data-src="images/minified/prj-keh-min.jpg"/>
                     </div>
                 </a>
             </li>
@@ -195,7 +203,7 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img src="images/prj-oneills.jpg"/>
+                            <img data-src="images/minified/prj-oneills-min.jpg"/>
                         </div>
                     </a>
                 </li>
@@ -206,7 +214,7 @@
                             <p>Inchoo Project | Wordpress</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img src="images/prj-inchoo.jpg"/>
+                            <img data-src="images/minified/prj-inchoo-min.jpg"/>
                         </div>
                     </a>
                 </li>
@@ -218,7 +226,7 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img src="images/prj-aa.jpg"/>
+                            <img src="images/minified/prj-aa-min.jpg" class="loaded" />
                         </div>
                     </a>
                 </li>
@@ -273,7 +281,6 @@
         src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
-<script src="./js/responsivelyLazy.min.js"></script>
 <script src="./js/smoothWheel.min.js"></script>
 <script src="./js/scrollPosition.min.js"></script>
 <script src="./js/smoothScroll.min.js"></script>

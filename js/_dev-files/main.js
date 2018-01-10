@@ -2,6 +2,7 @@ var codeAdrianMain;
 codeAdrianMain = (function($) {
     var $containerFeatures, $containerWork, $containerAbout;
     var workSlickArrowNext,workSlickArrowPrev;
+    var myLazyLoad;
 
     var containerFeaturesSlick = {
         infinite: false,
@@ -65,13 +66,16 @@ codeAdrianMain = (function($) {
         _cacheDom();
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerAbout, containerAboutSlick);
+
         $containerWork.on("init", function() {
             workSlickArrowNext = $containerWork.find(".slick-next");
             workSlickArrowPrev = $containerWork.find(".slick-prev");
             workSlickArrowPrev.addClass("slick-disabled");
             workSlickArrowPrev.attr("disabled","disabled");
         });
+
         initializeSlick($containerWork, containerWorkSlick);
+
         $containerWork.on("afterChange", function (event, slick) {
             workSlickArrowNext.removeClass("slick-disabled");
             workSlickArrowNext.removeAttr("disabled");
@@ -88,6 +92,8 @@ codeAdrianMain = (function($) {
 
             }
         });
+
+        myLazyLoad = new LazyLoad();
     });
 
     $(window).on('resize orientationchange', function() {

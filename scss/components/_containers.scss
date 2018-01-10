@@ -408,13 +408,21 @@
     &__imageWrapper {
         display: inline-block;
         margin-top: -29%;
-        background-image: url("../images/project-bg.png");
+        background-image: url("../images/minified/project-bg-min.png");
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
 
         img {
             width: 100%;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+
+        img.loaded {
             padding: percentage(31/812) percentage(103/812) percentage(82/812);
         }
     }
@@ -428,15 +436,6 @@
             transition: transform 0.3s .15s ease,
             opacity 0.3s .15s ease,
             filter 0.3s .15s ease;
-
-            img {
-                image-rendering: -moz-crisp-edges;
-                image-rendering: -o-crisp-edges;
-                image-rendering: -webkit-optimize-contrast;
-                image-rendering: crisp-edges;
-                -ms-interpolation-mode: nearest-neighbor;
-            }
-
         }
 
         .slick-next {

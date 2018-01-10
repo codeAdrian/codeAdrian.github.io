@@ -9,6 +9,14 @@ img {
     max-width: 100%; /* [1] */
     font-style: italic; /* [2] */
     -ms-interpolation-mode: bicubic; /* [3] */
+
+    &:not([src]) {
+        padding-bottom: 66.67%;
+    }
+
+    &:not(.loaded) {
+        visibility: hidden;
+    }
 }
 
 /*
