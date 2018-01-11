@@ -77,11 +77,15 @@ codeAdrianMain = (function($) {
         initializeSlick($containerWork, containerWorkSlick);
 
         $containerWork.on("afterChange", function (event, slick) {
+            var dataSrc = "";
             myLazyLoad.update();
             workSlickArrowNext.removeClass("slick-disabled");
             workSlickArrowNext.removeAttr("disabled");
             workSlickArrowPrev.removeClass("slick-disabled");
             workSlickArrowPrev.removeAttr("disabled");
+            var currentSlideImg = $(this).find(".slick-slide.slick-current.slick-active").find("img");
+            dataSrc = currentSlideImg.find("img").attr("data-src");
+            currentSlideImg.attr("src", dataSrc);
 
             if(slick.currentSlide===0) {
                 workSlickArrowPrev.addClass("slick-disabled");
