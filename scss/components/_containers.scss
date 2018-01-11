@@ -313,12 +313,14 @@
     .imagesContainer__wrapper {
         position: relative;
         text-align: center;
+        min-height: 10em;
 
         .loader {
-            position: absolute;
-            right: 0;
-            left: 0;
-            top: 50%;
+            @include absolute($top: 50%, $left:0, $right:0);
+        }
+
+        img:not(.loaded) {
+            height: 0;
         }
     }
 
@@ -427,6 +429,8 @@
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
+        height: 0;
+        padding-top:62.83%;
 
         .loader {
             position: absolute;
@@ -440,6 +444,10 @@
             margin: percentage(31/812) percentage(103/812) percentage(82/812);
         }
 
+        img {
+            @include absolute($top:0,$left:0,$right:0);
+        }
+
         img.loaded {
             width: 100%;
             image-rendering: -moz-crisp-edges;
@@ -448,7 +456,6 @@
             image-rendering: crisp-edges;
             -ms-interpolation-mode: nearest-neighbor;
             padding: percentage(31/812) percentage(103/812) percentage(82/812);
-            position: relative;
             z-index: 2;
         }
 

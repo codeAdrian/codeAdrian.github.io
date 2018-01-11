@@ -67,7 +67,7 @@ codeAdrianMain = (function($) {
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerAbout, containerAboutSlick);
 
-        $containerWork.on("init", function() {
+        $containerWork.on("init reInit", function() {
             workSlickArrowNext = $containerWork.find(".slick-next");
             workSlickArrowPrev = $containerWork.find(".slick-prev");
             workSlickArrowPrev.addClass("slick-disabled");
