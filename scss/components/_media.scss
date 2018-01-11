@@ -11,7 +11,7 @@ img {
     -ms-interpolation-mode: bicubic; /* [3] */
 
     &:not([src]) {
-        padding-bottom: 66.67%;
+        padding-bottom: 60%;
     }
 
     &:not(.loaded) {

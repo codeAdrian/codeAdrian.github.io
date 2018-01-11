@@ -84,7 +84,8 @@
     position: absolute;
     display: block;
     cursor: pointer;
-    bottom: -4rem;
+    top: 50%;
+    margin-top: -20px;
     border: none;
     font-size: 0;
     line-height: 0;
@@ -93,10 +94,7 @@
     color: $fontColorSecondary;
     padding: .5rem 1rem;
     transition: background-color .3s ease;
-
-    @media screen and (min-width: $mobile-landscape) {
-        bottom: -4.5rem;
-    }
+    z-index: 2;
 
     &:active,
     &:hover {
@@ -118,20 +116,18 @@
 }
 
 .slick-prev {
-    left: 30%;
+    left: -1.25rem;
     @extend .icon-left-dir;
-
-    @media screen and (min-width: $mobile-landscape) {
-        left: 40%;
+    @media screen and (min-width: $tablet-portrait) {
+        left: 9%;
     }
 }
 
 .slick-next {
-    right: 30%;
+    right: -1.25rem;
     @extend .icon-right-dir;
-
-    @media screen and (min-width: $mobile-landscape) {
-        right: 40%;
+    @media screen and (min-width: $tablet-portrait) {
+        right: 9%;
     }
 }
 

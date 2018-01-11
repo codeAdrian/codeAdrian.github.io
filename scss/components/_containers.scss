@@ -6,7 +6,7 @@
         align-items: center;
     }
 
-    @media screen and (min-width: $desktop-small) and (min-height: $mobile-wide) {
+    @media screen and (min-width: $desktop-small) and (min-height: $mobile-landscape-custom) {
         min-height: 100vh;
     }
 
@@ -48,6 +48,7 @@
 
                 @media screen and (min-width: $desktop-small) {
                     padding-bottom: 0;
+                    padding-top: 2em;
                     padding-right: 3em;
                 }
             }
@@ -91,7 +92,7 @@
             padding-top: 4em;
         }
 
-        @media screen and (min-width: $desktop-small) and (min-height: $mobile-wide) {
+        @media screen and (min-width: $desktop-small) and (min-height: $mobile-landscape-custom) {
             padding-top: 0;
             max-height: calc(100vh - 4em);
         }
@@ -341,7 +342,6 @@
 
 .containerWork {
     @include padding-leader(10);
-    @include padding-trailer(17);
     @include margin-trailer(10);
     text-align: center;
     padding-left: 1.5em;
@@ -349,7 +349,6 @@
 
     @media screen and (min-width: $mobile-landscape) {
         @include padding-leader(5);
-        @include padding-trailer(15);
     }
 
     @media screen and (min-width: $tablet-portrait) {
@@ -427,10 +426,13 @@
         }
     }
 
+    .slick-slide {
+        padding: 0;
+    }
+
     @media screen and (min-width: $tablet-portrait) {
         .slick-slide {
             transform: scale(.88);
-            padding: 0;
             transform-origin: bottom center;
             backface-visibility: hidden;
             transition: transform 0.3s .15s ease,
@@ -438,21 +440,8 @@
             filter 0.3s .15s ease;
         }
 
-        .slick-next {
-            right: 9%;
-        }
-
-        .slick-prev {
-            left: 9%;
-        }
-
         .slick-dots {
             padding-bottom: 0;
-        }
-
-        .slick-arrow {
-            bottom: 50%;
-            z-index: 2;
         }
 
         .slick-slide:not(.slick-center) {
