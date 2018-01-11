@@ -73,11 +73,12 @@
             <div class="containerHero__background"></div>
 
             <picture>
-                <source data-srcset="./images/minified/hero-image-550-min.png" media="(max-width: 767px)">
-                <source data-srcset="./images/minified/hero-image-420-min.png" media="(max-width: 1023px)">
-                <source data-srcset="./images/minified/hero-image-760-min.png" media="(max-width: 1919px)">
-                <source data-srcset="./images/minified/hero-image-960-min.png">
-                <img class="containerHero__image" data-src="./images/minified/hero-image-960-min.png" alt="Adrian Bece">
+                <source srcset="./images/minified/hero-image-420-min.png 1x, ./images/minified/hero-image-760-min.png 2x" media="(max-width: 440px)">
+                <source srcset="./images/minified/hero-image-550-min.png 1x, ./images/minified/hero-image-960-min.png 2x" media="(max-width: 767px)">
+                <source srcset="./images/minified/hero-image-420-min.png 1x, ./images/minified/hero-image-760-min.png 2x" media="(max-width: 1023px)">
+                <source srcset="./images/minified/hero-image-760-min.png 1x, ./images/minified/hero-image-960-min.png 2x" media="(max-width: 1919px)">
+                <source srcset="./images/minified/hero-image-960-min.png">
+                <img class="containerHero__image loaded" src="./images/minified/hero-image-960-min.png" alt="Adrian Bece">
             </picture>
         </article>
     </section>
@@ -139,6 +140,7 @@
                     <li><img data-src="images/minified/about-me-2-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
                     <li><img data-src="images/minified/about-me-3-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
                 </ul>
+                <div class="loader"></div>
             </div>
         </article>
         <article class="containerSecondary containerAbout__textContainer">
@@ -171,6 +173,7 @@
                         </div>
                         <div class="containerWork__imageWrapper">
                             <img data-src="images/minified/prj-zee-min.jpg"/>
+                            <div class="loader"></div>
                         </div>
                     </a>
                 </li>
@@ -182,6 +185,7 @@
                         </div>
                         <div class="containerWork__imageWrapper">
                             <img data-src="images/minified/prj-zeeBlog-min.jpg"/>
+                            <div class="loader"></div>
                         </div>
                     </a>
                 </li>
@@ -193,6 +197,7 @@
                     </div>
                     <div class="containerWork__imageWrapper">
                         <img data-src="images/minified/prj-keh-min.jpg"/>
+                        <div class="loader"></div>
                     </div>
                 </a>
             </li>
@@ -204,6 +209,7 @@
                         </div>
                         <div class="containerWork__imageWrapper">
                             <img data-src="images/minified/prj-oneills-min.jpg"/>
+                            <div class="loader"></div>
                         </div>
                     </a>
                 </li>
@@ -215,6 +221,7 @@
                         </div>
                         <div class="containerWork__imageWrapper">
                             <img data-src="images/minified/prj-inchoo-min.jpg"/>
+                            <div class="loader"></div>
                         </div>
                     </a>
                 </li>
@@ -227,13 +234,13 @@
                         </div>
                         <div class="containerWork__imageWrapper">
                             <img data-src="images/minified/prj-aa-min.jpg" />
+                            <div class="loader"></div>
                         </div>
                     </a>
                 </li>
             </ul>
         </article>
     </section>
-    <div class="loader"></div>
 </main>
 <footer class="footer containerSecondary containerSecondary--pattern">
     <div class="footer__wrapper">
