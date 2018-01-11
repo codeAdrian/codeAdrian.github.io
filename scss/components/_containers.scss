@@ -353,8 +353,8 @@
 
     /* Dirty fix to make lazy load work with slick */
     &__wrapper {
-        margin-left: -1px;
-        margin-right: -1px;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
     @media screen and (min-width: $tablet-portrait) {

@@ -77,6 +77,7 @@ codeAdrianMain = (function($) {
         initializeSlick($containerWork, containerWorkSlick);
 
         $containerWork.on("afterChange", function (event, slick) {
+            myLazyLoad.update();
             workSlickArrowNext.removeClass("slick-disabled");
             workSlickArrowNext.removeAttr("disabled");
             workSlickArrowPrev.removeClass("slick-disabled");
