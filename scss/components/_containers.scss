@@ -351,6 +351,12 @@
         @include padding-leader(5);
     }
 
+    /* Dirty fix to make lazy load work with slick */
+    &__wrapper {
+        margin-left: -1px;
+        margin-right: -1px;
+    }
+
     @media screen and (min-width: $tablet-portrait) {
         overflow-x: hidden;
         padding-bottom: 0;
