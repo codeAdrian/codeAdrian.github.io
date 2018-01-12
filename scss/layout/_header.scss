@@ -8,23 +8,16 @@ header {
 .navigation {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     &__linksList {
         display: flex;
-        justify-content: center;
-        flex: 1;
+        flex: 1 0 50%;
         text-align: center;
-
-        @media screen and (min-width: $mobile-wide) {
-            flex: 0;
-        }
+        max-width: px-to-em(377px, $base-font-size);
 
         li {
             flex: 1;
-
-            @media screen and (min-width: $mobile-wide) {
-                flex: 0;
-            }
         }
 
         .navigation__link {
@@ -58,6 +51,7 @@ header {
 
         &--socialMedia {
             display: none;
+            max-width: px-to-em(183px, $base-font-size);
 
             @media screen and (min-width: $mobile-wide) {
                 display: flex;
