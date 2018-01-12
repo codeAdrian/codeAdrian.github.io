@@ -312,7 +312,7 @@
     .imagesContainer__wrapper {
         position: relative;
         text-align: center;
-        min-height: 10em;
+        min-height: 100%;
 
         .loader {
             @include absolute($top: 50%, $left:0, $right:0);
