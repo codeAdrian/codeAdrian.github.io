@@ -67,11 +67,18 @@ codeAdrianMain = (function($) {
         initializeSlick($containerFeatures, containerFeaturesSlick);
         initializeSlick($containerAbout, containerAboutSlick);
 
-        $containerWork.on("init", function() {
+        $containerWork.on("init reInit", function() {
             workSlickArrowNext = $containerWork.find(".slick-next");
             workSlickArrowPrev = $containerWork.find(".slick-prev");
             workSlickArrowPrev.addClass("slick-disabled");
             workSlickArrowPrev.attr("disabled","disabled");
+            var currentSlideImg = $(this).find(".slick-cloned").find("img");
+            var dataSrc = currentSlideImg.data("src");
+            currentSlideImg.attr("src", dataSrc).delay(1000).queue(function(){
+                $(this).addClass("loaded");
+            });
+
+
         });
 
         initializeSlick($containerWork, containerWorkSlick);
@@ -84,8 +91,9 @@ codeAdrianMain = (function($) {
             workSlickArrowPrev.removeAttr("disabled");
             var currentSlideImg = $(this).find(".slick-slide.slick-current.slick-active").find("img");
             var dataSrc = currentSlideImg.data("src");
-            currentSlideImg.attr("src", dataSrc);
-            currentSlideImg.addClass("loaded");
+            currentSlideImg.attr("src", dataSrc).delay(1000).queue(function(){
+                $(this).addClass("loaded");
+            });
 
             if(slick.currentSlide===0) {
                 workSlickArrowPrev.addClass("slick-disabled");
@@ -97,7 +105,6 @@ codeAdrianMain = (function($) {
 
             }
         });
-
         myLazyLoad = new LazyLoad();
     });
 

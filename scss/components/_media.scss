@@ -10,10 +10,6 @@ img {
     font-style: italic; /* [2] */
     -ms-interpolation-mode: bicubic; /* [3] */
 
-    &:not([src]) {
-        padding-bottom: 60%;
-    }
-
     &:not(.loaded) {
         visibility: hidden;
     }
