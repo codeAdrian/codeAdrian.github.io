@@ -14,7 +14,10 @@ header {
         display: flex;
         flex: 1 0 50%;
         text-align: center;
-        max-width: px-to-em(377px, $base-font-size);
+
+        @media screen and (min-width: $mobile-wide) {
+            max-width: px-to-em(377px, $base-font-size);
+        }
 
         li {
             flex: 1;
@@ -51,14 +54,14 @@ header {
 
         &--socialMedia {
             display: none;
-            max-width: px-to-em(183px, $base-font-size);
+            max-width: px-to-em(200px, $base-font-size);
 
             @media screen and (min-width: $mobile-wide) {
                 display: flex;
             }
 
             .navigation__link {
-                padding: .85rem .75rem;
+                padding: .85rem;
 
                 &:hover {
                     color: $sectionActiveColor;

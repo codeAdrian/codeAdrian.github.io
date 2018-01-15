@@ -116,7 +116,7 @@
 }
 
 .slick-prev {
-    left: -1.2rem;
+    left: -1rem;
     @extend .icon-left-dir;
     @media screen and (min-width: $tablet-portrait) {
         left: 9%;
@@ -124,7 +124,7 @@
 }
 
 .slick-next {
-    right: -1.2rem;
+    right: -1rem;
     @extend .icon-right-dir;
     @media screen and (min-width: $tablet-portrait) {
         right: 9%;

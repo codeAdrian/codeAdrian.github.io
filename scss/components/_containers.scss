@@ -270,31 +270,61 @@
         background-color: transparent;
     }
 
+    .slick-slide {
+        padding: 0;
+    }
+
     &__imagesContainer {
+        background: $backgroundPrimary;
         min-height: 0;
         min-width: 0;
         flex: 5;
 
+        @media screen and (min-width: $tablet-portrait) {
+            margin-bottom: -20%;
+        }
+
         img {
-            @media screen and (min-width: $desktop-small) {
+            @include absolute($left: 0, $right: 0, $top: 0);
+        }
+
+        .slick-slide {
+            padding-bottom: 23%;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            margin-bottom: 0;
+
+            .slick-slide {
+                padding-bottom: 36%;
+            }
+
+            img {
                 min-width: 62vw;
                 margin-left: -31%;
             }
+        }
 
-            @media screen and (min-width: $desktop-medium) {
+        @media screen and (min-width: $desktop-medium) {
+            img {
                 min-width: 0;
                 margin-left: 0;
             }
         }
-    }
 
+        @media screen and (min-width: $desktop-medium) {
+            .slick-slide {
+                padding-bottom: 23%;
+            }
+            img {
+                width: 100%;
+                @include absolute($left: 0, $right: 0, $top: 0);
+            }
+        }
+    }
     .slick-slider {
         position: relative;
         z-index: 2;
-
-        .slick-slide {
-            padding: 0;
-        }
 
         .slick-dots {
             @include absolute($top: 0, $right: 0);
@@ -314,8 +344,17 @@
         text-align: center;
         min-height: 100%;
 
+        @media screen and (min-width: $tablet-portrait) {
+            max-width: 75%;
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: $desktop-small) {
+            max-width: 100%;
+        }
+
         .loader {
-            @include absolute($top: 50%, $left:0, $right:0);
+            @include absolute($top: 50%, $left: 0, $right: 0);
         }
 
         img:not(.loaded) {
@@ -330,11 +369,21 @@
         padding-left: 1.5em;
         padding-right: 1.5em;
 
+        @media screen and (min-width: $tablet-portrait) {
+            padding-top: 23%;
+            text-align: center;
+
+            p {
+                text-align: left;
+            }
+        }
+
         @media screen and (min-width: $desktop-small) {
+            text-align: left;
             padding-left: 2em;
             padding-right: 1em;
             @include padding-leader(5);
-            padding-bottom: 0;
+            @include padding-trailer(2);
             flex: 7;
         }
 
@@ -352,16 +401,22 @@
             }
         }
     }
+
 }
 
 .containerWork {
     @include padding-leader(10);
     @include margin-trailer(10);
     text-align: center;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: 1em;
+    padding-right: 1em;
 
     @media screen and (min-width: $mobile-landscape) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    @media screen and (min-width: $desktop-small) {
         @include padding-leader(5);
     }
 
@@ -377,9 +432,12 @@
     }
 
     &__title {
-        margin-left: .5em;
-        margin-right: .5em;
         @include margin-trailer(10);
+
+        @media screen and (min-width: $mobile-landscape) {
+            margin-left: .5em;
+            margin-right: .5em;
+        }
     }
 
     &__list {
@@ -429,7 +487,7 @@
         background-size: contain;
         width: 100%;
         height: 0;
-        padding-top:62.83%;
+        padding-top: 62.83%;
 
         .loader {
             position: absolute;
@@ -444,7 +502,7 @@
         }
 
         img {
-            @include absolute($top:0,$left:0,$right:0);
+            @include absolute($top: 0, $left: 0, $right: 0);
         }
 
         img.loaded {
@@ -459,7 +517,7 @@
         }
 
         img:not(.loaded) {
-            padding-top:62.83%;
+            padding-top: 62.83%;
             visibility: hidden;
             height: 0;
         }
