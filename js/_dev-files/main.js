@@ -1,6 +1,6 @@
 var codeAdrianMain;
 codeAdrianMain = (function($) {
-    var $containerFeatures, $containerWork, $containerAbout, $window;
+    var $containerFeatures, $containerWork, $containerAbout;
     var workSlickArrowNext,workSlickArrowPrev;
     var myLazyLoad;
 
@@ -63,15 +63,15 @@ codeAdrianMain = (function($) {
     };
 
     /**
-     * @param arrow
-     * @param enable
+     * Enables or disables Slick Work Container Carousel arrow
      *
-     * Enables or disables alick arrow
+     * @param arrow
+     * @param enabled
      *
      */
 
-    function _toggleArrow(arrow, enable){
-        if(enable){
+    function _toggleSlickArrow(arrow, enabled) {
+        if(enabled){
             arrow.removeClass("slick-disabled");
             arrow.removeAttr("disabled");
         } else {
@@ -81,62 +81,80 @@ codeAdrianMain = (function($) {
     }
 
     /**
-     * @param currentSlideImg
-     * @param dataSrc
-     *
-     * Lazy loads slick images and adds loaded class after delay
+     * Selects Slick Arrows in Work Container
      */
 
-    function _slickLazyLoadCustom(currentSlideImg, dataSrc) {
-        currentSlideImg.attr("src", dataSrc).delay(1000).queue(function(){
+    function _reselectSlickArrows(){
+        workSlickArrowNext = $containerWork.find(".slick-next");
+        workSlickArrowPrev = $containerWork.find(".slick-prev");
+    }
+
+    /**
+     * Handles Work container Slick Init (image loads and preparing slick arrows)
+     */
+
+    function _handleWorkSlickInit() {
+        _reselectSlickArrows();
+        _toggleSlickArrow(workSlickArrowPrev, false);
+
+        var currentSlideImg = $(this).find(".slick-cloned").find("img");
+        var dataSrc = currentSlideImg.data("src");
+
+        currentSlideImg
+            .attr("src", dataSrc)
+            .delay(1000)
+            .queue(function(){
             $(this).addClass("loaded");
         });
     }
 
     /**
-     * Handles Work Slider initialization event
+     * Handles work container slick change event (loads images, handles arrows)
+     *
+     * @param event
+     * @param slick
+     *
      */
 
-    function _handleWorkSlickInit() {
-        var currentSlideImg = $(this).find(".slick-cloned").find("img");
-        var dataSrc = currentSlideImg.data("src");
+    function _handleWorkSlickChange(event, slick){
+        myLazyLoad.update();
 
-        _toggleArrow(workSlickArrowPrev, false);
-
-        _slickLazyLoadCustom(currentSlideImg, dataSrc);
-    }
-
-    /**
-     * Handles Work Slider after change event
-     */
-
-    function _handleWorkSlickAfterChange(event, slick) {
         var currentSlideImg = $(this).find(".slick-slide.slick-current.slick-active").find("img");
         var dataSrc = currentSlideImg.data("src");
 
-        myLazyLoad.update();
-
-        _toggleArrow(workSlickArrowPrev, true);
-        _toggleArrow(workSlickArrowPrev, true);
-
-        _slickLazyLoadCustom(currentSlideImg, dataSrc);
+        currentSlideImg.attr("src", dataSrc).delay(1000).queue(function(){
+            $(this).addClass("loaded");
+        });
 
         if(slick.currentSlide===0) {
-            _toggleArrow(workSlickArrowPrev, false);
+            _toggleSlickArrow(workSlickArrowPrev, false);
+            _toggleSlickArrow(workSlickArrowNext, true);
 
         } else if(slick.currentSlide+1===slick.slideCount) {
-            _toggleArrow(workSlickArrowNext, false);
+            _toggleSlickArrow(workSlickArrowPrev, true);
+            _toggleSlickArrow(workSlickArrowNext, false);
+        } else {
+            _toggleSlickArrow(workSlickArrowPrev, true);
+            _toggleSlickArrow(workSlickArrowNext, true);
         }
     }
 
     /**
-     * On document ready initializations
+     * Refreshes Slick Sliders and reselects slick arrows
+     */
+
+    function _refreshSlickSliders(){
+        $($containerFeatures).slick('resize');
+        $($containerWork).slick('resize');
+        _reselectSlickArrows();
+    }
+
+    /**
+     * On document ready function calls and initializations
      */
 
     $(function() {
         _cacheDom();
-
-        $window.on('resize orientationchange', _refreshSlickAndSelectArrows);
 
         _initializeSlick($containerFeatures, containerFeaturesSlick);
         _initializeSlick($containerAbout, containerAboutSlick);
@@ -145,28 +163,15 @@ codeAdrianMain = (function($) {
 
         _initializeSlick($containerWork, containerWorkSlick);
 
-        $containerWork.on("afterChange", _handleWorkSlickAfterChange);
-
+        $containerWork.on("afterChange", _handleWorkSlickChange);
         myLazyLoad = new LazyLoad();
     });
 
     /**
-     * Refreshes sliders and reselects arrows in work slider
-     */
-
-    function _refreshSlickAndSelectArrows() {
-        $($containerFeatures).slick('resize');
-        $($containerWork).slick('resize');
-
-        workSlickArrowNext = $containerWork.find(".slick-next");
-        workSlickArrowPrev = $containerWork.find(".slick-prev");
-    }
-
-    /**
+     * Initializes slick with options
+     *
      * @param $slickContainer
      * @param slickOptions
-     *
-     * Initializes a slider with options
      */
 
     function _initializeSlick($slickContainer, slickOptions) {
@@ -174,7 +179,7 @@ codeAdrianMain = (function($) {
     }
 
     /**
-     * Caches DOM and JQuery selects elements (performance heavy tasks)
+     * Caches DOM - resource-heavy functions
      */
 
     function _cacheDom(){
@@ -182,7 +187,7 @@ codeAdrianMain = (function($) {
         $containerFeatures = $("#containerFeatures");
         $containerWork = $("#containerWork");
         $containerAbout = $("#aboutImageContainer");
-        workSlickArrowNext = $containerWork.find(".slick-next");
-        workSlickArrowPrev = $containerWork.find(".slick-prev");
+        _reselectSlickArrows();
+        $window.on('resize orientationchange', _refreshSlickSliders);
     }
 })(jQuery);
