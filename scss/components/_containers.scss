@@ -272,6 +272,10 @@
 
     .slick-slide {
         padding: 0;
+
+        img {
+            width: 100%
+        }
     }
 
     &__imagesContainer {
@@ -284,7 +288,7 @@
             margin-bottom: -20%;
         }
 
-        img {
+        picture {
             @include absolute($left: 0, $right: 0, $top: 0);
         }
 
@@ -299,14 +303,14 @@
                 padding-bottom: 36%;
             }
 
-            img {
+            picture {
                 min-width: 62vw;
                 margin-left: -31%;
             }
         }
 
         @media screen and (min-width: $desktop-medium) {
-            img {
+            picture {
                 min-width: 0;
                 margin-left: 0;
             }
@@ -316,7 +320,7 @@
             .slick-slide {
                 padding-bottom: 23%;
             }
-            img {
+            picture {
                 width: 100%;
                 @include absolute($left: 0, $right: 0, $top: 0);
             }
@@ -327,7 +331,7 @@
         z-index: 2;
 
         .slick-dots {
-            @include absolute($top: 0, $right: 0);
+            @include absolute($top: .5em, $right: 0);
             margin-right: .5em;
             padding-top: .5em;
 
@@ -452,6 +456,13 @@
         &Title {
             @include adjust-font-size-to(36px);
             @include margin-trailer(2);
+            @media screen and (min-width: $mobile-landscape) {
+                @include adjust-font-size-to(42px);
+            }
+        }
+
+        p {
+            font-weight: $semiBold;
         }
 
         a {
@@ -472,7 +483,6 @@
             transition: box-shadow 0.3s ease;
             @include padding-leader(5);
             padding-bottom: 29%;
-            //min-height: 100%;
             position: relative;
             z-index: -2;
         }
@@ -498,7 +508,7 @@
             padding-top: 20%;
             padding-bottom: 30%;
             background: $backgroundPrimary;
-            margin: percentage(31/812) percentage(103/812) percentage(82/812);
+            margin: percentage(32/812) percentage(103/812) percentage(82/812);
         }
 
         img {

@@ -136,9 +136,30 @@
         <article class="containerAbout__imagesContainer">
             <div class="imagesContainer__wrapper">
                 <ul id="aboutImageContainer">
-                    <li><img data-src="images/minified/about-me-1-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img data-src="images/minified/about-me-2-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img data-src="images/minified/about-me-3-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-1-420-min.jpg 1x, ./images/minified/about-me-1-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-1-768-min.jpg 1x, ./images/minified/about-me-1-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-1-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-1-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-2-420-min.jpg 1x, ./images/minified/about-me-2-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-2-768-min.jpg 1x, ./images/minified/about-me-2-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-2-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-2-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-3-420-min.jpg 1x, ./images/minified/about-me-3-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-3-768-min.jpg 1x, ./images/minified/about-me-3-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-3-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-3-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
                 </ul>
                 <div class="loader"></div>
             </div>
