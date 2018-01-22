@@ -296,6 +296,26 @@
             padding-bottom: 23%;
         }
 
+        /**
+         * Dirty fix for Firefox-specific bug:
+         * Firefox has a weird issue with flexbox and content padding
+         */
+        @-moz-document url-prefix() {
+            .slick-initialized .slick-slide {
+                display: table;
+            }
+        }
+
+        /**
+        * Dirty fix for Edge-specific bug:
+        * Edge has a weird issue with flexbox and content padding
+        */
+        @supports (-ms-ime-align: auto) {
+            .slick-initialized .slick-slide {
+                display: table;
+            }
+        }
+
         @media screen and (min-width: $desktop-small) {
             margin-bottom: 0;
 
@@ -346,7 +366,6 @@
     .imagesContainer__wrapper {
         position: relative;
         text-align: center;
-        min-height: 100%;
 
         @media screen and (min-width: $tablet-portrait) {
             max-width: 75%;
@@ -396,8 +415,12 @@
         }
 
         div {
+            max-width: px-to-em(720px, $base-font-size);
+            margin: 0 auto;
+
             @media screen and (min-width: $desktop-small) {
-                max-width: px-to-em(480px, $base-font-size);
+                margin-left: 0;
+                max-width: px-to-em(512px, $base-font-size);
             }
 
             @media screen and (min-width: $desktop-medium) {
@@ -410,7 +433,7 @@
 
 .containerWork {
     @include padding-leader(10);
-    @include margin-trailer(10);
+    @include margin-trailer(5);
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
@@ -418,21 +441,20 @@
     @media screen and (min-width: $mobile-landscape) {
         padding-left: 1.5em;
         padding-right: 1.5em;
+        @include margin-trailer(10);
     }
 
     @media screen and (min-width: $desktop-small) {
         @include padding-leader(5);
     }
 
-    @media screen and (min-width: $tablet-portrait) {
-        overflow-x: hidden;
-        padding-bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 0;
 
-        &__wrapper {
-            padding: 0;
-            margin-left: -10%;
-            margin-right: -10%;
-        }
+    &__wrapper {
+        padding: 0;
+        margin-left: -10%;
+        margin-right: -10%;
     }
 
     &__title {
@@ -537,6 +559,14 @@
         padding: 0;
     }
 
+    .slick-slider {
+        padding: 0 10%;
+
+        @media screen and (min-width: $tablet-portrait) {
+            padding: 0;
+        }
+    }
+
     @media screen and (min-width: $tablet-portrait) {
         .slick-slide {
             transform: scale(.88);
@@ -562,7 +592,7 @@
         }
     }
 
-    @media screen and (min-width: $tablet-portrait) and (min-height: $mobile-landscape) {
+    @media screen and (min-width: $tablet-portrait) {
         &__wrapper {
             padding: 0;
             margin-left: -27%;

@@ -125,16 +125,22 @@
 }
 
 .slick-prev {
-    left: -1rem;
     @extend .icon-left-dir;
+    left: 6%;
+    @media screen and (min-width: $mobile-landscape) {
+        left: 7.5%;
+    }
     @media screen and (min-width: $tablet-portrait) {
         left: 9%;
     }
 }
 
 .slick-next {
-    right: -1rem;
+    right: 6%;
     @extend .icon-right-dir;
+    @media screen and (min-width: $mobile-landscape) {
+        right: 7.5%;
+    }
     @media screen and (min-width: $tablet-portrait) {
         right: 9%;
     }
