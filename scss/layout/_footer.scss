@@ -10,7 +10,7 @@
         @include padding-trailer(10);
         display: none;
 
-        @media screen and (min-width: $mobile-landscape) {
+        @media screen and (min-width: $mobile-landscape-custom) {
             display: flex;
         }
 

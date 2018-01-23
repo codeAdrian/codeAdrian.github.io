@@ -27,7 +27,7 @@
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png"/>
     <meta name="msapplication-square150x150logo" content="mstile-150x150.png"/>
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Teko" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600|Teko" rel="preconnect stylesheet">
     <script src="./js/lazyload.min.js"></script>
 </head>
 <body>
@@ -136,9 +136,30 @@
         <article class="containerAbout__imagesContainer">
             <div class="imagesContainer__wrapper">
                 <ul id="aboutImageContainer">
-                    <li><img data-src="images/minified/about-me-1-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img data-src="images/minified/about-me-2-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
-                    <li><img data-src="images/minified/about-me-3-min.jpg" alt="Image of Adrian Bece in front of Intrepid Fox Club, Athens"/></li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-1-420-min.jpg 1x, ./images/minified/about-me-1-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-1-768-min.jpg 1x, ./images/minified/about-me-1-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-1-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-1-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-2-420-min.jpg 1x, ./images/minified/about-me-2-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-2-768-min.jpg 1x, ./images/minified/about-me-2-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-2-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-2-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
+                    <li>
+                        <picture>
+                            <source data-srcset="./images/minified/about-me-3-420-min.jpg 1x, ./images/minified/about-me-3-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/about-me-3-768-min.jpg 1x, ./images/minified/about-me-3-1024-min.jpg 2x" media="(max-width: 1699px)">
+                            <source data-srcset="./images/minified/about-me-3-1024-min.jpg 1x">
+                            <img data-src="./images/minified/about-me-3-768-min.jpg" alt="Adrian Bece">
+                        </picture>
+                    </li>
                 </ul>
                 <div class="loader"></div>
             </div>
@@ -172,7 +193,14 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img data-src="images/minified/prj-zee-min.jpg"/>
+                            <picture>
+                                <source data-srcset="./images/minified/prj-zee-420-min.jpg 1x, ./images/minified/prj-zee-768-min.jpg 2x" media="(max-width: 440px)">
+                                <source data-srcset="./images/minified/prj-zee-768-min.jpg 1x, ./images/minified/prj-zee-1024-min.jpg 2x" media="(max-width: 767px)">
+                                <source data-srcset="./images/minified/prj-zee-420-min.jpg 1x, ./images/minified/prj-zee-768-min.jpg 2x" media="(max-width: 1100px)">
+                                <source data-srcset="./images/minified/prj-zee-768-min.jpg 1x, ./images/minified/prj-zee-1024-min.jpg 2x" media="(max-width: 1700px)">
+                                <source data-srcset="./images/minified/prj-zee-1024-min.jpg">
+                                <img data-src="./images/minified/prj-zee-768-min.jpg" alt="Adrian Bece">
+                            </picture>
                             <div class="loader"></div>
                         </div>
                     </a>
@@ -184,7 +212,14 @@
                             <p>Inchoo Project | Wordpress</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img data-src="images/minified/prj-zeeBlog-min.jpg"/>
+                            <picture>
+                                <source data-srcset="./images/minified/prj-zeeBlog-420-min.jpg 1x, ./images/minified/prj-zeeBlog-768-min.jpg 2x" media="(max-width: 440px)">
+                                <source data-srcset="./images/minified/prj-zeeBlog-768-min.jpg 1x, ./images/minified/prj-zeeBlog-1024-min.jpg 2x" media="(max-width: 767px)">
+                                <source data-srcset="./images/minified/prj-zeeBlog-420-min.jpg 1x, ./images/minified/prj-zeeBlog-768-min.jpg 2x" media="(max-width: 1100px)">
+                                <source data-srcset="./images/minified/prj-zeeBlog-768-min.jpg 1x, ./images/minified/prj-zeeBlog-1024-min.jpg 2x" media="(max-width: 1700px)">
+                                <source data-srcset="./images/minified/prj-zeeBlog-1024-min.jpg">
+                                <img data-src="./images/minified/prj-zeeBlog-768-min.jpg" alt="Adrian Bece">
+                            </picture>
                             <div class="loader"></div>
                         </div>
                     </a>
@@ -196,11 +231,18 @@
                         <p>Inchoo Project | Magento</p>
                     </div>
                     <div class="containerWork__imageWrapper">
-                        <img data-src="images/minified/prj-keh-min.jpg"/>
+                        <picture>
+                            <source data-srcset="./images/minified/prj-keh-420-min.jpg 1x, ./images/minified/prj-keh-768-min.jpg 2x" media="(max-width: 440px)">
+                            <source data-srcset="./images/minified/prj-keh-768-min.jpg 1x, ./images/minified/prj-keh-1024-min.jpg 2x" media="(max-width: 767px)">
+                            <source data-srcset="./images/minified/prj-keh-420-min.jpg 1x, ./images/minified/prj-keh-768-min.jpg 2x" media="(max-width: 1100px)">
+                            <source data-srcset="./images/minified/prj-keh-768-min.jpg 1x, ./images/minified/prj-keh-1024-min.jpg 2x" media="(max-width: 1700px)">
+                            <source data-srcset="./images/minified/prj-keh-1024-min.jpg">
+                            <img data-src="./images/minified/prj-keh-768-min.jpg" alt="Adrian Bece">
+                        </picture>
                         <div class="loader"></div>
                     </div>
                 </a>
-            </li>
+                </li>
                 <li class="containerWork__card">
                     <a href="http://oneills.com/" target="_blank" rel="noopener noreferrer">
                         <div class="containerSecondary containerSecondary--pattern">
@@ -208,7 +250,14 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img data-src="images/minified/prj-oneills-min.jpg"/>
+                            <picture>
+                                <source data-srcset="./images/minified/prj-oneills-420-min.jpg 1x, ./images/minified/prj-oneills-768-min.jpg 2x" media="(max-width: 440px)">
+                                <source data-srcset="./images/minified/prj-oneills-768-min.jpg 1x, ./images/minified/prj-oneills-1024-min.jpg 2x" media="(max-width: 767px)">
+                                <source data-srcset="./images/minified/prj-oneills-420-min.jpg 1x, ./images/minified/prj-oneills-768-min.jpg 2x" media="(max-width: 1100px)">
+                                <source data-srcset="./images/minified/prj-oneills-768-min.jpg 1x, ./images/minified/prj-oneills-1024-min.jpg 2x" media="(max-width: 1700px)">
+                                <source data-srcset="./images/minified/prj-oneills-1024-min.jpg">
+                                <img data-src="./images/minified/prj-oneills-768-min.jpg" alt="Adrian Bece">
+                            </picture>
                             <div class="loader"></div>
                         </div>
                     </a>
@@ -220,7 +269,14 @@
                             <p>Inchoo Project | Wordpress</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img data-src="images/minified/prj-inchoo-min.jpg"/>
+                            <picture>
+                                <source data-srcset="./images/minified/prj-inchoo-420-min.jpg 1x, ./images/minified/prj-inchoo-768-min.jpg 2x" media="(max-width: 440px)">
+                                <source data-srcset="./images/minified/prj-inchoo-768-min.jpg 1x, ./images/minified/prj-inchoo-1024-min.jpg 2x" media="(max-width: 767px)">
+                                <source data-srcset="./images/minified/prj-inchoo-420-min.jpg 1x, ./images/minified/prj-inchoo-768-min.jpg 2x" media="(max-width: 1100px)">
+                                <source data-srcset="./images/minified/prj-inchoo-768-min.jpg 1x, ./images/minified/prj-inchoo-1024-min.jpg 2x" media="(max-width: 1700px)">
+                                <source data-srcset="./images/minified/prj-inchoo-1024-min.jpg">
+                                <img data-src="./images/minified/prj-inchoo-768-min.jpg" alt="Adrian Bece">
+                            </picture>
                             <div class="loader"></div>
                         </div>
                     </a>
@@ -233,7 +289,14 @@
                             <p>Inchoo Project | Magento</p>
                         </div>
                         <div class="containerWork__imageWrapper">
-                            <img data-src="images/minified/prj-aa-min.jpg" />
+                            <picture>
+                                <source data-srcset="./images/minified/prj-aa-420-min.jpg 1x, ./images/minified/prj-aa-768-min.jpg 2x" media="(max-width: 440px)">
+                                <source data-srcset="./images/minified/prj-aa-768-min.jpg 1x, ./images/minified/prj-aa-1024-min.jpg 2x" media="(max-width: 767px)">
+                                <source data-srcset="./images/minified/prj-aa-420-min.jpg 1x, ./images/minified/prj-aa-768-min.jpg 2x" media="(max-width: 1100px)">
+                                <source data-srcset="./images/minified/prj-aa-768-min.jpg 1x, ./images/minified/prj-aa-1024-min.jpg 2x" media="(max-width: 1700px)">
+                                <source data-srcset="./images/minified/prj-aa-1024-min.jpg">
+                                <img data-src="./images/minified/prj-aa-768-min.jpg" alt="Adrian Bece">
+                            </picture>
                             <div class="loader"></div>
                         </div>
                     </a>
@@ -279,14 +342,14 @@
         <p>
             Designed and made with <span class="icon-heart"></span> by Adrian Bece
         </p>
-        <p>
-            Created using HTML, CSS, Sass, JS.
-        </p>
+        <small>
+            Forged with Echo Toolkit using HTML, CSS, Sass, JavaScript and JQuery.
+        </small>
     </div>
 </footer>
 <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="./js/smoothWheel.min.js"></script>
 <script src="./js/scrollPosition.min.js"></script>

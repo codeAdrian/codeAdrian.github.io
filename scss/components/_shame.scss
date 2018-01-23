@@ -1,0 +1,23 @@
+.containerAbout {
+    &__imagesContainer {
+        /**
+         * Dirty fix for Firefox-specific bug:
+         * Firefox has a weird issue with flexbox and content padding
+         */
+        @-moz-document url-prefix() {
+            .slick-initialized .slick-slide {
+                display: table;
+            }
+        }
+
+        /**
+        * Dirty fix for Edge-specific bug:
+        * Edge has a weird issue with flexbox and content padding
+        */
+        @supports (-ms-ime-align: auto) {
+            .slick-initialized .slick-slide {
+                display: table;
+            }
+        }
+    }
+}
