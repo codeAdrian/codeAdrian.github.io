@@ -20,7 +20,7 @@ h6 {
 }
 
 h1 {
-    @include adjust-font-size-to(48px);
+    @include adjust-font-size-to(60px);
     @include padding-leader(20);
     color: $ctaColor;
 
@@ -30,6 +30,10 @@ h1 {
 
     @media screen and (min-width: $desktop-small) {
         padding-top: 0;
+        @include adjust-font-size-to(96px);
+    }
+
+    @media screen and (min-width: $desktop-small-custom) {
         @include adjust-font-size-to(110px);
     }
 }

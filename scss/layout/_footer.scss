@@ -10,7 +10,7 @@
         @include padding-trailer(10);
         display: none;
 
-        @media screen and (min-width: $mobile-landscape) {
+        @media screen and (min-width: $mobile-landscape-custom) {
             display: flex;
         }
 
@@ -24,6 +24,15 @@
 
     &__info {
         text-align: center;
+
+        .icon-heart {
+            display: block;
+            padding: .25em;
+            @media screen and (min-width: $mobile-landscape-custom) {
+                display: inline-block;
+                padding: 0 .15em;
+            }
+        }
     }
 
     &__title {

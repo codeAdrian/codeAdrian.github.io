@@ -31,6 +31,7 @@ codeAdrianMain = (function($) {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
+        accessibility: false,
         mobileFirst: true,
         responsive: [
             {
@@ -96,16 +97,6 @@ codeAdrianMain = (function($) {
     function _handleWorkSlickInit() {
         _reselectSlickArrows();
         _toggleSlickArrow(workSlickArrowPrev, false);
-
-        var currentSlideImg = $(this).find(".slick-cloned").find("img");
-        var dataSrc = currentSlideImg.data("src");
-
-        currentSlideImg
-            .attr("src", dataSrc)
-            .delay(1000)
-            .queue(function(){
-            $(this).addClass("loaded");
-        });
     }
 
     /**
@@ -118,14 +109,6 @@ codeAdrianMain = (function($) {
 
     function _handleWorkSlickChange(event, slick){
         myLazyLoad.update();
-
-        var currentSlideImg = $(this).find(".slick-slide.slick-current.slick-active").find("img");
-        var dataSrc = currentSlideImg.data("src");
-
-        currentSlideImg.attr("src", dataSrc).delay(1000).queue(function(){
-            $(this).addClass("loaded");
-        });
-
         if(slick.currentSlide===0) {
             _toggleSlickArrow(workSlickArrowPrev, false);
             _toggleSlickArrow(workSlickArrowNext, true);
