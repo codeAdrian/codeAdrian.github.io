@@ -14,7 +14,7 @@
         @media screen and (min-width: $tablet-portrait) {
             @include adjust-font-size-to(20px, 10);
         }
-        @media screen and (min-width: $desktop-small) {
+        @media screen and (min-width: $desktop-small-custom) {
             @include adjust-font-size-to(28px, 14);
         }
 
@@ -148,15 +148,15 @@
     background-color: $backgroundSecondary;
 
     &--pattern {
-        background-image: url("../images/pattern.jpg");
+        background-image: url("../images/minified/pattern-min.jpg");
     }
 }
 
 .containerSubtitle {
     text-align: center;
     @include adjust-font-size-to(22px, 9);
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: .75em;
+    padding-right: .75em;
     max-width: px-to-em(868px, 48);
     margin: 0 auto;
     @include rhythm-padding(5, 20);
@@ -424,7 +424,7 @@
             }
 
             @media screen and (min-width: $desktop-medium) {
-                max-width: px-to-em(768px, $base-font-size);
+                max-width: px-to-em(720px, $base-font-size);
             }
         }
     }

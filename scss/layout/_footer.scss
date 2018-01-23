@@ -24,6 +24,15 @@
 
     &__info {
         text-align: center;
+
+        .icon-heart {
+            display: block;
+            padding: .25em;
+            @media screen and (min-width: $mobile-landscape-custom) {
+                display: inline-block;
+                padding: 0 .15em;
+            }
+        }
     }
 
     &__title {
