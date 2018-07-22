@@ -15,7 +15,7 @@
 /*------------------------------------------------------------*\
                      RESET / NORMALIZE
 \*------------------------------------------------------------*/
-@import "base/normalize";
+@import 'base/normalize';
 /*------------------------------------------------------------*\
                       VENDOR INCLUDES
 \*------------------------------------------------------------*/
@@ -23,30 +23,31 @@
 /*------------------------------------------------------------*\
                       HELPERS INCLUDES
 \*------------------------------------------------------------*/
-@import "helpers/typography-config";
-@import "helpers/breakpoints-config";
-@import "helpers/functions";
-@import "helpers/mixins";
-@import "helpers/colors";
-@import "helpers/animations";
+@import 'helpers/typography-config';
+@import 'helpers/breakpoints-config';
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/colors';
+@import 'helpers/animations';
 /*------------------------------------------------------------*\
                        THEME FILES
 \*------------------------------------------------------------*/
-@import "components/typography";
-@import "components/media";
-@import "components/page";
-@import "components/list";
-@import "components/containers";
-@import "components/buttons";
-@import "components/icons";
-@import "components/slider";
-@import "components/loader";
+@import 'components/typography';
+@import 'components/media';
+@import 'components/page';
+@import 'components/list';
+@import 'components/containers';
+@import 'components/buttons';
+@import 'components/icons';
+@import 'components/slider';
+@import 'components/loader';
+@import 'components/tables';
 
 /*------------------------------------------------------------*\
                       LAYOUT INCLUDES
 \*------------------------------------------------------------*/
-@import "layout/header";
-@import "layout/footer";
+@import 'layout/header';
+@import 'layout/footer';
 
 /*------------------------------------------------------------*\
                        PAGE INCLUDES
@@ -56,4 +57,4 @@
                        BROWSER HACKS
 \*------------------------------------------------------------*/
 
-@import "components/shame";
+@import 'components/shame';

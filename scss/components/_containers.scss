@@ -104,10 +104,12 @@
 
         &:before,
         &:after {
-            content: "";
+            content: '';
         }
 
-        &, &:before, &:after {
+        &,
+        &:before,
+        &:after {
             animation: fade-in-out;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
@@ -131,7 +133,7 @@
         &:before {
             bottom: 45%;
             width: 110%;
-            animation-delay: .7s;
+            animation-delay: 0.7s;
             animation-duration: 1.641s;
         }
 
@@ -148,15 +150,15 @@
     background-color: $backgroundSecondary;
 
     &--pattern {
-        background-image: url("../images/minified/pattern-min.jpg");
+        background-image: url('../images/minified/pattern-min.jpg');
     }
 }
 
 .containerSubtitle {
     text-align: center;
     @include adjust-font-size-to(22px, 9);
-    padding-left: .75em;
-    padding-right: .75em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
     max-width: px-to-em(868px, 48);
     margin: 0 auto;
     @include rhythm-padding(5, 20);
@@ -224,17 +226,17 @@
         }
 
         &:after {
-            content: "";
+            content: '';
             @include absolute($bottom: 0, $left: 0, $right: 0);
             width: 60%;
-            height: .5em;
+            height: 0.5em;
             margin: 0 auto;
-            box-shadow: 0 -2.5em 15px 1px rgba($Nero, .1);
+            box-shadow: 0 -2.5em 15px 1px rgba($Nero, 0.1);
             border-radius: 100%;
 
             @media screen and (min-width: $desktop-small) {
                 width: 75%;
-                box-shadow: 0 -4.5em 15px 1px rgba($Nero, .1);
+                box-shadow: 0 -4.5em 15px 1px rgba($Nero, 0.1);
             }
         }
     }
@@ -254,6 +256,10 @@
         .icon {
             color: $ctaColor;
             @include adjust-font-size-to(48px);
+
+            &-larger {
+                @include adjust-font-size-to(62px);
+            }
         }
     }
 }
@@ -274,7 +280,7 @@
         padding: 0;
 
         img {
-            width: 100%
+            width: 100%;
         }
     }
 
@@ -351,9 +357,9 @@
         z-index: 2;
 
         .slick-dots {
-            @include absolute($top: .5em, $right: 0);
-            margin-right: .5em;
-            padding-top: .5em;
+            @include absolute($top: 0.5em, $right: 0);
+            margin-right: 0.5em;
+            padding-top: 0.5em;
 
             li {
                 display: block;
@@ -428,7 +434,6 @@
             }
         }
     }
-
 }
 
 .containerWork {
@@ -461,8 +466,8 @@
         @include margin-trailer(10);
 
         @media screen and (min-width: $mobile-landscape) {
-            margin-left: .5em;
-            margin-right: .5em;
+            margin-left: 0.5em;
+            margin-right: 0.5em;
         }
     }
 
@@ -495,13 +500,15 @@
 
             &:hover {
                 .containerSecondary {
-                    box-shadow: inset 0 0 0 15em rgba(darken($backgroundSecondary, 50%), .3);
+                    box-shadow: inset 0 0 0 15em
+                        rgba(darken($backgroundSecondary, 50%), 0.3);
                 }
             }
         }
 
         .containerSecondary {
-            box-shadow: inset 0 0 0 15em rgba(darken($backgroundSecondary, 50%), 0);
+            box-shadow: inset 0 0 0 15em
+                rgba(darken($backgroundSecondary, 50%), 0);
             transition: box-shadow 0.3s ease;
             @include padding-leader(5);
             padding-bottom: 29%;
@@ -514,7 +521,7 @@
         position: relative;
         display: inline-block;
         margin-top: -29%;
-        background-image: url("../images/minified/project-bg-min.png");
+        background-image: url('../images/minified/project-bg-min.png');
         background-repeat: no-repeat;
         background-size: contain;
         width: 100%;
@@ -569,12 +576,11 @@
 
     @media screen and (min-width: $tablet-portrait) {
         .slick-slide {
-            transform: scale(.88);
+            transform: scale(0.88);
             transform-origin: bottom center;
             backface-visibility: hidden;
-            transition: transform 0.3s .15s ease,
-            opacity 0.3s .15s ease,
-            filter 0.3s .15s ease;
+            transition: transform 0.3s 0.15s ease, opacity 0.3s 0.15s ease,
+                filter 0.3s 0.15s ease;
         }
 
         .slick-dots {
@@ -582,7 +588,7 @@
         }
 
         .slick-slide:not(.slick-center) {
-            opacity: .25;
+            opacity: 0.25;
             pointer-events: none;
             filter: grayscale(100%);
         }
@@ -606,6 +612,5 @@
         .slick-prev {
             left: 19%;
         }
-
     }
 }

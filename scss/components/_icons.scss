@@ -1,16 +1,20 @@
 @font-face {
     font-family: 'fontello';
-    src: url('../font/Fontello/fontello.eot?96452683');
-    src: url('../font/Fontello/fontello.eot?96452683#iefix') format('embedded-opentype'),
-    url('../font/Fontello/fontello.woff?96452683') format('woff'),
-    url('../font/Fontello/fontello.ttf?96452683') format('truetype'),
-    url('../font/Fontello/fontello.svg?96452683#fontello') format('svg');
+    src: url('../font/Fontello/fontello.eot?68849445');
+    src: url('../font/Fontello/fontello.eot?68849445#iefix')
+            format('embedded-opentype'),
+        url('../font/Fontello/fontello.woff2?68849445') format('woff2'),
+        url('../font/Fontello/fontello.woff?68849445') format('woff'),
+        url('../font/Fontello/fontello.ttf?68849445') format('truetype'),
+        url('../font/Fontello/fontello.svg?68849445#fontello') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before, .slick-arrow:before {
-    font-family: "fontello";
+[class^='icon-']:before,
+[class*=' icon-']:before,
+.slick-arrow:before {
+    font-family: 'fontello';
     font-style: normal;
     font-weight: normal;
     speak: none;
@@ -23,16 +27,42 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-right-dir:before { content: '\e800'; } /* '' */
-.icon-down-dir:before { content: '\e801'; } /* '' */
-.icon-basket:before { content: '\e802'; } /* '' */
-.icon-doc:before { content: '\e803'; } /* '' */
-.icon-heart:before { content: '\e804'; } /* '' */
-.icon-cog:before { content: '\e805'; } /* '' */
-.icon-left-dir:before { content: '\e807'; } /* '' */
-.icon-up-dir:before { content: '\e808'; } /* '' */
-.icon-twitter:before { content: '\f099'; } /* '' */
-.icon-github:before { content: '\f09b'; } /* '' */
-.icon-mail:before { content: '\f0e0'; } /* '' */
-.icon-linkedin:before { content: '\f0e1'; } /* '' */
-.icon-css3:before { content: '\f13c'; } /* '' */
+.icon-react:before {
+    content: '\e801';
+} /* '' */
+.icon-basket:before {
+    content: '\e802';
+} /* '' */
+.icon-doc:before {
+    content: '\e803';
+} /* '' */
+.icon-heart:before {
+    content: '\e804';
+} /* '' */
+.icon-cog:before {
+    content: '\e805';
+} /* '' */
+.icon-magento:before {
+    content: '\e806';
+} /* '' */
+.icon-left-dir:before {
+    content: '\e808';
+} /* '' */
+.icon-right-dir:before {
+    content: '\e809';
+} /* '' */
+.icon-twitter:before {
+    content: '\f099';
+} /* '' */
+.icon-github:before {
+    content: '\f09b';
+} /* '' */
+.icon-mail:before {
+    content: '\f0e0';
+} /* '' */
+.icon-linkedin:before {
+    content: '\f0e1';
+} /* '' */
+.icon-css3:before {
+    content: '\f13c';
+} /* '' */
