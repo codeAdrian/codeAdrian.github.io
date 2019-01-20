@@ -4,9 +4,12 @@
     | append: site.baseurl | append: page.url %} {% capture share_link %} {%- if
     id contains "twitter" %}https://twitter.com/intent/tweet/?url={{
         url
-    }}&text={{ page.title | uri_escape }}{% if site.twitter.username %}&via={{
+    }}&text={{ page.title | uri_escape }} {% if site.twitter.username%}&via={{
         site.twitter.username
-    }}{% endif %}{% endif -%} {%- if id contains "facebook"
+    }}{% endif %}&hashtags= {% for tag in page.tags %} {%capture tag_name %}{{
+        tag
+    }}{% endcapture %} {{ tag_name }} {% if forloop.last == false %},{% endif
+    %}{% endfor %}{% endif -%} {%- if id contains "facebook"
     %}https://facebook.com/sharer/sharer.php?u={{ url }}{% endif -%} {%- if id
     contains "google+" %}https://plus.google.com/share?url={{ url }}{% endif -%}
     {%- if id contains "pinterest"
