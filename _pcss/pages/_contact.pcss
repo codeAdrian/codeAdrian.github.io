@@ -1,0 +1,35 @@
+.contact {
+    background-color: var(--color__accent);
+}
+
+.contact__wrapper {
+    border-width: 0;
+    background-color: var(--color__secondary);
+    max-width: var(--container__width--smaller);
+    padding: var(--spacing__vertical--1) var(--spacing__default--horizontal);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__title {
+    font-size: var(--typography__ms--4);
+    line-height: var(--spacing__vertical--3);
+    text-align: center;
+}
+
+.contact__list {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    padding-bottom: var(--spacing__vertical--1);
+}
+
+.contact__actions {
+    text-align: center;
+}
+
+@media (--mq__mobileLandscape--min) {
+    .contact {
+        padding: var(--spacing__vertical--1) var(--spacing__default--horizontal);
+    }
+}

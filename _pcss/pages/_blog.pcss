@@ -1,0 +1,85 @@
+.blog {
+    padding-top: var(--spacing__vertical--1);
+    padding-left: var(--spacing__default--horizontal);
+    padding-right: var(--spacing__default--horizontal);
+    max-width: var(--container__width--widest);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog__list {
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+}
+
+.blog__item {
+    margin-bottom: var(--spacing__vertical--1);
+    border-bottom: var(--border__width--medium) solid
+        var(--color__grayscale--light);
+}
+
+.blog__imageWrapper {
+    height: var(--spacing__vertical--10);
+    display: flex;
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+    margin-bottom: var(--spacing__vertical--1);
+    text-align: center;
+    background-color: var(--color__accent);
+}
+
+.blog__image {
+    margin-left: auto;
+    margin-right: auto;
+    max-height: var(--spacing__vertical--8);
+}
+
+.blog__actions {
+    padding-bottom: var(--spacing__vertical--1);
+}
+
+.blog__link {
+    color: var(--color__primary);
+
+    &:hover,
+    &:active {
+        color: var(--color__primary);
+    }
+}
+
+.blog__heading {
+    padding-bottom: var(--spacing__vertical--1);
+}
+
+.blog__metaWrapper {
+    padding-bottom: var(--spacing__vertical--n1);
+}
+
+.blog__meta--author {
+    padding-bottom: var(--spacing__vertical--n1);
+}
+
+.blog__date {
+    color: var(--color__grayscale--darker);
+}
+
+@media (--mq__tablet--min) {
+    .blog__metaWrapper {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    .blog__meta--author {
+        padding-bottom: 0;
+    }
+
+    .blog__list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .blog__title {
+        padding-bottom: var(--spacing__vertical--n1);
+    }
+}

@@ -1,0 +1,34 @@
+.input {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: middle;
+    white-space: normal;
+    background: none;
+    display: block;
+    width: 100%;
+
+    height: calc(var(--spacing__vertical--1) - var(--border__width--light));
+    font-size: var(--typography__ms--0);
+    line-height: calc(
+        var(--spacing__vertical--1) - var(--border__width--light)
+    );
+}
+
+.input--default {
+    border-bottom: var(--border__width--light) solid
+        var(--color__grayscale--darker);
+}
+
+.input--textarea {
+    resize: vertical;
+    padding: var(--spacing__horizontal--n1);
+    min-height: var(--spacing__vertical--4);
+    max-height: var(--spacing__vertical--8);
+    border: var(--border__width--light) solid var(--color__grayscale--darker);
+    padding: calc(
+            var(--spacing__vertical--n1) - 2 * var(--border__width--light)
+        )
+        var(--spacing__vertical--n1);
+}

@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    (function() {
+      var registerServiceWorker = function() {
+        if (!navigator.serviceWorker) {
+          return;
+        }
+
+        navigator.serviceWorker
+          .register("{{ "/sw.js" | relative_url }}")
+          .then(function(registration) {
+            console.log("Service Worker: registered");
+          })
+          .catch(function(err) {
+            console.log("Service Worker: registration failed ", err);
+          });
+      };
+
+      registerServiceWorker();
+    })();
+</script>

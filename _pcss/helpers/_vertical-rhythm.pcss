@@ -1,0 +1,35 @@
+:root {
+    --spacing__vertical--n3: calc(1 / 8 * var(--spacing__vertical--1));
+    --spacing__vertical--n2: calc(1 / 4 * var(--spacing__vertical--1));
+    --spacing__vertical--n1: calc(1 / 2 * var(--spacing__vertical--1));
+    --spacing__vertical--1: 1.625rem;
+    --spacing__vertical--2: calc(2 * var(--spacing__vertical--1));
+    --spacing__vertical--3: calc(3 * var(--spacing__vertical--1));
+    --spacing__vertical--4: calc(4 * var(--spacing__vertical--1));
+    --spacing__vertical--5: calc(5 * var(--spacing__vertical--1));
+    --spacing__vertical--6: calc(6 * var(--spacing__vertical--1));
+    --spacing__vertical--7: calc(7 * var(--spacing__vertical--1));
+    --spacing__vertical--8: calc(8 * var(--spacing__vertical--1));
+    --spacing__vertical--9: calc(9 * var(--spacing__vertical--1));
+    --spacing__vertical--10: calc(10 * var(--spacing__vertical--1));
+
+    --spacing__horizontal--n2: var(--spacing__vertical--n2);
+    --spacing__horizontal--n1: var(--spacing__vertical--n1);
+    --spacing__horizontal--1: var(--spacing__vertical--1);
+    --spacing__horizontal--2: var(--spacing__vertical--2);
+    --spacing__horizontal--3: var(--spacing__vertical--3);
+    --spacing__horizontal--4: var(--spacing__vertical--4);
+    --spacing__horizontal--5: var(--spacing__vertical--5);
+    --spacing__horizontal--6: var(--spacing__vertical--6);
+
+    --spacing__default--horizontal: var(--spacing__horizontal--n1);
+
+    --border__width--light: calc((1 / var(--typography__fontSize--px)) * 1rem);
+    --border__width--medium: calc((2 / var(--typography__fontSize--px)) * 1rem);
+    --border__width--heavy: calc((3 / var(--typography__fontSize--px)) * 1rem);
+
+    @media (--mq__desktop--min) {
+        --spacing__vertical--1: 1.778rem;
+        --spacing__default--horizontal: var(--spacing__horizontal--1);
+    }
+}

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<main class="main">
+    <section class="card">
+        <div class="container--alt card__titleWrapper">
+            <h1 class="card__title project__cardTitle">{{ page.title }}</h1>
+        </div>
+
+        <div class="card__imageWrapper project__cardImage">
+            <div class="card__background"></div>
+            <div class="card__inner">
+                <div class="imageContainer">
+                    <picture>
+                        <source
+                            data-srcset="{{ page.image }}"
+                            type="image/webp"
+                        />
+                        <source data-srcset="{{ page.image_fallback }}" />
+                        <img
+                            class="card__image"
+                            src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
+                            data-src="{{ page.image_fallback }}"
+                            alt="{{ page.title }}"
+                        />
+                    </picture>
+                    <div
+                        class="image--default image--1024x643 image--lazyLoaded"
+                    >
+                        <div class="icon icon__image image--placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project__info">
+        <div><strong>Platform: </strong>{{ page.platform }}</div>
+        <div><strong>Type:</strong> {{ page.contribution }}</div>
+        <div>
+            <strong>View Project: </strong>
+            <a target="_blank" rel="noopener noreferrer" href="{{ page.link }}"
+                >Project Site</a
+            >
+        </div>
+    </section>
+    <section class="project__content">{{ content | markdownify }}</section>
+</main>

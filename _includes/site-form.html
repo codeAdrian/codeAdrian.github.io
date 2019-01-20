@@ -1,0 +1,104 @@
+{% if include.name %} {% assign name = include.name %} {% else %} {% assign name
+= "Contact" %} {% endif %} {% assign name_id = name | downcase | replace: " ",
+"-" %} {% if include.thanks_url %} {% assign thanks_url = include.thanks_url %}
+{% else %} {% assign thanks_url = "/thanks/" %} {% endif %}
+
+<form
+    class="form  form--{{ name_id }}"
+    method="post"
+    name="{{ name }}"
+    action="{{ thanks_url }}"
+    {%
+    if
+    include.netlify_form
+    %}
+    netlify-honeypot="bot-field"
+    netlify
+    {%
+    endif
+    %}
+>
+    <fieldset class="contact__wrapper">
+        <h1 class="hero__title hero__title--default contact__title">
+            {{ name }}
+        </h1>
+        <p>
+            Do you have any feedback on my articles or website, or just want to
+            say hi? Fill out the contact form below and I'll get back to you as
+            soon as possible.
+        </p>
+        <ul class="formList">
+            <li class="formList__item">
+                <label for="name--{{ name_id }}" class="visuallyHidden"
+                    >Name</label
+                >
+                <input
+                    class="input input--default"
+                    id="name--{{ name_id }}"
+                    type="text"
+                    name="name"
+                    value=""
+                    placeholder="Name"
+                    required="required"
+                />
+                <small class="small formList__note">Required Field</small>
+            </li>
+            <li class="formList__item">
+                <label class="visuallyHidden" for="email--{{ name_id }}"
+                    >Email</label
+                >
+                <input
+                    class="input input--default"
+                    id="email--{{ name_id }}"
+                    type="email"
+                    name="email"
+                    value=""
+                    placeholder="Email"
+                    required="required"
+                />
+                <small class="small formList__note">Required Field</small>
+            </li>
+            <li class="formList__item">
+                <label class="label" for="message--{{ name_id }}"
+                    >Message</label
+                >
+                <textarea
+                    class="input input--default input--textarea"
+                    id="message--{{ name_id }}"
+                    name="message"
+                    placeholder="Your message here..."
+                    required="required"
+                ></textarea>
+                <small class="small formList__note">Required Field</small>
+            </li>
+        </ul>
+        <div>
+            <input
+                class="button button--cta"
+                type="submit"
+                value="Send message"
+            />
+        </div>
+
+        {% if include.netlify_form %}
+        <label style="display:none"
+            >Don’t fill this out if you’re human: <input name="bot-field"
+        /></label>
+        {% else %} <input type="text" name="_gotcha" style="display:none" />
+        <input
+            type="hidden"
+            name="_subject"
+            value="{{ site.title }} submission from {{ name }}"
+        />
+        <input type="hidden" name="_next" value="{{ thanks_url }}" /> {% endif
+        %}
+    </fieldset>
+</form>
+{% unless include.netlify_form %}
+<script>
+    var email = "{{ site.email | split: "" | reverse | join: "" }}";
+    var unraveledEmail = email.split("").reverse().join("");
+    var form = document.querySelector(".form--{{ name_id }}");
+      form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
+</script>
+<noscript>Please enable JavaScript to use the form.</noscript> {% endunless %}
