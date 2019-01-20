@@ -6,16 +6,15 @@ hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:lo
 hero_title: Skills
 hero_layout: default
 hero_text: <div class="hero__subtitle">4 years of experience in Frontend Development, Magento Development, Design and more.</div>
-collectionpage: services
 ---
 
 <main class="main">
     <section class="container--alt banner banner--center">
         <article class="banner__container">
-            <h2 class="banner__text services__title">Development Skills</h2>
+            <h2 class="banner__text skills__title">Development Skills</h2>
         </article>
     </section>
-    <section class="featuredList glide" id="js-services-1">
+    <section class="featuredList glide" id="js-skills-1">
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides featuredList__items">
                 <article class="featuredList__item glide__slide">
@@ -108,10 +107,10 @@ collectionpage: services
     </section>
     <section class="container--alt banner banner--center">
         <article class="banner__container">
-            <h2 class="banner__text services__title">Additional Skills</h2>
+            <h2 class="banner__text skills__title">Additional Skills</h2>
         </article>
     </section>
-    <section class="featuredList glide" id="js-services-2">
+    <section class="featuredList glide" id="js-skills-2">
         <div class="glide__track" data-glide-el="track">
             <div class="glide__slides featuredList__items">
                 <article class="featuredList__item glide__slide">
@@ -204,7 +203,7 @@ collectionpage: services
 </main>
 
 <script>
-    new Glide("#js-services-1", {
+    var jsSkillsOptions = {
         type: "slider",
         bound: true,
         rewind: false,
@@ -221,26 +220,8 @@ collectionpage: services
                 perView: 2
             }
         }
-    }).mount();
-</script>
+    };
 
-<script>
-    new Glide("#js-services-2", {
-        type: "slider",
-        bound: true,
-        rewind: false,
-        touchRatio: 0,
-        gap: 0,
-        perView: 4,
-        breakpoints: {
-            568: {
-                touchRatio: 0.5,
-                perView: 1
-            },
-            1140: {
-                touchRatio: 0.5,
-                perView: 2
-            }
-        }
-    }).mount();
+    var jsSkill1 = new Glide("#js-skills-1", jsSkillsOptions).mount();
+    var jsSkill2 = new Glide("#js-skills-2", jsSkillsOptions).mount();
 </script>

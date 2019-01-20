@@ -67,9 +67,6 @@ collections:
     portfolio:
         output: true
         title: "Portfolio"
-    services:
-        output: true
-        title: "Services"
 
 # 6. Jekyll collections settings
 defaults:
