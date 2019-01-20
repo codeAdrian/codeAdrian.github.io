@@ -1,0 +1,26 @@
+{% assign hero_title = page.hero_title %} {% assign hero_text = page.hero_text%}
+{% assign hero_image = page.hero_image %} {% assign hero_image_fallback =
+page.hero_image_fallback %} {% if hero_text or hero_title or hero_image %}
+
+<section class="hero">
+    <article class="hero__container--title">
+        <div class="hero__wrapper">
+            <h1 class="hero__title hero__title--default">{{ hero_title }}</h1>
+            {{ hero_text | markdownify }}
+        </div>
+    </article>
+    <article class="hero__container--image">
+        <div class="hero__deco hero__deco--default"></div>
+        <picture>
+            <source data-srcset="{{ hero_image }}" type="image/webp" />
+            <source data-srcset="{{ hero_image_fallback }}" />
+            <img
+                class="hero__image"
+                src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
+                data-src="{{ hero_image_fallback }}"
+                alt="{{ hero_title }}"
+            />
+        </picture>
+    </article>
+</section>
+{% endif %}

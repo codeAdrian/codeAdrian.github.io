@@ -1,0 +1,90 @@
+:root {
+    --nav__items: 5;
+}
+
+.navigation {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: var(--typography__ms--n1);
+    line-height: var(--spacing__vertical--n1);
+}
+
+.navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navigation__list--default {
+    max-width: var(--container__width--mediumCustom);
+    padding-left: 0;
+}
+
+.navigation__item {
+    flex: 1 1 auto;
+}
+
+.navigation__item--default {
+    transition: box-shadow 0.2s ease-in-out;
+    box-shadow: inset 0 0 0 0 var(--color__grayscale--light);
+
+    &:hover {
+        box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
+            var(--color__grayscale--light);
+    }
+}
+
+.navigation__item--current {
+    box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
+        var(--color__cta);
+
+    &:hover {
+        box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
+            var(--color__cta);
+    }
+}
+
+.navigation__link {
+    display: block;
+    padding: var(--spacing__vertical--n1) var(--spacing__horizontal--n2)
+        calc(var(--spacing__vertical--n1) - var(--border__width--medium));
+}
+
+.navigation__link--default {
+    color: var(--color__primary);
+    font-weight: var(--typography__fontWeight--semiBold);
+
+    &:hover,
+    &:active {
+        color: var(--color__primary);
+    }
+}
+
+@media (--mq__mobileLandscape--min) {
+    .navigation {
+        font-size: var(--typography__ms--0);
+        line-height: var(--spacing__vertical--1);
+    }
+
+    .navigation__list--default {
+        padding-left: var(--spacing__default--horizontal);
+    }
+
+    .navigation__link {
+        padding: var(--spacing__vertical--n1) var(--spacing__horizontal--n2)
+            calc(var(--spacing__vertical--n1) - var(--border__width--light));
+    }
+}
+
+@media (--mq__tablet--min) {
+    .navigation__list--default {
+        padding-right: var(--spacing__default--horizontal);
+    }
+
+    .navigation__item {
+        flex: 1 1 calc(100% / var(--nav__items));
+    }
+}

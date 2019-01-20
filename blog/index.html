@@ -1,0 +1,17 @@
+---
+title: Blog
+layout: default
+aside: true
+collectionpage: posts
+hero_image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546681004/devstar/hero-blog.svg
+hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546681004/devstar/hero-blog.png
+hero_title: Blog
+description: Byte-sized articles about web development, design, day-to-day existence, and more.
+hero_text: <div class="hero__subtitle">Byte-sized articles about web development, design, day-to-day existence, and more.</div>
+hero_layout: default
+---
+
+<main class="main blog layout">
+    {% include post-list.html %} {% if page.aside == true %}{% include
+    site-aside.html %}{% endif %}
+</main>

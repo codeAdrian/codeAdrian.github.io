@@ -1,0 +1,25 @@
+<aside class="blog__metaWrapper">
+    <div class="blog__meta blog__meta--author">
+        Author:
+        <a
+            class="blog__authorLink"
+            target="_blank"
+            rel="noreferrer nofollow"
+            href="{{ page.authorUrl }}"
+            title="{{ page.author }}"
+            >{{ page.author }}</a
+        >
+    </div>
+
+    <div class="blog__meta blog__meta--tags tags">
+        {% for tag in page.tags %} {% capture tag_name %}{{ tag }}{% endcapture
+        %}
+        <a
+            class="blog__tag tags__item tags__item--default"
+            href="/tag/{{ tag_name }}"
+        >
+            <small> {{ tag_name }} </small></a
+        >
+        {% endfor %}
+    </div>
+</aside>

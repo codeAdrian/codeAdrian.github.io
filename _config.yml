@@ -1,0 +1,128 @@
+# Site configuration
+# 1. Files excluded from Jekyll builds
+# 2. Installed Gems
+# 3. Gem settings
+# 4. Jekyll settings
+# 5. Collections
+# 6. Jekyll collections settings
+# 7. Site settings
+# 8. Site navigation
+# 9. Minifier
+
+# 1. Files excluded from Jekyll builds
+exclude:
+    - README.md
+    - CODE_OF_CONDUCT.md
+    - CONTRIBUTING.md
+    - screenshot.png
+    - LICENSE
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - node_modules
+    - pcss
+    - vendor
+    - gulpconfig.js
+    - gulpfile.js
+    - production.rb
+
+# 2. Installed Gems
+plugins:
+    - jekyll-sitemap
+    - jekyll-mentions
+    - jekyll-paginate
+    - jekyll-seo-tag
+    - jekyll-redirect-from
+    - jekyll-default-layout
+    - jekyll-feed
+    - jekyll-minifier
+    - rouge
+
+# 3. Gem settings
+paginate: 5 # jekyll-paginate > items per page
+paginate_path: blog/:num # jekyll-paginate > blog page
+jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
+twitter:
+    username: AdrianBDesigns # jekyll-seo-tag > Owners twitter username
+author: AdrianBece # jekyll-seo-tag > default author
+social: # jekyll-seo-tag > social overrides
+    name: Adrian Bece # jekyll-seo-tag > real name
+    links: # jekyll-seo-tag > social aliases (sameAs)
+        - https://twitter.com/AdrianBDesigns
+        - https://www.linkedin.com/in/adrianbece
+        - https://github.com/codeAdrian
+
+# 4. Jekyll settings
+permalink: none # Permalink style (/YYYY/MM/DD/page-name/)
+excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+timezone: Europe/London # Timezone for blog posts and alike
+
+#disqus: devstar
+
+# 5. Collections
+collections:
+    posts:
+        output: true
+        title: "Blog"
+    portfolio:
+        output: true
+        title: "Portfolio"
+    services:
+        output: true
+        title: "Services"
+
+# 6. Jekyll collections settings
+defaults:
+    - scope:
+          path: ""
+      values:
+          image: "https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546171888/devstar/hero-homepage.png" # Default image for sharing
+
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+lang: en-GB # Set the site language
+title: "codeAdrian" # Site name or title, also used in jekyll-seo-tag
+logo: "https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547983560/codeAdrian/codeAdrian.svg" # Site logo, also used in jekyll-seo-tag
+logo_small: "https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547983560/codeAdrian/codeAdrian.svg"
+description: ""
+url: "https://codeadrian.github.io" # Site url, also used in jekyll-seo-tag
+baseurl: ""
+repo: "https://github.com/codeAdrian/codeadrian.github.io"
+email: "adrianbece@live.com"
+avatarurl: "favicon/favicon.ico" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
+# google_analytics: ''
+# service_worker: false # Will turn off the service worker if set to false
+css_inline: false # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
+
+# 8. Site navigation
+navigation_header:
+    Home: /
+    Portfolio: /portfolio/
+    Blog: /blog/
+    Skills: /skills/
+    Contact: /contact/
+
+social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+    Twitter: https://twitter.com/AdrianBDesigns
+    Linkedin: https://www.linkedin.com/in/adrianbece
+    GitHub: https://github.com/codeAdrian
+    feed: /feed.xml
+
+sharing_links:
+    Twitter: "twitter"
+    facebook: "facebook"
+    linkedin: "linkedin"
+    email: "email"
+
+# 9. Minifier Options
+jekyll-minifier:
+    compress_css: false
+    uglifier_args:
+        harmony: true
+
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+date_format: "%-d %B %Y"

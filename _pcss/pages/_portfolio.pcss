@@ -1,0 +1,24 @@
+.portfolio {
+    padding-top: var(--spacing__vertical--2);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: var(--container__width--widest);
+}
+
+.portfolio__item {
+    padding-left: var(--spacing__default--horizontal);
+    padding-right: var(--spacing__default--horizontal);
+    margin-bottom: var(--spacing__vertical--1);
+}
+
+@media (--mq__desktop--min) {
+    .portfolio {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .portfolio__item {
+        lost-waffle: 1/2;
+    }
+}
