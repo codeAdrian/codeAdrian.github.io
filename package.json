@@ -5,7 +5,8 @@
     "scripts": {
         "setup": "npm install",
         "watch": "gulp",
-        "build": "JEKYLL_ENV=production jekyll build"
+        "build": "JEKYLL_ENV=production jekyll build",
+        "update-live": "git subtree push --prefix _site origin master"
     },
     "author": "Adrian Bece",
     "license": "ISC",
