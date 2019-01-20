@@ -1,5 +1,0 @@
-.jekyll-metadata
-node_modules/
-Gemfile.lock
-**/Gemfile.lock
-.git
