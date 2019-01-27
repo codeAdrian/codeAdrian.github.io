@@ -8,7 +8,7 @@ categories:
 tags: development css
 image: "https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547309683/articles/number.svg"
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547309683/articles/number.jpg
-excerpt: In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.
+excerpt: Magic numbers can be seen as very benign on smaller projects, examples and individual cases, but they can really make our jobs difficult when adding new features, fixing issues and maintaining the website. Soon you'll find yourself adding magic numbers to fix issues caused by other magic numbers, but also potentially causing new issues down the line.
 ---
 
 <article class="block block--text">
