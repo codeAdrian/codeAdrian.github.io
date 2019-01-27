@@ -14,26 +14,26 @@
 
     
 
-      <title>Hiding content for accesibility | codeAdrian</title>
+      <title>Magic Numbers in CSS | codeAdrian</title>
       <meta name="description" content="In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.">
 
       <!-- Google / Search Engine Tags -->
-      <meta itemprop="name" content="Hiding content for accesibility | codeAdrian">
+      <meta itemprop="name" content="Magic Numbers in CSS | codeAdrian">
       <meta itemprop="description" content="In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.">
-      <meta itemprop="image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547297762/articles/glasses.jpg">
+      <meta itemprop="image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547309683/articles/number.jpg">
       
       <!-- Facebook Meta Tags -->
-      <meta property="og:url" content="http://localhost:4000/blog/development/hiding-elements-accessibility.html">
+      <meta property="og:url" content="http://localhost:4000/blog/development/magic-nunbers-in-css.html">
       <meta property="og:type" content="website">
-      <meta property="og:title" content="Hiding content for accesibility | codeAdrian">
+      <meta property="og:title" content="Magic Numbers in CSS | codeAdrian">
       <meta property="og:description" content="In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.">
-      <meta property="og:image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547297762/articles/glasses.jpg">
+      <meta property="og:image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547309683/articles/number.jpg">
       
       <!-- Twitter Meta Tags -->
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:title" content="Hiding content for accesibility | codeAdrian">
+      <meta name="twitter:title" content="Magic Numbers in CSS | codeAdrian">
       <meta name="twitter:description" content="In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.">
-      <meta name="twitter:image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547297762/articles/glasses.jpg">
+      <meta name="twitter:image" content="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547309683/articles/number.jpg">
 
       <meta name="theme-color" content="#151515" />
 
@@ -177,67 +177,97 @@
                         
                         <div class="blog__date">
                             <time
-                                datetime="2019-01-12T00:00:00+00:00"
+                                datetime="2019-01-27T00:00:00+00:00"
                                 class="time"
-                                >12 January 2019</time
+                                >27 January 2019</time
                             >
                         </div>
-                    <h1 class="post__title">Hiding content for accesibility</h1>
+                    <h1 class="post__title">Magic Numbers in CSS</h1>
                 </div>
                 <div class="post__imageContainer">
                         <img
                         class="post__image"
                         src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
-                            data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547297762/articles/glasses.svg"
-                            alt="Hiding content for accesibility Featured Image"
+                            data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547309683/articles/number.svg"
+                            alt="Magic Numbers in CSS Featured Image"
                         />
                 </div>
         </article>
        
         <article class="block block--text">
 
-<p>In web development, it's safe to assume that it's unavoidable to hide some elements or part of the content. Using only a single way of hiding content can harm accessibility, because users using assistive technologies won't get the full context of the page the way the regular screen users do. In this article we are going to cover several ways of hiding elements, depending on accessibility.</p>
+<p>We've all seen magic numbers in code, didn't we? The magical <code class="code--inline">padding-top: 2px;</code> and <code class="code--inline">top: 136px;</code> - like randomly-spread pieces of bubblegum holding the house of cards together. Code should be easily read, self-explanitory and have a logical structure.</p>
 
-<h2 class="heading">Hiding content from all devices</h2>
+<p>Magic numbers can be seen as very benign on smaller projects, examples and individual cases, but they can really make our jobs difficult when adding new features, fixing issues and maintaining the website. Soon you'll find yourself adding magic numbers to fix issues caused by other magic numbers, but also potentially causing new issues down the line.</p>
 
-<p>Using CSS rules like<code class="code--inline">display: none;</code> or <code class="code--inline">visibility: hidden;</code>, or HTML <code class="code--inline">hidden</code> attribute is the first thing that comes to mind when hiding elements or part of the content. Using these two CSS attributes will make both display devices and assistive technologies (like screen readers) to completely ignore the element and not present it to users.</p>
+<h2 class="heading">Solution starts with the design</h2>
 
-<p class="padding--clear">
-Of course, there are cases where we want to hide content from all devices. For example, we can use these CSS rules on elements in an accordion, tabs or other toggleable elements.
+<p>
+When a project has a design phase which results with a design file with style guide, component, modules, pages, etc. we usually have all the information about color, typography, horizontal grids, and media query variables, but those are just a few of many variables that can repeat throughout the website. What about horizontal and vertical spacing (<a target="_blank" rel="noreferrer nofollow" href="/blog/development/mastering-css-vertical-rhythm.html">vertical rhythm</a>), or borders, or shadows, container widths, image aspect ratios, z-indices, etc.
 </p>
+
+<p class="padding--clear">The more variables are defined in the design phase and the more design is constrained within those variables, the less we rely on magic numbers since we can see the connection between all design elements. For example, Defining a rhythm unit can add a better context of vertical spacing. Now if we see that header is at <code class="code--inline">96px</code> height, and if we know that our base line height is <code class="code--inline">32px</code>, we can see that all elements in header container follow the <a target="_blank" rel="noreferrer nofollow" href="/blog/development/mastering-css-vertical-rhythm.html">rules of vertical rhythm</a>. This allows us to establish a better connection between a style guide variable (rhythm unit) and a complex module (header).</p>
 
 </article>
 
 <article class="block block--text">
-<h2 class="heading">Hiding content from screen devices</h2>
+<h2 class="heading">Discipline makes strong developers</h2>
 <p>
-In some cases, we want to hide some elements from displays, but we want to let assistive technologies present the visually hidden content to users. An example of that case, off the top of my head, are label-less inputs. Labels are usually hidden with <code class="code--inline">display: none;</code> but we would prefer if labels were accessible to the assistive technologies in order to provide more context to users.
+For better or worse, nothing stops us from using Magic numbers in CSS. The code will work the same if we write a value or a variable that contains the value. No linter or preprocessor will throw an error. It's up to a developer to learn the best practices, go beyond the call of duty and make quality long-term decisions. When starting a new project, outlining and defining CSS variables is very important. Quality, readability and maintainability of your code will depend on how well you define those variables: giving them a meaningful name, grouping the variables properly, defining a clear dependency between the variables, etc.
 </p>
-<p class="padding--clear">This solution is a bit hacky, but very effective solution if we want to hide content from screen devices only. We can use the following CSS rule:</p>
+<p class="padding--clear">Let's demonstrate this with the following code. Please note that, in this example, I'm using PostCSS and modern CSS syntax. But this philosophy also applies to CSS Preprocessors like SASS and LESS.</p>
 </article>
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.hidden--visually</span> <span class="p">{</span>
-    <span class="nl">border</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">1px</span> <span class="m">1px</span> <span class="m">1px</span> <span class="m">1px</span><span class="p">);</span>
-    <span class="nl">clip</span><span class="p">:</span> <span class="n">rect</span><span class="p">(</span><span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">,</span> <span class="m">1px</span><span class="p">);</span>
-    <span class="nl">height</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
-    <span class="nl">margin</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
-    <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
-    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="nl">position</span><span class="p">:</span> <span class="nb">absolute</span><span class="p">;</span>
-    <span class="nl">width</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">:root</span> <span class="p">{</span>
+    <span class="c">/* px definitions for easier calculations */</span>
+    <span class="c">/* These variables are only used for calculation */</span>
+    <span class="py">--typography__fontSize--px</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+    <span class="py">--typography__lineHeight--px</span><span class="p">:</span> <span class="m">27px</span><span class="p">;</span>
+
+    <span class="py">--browser__fontSize--default</span><span class="p">:</span> <span class="m">16px</span><span class="p">;</span>
+
+    <span class="c">/* Basic typography setup, establishing rhythm unit */</span>
+    <span class="c">/* These variables should be assigned to the CSS attributes */</span>
+    <span class="py">--typography__fontSize</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--typography__fontSize--px</span><span class="p">)</span> <span class="p">/</span> <span class="n">var</span><span class="p">(</span><span class="n">--browser__fontSize--default</span><span class="p">))</span> <span class="err">*</span> <span class="m">1rem</span>
+    <span class="p">);</span>
+    <span class="py">--typography__lineHeight</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">var</span><span class="p">(</span><span class="n">--typography__lineHeight--px</span><span class="p">)</span> <span class="p">/</span> <span class="n">var</span><span class="p">(</span><span class="n">--typography__fontSize--px</span><span class="p">))</span> <span class="err">*</span> <span class="m">1rem</span>
+    <span class="p">);</span>
+
+    <span class="c">/* Calculating vertical rhythm variables */</span>
+    <span class="c">/* Can be located in separate file if using Preprocessors or PostCSS import */</span>
+    <span class="py">--spacing__vertical--1</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--typography__lineHeight</span><span class="p">);</span>
+    <span class="py">--spacing__vertical--2</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">2</span> <span class="err">*</span> <span class="n">var</span><span class="p">(</span><span class="n">--spacing__vertical--1</span><span class="p">));</span>
+    <span class="py">--spacing__vertical--3</span><span class="p">:</span> <span class="n">calc</span><span class="p">(</span><span class="m">3</span> <span class="err">*</span> <span class="n">var</span><span class="p">(</span><span class="n">--spacing__vertical--1</span><span class="p">));</span>
+
+    <span class="c">/* Defining custom variables for modules */</span>
+    <span class="c">/* Can be located in separate file if using Preprocessors or PostCSS import */</span>
+    <span class="py">--header__height</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--spacing__vertical--3</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
 <article class="block block--text">
-<h2 class="heading">Hiding content from assistive devices</h2>
-<p>There are cases where we would like to hide the content from screen readers and other assistive technologies. For example, if we have an image carousel, with "previous" button on the beginning, carousel images in the middle and "next" button on the end, we don't want the screen reader to read it out in that order. We can provide a separate, more accessible controls which are visually hidden, but hide the "previous" and "next" buttons from assistive devices.</p>
-<p>
-In cases where we want to hide content from the assistive devices, we can use the <code class="code--inline">aria-hidden="true"</code> HTML attribute.</p>
 
-<h2 class="heading">Override quirk</h2>
-<p>It's important to note that CSS rules like <code class="code--inline">display: none;</code> will override the <code class="code--inline">aria-hidden="false"</code> and the content will be ignored by assistive technologies. </p>
+<p>Notice how we used only two numbers and how the rest of the variables are linked to those two numbers. I've used my way of naming the variables, with the BEM-like structure <code class="code--inline">group__attributeName--variation</code>. The connection between the variables is clear: base rhythm unit is equal to the base line height which <code class="code--inline">rem</code> value is calculated using <code class="code--inline">px</code> values of font size and line height. Similarly, header has a fixed height which equals rhythm unit multiplier of 3, whih is calculated along with the rest rhythm unit multipliers (vertical spacings).</p>
+
+<p>With variables being organized this way, we can easily add more complexity to our code and avoid repeating values or variables, and avoid using magic numbers alltogether. But...</p>
+
+<h2 class="heading">Sometimes, using Magic Numbers is unavoidable</h2>
+<p>Due to the hacky nature of CSS and varying browser support, sometimes the only solution is to use Magic Numbers. Even in that case, Magic number should be saved and documented in a variable in the same file it's used. Magic number that apply to a single element should not be defined along the global variables. That way, any developer will understand the scope and role of the variable and may want to remove it in the future, if needed.</p>
 </article>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* element.css */</span>
+
+<span class="nd">:root</span> <span class="p">{</span>
+    <span class="c">/* Browser-specific bug, expected to be fixed in the future */</span>
+    <span class="py">--element__spacing--magic</span><span class="p">:</span> <span class="m">-1px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.element</span> <span class="p">{</span>
+    <span class="nl">margin-top</span><span class="p">:</span> <span class="n">var</span><span class="p">(</span><span class="n">--element__spacing--magic</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 
         <article class="block block--text post__metaWrapper"><aside class="blog__metaWrapper">
@@ -264,9 +294,9 @@ In cases where we want to hide content from the assistive devices, we can use th
          
         <a
             class="blog__tag tags__item tags__item--default"
-            href="/tag/accessibility"
+            href="/tag/css"
         >
-            <small> accessibility </small></a
+            <small> css </small></a
         >
         
     </div>
@@ -275,7 +305,7 @@ In cases where we want to hide content from the assistive devices, we can use th
 
         <nav class="block block--text share">
          <a
-    href="https://twitter.com/intent/tweet/?url=http://localhost:4000/blog/development/hiding-elements-accessibility.html&text=Hiding%20content%20for%20accesibility &via=AdrianBDesigns&hashtags=   development ,  accessibility "
+    href="https://twitter.com/intent/tweet/?url=http://localhost:4000/blog/development/magic-nunbers-in-css.html&text=Magic%20Numbers%20in%20CSS &via=AdrianBDesigns&hashtags=   development ,  css "
     class="share__link"
     target="_blank"
     rel="nofollow norefferer"
@@ -284,7 +314,7 @@ In cases where we want to hide content from the assistive devices, we can use th
     <span class="visuallyHidden">twitter</span>
 </a>
       <a
-    href="https://facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/development/hiding-elements-accessibility.html"
+    href="https://facebook.com/sharer/sharer.php?u=http://localhost:4000/blog/development/magic-nunbers-in-css.html"
     class="share__link"
     target="_blank"
     rel="nofollow norefferer"
@@ -293,7 +323,7 @@ In cases where we want to hide content from the assistive devices, we can use th
     <span class="visuallyHidden">facebook</span>
 </a>
       <a
-    href="https://www.linkedin.com/shareArticle?url=http://localhost:4000/blog/development/hiding-elements-accessibility.html&title=Hiding content for accesibility&source=codeAdrian&mini=true"
+    href="https://www.linkedin.com/shareArticle?url=http://localhost:4000/blog/development/magic-nunbers-in-css.html&title=Magic Numbers in CSS&source=codeAdrian&mini=true"
     class="share__link"
     target="_blank"
     rel="nofollow norefferer"
@@ -302,7 +332,7 @@ In cases where we want to hide content from the assistive devices, we can use th
     <span class="visuallyHidden">linkedin</span>
 </a>
       <a
-    href="mailto:?subject=Hiding content for accesibility&body=Hiding content for accesibility: http://localhost:4000/blog/development/hiding-elements-accessibility.html"
+    href="mailto:?subject=Magic Numbers in CSS&body=Magic Numbers in CSS: http://localhost:4000/blog/development/magic-nunbers-in-css.html"
     class="share__link"
     target="_blank"
     rel="nofollow norefferer"
