@@ -5,7 +5,7 @@ title: "Magic Numbers in CSS"
 categories:
     - blog
     - development
-tags: development css
+tags: development CSS
 image: "https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1547309683/articles/number.svg"
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:best/v1547309683/articles/number.jpg
 excerpt: Magic numbers can be seen as very benign on smaller projects, examples and individual cases, but they can really make our jobs difficult when adding new features, fixing issues and maintaining the website. Soon you'll find yourself adding magic numbers to fix issues caused by other magic numbers, but also potentially causing new issues down the line.
