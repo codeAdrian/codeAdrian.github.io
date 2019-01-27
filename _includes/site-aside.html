@@ -15,7 +15,7 @@
             tagitems[1]
         }}{% endcapture %}
         <li>
-            <a href="/tag/{{ tagname }}">{{ tagname }}</a>
+            <a href="/tag/{{ tagname | downcase }}">{{ tagname }}</a>
         </li>
         {% endfor %}
     </ul>

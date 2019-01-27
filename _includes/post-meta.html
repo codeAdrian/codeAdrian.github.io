@@ -16,7 +16,7 @@
         %}
         <a
             class="blog__tag tags__item tags__item--default"
-            href="/tag/{{ tag_name }}"
+            href="/tag/{{ tag_name | downcase }}"
         >
             <small> {{ tag_name }} </small></a
         >
