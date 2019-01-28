@@ -38,11 +38,11 @@ For better or worse, nothing stops us from using Magic numbers in CSS. The code 
 ```css
 :root {
     /* px definitions for easier calculations */
-    /* These variables are only used for calculation */
-    --typography__fontSize--px: 16px;
-    --typography__lineHeight--px: 27px;
+    /* These variables are only used for calculation, we ommit the px because calc cannot strip units */
+    --typography__fontSize--px: 16;
+    --typography__lineHeight--px: 27;
 
-    --browser__fontSize--default: 16px;
+    --browser__fontSize--default: 16;
 
     /* Basic typography setup, establishing rhythm unit */
     /* These variables should be assigned to the CSS attributes */
