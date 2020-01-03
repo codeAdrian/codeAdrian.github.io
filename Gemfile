@@ -16,7 +16,6 @@ gem "jekyll", "~> 3.8.5"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-feed', '~> 0.11.0'
   gem 'jekyll-sitemap', '~> 1.2'
   gem 'jekyll-mentions', '~> 1.4', '>= 1.4.1'
   gem 'jekyll-paginate', '~> 1.1'
@@ -24,7 +23,6 @@ group :jekyll_plugins do
   gem 'jekyll-redirect-from', '~> 0.14.0'
   gem 'jekyll-default-layout', '~> 0.1.4'
   gem 'jekyll-minifier', '~> 0.1.9'
-  gem 'rouge', '~> 3.3.0'
 
 end
 

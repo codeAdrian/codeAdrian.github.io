@@ -7,9 +7,6 @@ const cacheName = `static::${version}`;
 
 const buildContentBlob = () => {
   return [
-    {%- for post in site.posts limit: 5 -%}
-      "{{ post.url }}",
-    {%- endfor -%}
     {%- for item in site.portfolio limit: 5 -%}
     "{{ item.url }}",
     {%- if item.image -%}"{{ item.image }}","{{ item.image_fallback }}",{%- endif -%}
