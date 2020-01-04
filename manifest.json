@@ -1,15 +1,1 @@
-{
-  "lang": "en-GB",
-  "name": "codeAdrian",
-  "short_name": "codeAdrian",
-  "theme_color": "#c16014",
-  "background_color": "#ffffff",
-  "icons": [
-    {
-      "src": "/assets/favicons/android-chrome-512x512.png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": "/",
-  "display": "standalone"
-}
+{"lang":"en-GB","name":"codeAdrian","short_name":"codeAdrian","theme_color":"#c16014","background_color":"#ffffff","icons":[{"src":"/assets/favicons/android-chrome-512x512.png","sizes":"512x512"}],"start_url":"/","display":"standalone"}
