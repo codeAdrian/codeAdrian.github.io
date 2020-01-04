@@ -195,171 +195,60 @@
 
     
     <main class="main layout blog">
-  <ul class="blog__list" id="js-blog__list"></ul>
+  <section class="layout__main">
+    <ul class="blog__list" id="js-blog__list"></ul>
+  </section>
+  <aside class="layout__aside">
+    <h2 class="title--secondary aside__heading">Discussion</h2>
+    <ul class="aside__list" id="js-discussion__list"></ul>
+    <h2 class="title--secondary aside__heading">Social</h2>
+    <ul class="aside__list">
+      <li>
+        <a
+          target="_blank"
+          rel="nofollow noreferrer"
+          href="https://dev.to/adrianbdesigns"
+        >
+          <span class="icon icon__social--dev"></span> DEV Community</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          rel="nofollow noreferrer"
+          href="https://twitter.com/AdrianBDesigns"
+        >
+          <span class="icon icon__social--twitter"></span> Twitter</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          rel="nofollow noreferrer"
+          href="https://github.com/codeAdrian"
+        >
+          <span class="icon icon__social--github"></span> GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          rel="nofollow noreferrer"
+          href="https://www.linkedin.com/in/adrianbece/"
+        >
+          <span class="icon icon__social--linkedin"></span> LinkedIn</a
+        >
+      </li>
+      <li>
+        <a href="mailto:adrianbece@live.com">
+          <span class="icon icon__social--email"></span> Email</a
+        >
+      </li>
+    </ul>
+  </aside>
 </main>
 
-<script>
-  function handleJSON(r) {
-    return r.json();
-  }
-
-  function generateTag(t) {
-    var tag = document.createElement("span");
-    tag.className = "blog__tag tags__item tags__item--default";
-
-    var tagText = document.createElement("small");
-    tagText.textContent = t;
-
-    tag.appendChild(tagText);
-
-    return tag;
-  }
-
-  function generateMeta(a) {
-    var meta = document.createElement("div");
-    meta.className = "blog__metaWrapper";
-
-    var author = document.createElement("div");
-    author.className = "blog__meta blog__meta--author";
-    author.textContent = "Author: ";
-
-    var authorLink = document.createElement("a");
-    authorLink.className = "blog__authorLink";
-    authorLink.target = "_blank";
-    authorLink.rel = "noopener nofollow";
-    authorLink.textContent = a.user.name;
-    authorLink.href = "https://dev.to/" + a.user.username;
-
-    var tags = document.createElement("div");
-    tags.className = "blog__meta blog__meta--tags tags";
-
-    for (var i = 0; i < a["tag_list"].length; i++) {
-      tags.appendChild(generateTag(a["tag_list"][i]));
-    }
-
-    author.appendChild(authorLink);
-    meta.appendChild(author);
-    meta.appendChild(tags);
-
-    return meta;
-  }
-
-  function generateLink(a) {
-    var link = document.createElement("a");
-    link.className = "blog__link";
-    link.href = a.url;
-    link.target = "_blank";
-    link.rel = "noopener nofollow";
-    link.textContent = a.title;
-    return link;
-  }
-
-  function generateTitle(a) {
-    var link = generateLink(a);
-    var title = document.createElement("h2");
-    title.className = "blog__title";
-    title.appendChild(link);
-    return title;
-  }
-
-  function generateImage(a) {
-    var imageContainer = document.createElement("div");
-    imageContainer.className = "blog__imageWrapper";
-
-    var image = document.createElement("img");
-    image.src = a["cover_image"];
-    image.className = "blog__image";
-
-    imageContainer.appendChild(image);
-
-    return image;
-  }
-
-  function generateActions(a) {
-    var actions = document.createElement("div");
-    actions.className = "blog__actions";
-
-    var link = document.createElement("a");
-    link.className = "button button--cta";
-    link.href = a.url;
-    link.target = "_blank";
-    link.rel = "noopener nofollow";
-    link.textContent = "Continue Reading on DEV";
-
-    actions.appendChild(link);
-    return actions;
-  }
-
-  function generateArticle(a) {
-    var title = generateTitle(a);
-    var article = document.createElement("article");
-    var meta = generateMeta(a);
-    var image = generateImage(a);
-    var actions = generateActions(a);
-    var date = new Date(a["published_at"]).toLocaleDateString("hr-HR");
-    article.className = "article  article--post";
-    article.textContent = date;
-    article.appendChild(title);
-    article.appendChild(meta);
-    article.appendChild(image);
-
-    var excerpt = document.createElement("p");
-    excerpt.textContent = a.description;
-
-    article.appendChild(excerpt);
-    article.appendChild(actions);
-
-    var listItem = document.createElement("li");
-    listItem.className = "blog__item";
-    listItem.appendChild(article);
-
-    return listItem;
-  }
-
-  function handleResponse(r) {
-    var blogList = document.getElementById("js-blog__list");
-    localStorage.setItem("blogPosts", JSON.stringify(r));
-
-    filtered = r.filter(function(r) {
-      return !r.tag_list.includes("discuss");
-    });
-
-    filtered.length = 10;
-
-    console.log("r", r);
-    for (var i = 0; i < filtered.length; i++) {
-      blogList.appendChild(generateArticle(filtered[i]));
-    }
-
-    console.log("list", list);
-  }
-
-  function handleFallback() {
-    var r = JSON.parse(localStorage.getItem("blogPosts"));
-    console.log("FALLBACK", r);
-    handleResponse(r);
-  }
-
-  function handleErrors(r) {
-    if (!r.ok) {
-      console.log("ERROR");
-      handleFallback();
-    }
-    return r;
-  }
-
-  function fetchDevArticles() {
-    var result = [];
-
-    fetch("https://dev.to/api/articles?username=adrianbdesigns&tags=css")
-      .then(handleErrors)
-      .then(handleJSON)
-      .then(handleResponse)
-      .catch(handleFallback);
-  }
-
-  fetchDevArticles();
-</script>
+<script src="http://localhost:4000/assets/scripts/articles.js"></script>
 
     
     <footer class="footer">
