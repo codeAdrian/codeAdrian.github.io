@@ -3,8 +3,8 @@ title: Recipe Magic
 layout: portfolio-item
 platform: React, API
 contribution: Personal Project
-image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546804900/work/recipe-magic-1.webp
-image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546804900/work/recipe-magic-1.jpg
+image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231531/work/recipe-magic-1.webp
+image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231531/work/recipe-magic-1.jpg
 link: https://recipe-magic.netlify.com/
 description: I was looking for some interesting API-s to experiment with, and Edamam caught my attentionn. Edamam is a food recipe API which allows access to recipe database search, nutritional values, searching by ingredients, etc.
 ---
@@ -39,12 +39,12 @@ description: I was looking for some interesting API-s to experiment with, and Ed
 <div class="icon icon__image image--placeholder"></div>
 </div>
         <picture>
-            <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546880066/work/recipe-magic-2.webp" type="image/webp" />
-            <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546880066/work/recipe-magic-2.jpg" />
+            <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231590/work/recipe-magic-2.webp" type="image/webp" />
+            <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231590/work/recipe-magic-2.jpg" />
             <img
                 class="image--lazyLoaded"
                 src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
-                data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546880066/work/recipe-magic-2.jpg"
+                data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231590/work/recipe-magic-2.jpg"
                 alt=""
             />
         </picture>
