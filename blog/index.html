@@ -1,66 +1,82 @@
 ---
-title: Latest Posts
+title: Articles
 layout: default
 hero_image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546681004/devstar/hero-blog.svg
 hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546681004/devstar/hero-blog.png
-hero_title: Latest Posts
+hero_title: Articles
 description: Byte-sized articles about web development, design, day-to-day existence, and more.
 hero_text: <div class="hero__subtitle">Byte-sized articles about web development, design, day-to-day existence, and more.</div>
 hero_layout: default
 ---
 
-<main class="main layout blog">
-  <section class="layout__main">
-    <ul class="blog__list" id="js-blog__list"></ul>
-  </section>
-  <aside class="layout__aside">
-    <h2 class="title--secondary aside__heading">Discussion</h2>
-    <ul class="aside__list" id="js-discussion__list"></ul>
-    <h2 class="title--secondary aside__heading">Social</h2>
-    <ul class="aside__list">
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://dev.to/adrianbdesigns"
-        >
-          <span class="icon icon__social--dev"></span> DEV Community</a
-        >
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://twitter.com/AdrianBDesigns"
-        >
-          <span class="icon icon__social--twitter"></span> Twitter</a
-        >
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://github.com/codeAdrian"
-        >
-          <span class="icon icon__social--github"></span> GitHub
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://www.linkedin.com/in/adrianbece/"
-        >
-          <span class="icon icon__social--linkedin"></span> LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="mailto:adrianbece@live.com">
-          <span class="icon icon__social--email"></span> Email</a
-        >
-      </li>
-    </ul>
-  </aside>
+<main class="blog main">
+    <section class="container--alt banner banner--center">
+        <article class="banner__container">
+            <h2 class="banner__text skills__title">Featured Articles</h2>
+        </article>
+    </section>
+
+    <section class="container--alt banner banner--center">
+        <article class="banner__container">
+            <h2 class="banner__text skills__title">Latest Articles</h2>
+        </article>
+    </section>
+    <div class="layout blog__layout">
+        <section class="layout__main blog__main">
+            <ul class="blog__list" id="js-blog__list"></ul>
+        </section>
+        <aside class="layout__aside blog__aside">
+            <h2 class="title--secondary aside__heading">Discussion</h2>
+            <ul class="aside__list" id="js-discussion__list"></ul>
+            <h2 class="title--secondary aside__heading">Social</h2>
+            <ul class="aside__list">
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://dev.to/adrianbdesigns"
+                    >
+                        <span class="icon icon__social--dev"></span> DEV
+                        Community</a
+                    >
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://twitter.com/AdrianBDesigns"
+                    >
+                        <span class="icon icon__social--twitter"></span>
+                        Twitter</a
+                    >
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://github.com/codeAdrian"
+                    >
+                        <span class="icon icon__social--github"></span> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://www.linkedin.com/in/adrianbece/"
+                    >
+                        <span class="icon icon__social--linkedin"></span>
+                        LinkedIn</a
+                    >
+                </li>
+                <li>
+                    <a href="mailto:adrianbece@live.com">
+                        <span class="icon icon__social--email"></span> Email</a
+                    >
+                </li>
+            </ul>
+        </aside>
+    </div>
 </main>
 
 <script src="{{ base.url | prepend: site.url }}/assets/scripts/articles.js"></script>

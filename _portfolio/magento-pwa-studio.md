@@ -32,7 +32,6 @@ While I was working on the feature, I was invited to do a demo of the feature fo
 </article>
 
 <article class="block block--image">
-
 <div class="video">
 <div class="icon icon__video image--placeholder"></div>
 <iframe class="video__content" 
@@ -45,7 +44,7 @@ data-src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" al
 
 <blockquote class="blockquote--default blockquote block">
 <div class="blockquote__wrapper">
-<div class="blockquote__text blockquote__text--default">Adrian Bece continues to make a big difference in PWA with the Magento community — we love working with him as he continues to push the limit on experience."</div>
+<div class="blockquote__text blockquote__text--default">Adrian Bece continues to make a big difference in PWA with the Magento community — we love working with him as he continues to push the limit on experience.</div>
 <div class="blockquote__author blockquote__author--default">- Eric Erway (Project Manager at Magento)</div>
 </div>
 </blockquote>

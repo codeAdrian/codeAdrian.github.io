@@ -1,4 +1,4 @@
-(function() {
+(function () {
   function handleJSON(r) {
     return r.json();
   }
@@ -136,11 +136,11 @@
     var blogDiscussions = document.getElementById("js-discussion__list");
     localStorage.setItem("blogPosts", JSON.stringify(r));
 
-    var filtered = r.filter(function(r) {
+    var filtered = r.filter(function (r) {
       return !r.tag_list.includes("discuss");
     });
 
-    var discussions = r.filter(function(r) {
+    var discussions = r.filter(function (r) {
       return r.tag_list.includes("discuss");
     });
 

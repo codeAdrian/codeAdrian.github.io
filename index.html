@@ -7,10 +7,10 @@ hero_image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:eco/v154617
 hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:eco/v1546171888/devstar/hero-homepage.png
 hero_text:
     <ul class="hero__subtitle hero__subtitle--list hero__subtitle--spacing">
-    <li>Frontend</li>
-    <li>React</li>
-    <li>eCommerce</li>
-    <li>FE & UX Audits</li>
+    <li>Full-stack tech lead</li>
+    <li>Award-winning developer</li>
+    <li>Magento 2 certified</li>
+    <li>Distinguished author</li>
     </ul>
     <div><a class="button button--cta" href="/contact/">Contact Me</a></div>
 ---
@@ -28,57 +28,57 @@ hero_text:
         <div class="glide__slides featuredList__items">
             <article class="featuredList__item glide__slide">
                 <div class="featuredList__icon featuredList__icon--default">
+                    <span class="icon icon__stack"></span>
+                </div>
+                <h3 class="title--secondary featuredList__title">
+                    Full-stack professional
+                </h3>
+                <div class="featuredList__text">
+                    I work with React-powered frontend and Firebase-powered
+                    backend stack to create delightful, functional and
+                    performant Progressive Web Apps (PWAs) for wide range of
+                    browsers and devices.
+                </div>
+            </article>
+            <article class="featuredList__item glide__slide">
+                <div class="featuredList__icon featuredList__icon--default">
+                    <span class="icon icon__trophy"></span>
+                </div>
+                <h3 class="title--secondary featuredList__title">
+                    Award-winning developer
+                </h3>
+                <div class="featuredList__text">
+                    One of the creators of Homebound - a web app that is a grand
+                    prize winner of DEV x Twilio Hackathon 2020. This delightful
+                    app won a grand prize even with a serious worldwide
+                    competition.
+                </div>
+            </article>
+            <article class="featuredList__item glide__slide">
+                <div class="featuredList__icon featuredList__icon--default">
+                    <span class="icon icon__star--full"></span>
+                </div>
+                <h3 class="title--secondary featuredList__title">
+                    Distinguished Author
+                </h3>
+                <div class="featuredList__text">
+                    My articles on DEV received more than 170,000 views and I
+                    was recognized as an distinguished DEV author in 2019. I'm
+                    also a guest writer for Smashing Magazine, CSS-Tricks and
+                    LogRocket.
+                </div>
+            </article>
+            <article class="featuredList__item glide__slide">
+                <div class="featuredList__icon featuredList__icon--default">
                     <span class="icon icon__brand--magento"></span>
                 </div>
                 <h3 class="title--secondary featuredList__title">
-                    eCommerce Development
+                    Magento-certified Developer
                 </h3>
                 <div class="featuredList__text">
                     I've been working on development and maintenance of multiple
-                    Magento and Magento 2 projects for the last 3 years ranging
-                    from small-scale websites to multi-store enterprise
-                    websites.
-                </div>
-            </article>
-            <article class="featuredList__item glide__slide">
-                <div class="featuredList__icon featuredList__icon--default">
-                    <span class="icon icon__brand--css3"></span>
-                </div>
-                <h3 class="title--secondary  featuredList__title">
-                    Frontend Development
-                </h3>
-                <div class="featuredList__text">
-                    I keep up with the latest trends in Frontend development and
-                    selectively use the proven and tested technologies to
-                    improve my workflow and deliver higher quality code and
-                    better performance.
-                </div>
-            </article>
-            <article class="featuredList__item glide__slide">
-                <div class="featuredList__icon featuredList__icon--default">
-                    <span class="icon icon__brand--react"></span>
-                </div>
-                <h3 class="title--secondary  featuredList__title">
-                    React Development
-                </h3>
-                <div class="featuredList__text">
-                    I've created several small-scale web apps using React as
-                    part of personal projects. I'm also a code contributor for
-                    Magento PWA Studio, which is also built with React.
-                </div>
-            </article>
-            <article class="featuredList__item glide__slide">
-                <div class="featuredList__icon featuredList__icon--default">
-                    <span class="icon icon__file"></span>
-                </div>
-                <h3 class="title--secondary  featuredList__title">
-                    UX & FE Audits
-                </h3>
-                <div class="featuredList__text">
-                    I have experience in analyzing the websites from technical
-                    aspect and UX aspect. I am also proficient in writing
-                    detailed reports addressing critical issues and providing
-                    solution suggestions.
+                    Magento and Magento 2 projects ranging from small-scale
+                    websites to multi-store enterprise websites.
                 </div>
             </article>
         </div>
@@ -160,8 +160,8 @@ hero_text:
         breakpoints: {
             767.5: {
                 perView: 1,
-                gap: 20
-            }
+                gap: 20,
+            },
         },
         classes: {
             slider: "featuredWork-slider",
@@ -170,13 +170,13 @@ hero_text:
             dragging: "featuredWork-dragging",
             cloneSlide: "featuredWork-slide-clone",
             activeSlide: "featuredWork__item--active",
-            disabledArrow: "featuredWork-arrow-disabled"
-        }
+            disabledArrow: "featuredWork-arrow-disabled",
+        },
     });
 
-    featuredWorkJs.on("build.after", function() {
+    featuredWorkJs.on("build.after", function () {
         var carouselLazyLoad = new LazyLoad({
-            container: document.getElementById("js-featuredWork-list")
+            container: document.getElementById("js-featuredWork-list"),
         });
     });
 
@@ -193,12 +193,12 @@ hero_text:
         breakpoints: {
             568: {
                 touchRatio: 0.5,
-                perView: 1
+                perView: 1,
             },
             1140: {
                 touchRatio: 0.5,
-                perView: 2
-            }
-        }
+                perView: 2,
+            },
+        },
     }).mount();
 </script>
