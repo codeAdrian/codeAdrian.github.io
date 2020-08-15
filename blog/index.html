@@ -1,66 +1,218 @@
 ---
-title: Latest Posts
+title: Articles
 layout: default
 hero_image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546681004/devstar/hero-blog.svg
 hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546681004/devstar/hero-blog.png
-hero_title: Latest Posts
-description: Byte-sized articles about web development, design, day-to-day existence, and more.
-hero_text: <div class="hero__subtitle">Byte-sized articles about web development, design, day-to-day existence, and more.</div>
+hero_title: Articles
+description: My articles from DEV, Smashing Magazine, CSS-Tricks, LogRocket and more!
+hero_text: <div class="hero__subtitle">My articles from DEV, Smashing Magazine, CSS-Tricks, LogRocket and more!</div>
 hero_layout: default
 ---
 
-<main class="main layout blog">
-  <section class="layout__main">
-    <ul class="blog__list" id="js-blog__list"></ul>
-  </section>
-  <aside class="layout__aside">
-    <h2 class="title--secondary aside__heading">Discussion</h2>
-    <ul class="aside__list" id="js-discussion__list"></ul>
-    <h2 class="title--secondary aside__heading">Social</h2>
-    <ul class="aside__list">
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://dev.to/adrianbdesigns"
-        >
-          <span class="icon icon__social--dev"></span> DEV Community</a
-        >
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://twitter.com/AdrianBDesigns"
-        >
-          <span class="icon icon__social--twitter"></span> Twitter</a
-        >
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://github.com/codeAdrian"
-        >
-          <span class="icon icon__social--github"></span> GitHub
-        </a>
-      </li>
-      <li>
-        <a
-          target="_blank"
-          rel="nofollow noreferrer"
-          href="https://www.linkedin.com/in/adrianbece/"
-        >
-          <span class="icon icon__social--linkedin"></span> LinkedIn</a
-        >
-      </li>
-      <li>
-        <a href="mailto:adrianbece@live.com">
-          <span class="icon icon__social--email"></span> Email</a
-        >
-      </li>
-    </ul>
-  </aside>
+<main class="blog main">
+    <section class="container--alt banner banner--center">
+        <article class="banner__container">
+            <h2 class="banner__text skills__title">Featured Articles</h2>
+        </article>
+    </section>
+    <section class="featuredList glide" id="js-featured-articles">
+        <div class="glide__track" data-glide-el="track">
+            <div class="glide__slides featuredList__items">
+                <article class="featuredList__item glide__slide">
+                    <div class="featuredList__icon featuredList__icon--default">
+                        <span class="icon icon__star--full"></span>
+                    </div>
+                    <h3 class="title--secondary featuredList__title">
+                        <div>
+                            <small>Smashing Magazine</small>
+                        </div>
+                        A Practical Overview Of CSS Houdini
+                    </h3>
+                    <p class="featuredList__text">
+                        Houdini, an umbrella term for the collection of browser
+                        APIs, aims to bring significant improvements to the web
+                        development process and the development of CSS standards
+                        in general. We are going to take a look at each part of
+                        Houdini, its current browser support and see how they
+                        can be used today using progressive enhancement.
+                    </p>
+                    <div class="banner--center">
+                        <a
+                            class="button button--withIcon button--cta"
+                            target="_blank"
+                            href="https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/"
+                        >
+                            Read More</a
+                        >
+                    </div>
+                </article>
+                <article class="featuredList__item glide__slide">
+                    <div class="featuredList__icon featuredList__icon--default">
+                        <span class="icon icon__star--full"></span>
+                    </div>
+                    <h3 class="title--secondary featuredList__title">
+                        <div>
+                            <small>CSS-Tricks</small>
+                        </div>
+                        Neumorphism and CSS
+                    </h3>
+                    <p class="featuredList__text">
+                        Neumorphism (aka neomorphism) is a relatively new design
+                        trend and a term that’s gotten a good amount of buzz
+                        lately. It’s aesthetic is marked by minimal and
+                        real-looking UI that’s sort of a new take on
+                        skeuomorphism — hence the name. We’ll take a look at
+                        both the arguments for and against the style and weigh
+                        how it can be used in a web interface.
+                    </p>
+                    <div class="banner--center">
+                        <a
+                            class="button button--withIcon button--cta"
+                            target="_blank"
+                            href="https://css-tricks.com/neumorphism-and-css/"
+                        >
+                            Read More</a
+                        >
+                    </div>
+                </article>
+                <article class="featuredList__item glide__slide">
+                    <div class="featuredList__icon featuredList__icon--default">
+                        <span class="icon icon__star--full"></span>
+                    </div>
+                    <h3 class="title--secondary featuredList__title">
+                        <div>
+                            <small>LogRocket</small>
+                        </div>
+                        How to use Chromatic 2.0
+                    </h3>
+                    <p class="featuredList__text">
+                        It’s quite a challenge to build a scalable and reliable
+                        UI system that works on a wide range of devices and
+                        browsers. Maintenance becomes difficult as the UI system
+                        expands. In this article, we’re going to find out how
+                        Chromatic can help us out with these issues that have
+                        been causing headaches for both the development team and
+                        product owners alike.
+                    </p>
+                    <div class="banner--center">
+                        <a
+                            class="button button--withIcon button--cta"
+                            target="_blank"
+                            href="https://blog.logrocket.com/how-to-use-chromatic-2-0/"
+                        >
+                            Read Article</a
+                        >
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="featuredList__controls" data-glide-el="controls[nav]">
+            <button
+                aria-label="Slide 1"
+                class="button glide__bullet featuredList__bullet"
+                data-glide-dir="=0"
+            >
+                <span class="visuallyHidden">Slide 1</span>
+            </button>
+            <button
+                aria-label="Slide 2"
+                class="button glide__bullet featuredList__bullet"
+                data-glide-dir="=1"
+            >
+                <span class="visuallyHidden">Slide 2</span>
+            </button>
+            <button
+                aria-label="Slide 3"
+                class="button glide__bullet featuredList__bullet"
+                data-glide-dir="=2"
+            >
+                <span class="visuallyHidden">Slide 3</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="container--alt banner banner--center">
+        <article class="banner__container">
+            <h2 class="banner__text skills__title">Latest Articles</h2>
+        </article>
+    </section>
+    <div class="layout blog__layout">
+        <section class="layout__main blog__main">
+            <ul class="blog__list" id="js-blog__list"></ul>
+        </section>
+        <aside class="layout__aside blog__aside">
+            <h2 class="title--secondary aside__heading">Discussion</h2>
+            <ul class="aside__list" id="js-discussion__list"></ul>
+            <h2 class="title--secondary aside__heading">Social</h2>
+            <ul class="aside__list">
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://dev.to/adrianbdesigns"
+                    >
+                        <span class="icon icon__social--dev"></span> DEV
+                        Community</a
+                    >
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://twitter.com/AdrianBDesigns"
+                    >
+                        <span class="icon icon__social--twitter"></span>
+                        Twitter</a
+                    >
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://github.com/codeAdrian"
+                    >
+                        <span class="icon icon__social--github"></span> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a
+                        target="_blank"
+                        rel="nofollow noreferrer"
+                        href="https://www.linkedin.com/in/adrianbece/"
+                    >
+                        <span class="icon icon__social--linkedin"></span>
+                        LinkedIn</a
+                    >
+                </li>
+                <li>
+                    <a href="mailto:adrianbece@live.com">
+                        <span class="icon icon__social--email"></span> Email</a
+                    >
+                </li>
+            </ul>
+        </aside>
+    </div>
 </main>
+
+<script>
+    new Glide("#js-featured-articles", {
+        type: "slider",
+        bound: true,
+        rewind: false,
+        touchRatio: 0,
+        gap: 0,
+        perView: 3,
+        breakpoints: {
+            568: {
+                touchRatio: 0.5,
+                perView: 1,
+            },
+            1140: {
+                touchRatio: 0.5,
+                perView: 2,
+            },
+        },
+    }).mount();
+</script>
 
 <script src="{{ base.url | prepend: site.url }}/assets/scripts/articles.js"></script>

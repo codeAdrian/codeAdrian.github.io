@@ -22,7 +22,7 @@ group :jekyll_plugins do
   gem 'jekyll-seo-tag', '~> 2.5'
   gem 'jekyll-redirect-from', '~> 0.14.0'
   gem 'jekyll-default-layout', '~> 0.1.4'
-  gem 'jekyll-minifier', '~> 0.1.9'
+  gem 'jekyll-minifier', '~> 0.1.10'
 
 end
 
