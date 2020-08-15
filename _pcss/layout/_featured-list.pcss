@@ -1,8 +1,11 @@
 .featuredList {
     lost-center: 100%;
-    max-width: var(--container__width--widest);
     position: relative;
     margin-top: calc(-1 * var(--spacing__vertical--2));
+
+    &:not(.featuredList--fullWidth) {
+        max-width: var(--container__width--widest);
+    }
 }
 
 .featuredList__item {
