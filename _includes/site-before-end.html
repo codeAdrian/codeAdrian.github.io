@@ -16,13 +16,11 @@
 
     var isIE = !!window.MSInputMethodContext && !!document.documentMode;
 
-    console.log("isIE", isIE);
-
     if (isIE) {
         var stylesLink = document.createElement("link");
         stylesLink.rel = "stylesheet";
         stylesLink.type = "text/css";
-        stylesLink.href = "https://codeadrian.github.io/assets/styles.css";
+        stylesLink.href = "https://codeadrian.github.io/assets/critical.css";
         var fontLink = document.createElement("link");
         fontLink.rel = "stylesheet";
         fontLink.type = "text/css";
