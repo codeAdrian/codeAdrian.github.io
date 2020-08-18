@@ -17,7 +17,7 @@ const buildContentBlob = () => {
         {%- if page.hero_image -%}"{{ page.hero_image }}", "{{ page.hero_image_fallback }}",{%- endif -%}
       {%- endunless -%}
     {%- endfor -%}
-      "{{ site.logo }}","https://dev.to/api/articles?username=adrianbdesigns", "/assets/styles.css","/assets/default-offline-image.png","/assets/scripts/glide.js","/assets/scripts/lazyload.js","/assets/fonts/devstar.woff?ytkptp","/assets/fonts/devstar.ttf?ytkptp","/assets/favicons/favicon-32x32.png","/assets/favicons/android-chrome-512x512.png","https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap"
+      "{{ site.logo }}","https://dev.to/api/articles?username=adrianbdesigns", "/assets/styles.css","/assets/default-offline-image.png","/assets/scripts/glide.js","/assets/scripts/lazysizes.js","/assets/fonts/devstar.woff?ytkptp","/assets/fonts/devstar.ttf?ytkptp","/assets/favicons/favicon-32x32.png","/assets/favicons/android-chrome-512x512.png","https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap"
   ]
 }
 
