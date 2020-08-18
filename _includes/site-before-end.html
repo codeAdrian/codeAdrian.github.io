@@ -13,4 +13,20 @@
         script.src = "/assets/scripts/lazysizes.js";
         document.body.appendChild(script);
     }
+
+    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+
+    console.log("isIE", isIE);
+
+    if (isIE) {
+        var stylesLink = document.createElement("link");
+        stylesLink.rel = "stylesheet";
+        stylesLink.href = "/assets/styles.css";
+        var fontLink = document.createElement("link");
+        fontLink.rel = "stylesheet";
+        fontLink.href =
+            "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap";
+        document.head.appendChild(stylesLink);
+        document.head.appendChild(fontLink);
+    }
 </script>
