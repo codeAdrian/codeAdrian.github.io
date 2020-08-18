@@ -159,19 +159,22 @@
         return r;
     }
 
-    function fetchArticles() {
+    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+
+    if (isIE) {
+        setTimeout(function () {
+            window
+                .fetch("https://dev.to/api/articles?username=adrianbdesigns")
+                .then(handleErrors)
+                .then(handleJSON)
+                .then(handleResponse)
+                .catch(handleFallback);
+        }, 10000);
+    } else {
         fetch("https://dev.to/api/articles?username=adrianbdesigns")
             .then(handleErrors)
             .then(handleJSON)
             .then(handleResponse)
             .catch(handleFallback);
-    }
-
-    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
-
-    if (isIE) {
-        setTimeout(fetchArticles, 10000);
-    } else {
-        fetchArticles();
     }
 })();
