@@ -159,9 +159,19 @@
         return r;
     }
 
-    fetch("https://dev.to/api/articles?username=adrianbdesigns")
-        .then(handleErrors)
-        .then(handleJSON)
-        .then(handleResponse)
-        .catch(handleFallback);
+    function fetchArticles() {
+        fetch("https://dev.to/api/articles?username=adrianbdesigns")
+            .then(handleErrors)
+            .then(handleJSON)
+            .then(handleResponse)
+            .catch(handleFallback);
+    }
+
+    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+
+    if (isIE) {
+        setTimeout(fetchArticles, 10000);
+    } else {
+        fetchArticles();
+    }
 })();
