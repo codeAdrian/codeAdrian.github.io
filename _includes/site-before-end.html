@@ -1,7 +1,7 @@
 <script>
     if ("loading" in HTMLImageElement.prototype) {
-        const images = document.querySelectorAll('img[loading="lazy"]');
-        const sources = document.querySelectorAll("source[data-srcset]");
+        var images = document.querySelectorAll('img[loading="lazy"]');
+        var sources = document.querySelectorAll("source[data-srcset]");
         sources.forEach(function (source) {
             source.srcset = source.dataset.srcset;
         });
@@ -9,7 +9,7 @@
             img.src = img.dataset.src;
         });
     } else {
-        const script = document.createElement("script");
+        var script = document.createElement("script");
         script.src = "/assets/scripts/lazysizes.js";
         document.body.appendChild(script);
     }
