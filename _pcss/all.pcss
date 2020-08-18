@@ -53,3 +53,10 @@
 @import "pages/portfolio";
 @import "pages/project";
 @import "pages/blog";
+
+// IE 11 specific hack
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .featuredWork {
+        display: none !important;
+    }
+}
