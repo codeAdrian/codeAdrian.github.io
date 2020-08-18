@@ -45,7 +45,13 @@
     <script src="/assets/scripts/glide.js"></script>
     <script src="/assets/scripts/lazyload.js"></script>
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
-    <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}" />
+    <style>{% include critical.css %}</style>
+    <!--
+
+      <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}" />
+    -->
+
+
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Oswald" rel="stylesheet">
 
