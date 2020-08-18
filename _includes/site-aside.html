@@ -1,19 +1,11 @@
 <aside class="layout__aside">
     <h2 class="title--secondary aside__heading">Categories</h2>
     <ul class="aside__list aside__tags">
-        {% capture temptags %} {% for tag in site.tags %}
-        {{
-            tag[1].size | plus: 1000
-        }}#{{
-            tag[0]
-        }}#{{
-            tag[1].size
-        }}
-        {% endfor %} {% endcapture %} {% assign sortedtemptags = temptags |
-        split:' ' | sort | reverse %} {% for temptag in sortedtemptags %} {%
-        assign tagitems = temptag | split: '#' %} {% capture tagname %}{{
-            tagitems[1]
-        }}{% endcapture %}
+        {% capture temptags %} {% for tag in site.tags %} {{ tag[1].size | plus:
+        1000 }}#{{ tag[0] }}#{{ tag[1].size }} {% endfor %} {% endcapture %} {%
+        assign sortedtemptags = temptags | split:' ' | sort | reverse %} {% for
+        temptag in sortedtemptags %} {% assign tagitems = temptag | split: '#'
+        %} {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
         <li>
             <a href="/tag/{{ tagname | downcase }}">{{ tagname }}</a>
         </li>
@@ -30,7 +22,7 @@
     </ul>
     <h2 class="title--secondary aside__heading">RSS Feed</h2>
     <p>
-        <a target="_blank" rel="nofollow noreferrer" href="/feed.xml"
+        <a target="_blank" rel="noopener noreferrer" href="/feed.xml"
             >RSS Feed</a
         >
     </p>
@@ -39,7 +31,7 @@
         <li>
             <a
                 target="_blank"
-                rel="nofollow noreferrer"
+                rel="noopener noreferrer"
                 href="https://twitter.com/AdrianBDesigns"
             >
                 <span class="icon icon__social--twitter"></span> Twitter</a
@@ -48,7 +40,7 @@
         <li>
             <a
                 target="_blank"
-                rel="nofollow noreferrer"
+                rel="noopener noreferrer"
                 href="https://github.com/codeAdrian"
             >
                 <span class="icon icon__social--github"></span> GitHub
@@ -57,7 +49,7 @@
         <li>
             <a
                 target="_blank"
-                rel="nofollow noreferrer"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/adrianbece/"
             >
                 <span class="icon icon__social--linkedin"></span> LinkedIn</a

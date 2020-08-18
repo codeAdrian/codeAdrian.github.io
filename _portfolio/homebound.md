@@ -26,7 +26,8 @@ link: https://luthien.netlify.com/
 </div>
 <p>During the April of 2020, COVID-19 spread accross the world at the rapid pace. The COVID-19 tidalwave hit Croatia in February so we were working from home at the time.</p>
 
-<p>I was always looking for projects and activities to do under the lockdown and when <a href="https://dev.to/devteam/announcing-the-twilio-hackathon-on-dev-2lh8" target="_blank" rel="nofollow noreferrer" >DEV announced the hackathon competition</a> in collaboration with Twilio, I was hell-bent on doing it right away. Few of my colleagues from PROTOTYP got interested in the competition and we went with all guns blazing, working on the project after our regular office hours, sometimes long into the night.</p>
+<p>I was always looking for projects and activities to do under the lockdown and when <a href="https://dev.to/devteam/announcing-the-twilio-hackathon-on-dev-2lh8"                           target="_blank"
+                            rel="noopener noreferrer" >DEV announced the hackathon competition</a> in collaboration with Twilio, I was hell-bent on doing it right away. Few of my colleagues from PROTOTYP got interested in the competition and we went with all guns blazing, working on the project after our regular office hours, sometimes long into the night.</p>
 
 </article>
 
@@ -48,7 +49,8 @@ link: https://luthien.netlify.com/
 <p>First, we needed to come up with an idea. With COVID-19 being relatively new and unknown in our community, we wanted to create an app that will make use of Twilio communications and bot API and be delightful and helpful to use. So we went with an app that motivates its users to have regular, healthy daily activities through gamification, help them keep track of their close contacts, and have a information bot.</p>
 
 <p>
-If you are interested in full breakdown of features and development approach, you can <a href="https://dev.to/adrianbdesigns/homebound-my-submission-to-the-twilio-x-dev-hackathon-4a22" target="_blank" rel="nofollow noreferrer" >read the full article here</a>.
+If you are interested in full breakdown of features and development approach, you can <a href="https://dev.to/adrianbdesigns/homebound-my-submission-to-the-twilio-x-dev-hackathon-4a22" 
+target="_blank" rel="noopener noreferrer" >read the full article here</a>.
 </p>
 
 </article>

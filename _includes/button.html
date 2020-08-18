@@ -2,7 +2,7 @@
     href="{{ include.link | default: '#' }}"
     class="share__link"
     target="_blank"
-    rel="nofollow norefferer"
+    rel="noopener noreferrer"
     >{% if include.icon %}{% include icon.html id=include.icon
     title=include.icon %}{% endif %}
     <span class="visuallyHidden">{{ id }}</span>

@@ -36,7 +36,7 @@
         link.className = "blog__link";
         link.href = a.url;
         link.target = "_blank";
-        link.rel = "noopener nofollow";
+        link.rel = "noopener noreferrer";
         link.textContent = a.title;
         return link;
     }
@@ -73,7 +73,7 @@
         link.className = "button button--cta";
         link.href = a.url;
         link.target = "_blank";
-        link.rel = "noopener nofollow";
+        link.rel = "noopener noreferrer";
         link.textContent = "Read article on DEV";
 
         actions.appendChild(link);
@@ -112,7 +112,7 @@
         var link = document.createElement("a");
         link.className = "discussion__link";
         link.target = "_blank";
-        link.rel = "noopener nofollow";
+        link.rel = "noopener noreferrer";
         link.textContent = r.title;
         link.href = r.url;
 

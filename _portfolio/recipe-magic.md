@@ -15,7 +15,7 @@ description: I was looking for some interesting API-s to experiment with, and Ed
 <h2 class="title--secondary project__heading">About The Project</h2>
 </div>
 
-<p>I was looking for some interesting API-s to experiment with, and <a href="https://developer.edamam.com/" target="_blank" rel="nofollow noreferrer">Edamam</a> caught my attentionn. Edamam is a food recipe API which allows access to recipe database search, nutritional values, searching by ingredients, etc.</p>
+<p>I was looking for some interesting API-s to experiment with, and <a href="https://developer.edamam.com/" target="_blank" rel="noopener noreferrer">Edamam</a> caught my attentionn. Edamam is a food recipe API which allows access to recipe database search, nutritional values, searching by ingredients, etc.</p>
 
 </article>
 
