@@ -11,7 +11,7 @@ layout: default
             {% for post in site.tags[page.tag] %} {% assign page = post |
             default: "%d %b %Y" %}
             <li class="blog__item">
-                <article class="article  article--post">
+                <article class="article article--post">
                     {% assign date_format = site.date_format | default: "%d %b
                     %Y" %}
                     <small class="blog__date">
@@ -31,7 +31,8 @@ layout: default
                     {% include post-meta.html %}
                     <div class="blog__imageWrapper">
                         <img
-                            class="blog__image"
+                            loading="lazy"
+                            class="blog__image lazyload"
                             src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                             data-src="{{ page.image }}"
                             alt="{{ page.title }} Featured Image"

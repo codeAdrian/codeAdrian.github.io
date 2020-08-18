@@ -31,7 +31,7 @@ While I was working on the feature, I was invited to do a demo of the feature fo
 
 <article class="block block--image">
 <div class="video">
-<iframe class="video__content" src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<iframe loading="lazy" class="video__content lazyload" src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 </article>
 
 <article class="block block--text">
@@ -39,7 +39,10 @@ While I was working on the feature, I was invited to do a demo of the feature fo
 </article>
 
 <figure class="block block--image">
-<img  src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
+<img  
+    class="lazyload"
+    loading="lazy"
+src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
 data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/pwa-studio-2.gif" />
 <figcaption>Search Suggestion Dropdown</figcaption>
 </figure>

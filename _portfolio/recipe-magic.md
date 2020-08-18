@@ -42,7 +42,8 @@ description: I was looking for some interesting API-s to experiment with, and Ed
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578232108/work/recipe-magic-2.webp" type="image/webp" />
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578232108/work/recipe-magic-2.jpg" />
             <img
-                class="image--lazyLoaded"
+                loading="lazy"
+                class="image--lazyLoaded lazyload"
                 src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                 data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578232108/work/recipe-magic-2.jpg"
                 alt=""

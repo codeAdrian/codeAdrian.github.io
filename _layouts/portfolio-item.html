@@ -19,7 +19,8 @@ layout: default
                         />
                         <source data-srcset="{{ page.image_fallback }}" />
                         <img
-                            class="card__image"
+                            loading="lazy"
+                            class="card__image lazyload"
                             src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                             data-src="{{ page.image_fallback }}"
                             alt="{{ page.title }}"

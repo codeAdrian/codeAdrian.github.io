@@ -40,20 +40,19 @@
       <meta name="theme-color" content="#151515" />
 
     <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="preconnect" href="https://dev.to">
+    <link rel="preconnect" href="https://codeadrian.github.io">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.buymeacoffee.com">
     <link rel="manifest" href="{{ "/manifest.json" | relative_url }}">
     <script src="/assets/scripts/glide.js"></script>
-    <script src="/assets/scripts/lazyload.js"></script>
     <meta name="theme-color" content="{{ site.manifest.theme_color | default: '#242e2b' }}"/>
     <style>{% include critical.css %}</style>
-    <!--
-
-      <link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}" />
-    -->
-
-
-
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Oswald" rel="stylesheet">
+    
+    <link rel="preload" href="{{ '/assets/styles.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/styles.css' | relative_url }}"></noscript>
+    
+    <link  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap" rel="stylesheet">
 
     {% if site.avatarurl %}{% include site-favicons.html %}{% endif %}
 
@@ -75,6 +74,7 @@
     {% if site.service_worker != false %}{% include site-sw.html %}{% endif %}
 
     {% include site-before-end.html %}
+
   </body>
 
 </html>

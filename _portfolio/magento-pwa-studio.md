@@ -32,11 +32,10 @@ While I was working on the feature, I was invited to do a demo of the feature fo
 </article>
 
 <article class="block block--image">
-
 <div class="video">
 <div class="icon icon__video image--placeholder"></div>
-<iframe class="video__content" 
-data-src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe loading="lazy" class="video__content lazyload" 
+src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </article>
 
@@ -45,7 +44,7 @@ data-src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" al
 
 <blockquote class="blockquote--default blockquote block">
 <div class="blockquote__wrapper">
-<div class="blockquote__text blockquote__text--default">Adrian Bece continues to make a big difference in PWA with the Magento community — we love working with him as he continues to push the limit on experience."</div>
+<div class="blockquote__text blockquote__text--default">Adrian Bece continues to make a big difference in PWA with the Magento community — we love working with him as he continues to push the limit on experience.</div>
 <div class="blockquote__author blockquote__author--default">- Eric Erway (Project Manager at Magento)</div>
 </div>
 </blockquote>
@@ -63,7 +62,8 @@ data-src="https://www.youtube-nocookie.com/embed/G3S5Evyo5lg" frameborder="0" al
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/pwa-studio-2.webp" type="image/webp" />
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/pwa-studio-2.jpg" />
             <img
-                class="image--lazyLoaded"
+                loading="lazy"
+                class="image--lazyLoaded lazyload"
                 src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                 data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/pwa-studio-2.jpg"
                 alt=""

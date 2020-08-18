@@ -40,7 +40,8 @@ link: https://adrians-music-collection.netlify.com/
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803152/work/adrians-music-collection-2.webp" type="image/webp" />
             <source data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803152/work/adrians-music-collection-2.jpg" />
             <img
-                class="image--lazyLoaded"
+                loading="lazy"
+                class="image--lazyLoaded lazyload"
                 src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                 data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803152/work/adrians-music-collection-2.jpg"
                 alt=""

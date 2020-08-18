@@ -15,7 +15,8 @@ page.hero_image_fallback %} {% if hero_text or hero_title or hero_image %}
             <source data-srcset="{{ hero_image }}" type="image/webp" />
             <source data-srcset="{{ hero_image_fallback }}" />
             <img
-                class="hero__image"
+                loading="lazy"
+                class="hero__image lazyload"
                 src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
                 data-src="{{ hero_image_fallback }}"
                 alt="{{ hero_title }}"

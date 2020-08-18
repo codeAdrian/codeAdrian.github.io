@@ -1,6 +1,16 @@
 <script>
-    var globalLazyLoad = new LazyLoad();
-    var videoLazyLoad = new LazyLoad({
-        elements_selector: '.video__content'
-    });
+    if ("loading" in HTMLImageElement.prototype) {
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        const sources = document.querySelectorAll("source[data-srcset]");
+        sources.forEach((source) => {
+            source.srcset = source.dataset.srcset;
+        });
+        images.forEach((img) => {
+            img.src = img.dataset.src;
+        });
+    } else {
+        const script = document.createElement("script");
+        script.src = "/assets/scripts/lazysizes.js";
+        document.body.appendChild(script);
+    }
 </script>

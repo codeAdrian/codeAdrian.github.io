@@ -3,7 +3,7 @@
     <ul class="blog__list">
         {% for page in paginator.posts %}
         <li class="blog__item">
-            <article class="article  article--post">
+            <article class="article article--post">
                 {% assign date_format = site.date_format | default: "%d %b %Y"
                 %}
                 <small class="blog__date">
@@ -23,8 +23,9 @@
                 {% include post-meta.html %}
                 <div class="blog__imageWrapper">
                     <img
+                        loading="lazy"
                         src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
-                        class="blog__image"
+                        class="blog__image lazyload"
                         data-src="{{ page.image }}"
                         alt="{{ page.title }} Featured Image"
                     />
@@ -49,8 +50,8 @@
 <section class="blog">
     <ul class="blog__list">
         {% for page in site.posts %}
-        <li class="item  item--post">
-            <article class="article  article--post">
+        <li class="item item--post">
+            <article class="article article--post">
                 <h2 class="blog__title">
                     <a
                         class="blog__link"
@@ -61,8 +62,9 @@
                 {% include post-meta.html %}
                 <div class="blog__imageWrapper">
                     <img
+                        loading="lazy"
                         src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
-                        class="blog__image"
+                        class="blog__image lazyload"
                         data-src="{{ page.image }}"
                         alt="{{ page.title }} Featured Image"
                     />

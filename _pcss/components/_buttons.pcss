@@ -29,6 +29,11 @@
     }
 }
 
+.button__text {
+    display: block;
+    padding-right: var(--spacing__horizontal--n1);
+}
+
 .button--cta {
     background-color: var(--color__cta);
     color: var(--color__secondary);
@@ -38,6 +43,14 @@
         background-color: var(--color__cta--darker);
         color: var(--color__secondary);
     }
+}
+
+.button--withIcon {
+    display: inline-flex;
+}
+
+.button__image {
+    max-width: var(--spacing__horizontal--n1);
 }
 
 .button--fullWidth {

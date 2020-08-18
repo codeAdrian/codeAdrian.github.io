@@ -5,13 +5,12 @@ description: Experience working on various small-scale and large scale web, eCom
 hero_image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546680674/devstar/hero-portfolio.svg
 hero_image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546680674/devstar/hero-portfolio.png
 hero_title: Portfolio
-hero_text: <div class="hero__subtitle">Experience working on various small-scale and large scale web, eCommerce and PWA projects.</div>
+hero_text: <div class="hero__subtitle">Small-scale and large-scale web, eCommerce and PWA projects.</div>
 collectionpage: portfolio
 ---
 
 <main class="main container">
-    <section class="portfolio">
-        {% for work in site.portfolio %} {% include work-card.html %} {% endfor
-        %}
-    </section>
+  <section class="portfolio">
+    {% for work in site.portfolio %} {% include work-card.html %} {% endfor %}
+  </section>
 </main>
