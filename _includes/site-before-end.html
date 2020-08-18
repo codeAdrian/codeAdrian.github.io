@@ -2,10 +2,10 @@
     if ("loading" in HTMLImageElement.prototype) {
         const images = document.querySelectorAll('img[loading="lazy"]');
         const sources = document.querySelectorAll("source[data-srcset]");
-        sources.forEach((source) => {
+        sources.forEach(function (source) {
             source.srcset = source.dataset.srcset;
         });
-        images.forEach((img) => {
+        images.forEach(function (img) {
             img.src = img.dataset.src;
         });
     } else {
