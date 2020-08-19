@@ -15,6 +15,24 @@
     }
 
     var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+    var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+
+    if (isIE || isFirefox) {
+        var fontLink = document.createElement("link");
+        fontLink.rel = "stylesheet";
+        fontLink.type = "text/css";
+        fontLink.href =
+            "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap";
+        document.head.appendChild(fontLink);
+    }
+
+    if (isFirefox) {
+        var stylesLinkFf = document.createElement("link");
+        stylesLinkFf.rel = "stylesheet";
+        stylesLinkFf.type = "text/css";
+        stylesLinkFf.href = "https://codeadrian.github.io/assets/styles.css";
+        document.head.appendChild(stylesLinkFf);
+    }
 
     if (isIE) {
         var promiseScript = document.createElement("script");
@@ -32,15 +50,8 @@
         stylesLink.type = "text/css";
         stylesLink.href = "https://codeadrian.github.io/assets/all.css";
 
-        var fontLink = document.createElement("link");
-        fontLink.rel = "stylesheet";
-        fontLink.type = "text/css";
-        fontLink.href =
-            "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap";
-
         document.head.appendChild(promiseScript);
         document.head.appendChild(fetchScript);
         document.head.appendChild(stylesLink);
-        document.head.appendChild(fontLink);
     }
 </script>

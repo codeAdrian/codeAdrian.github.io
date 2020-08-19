@@ -195,7 +195,7 @@ hero_layout: default
 </main>
 
 <script>
-    new Glide("#js-featured-articles", {
+    var slider = new Glide("#js-featured-articles", {
         type: "slider",
         bound: true,
         rewind: false,
@@ -212,7 +212,11 @@ hero_layout: default
                 perView: 2,
             },
         },
-    }).mount();
+    });
+
+    setTimeout(function () {
+        slider.mount();
+    }, 100);
 </script>
 
 <script src="{{ base.url | prepend: site.url }}/assets/scripts/articles.js"></script>

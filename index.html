@@ -189,11 +189,12 @@ hero_text:
             disabledArrow: "featuredWork-arrow-disabled",
         },
     });
-
-    featuredWorkJs.mount();
+    setTimeout(function () {
+        featuredWorkJs.mount();
+    }, 100);
 </script>
 <script>
-    new Glide("#js-skills", {
+    var slider = new Glide("#js-skills", {
         type: "slider",
         bound: true,
         rewind: false,
@@ -210,5 +211,9 @@ hero_text:
                 perView: 2,
             },
         },
-    }).mount();
+    });
+
+    setTimeout(function () {
+        slider.mount();
+    }, 100);
 </script>
