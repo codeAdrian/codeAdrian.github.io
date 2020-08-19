@@ -4,4 +4,4 @@ Gemfile.lock
 package.json
 package-lock.json
 yarn.lock
-DS_store
+.DS_Store
