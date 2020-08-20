@@ -166,6 +166,7 @@ hero_text:
         </article>
     </div>
 </section>
+{% include glide.html %}
 <script>
     var featuredWorkJs = new Glide("#js-featuredWork", {
         type: "carousel",
@@ -189,11 +190,7 @@ hero_text:
             disabledArrow: "featuredWork-arrow-disabled",
         },
     });
-    setTimeout(function () {
-        featuredWorkJs.mount();
-    }, 200);
-</script>
-<script>
+
     var slider = new Glide("#js-skills", {
         type: "slider",
         bound: true,
@@ -215,5 +212,9 @@ hero_text:
 
     setTimeout(function () {
         slider.mount();
+    }, 200);
+
+    setTimeout(function () {
+        featuredWorkJs.mount();
     }, 200);
 </script>
