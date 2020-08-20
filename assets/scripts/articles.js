@@ -176,8 +176,8 @@
         document.head.appendChild(fetchScript);
 
         setTimeout(function () {
-            console.log({ polyfill: fetchPolyfill, native: window.fetch });
-            fetchPolyfill
+            console.log(window.fetch);
+            window
                 .fetch("https://dev.to/api/articles?username=adrianbdesigns")
                 .then(handleErrors)
                 .then(handleJSON)
