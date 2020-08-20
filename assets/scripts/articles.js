@@ -176,7 +176,6 @@
         document.head.appendChild(fetchScript);
 
         setTimeout(function () {
-            console.log(window.fetch);
             window
                 .fetch("https://dev.to/api/articles?username=adrianbdesigns")
                 .then(handleErrors)
