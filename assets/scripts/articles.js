@@ -175,19 +175,15 @@
         document.head.appendChild(promiseScript);
         document.head.appendChild(fetchScript);
 
-        fetchScript.onload(function () {
-            setTimeout(function () {
-                console.log({ polyfill: fetchPolyfill, native: window.fetch });
-                fetchPolyfill
-                    .fetch(
-                        "https://dev.to/api/articles?username=adrianbdesigns"
-                    )
-                    .then(handleErrors)
-                    .then(handleJSON)
-                    .then(handleResponse)
-                    .catch(handleFallback);
-            }, 1000);
-        });
+        setTimeout(function () {
+            console.log({ polyfill: fetchPolyfill, native: window.fetch });
+            fetchPolyfill
+                .fetch("https://dev.to/api/articles?username=adrianbdesigns")
+                .then(handleErrors)
+                .then(handleJSON)
+                .then(handleResponse)
+                .catch(handleFallback);
+        }, 4000);
     } else {
         fetch("https://dev.to/api/articles?username=adrianbdesigns")
             .then(handleErrors)
