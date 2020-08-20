@@ -127,11 +127,11 @@
         localStorage.setItem("blogPosts", JSON.stringify(r));
 
         var filtered = r.filter(function (r) {
-            return !r.tag_list.includes("discuss");
+            return !r.tag_list.indexOf("discuss") >= 0;
         });
 
         var discussions = r.filter(function (r) {
-            return r.tag_list.includes("discuss");
+            return r.tag_list.indexOf("discuss") >= 0;
         });
 
         if (discussions.length > 8) discussions.length = 8;
