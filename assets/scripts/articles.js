@@ -162,14 +162,32 @@
     var isIE = !!window.MSInputMethodContext && !!document.documentMode;
 
     if (isIE) {
-        setTimeout(function () {
-            window
-                .fetch("https://dev.to/api/articles?username=adrianbdesigns")
-                .then(handleErrors)
-                .then(handleJSON)
-                .then(handleResponse)
-                .catch(handleFallback);
-        }, 10000);
+        var promiseScript = document.createElement("script");
+        promiseScript.type = "text/javascript";
+        promiseScript.src =
+            "https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js";
+
+        var fetchScript = document.createElement("script");
+        fetchScript.type = "text/javascript";
+        fetchScript.src =
+            "https://cdn.jsdelivr.net/npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js";
+
+        document.head.appendChild(promiseScript);
+        document.head.appendChild(fetchScript);
+
+        fetchScript.onload(function () {
+            setTimeout(function () {
+                console.log({ polyfill: fetchPolyfill, native: window.fetch });
+                fetchPolyfill
+                    .fetch(
+                        "https://dev.to/api/articles?username=adrianbdesigns"
+                    )
+                    .then(handleErrors)
+                    .then(handleJSON)
+                    .then(handleResponse)
+                    .catch(handleFallback);
+            }, 1000);
+        });
     } else {
         fetch("https://dev.to/api/articles?username=adrianbdesigns")
             .then(handleErrors)

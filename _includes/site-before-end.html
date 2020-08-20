@@ -35,23 +35,10 @@
     }
 
     if (isIE) {
-        var promiseScript = document.createElement("script");
-        promiseScript.type = "text/javascript";
-        promiseScript.src =
-            "https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js";
-
-        var fetchScript = document.createElement("script");
-        fetchScript.type = "text/javascript";
-        fetchScript.src =
-            "https://cdn.jsdelivr.net/npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js";
-
         var stylesLink = document.createElement("link");
         stylesLink.rel = "stylesheet";
         stylesLink.type = "text/css";
         stylesLink.href = "https://codeadrian.github.io/assets/all.css";
-
-        document.head.appendChild(promiseScript);
-        document.head.appendChild(fetchScript);
         document.head.appendChild(stylesLink);
     }
 </script>
