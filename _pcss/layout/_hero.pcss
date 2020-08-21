@@ -4,8 +4,6 @@
 }
 
 .hero {
-    opacity: 0;
-    animation: heroFadeIn 0.3s 0.05s ease-in-out forwards;
     overflow: hidden;
 }
 
@@ -20,6 +18,8 @@
 }
 
 .hero__container--title {
+    opacity: 0;
+    animation: heroFadeInVertical 0.5s 0.05s ease-in-out forwards;
     text-align: center;
 }
 
@@ -48,6 +48,8 @@
 }
 
 .hero__image {
+    opacity: 0;
+    animation: heroFadeInRight 0.5s 0.05s ease-in-out forwards;
     padding-left: var(--spacing__default--horizontal);
     padding-right: var(--spacing__default--horizontal);
 }
@@ -183,6 +185,7 @@
     }
 
     .hero__container--title {
+        animation: heroFadeInLeft 0.5s 0.05s ease-in-out forwards;
         text-align: right;
         padding-left: var(--spacing__default--horizontal);
         lost-column: 6/12;
@@ -244,12 +247,38 @@
     }
 }
 
-@keyframes heroFadeIn {
+@keyframes heroFadeInLeft {
     from {
         opacity: 0;
+        transform: translate3d(calc(-1 * var(--spacing__horizontal--n1)), 0, 0);
     }
 
     to {
         opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes heroFadeInRight {
+    from {
+        opacity: 0;
+        transform: translate3d(var(--spacing__horizontal--n1), 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes heroFadeInVertical {
+    from {
+        opacity: 0;
+        transform: translate3d(0, var(--spacing__vertical--n2), 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }

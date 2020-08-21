@@ -1,8 +1,6 @@
-.contact {
-    background-color: var(--color__accent);
-}
-
 .contact__wrapper {
+    animation: contactFadeInVertical 0.5s 0.05s ease-in-out forwards;
+    opacity: 0;
     border-width: 0;
     background-color: var(--color__secondary);
     max-width: var(--container__width--smaller);
@@ -30,6 +28,19 @@
 
 @media (--mq__mobileLandscape--min) {
     .contact {
+        background-color: var(--color__accent);
         padding: var(--spacing__vertical--1) var(--spacing__default--horizontal);
+    }
+}
+
+@keyframes contactFadeInVertical {
+    from {
+        opacity: 0;
+        transform: translate3d(0, var(--spacing__vertical--n1), 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
