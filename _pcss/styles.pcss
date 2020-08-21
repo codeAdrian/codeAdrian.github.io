@@ -26,3 +26,12 @@
 @import "pages/portfolio";
 @import "pages/project";
 @import "pages/blog";
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.0001s !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.0001s !important;
+        scroll-behavior: auto !important;
+    }
+}
