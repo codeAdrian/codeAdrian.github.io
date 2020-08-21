@@ -4,6 +4,8 @@
 }
 
 .hero {
+    opacity: 0;
+    animation: heroFadeIn 0.3s 0.05s ease-in-out forwards;
     overflow: hidden;
 }
 
@@ -72,7 +74,7 @@
 
     &::before,
     &::after {
-        content: '';
+        content: "";
     }
 
     &,
@@ -215,7 +217,7 @@
 
         &::before,
         &::after {
-            content: '';
+            content: "";
         }
     }
 }
@@ -239,5 +241,15 @@
 
     .hero__image {
         width: auto;
+    }
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

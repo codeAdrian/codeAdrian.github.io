@@ -38,8 +38,7 @@
 }
 
 .navigation__item--current {
-    box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
-        var(--color__cta);
+    animation: borderChange 0.3s ease-in forwards;
 
     &:hover {
         box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
@@ -86,5 +85,17 @@
 
     .navigation__item {
         flex: 1 1 calc(100% / var(--nav__items));
+    }
+}
+
+@keyframes borderChange {
+    from {
+        box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
+            var(--color__grayscale--light);
+    }
+
+    to {
+        box-shadow: inset 0 calc(-1 * var(--border__width--medium)) 0 0
+            var(--color__cta);
     }
 }
