@@ -1,7 +1,7 @@
 ---
 title: Crawling Chaos
 layout: portfolio-item
-platform: Static site
+platform: CSS
 contribution: Code Contribution
 image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/crawling-chaos-1.webp
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/crawling-chaos-1.jpg

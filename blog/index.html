@@ -104,9 +104,70 @@ hero_layout: default
                         >
                     </div>
                 </article>
+                <article class="featuredList__item glide__slide">
+                    <div class="featuredList__icon featuredList__icon--default">
+                        <span class="icon icon__star--full"></span>
+                    </div>
+                    <h3 class="title--secondary featuredList__title">
+                        <div>
+                            <small>CSS-Tricks</small>
+                        </div>
+                        Fixing UI bugs with various debugging strategies
+                    </h3>
+                    <p class="featuredList__text">
+                        I was recently reminded of how convoluted UI bugs can
+                        be. I recently fixed an interesting bug that was
+                        affecting some SVGs in Safari browsers with no obvious
+                        pattern or reason. I had searched for any similar issues
+                        to get some clue about what was going on, but I found no
+                        useful results. Despite the obstacles, I managed to fix
+                        it.
+                    </p>
+                    <div class="banner--center">
+                        <a
+                            class="button button--withIcon button--cta"
+                            target="_blank"
+                            href="https://css-tricks.com/heres-how-i-solved-a-weird-bug-using-tried-and-true-debugging-strategies/"
+                        >
+                            Read Article</a
+                        >
+                    </div>
+                </article>
+                <article class="featuredList__item glide__slide">
+                    <div class="featuredList__icon featuredList__icon--default">
+                        <span class="icon icon__star--full"></span>
+                    </div>
+                    <h3 class="title--secondary featuredList__title">
+                        <div>
+                            <small>CSS-Tricks</small>
+                        </div>
+                        Async font loading & handling FOUT
+                    </h3>
+                    <p class="featuredList__text">
+                        A web font workflow is simple, right? Choose a few
+                        nice-looking web-ready fonts, get the HTML or CSS code
+                        snippet, plop it in the project, and check if they
+                        display properly. People do this with Google Fonts a
+                        zillion times a day, dropping its link tag into the
+                        head. Let’s see what Lighthouse has to say about this
+                        workflow.
+                    </p>
+                    <div class="banner--center">
+                        <a
+                            class="button button--withIcon button--cta"
+                            target="_blank"
+                            href="https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/"
+                        >
+                            Read Article</a
+                        >
+                    </div>
+                </article>
             </div>
         </div>
-        <div class="featuredList__controls" data-glide-el="controls[nav]">
+        <div
+            class="featuredList__controls featuredList__controls--single"
+            data-glide-el="controls[nav]"
+        >
             <button
                 aria-label="Slide 1"
                 class="button glide__bullet featuredList__bullet"
@@ -127,6 +188,20 @@ hero_layout: default
                 data-glide-dir="=2"
             >
                 <span class="visuallyHidden">Slide 3</span>
+            </button>
+            <button
+                aria-label="Slide 4"
+                class="button glide__bullet featuredList__bullet"
+                data-glide-dir="=3"
+            >
+                <span class="visuallyHidden">Slide 4</span>
+            </button>
+            <button
+                aria-label="Slide 5"
+                class="button glide__bullet featuredList__bullet"
+                data-glide-dir="=4"
+            >
+                <span class="visuallyHidden">Slide 5</span>
             </button>
         </div>
     </section>
@@ -159,7 +234,7 @@ hero_layout: default
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="https://twitter.com/AdrianBDesigns"
+                        href="https://twitter.com/AdrianBeceDev"
                     >
                         <span class="icon icon__social--twitter"></span>
                         Twitter</a
@@ -196,7 +271,7 @@ hero_layout: default
 {% include glide.html %}
 <script>
     var slider = new Glide("#js-featured-articles", {
-        type: "slider",
+        type: "carousel",
         bound: true,
         rewind: false,
         touchRatio: 0,

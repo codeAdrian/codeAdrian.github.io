@@ -1,1 +1,193 @@
-!function(){function e(e){return e.json()}function t(e){var t=document.createElement("span");t.className="blog__tag tags__item tags__item--default";var n=document.createElement("small");return n.textContent=e,t.appendChild(n),t}function n(e){var n=document.createElement("div");n.className="blog__metaWrapper";var a=document.createElement("div");a.className="blog__meta blog__meta--tags tags";for(var r=0;r<e.tag_list.length;r++)a.appendChild(t(e.tag_list[r]));return n.appendChild(a),n}function a(e){var t=document.createElement("a");return t.className="blog__link",t.href=e.url,t.target="_blank",t.rel="noopener noreferrer",t.textContent=e.title,t}function r(e){var t=a(e),n=document.createElement("h2");return n.className="blog__title",n.appendChild(t),n}function l(){return document.createElement("div")}function i(e){var t=document.createElement("div");t.className="blog__actions";var n=document.createElement("a");return n.className="button button--cta",n.href=e.url,n.target="_blank",n.rel="noopener noreferrer",n.textContent="Read article on DEV",t.appendChild(n),t}function c(e){var t=r(e),a=document.createElement("article"),c=n(e),o=l(e),d=i(e),s=new Date(e.published_at).toLocaleDateString("hr-HR");a.className="article  article--post",a.textContent=s,a.appendChild(t),a.appendChild(c),a.appendChild(o);var m=document.createElement("p");m.textContent=e.description,a.appendChild(m),a.appendChild(d);var u=document.createElement("li");return u.className="blog__item",u.appendChild(a),u}function o(e){var t=document.createElement("li");t.className="discussion__item";var n=document.createElement("a");return n.className="discussion__link",n.target="_blank",n.rel="noopener noreferrer",n.textContent=e.title,n.href=e.url,t.appendChild(n),t}function d(e){var t=document.getElementById("js-blog__list"),n=document.getElementById("js-discussion__list");localStorage.setItem("blogPosts",JSON.stringify(e));var a=e.filter(function(e){return!e.tag_list.indexOf("discuss")>=0}),r=e.filter(function(e){return e.tag_list.indexOf("discuss")>=0});r.length>8&&(r.length=8),a.length=10;for(var l=0;l<a.length;l++)t.appendChild(c(a[l]));for(var i=0;i<r.length;i++)n.appendChild(o(r[i]))}function s(){d(JSON.parse(localStorage.getItem("blogPosts")))}function m(e){return e.ok||s(),e}if(!!window.MSInputMethodContext&&!!document.documentMode){var u=document.createElement("script");u.type="text/javascript",u.src="https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js";var p=document.createElement("script");p.type="text/javascript",p.src="https://cdn.jsdelivr.net/npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js",document.head.appendChild(u),document.head.appendChild(p),setTimeout(function(){window.fetch("https://dev.to/api/articles?username=adrianbdesigns").then(m).then(e).then(d)["catch"](s)},4e3)}else fetch("https://dev.to/api/articles?username=adrianbdesigns").then(m).then(e).then(d)["catch"](s)}();
+(function () {
+    function handleJSON(r) {
+        return r.json();
+    }
+
+    function generateTag(t) {
+        var tag = document.createElement("span");
+        tag.className = "blog__tag tags__item tags__item--default";
+
+        var tagText = document.createElement("small");
+        tagText.textContent = t;
+
+        tag.appendChild(tagText);
+
+        return tag;
+    }
+
+    function generateMeta(a) {
+        var meta = document.createElement("div");
+        meta.className = "blog__metaWrapper";
+
+        var tags = document.createElement("div");
+        tags.className = "blog__meta blog__meta--tags tags";
+
+        for (var i = 0; i < a["tag_list"].length; i++) {
+            tags.appendChild(generateTag(a["tag_list"][i]));
+        }
+
+        meta.appendChild(tags);
+
+        return meta;
+    }
+
+    function generateLink(a) {
+        var link = document.createElement("a");
+        link.className = "blog__link";
+        link.href = a.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = a.title;
+        return link;
+    }
+
+    function generateTitle(a) {
+        var link = generateLink(a);
+        var title = document.createElement("h2");
+        title.className = "blog__title";
+        title.appendChild(link);
+        return title;
+    }
+
+    function generateImage(a) {
+        var imageContainer = document.createElement("div");
+        return imageContainer;
+
+        /*
+        imageContainer.className = "blog__imageWrapper";
+        var image = document.createElement("img");
+        image.src = a["cover_image"];
+        image.className = "blog__image";
+
+        imageContainer.appendChild(image);
+
+        return image;
+        */
+    }
+
+    function generateActions(a) {
+        var actions = document.createElement("div");
+        actions.className = "blog__actions";
+
+        var link = document.createElement("a");
+        link.className = "button button--cta";
+        link.href = a.url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "Read article on DEV";
+
+        actions.appendChild(link);
+        return actions;
+    }
+
+    function generateArticle(a) {
+        var title = generateTitle(a);
+        var article = document.createElement("article");
+        var meta = generateMeta(a);
+        var image = generateImage(a);
+        var actions = generateActions(a);
+        var date = new Date(a["published_at"]).toLocaleDateString("hr-HR");
+        article.className = "article  article--post";
+        article.textContent = date;
+        article.appendChild(title);
+        article.appendChild(meta);
+        article.appendChild(image);
+
+        var excerpt = document.createElement("p");
+        excerpt.textContent = a.description;
+
+        article.appendChild(excerpt);
+        article.appendChild(actions);
+
+        var listItem = document.createElement("li");
+        listItem.className = "blog__item";
+        listItem.appendChild(article);
+
+        return listItem;
+    }
+
+    function generateDiscussion(r) {
+        var listItem = document.createElement("li");
+        listItem.className = "discussion__item";
+        var link = document.createElement("a");
+        link.className = "discussion__link";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = r.title;
+        link.href = r.url;
+
+        listItem.appendChild(link);
+
+        return listItem;
+    }
+
+    function handleResponse(r) {
+        var blogList = document.getElementById("js-blog__list");
+        var blogDiscussions = document.getElementById("js-discussion__list");
+        localStorage.setItem("blogPosts", JSON.stringify(r));
+
+        var filtered = r.filter(function (r) {
+            return !r.tag_list.indexOf("discuss") >= 0;
+        });
+
+        var discussions = r.filter(function (r) {
+            return r.tag_list.indexOf("discuss") >= 0;
+        });
+
+        if (discussions.length > 8) discussions.length = 8;
+
+        filtered.length = 10;
+
+        for (var i = 0; i < filtered.length; i++) {
+            blogList.appendChild(generateArticle(filtered[i]));
+        }
+
+        for (var j = 0; j < discussions.length; j++) {
+            blogDiscussions.appendChild(generateDiscussion(discussions[j]));
+        }
+    }
+
+    function handleFallback() {
+        var r = JSON.parse(localStorage.getItem("blogPosts"));
+        handleResponse(r);
+    }
+
+    function handleErrors(r) {
+        if (!r.ok) {
+            handleFallback();
+        }
+        return r;
+    }
+
+    var isIE = !!window.MSInputMethodContext && !!document.documentMode;
+
+    if (isIE) {
+        var promiseScript = document.createElement("script");
+        promiseScript.type = "text/javascript";
+        promiseScript.src =
+            "https://cdn.jsdelivr.net/npm/promise-polyfill@8.1.3/dist/polyfill.min.js";
+
+        var fetchScript = document.createElement("script");
+        fetchScript.type = "text/javascript";
+        fetchScript.src =
+            "https://cdn.jsdelivr.net/npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js";
+
+        document.head.appendChild(promiseScript);
+        document.head.appendChild(fetchScript);
+
+        setTimeout(function () {
+            window
+                .fetch("https://dev.to/api/articles?username=adrianbdesigns")
+                .then(handleErrors)
+                .then(handleJSON)
+                .then(handleResponse)
+                .catch(handleFallback);
+        }, 4000);
+    } else {
+        fetch("https://dev.to/api/articles?username=adrianbdesigns")
+            .then(handleErrors)
+            .then(handleJSON)
+            .then(handleResponse)
+            .catch(handleFallback);
+    }
+})();

@@ -1,0 +1,30 @@
+I"<article class="block block--text">
+<div class="project__headingWrapper">
+<h2 class="title--secondary project__heading">About The Project</h2>
+</div>
+
+<p>Gatsby is a popular static site generator, based on React. It is a very flexible framework due to the extension options using plugins. While researching Gatsby and taking notes of must-have plugins, I've noticed that all font loading plugins are either deprecated or not maintained anymore.</p>
+
+<p>After noticing the gap in the market, I've decided to develop the plugin myself using modern async font loading and FOUT handling methods.</p>
+</article>
+
+<article class="block block--text">
+<div class="project__headingWrapper">
+<h2 class="title--secondary project__heading">Development</h2>
+</div>
+
+<p>Gatsby is a popular static site generator, based on React. It is a very flexible framework due to the extension options using plugins. While researching Gatsby and taking notes of must-have plugins, I've noticed that all font loading plugins are either deprecated or not maintained anymore.</p>
+
+<p>After noticing the gap in the market, I've decided to develop the plugin myself using modern async font loading and FOUT handling methods.</p>
+</article>
+
+<article class="block block--text">
+<div class="project__headingWrapper">
+<h2 class="title--secondary project__heading">Open-source Success</h2>
+</div>
+
+<p>Gatsby is a popular static site generator, based on React. It is a very flexible framework due to the extension options using plugins. While researching Gatsby and taking notes of must-have plugins, I've noticed that all font loading plugins are either deprecated or not maintained anymore.</p>
+
+<p>After noticing the gap in the market, I've decided to develop the plugin myself using modern async font loading and FOUT handling methods.</p>
+</article>
+:ET

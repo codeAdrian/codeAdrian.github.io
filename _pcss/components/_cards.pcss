@@ -3,6 +3,10 @@
     margin-top: calc(-1 * var(--spacing__vertical--4));
 }
 
+.card {
+    position: relative;
+}
+
 .card__background {
     padding-top: 62.83%;
     background-image: url(https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1545401062/devstar/project-bg-min.png);
@@ -43,4 +47,19 @@
 
 .card__title {
     padding-bottom: var(--spacing__vertical--1);
+}
+
+.card__badge {
+    position: absolute;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    top: calc(-1 * var(--spacing__vertical--1));
+    z-index: var(--level--midHigh);
+    color: var(--color__cta);
+    background-color: var(--color__secondary);
+    border: var(--spacing__vertical--n2) solid var(--color__grayscale--light);
+    font-size: var(--typography__ms--2);
+    line-height: var(--spacing__vertical--1);
+    border-radius: 100%;
+    padding: var(--spacing__vertical--n3);
 }
