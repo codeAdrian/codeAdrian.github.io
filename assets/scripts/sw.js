@@ -16,7 +16,7 @@ const buildContentBlob = () => {
         "{{ page.url }}",
         {%- if page.hero_image -%}"{{ page.hero_image }}", "{{ page.hero_image_fallback }}",{%- endif -%}
       {%- endunless -%}
-    {%- endfor -%}"/assets/bmc-new-btn-logo.svg","https://dev.to/api/articles?username=adrianbdesigns", "/assets/styles.css","/assets/default-offline-image.png","/assets/scripts/glide.js","/assets/scripts/lazysizes.js","/assets/fonts/devstar.woff?ytkptp","/assets/fonts/devstar.ttf?ytkptp","/assets/favicons/favicon-32x32.png","/assets/favicons/android-chrome-512x512.png","https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap"
+    {%- endfor -%}"/assets/bmc-new-btn-logo.svg","https://dev.to/api/articles?username=adrianbdesigns", "/assets/styles.css","/assets/default-offline-image.png","/assets/scripts/glide.js","/assets/scripts/lazysizes.js","/assets/fonts/devstar.woff?l9582j","/assets/fonts/devstar.ttf?l9582j","/assets/favicons/favicon-32x32.png","/assets/favicons/android-chrome-512x512.png","https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Oswald&display=swap"
   ]
 }
 
