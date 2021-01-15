@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8.5"
+gem "jekyll", "~> 4.1.1"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
@@ -16,11 +16,11 @@ gem "jekyll", "~> 3.8.5"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-sitemap', '~> 1.2'
+  gem 'jekyll-sitemap', '~> 1.4'
   gem 'jekyll-mentions', '~> 1.4', '>= 1.4.1'
   gem 'jekyll-paginate', '~> 1.1'
   gem 'jekyll-seo-tag', '~> 2.5'
-  gem 'jekyll-redirect-from', '~> 0.14.0'
+  gem 'jekyll-redirect-from', '~> 0.16.0'
   gem 'jekyll-default-layout', '~> 0.1.4'
   gem 'jekyll-minifier', '~> 0.1.10'
 

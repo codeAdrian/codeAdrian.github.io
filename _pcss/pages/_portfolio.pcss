@@ -8,17 +8,21 @@
 .portfolio__item {
     padding-left: var(--spacing__default--horizontal);
     padding-right: var(--spacing__default--horizontal);
-    margin-bottom: var(--spacing__vertical--1);
+    margin-bottom: var(--spacing__vertical--2);
 }
 
 @media (--mq__desktop--min) {
+    .portfolio__item {
+        lost-waffle: 1/2;
+    }
+
     .portfolio {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-    }
 
-    .portfolio__item {
-        lost-waffle: 1/2;
+        & .portfolio__item {
+            margin-bottom: var(--spacing__vertical--2);
+        }
     }
 }

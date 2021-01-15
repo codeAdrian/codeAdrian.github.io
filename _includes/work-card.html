@@ -5,6 +5,12 @@
             <div>{{ work.contribution }} | {{ work.platform }}</div>
         </div>
 
+        {% if work.contribution == "Award-winning project" %}
+        <div class="card__badge">
+            <span class="icon icon__award"></span>
+        </div>
+        {% endif %}
+
         <div class="card__imageWrapper">
             <div class="card__background"></div>
             <div class="card__inner">

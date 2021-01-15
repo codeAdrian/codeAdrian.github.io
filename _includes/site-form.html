@@ -5,9 +5,9 @@
 
 <form
     class="form  form--{{ name_id }}"
-    method="post"
+    method="POST"
     name="{{ name }}"
-    action="{{ thanks_url }}"
+    action="https://formspree.io/f/mknpvzvo"
     {%
     if
     include.netlify_form
@@ -51,7 +51,7 @@
                     class="input input--default"
                     id="email--{{ name_id }}"
                     type="email"
-                    name="email"
+                    name="_replyto"
                     value=""
                     placeholder="Email"
                     required="required"
@@ -79,26 +79,6 @@
                 value="Send message"
             />
         </div>
-
-        {% if include.netlify_form %}
-        <label style="display:none"
-            >Don’t fill this out if you’re human: <input name="bot-field"
-        /></label>
-        {% else %} <input type="text" name="_gotcha" style="display:none" />
-        <input
-            type="hidden"
-            name="_subject"
-            value="{{ site.title }} submission from {{ name }}"
-        />
-        <input type="hidden" name="_next" value="{{ thanks_url }}" /> {% endif
-        %}
     </fieldset>
 </form>
-{% unless include.netlify_form %}
-<script>
-    var email = "{{ site.email | split: "" | reverse | join: "" }}";
-    var unraveledEmail = email.split("").reverse().join("");
-    var form = document.querySelector(".form--{{ name_id }}");
-      form.setAttribute("action", "https://formspree.io/" + unraveledEmail);
-</script>
-<noscript>Please enable JavaScript to use the form.</noscript> {% endunless %}
+<noscript>Please enable JavaScript to use the form.</noscript>

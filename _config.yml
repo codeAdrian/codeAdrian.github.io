@@ -41,12 +41,12 @@ paginate: 5 # jekyll-paginate > items per page
 paginate_path: blog/:num # jekyll-paginate > blog page
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
 twitter:
-  username: AdrianBDesigns # jekyll-seo-tag > Owners twitter username
+  username: AdrianBDev # jekyll-seo-tag > Owners twitter username
 author: AdrianBece # jekyll-seo-tag > default author
 social: # jekyll-seo-tag > social overrides
   name: Adrian Bece # jekyll-seo-tag > real name
   links: # jekyll-seo-tag > social aliases (sameAs)
-    - https://twitter.com/AdrianBDesigns
+    - https://twitter.com/AdrianBeceDev
     - https://www.linkedin.com/in/adrianbece
     - https://github.com/codeAdrian
 
@@ -98,7 +98,7 @@ navigation_header:
   Contact: /contact/
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/AdrianBDesigns
+  Twitter: https://twitter.com/AdrianBeceDev
   Linkedin: https://www.linkedin.com/in/adrianbece
   GitHub: https://github.com/codeAdrian
   feed: /feed.xml
