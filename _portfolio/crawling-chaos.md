@@ -7,6 +7,8 @@ image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/crawling-chaos-1.jpg
 link: https://stylestage.dev/styles/crawling-chaos/
 description: Crawling Chaos is a Lovecraftian theme that I've contributed to Style Stage - a website that showcases the best and most creative frontend themes designed by the developer community.
+featured: "true"
+position: 3
 ---
 
 <article class="block block--text">

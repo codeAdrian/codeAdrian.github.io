@@ -196,7 +196,8 @@
     }
 
     .hero {
-        min-height: calc(100vh - var(--spacing__vertical--2));
+        height: calc(100vh - var(--spacing__vertical--2));
+        max-height: 55rem;
     }
 
     .hero__image {
@@ -244,6 +245,12 @@
 
     .hero__image {
         width: auto;
+    }
+}
+
+@media (--mq__desktopLarge--min) {
+    .hero__wrapper {
+        margin-right: var(--spacing__horizontal--6);
     }
 }
 

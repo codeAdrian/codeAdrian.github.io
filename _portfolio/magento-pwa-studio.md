@@ -7,6 +7,7 @@ image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/pwa-studio-1.jpg
 link: https://github.com/magento-research/pwa-studio
 description: Magento announced Magento PWA Studio right around the time I started learning React. Magento PWA Studio is a set of tools which simplifies the development process of React-powered theme for Magento 2. After getting familiar with it and developing a showcase theme using PWA Studio which I presented to the key people in Magento PWA Studio team, I was encouraged to contribute to the project.
+position: 7
 ---
 
 <article class="block block--text">

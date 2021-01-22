@@ -61,12 +61,12 @@ hero_text:
                     <span class="icon icon__trophy"></span>
                 </div>
                 <h3 class="title--secondary featuredList__title">
-                    Award-winning developer
+                    Hackathon winner
                 </h3>
                 <div class="featuredList__text">
-                    Created Homebound, a web app that is a grand prize winner of
-                    DEV x Twilio Hackathon 2020. I'm also a winner of Egghead
-                    VSCode snippet Hackathon 2020.
+                    So far, I've competed and won a grand prize in 3 hackathons:
+                    DEV x Twilio hackathon, Egghead VSCode hackathon and
+                    Hashnode Christmas hackathon.
                 </div>
             </article>
             <article class="featuredList__item glide__slide">
@@ -74,7 +74,7 @@ hero_text:
                     <span class="icon icon__star--full"></span>
                 </div>
                 <h3 class="title--secondary featuredList__title">
-                    Distinguished Author
+                    Distinguished author
                 </h3>
                 <div class="featuredList__text">
                     I was recognized as an distinguished DEV author in 2019 and
@@ -87,7 +87,7 @@ hero_text:
                     <span class="icon icon__brand--magento"></span>
                 </div>
                 <h3 class="title--secondary featuredList__title">
-                    Magento-certified Developer
+                    Magento-certified developer
                 </h3>
                 <div class="featuredList__text">
                     I have developed and maintained multiple Magento and Magento
@@ -130,6 +130,9 @@ hero_text:
     </div>
 </section>
 
+{% assign featuredWork = site.portfolio | where:'featured', "true" | sort:
+"position" %}
+
 <section class="featuredWork">
     <h2 class="title--secondary featuredWork__title">Featured Work</h2>
     <div class="featuredWork__overflowWrapper">
@@ -142,15 +145,15 @@ hero_text:
                     class="glide__slides featuredWork-list"
                     id="js-featuredWork-list"
                 >
-                    {% for work in site.portfolio %} {% include
-                    carousel-card.html %} {% endfor %}
+                    {% for work in featuredWork %} {% include carousel-card.html
+                    %} {% endfor %}
                 </ul>
             </div>
             <div
                 class="glide__bullets featuredWork__bullets"
                 data-glide-el="controls[nav]"
             >
-                {% for work in site.portfolio %}
+                {% for work in featuredWork %}
                 <button
                     aria-label="Slide {{ forloop.index0 }}"
                     class="button glide__bullet"

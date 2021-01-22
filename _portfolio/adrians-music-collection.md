@@ -7,6 +7,8 @@ contribution: Personal Project
 image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803175/work/adrians-music-collection-1.webp
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803175/work/adrians-music-collection-1.jpg
 link: https://adrians-music-collection.netlify.com/
+featured: "true"
+position: 5
 ---
 
 <article class="block block--text">

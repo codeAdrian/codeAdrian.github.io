@@ -1,14 +1,14 @@
 ---
-title: Homebound
+title: Dream painter
 layout: portfolio-item
-platform: React, Firebase, Twilio
+platform: React, Canvas API
 contribution: Award-winning project
 description: This is an award-winning project! I lead the team of five people (colleagues from work and I) and we developed this delightful app in about 3 weeks. This project was done for Twilio x DEV hackathon that ran from April 1st to May 1st 2020. Despite a tough worldwide competition and many impressive projects submitted, we've managed to win the grand prize.
 image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.webp
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg
 link: https://luthien.netlify.com/
 featured: "true"
-position: 1
+position: 5
 ---
 
 <article class="block block--text">

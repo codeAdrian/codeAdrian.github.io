@@ -10,7 +10,123 @@ collectionpage: portfolio
 ---
 
 <main class="main container">
-  <section class="portfolio">
-    {% for work in site.portfolio %} {% include work-card.html %} {% endfor %}
-  </section>
+    <section class="container--alt banner banner--center">
+        <article class="banner__container">
+            <h2 class="banner__text skills__title">Award-winning projects</h2>
+        </article>
+    </section>
+
+    <div>
+        <ul>
+            <li>
+                <article class="card portfolio__item">
+                    <a class="card__link" href="/portfolio/homebound.html">
+                        <div class="card__titleWrapper">
+                            <h2 class="card__title">Homebound</h2>
+                            <div>React, Firebase, Twilio</div>
+                        </div>
+
+                        <div class="card__imageWrapper">
+                            <div class="card__background"></div>
+                            <div class="card__inner">
+                                <div class="imageContainer">
+                                    <picture>
+                                        <source
+                                            data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.webp"
+                                            type="image/webp"
+                                            srcset="
+                                                https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.webp
+                                            "
+                                        />
+                                        <source
+                                            data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg"
+                                            srcset="
+                                                https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg
+                                            "
+                                        />
+                                        <img
+                                            loading="lazy"
+                                            class="card__image lazyload"
+                                            src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg"
+                                            data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg"
+                                            alt="Homebound"
+                                        />
+                                    </picture>
+
+                                    <div
+                                        class="image--default image--1024x643 image--lazyLoaded"
+                                    >
+                                        <div
+                                            class="icon icon__image image--placeholder"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+
+            <li>
+                <article class="card portfolio__item">
+                    <a
+                        class="card__link"
+                        href="/portfolio/awesome-seo-snippets.html"
+                    >
+                        <div class="container--alt card__titleWrapper">
+                            <h2 class="card__title">Awesome SEO Snippets</h2>
+                            <div>Web, VSCode</div>
+                        </div>
+
+                        <div class="card__imageWrapper">
+                            <div class="card__background"></div>
+                            <div class="card__inner">
+                                <div class="imageContainer">
+                                    <picture>
+                                        <source
+                                            data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.webp"
+                                            type="image/webp"
+                                            srcset="
+                                                https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.webp
+                                            "
+                                        />
+                                        <source
+                                            data-srcset="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.jpg"
+                                            srcset="
+                                                https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.jpg
+                                            "
+                                        />
+                                        <img
+                                            loading="lazy"
+                                            class="card__image lazyload"
+                                            src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.jpg"
+                                            data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.jpg"
+                                            alt="Awesome SEO Snippets"
+                                        />
+                                    </picture>
+
+                                    <div
+                                        class="image--default image--1024x643 image--lazyLoaded"
+                                    >
+                                        <div
+                                            class="icon icon__image image--placeholder"
+                                        ></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </div>
+
+    <div class="project__headingWrapper">
+        <h2 class="title--secondary featuredWork__title">All projects</h2>
+    </div>
+
+    <section class="portfolio">
+        {% assign sortedWork = site.portfolio | sort: "position" %} {% for work
+        in sortedWork %} {% include work-card.html %} {% endfor %}
+    </section>
 </main>

@@ -7,6 +7,8 @@ image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1606582324
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1606582324/work/gatsby-font-loader-1.jpg
 link: https://stylestage.dev/styles/crawling-chaos/
 description: Crawling Chaos is a Lovecraftian theme that I've contributed to Style Stage - a website that showcases the best and most creative frontend themes designed by the developer community.
+featured: "true"
+position: 2
 ---
 
 <article class="block block--text">
@@ -29,14 +31,25 @@ description: Crawling Chaos is a Lovecraftian theme that I've contributed to Sty
 <p>I've also wrote an<a href="https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/" target="_blank" rel="noopener noreferrer">article for CSS-Tricks</a> where I've explained in detail what is going on under the hood.</p>
 </article>
 
+
 <article class="block block--text">
 <div class="project__headingWrapper">
 <h2 class="title--secondary project__heading">Open-source success</h2>
 </div>
 
-<p>"Gatsby Omni Font Loader" has been launched October 31st 2020 and it has been a success. It received more than 1,500 downloads in the first month and it has been endorsed by the community. Even Gatsby team has noticed the success and reached out to me on Twitter.</p>
+<p>"Gatsby Omni Font Loader" has been launched October 31st 2020 and it has been a success. It received more than 1,500 downloads in the first month and it has been endorsed by the community. Roboto studio, development agency from the UK, reached out to me with their thoughts on the plugin.</p>
+</article>
 
+<blockquote class="blockquote--default blockquote block">
+<div class="blockquote__wrapper">
+<div class="blockquote__text blockquote__text--default">We saw your original reddit post for this particular Gatsby plugin and read your blog post. We're blown away with the functionality and plan to use it in nearly every one of our sites. </div>
+<div class="blockquote__author blockquote__author--default">- Roboto Studio</div>
+</div>
+</blockquote>
 
+<article class="block block--text">
+
+<p>Even Gatsby team has noticed the success and reached out to me on Twitter. Also, one of the Gatsby team members contributed a bugfix for the plugin.</p>
 </article>
 
 <blockquote class="blockquote--default blockquote block">
@@ -49,6 +62,15 @@ description: Crawling Chaos is a Lovecraftian theme that I've contributed to Sty
 <article class="block block--text">
 <div class="project__headingWrapper">
 </div>
+
+<p>As of January 2021, this plugin has:</p>
+<ul>
+<li>Over 10,000 downloads</li>
+<li>Over 60 public projects using it</li>
+<li>Over 50 stars</li>
+<li>3 community contributors</li>
+<li>1 sponsor</li>
+</ul>
 
 <p>I am continuing to actively work on the plugin, continuously improving and optimizing it. Community contribution and bug reports are very much welcome!</p>
 

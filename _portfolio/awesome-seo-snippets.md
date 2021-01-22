@@ -7,6 +7,7 @@ description: Egghed.io announced the VSCode snippet hackathon on September 22nd 
 image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.webp
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1546803150/work/awesome-seo-1.jpg
 link: https://github.com/codeAdrian/egghead-challenge-awesome-seo
+position: 6
 ---
 
 <article class="block block--text">

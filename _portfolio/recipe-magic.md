@@ -7,6 +7,8 @@ image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231531
 image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1578231531/work/recipe-magic-1.jpg
 link: https://recipe-magic.netlify.com/
 description: I was looking for some interesting API-s to experiment with, and Edamam caught my attentionn. Edamam is a food recipe API which allows access to recipe database search, nutritional values, searching by ingredients, etc.
+featured: "true"
+position: 4
 ---
 
 <article class="block block--text">

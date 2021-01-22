@@ -39,11 +39,26 @@ layout: default
         <div><strong>Platform: </strong>{{ page.platform }}</div>
         <div><strong>Type:</strong> {{ page.contribution }}</div>
         <div>
-            <strong>View Project: </strong>
+            <strong>View project</strong>
             <a target="_blank" rel="noopener noreferrer" href="{{ page.link }}"
-                >Project Site</a
+                >Project website</a
             >
         </div>
     </section>
-    <section class="project__content">{{ content | markdownify }}</section>
+    <section class="project__content">
+        {{ content | markdownify }}
+
+        <div class="banner--center">
+            <p>
+                <a
+                    class="button button--cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="{{ page.link }}"
+                >
+                    View project
+                </a>
+            </p>
+        </div>
+    </section>
 </main>
