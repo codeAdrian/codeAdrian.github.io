@@ -43,8 +43,12 @@
 @media (--mq__mobileLandscape--custom) {
     .project__info {
         padding-bottom: var(--spacing__vertical--2);
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(
+            3,
+            minmax(var(--spacing__horizontal--1), 1fr)
+        );
+        grid-gap: var(--spacing__horizontal--1);
     }
 }
 

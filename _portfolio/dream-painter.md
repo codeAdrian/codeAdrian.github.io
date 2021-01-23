@@ -1,14 +1,14 @@
 ---
-title: Dream painter
+title: Magic painter
 layout: portfolio-item
 platform: React, Canvas API
 contribution: Award-winning project
-description: This is an award-winning project! I lead the team of five people (colleagues from work and I) and we developed this delightful app in about 3 weeks. This project was done for Twilio x DEV hackathon that ran from April 1st to May 1st 2020. Despite a tough worldwide competition and many impressive projects submitted, we've managed to win the grand prize.
-image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.webp
-image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v15468800658/work/homebound-1.jpg
-link: https://luthien.netlify.com/
+description: This is an award-winning project created for Hashnode Christmas hackathon 2020. It was coded in just a few days using React, Typescript, React custom hooks and Canvas API. This hackathon was an opportunity for me to play around with new tech and APIs, so I decided to go with the Canvas API and create an awesome painting app.
+image: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1611414690/work/magic-painter.webp
+image_fallback: https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1611414690/work/magic-painter.jpg
+link: https://magic-painter.netlify.app/
 featured: "true"
-position: 5
+position: 4
 ---
 
 <article class="block block--text">
@@ -17,43 +17,80 @@ position: 5
 <h2 class="title--secondary project__heading">About The Project</h2>
 </div>
 
-<p>This is an <strong>award-winning project</strong>! I lead the team of five people and we developed this delightful app in about 3 weeks. This project was done for Twilio x DEV hackathon that ran from April 1st to May 1st 2020. Despite a tough worldwide competition and many impressive projects submitted, we've managed to win the grand prize.</p>
+<p>This is an <strong>award-winning project</strong> created for Hashnode Christmas hackathon 2020. It was coded in just a few days using React, Typescript, React custom hooks and Canvas API. This hackathon was an opportunity for me to play around with new tech and APIs, so I decided to go with the Canvas API and create an awesome painting app.</p>
 
 </article>
 
 <article class="block block--text">
 
 <div class="project__headingWrapper">
-<h2 class="title--secondary project__heading">Road to the hackathon</h2>
+<h2 class="title--secondary project__heading">Splash screen</h2>
 </div>
-<p>During the April of 2020, COVID-19 spread accross the world at the rapid pace. The COVID-19 tidalwave hit Croatia in February so we were working from home at the time.</p>
+<p>I remember when I was buying paint sets for school, I was impressed by the images on the boxes. They showed a beautiful painting and were basically communicating "You can paint this beautiful image with this set". So I wanted to mimic that feeling with the splash screen.</p>
+</article>
 
-<p>I was always looking for projects and activities to do under the lockdown and when <a href="https://dev.to/devteam/announcing-the-twilio-hackathon-on-dev-2lh8"                           target="_blank" rel="noopener noreferrer" >DEV announced the hackathon competition</a> in collaboration with Twilio, I was hell-bent on doing it right away. Few of my colleagues from work got interested in the competition and we went with all guns blazing, working on the project after our regular office hours, sometimes long into the night.</p>
+<figure class="block block--image">
+<img  
+    class="lazyload block__image"
+    loading="lazy"
+src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
+data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1611415417/work/
+splash.jpg" />
+<figcaption>Magic painter app landing page (splash screen)</figcaption>
+</figure>
 
+<article class="block block--text">
+<p>I also wanted to use CSS properties I don't have much chance to use, like conic gradient borders and overlayed gradients on the text. The button also has some nice transition animation. Additionally, the button colors change over time in a smooth animation.</p>
 </article>
 
 <article class="block block--text">
 
 <div class="project__headingWrapper">
-<h2 class="title--secondary project__heading">Development</h2>
+<h2 class="title--secondary project__heading">Paint canvas</h2>
 </div>
-<p>We've decided to use our default dev stack that we regularly use at work alongside Twilio API which was required for the competition:</p>
-
-<ul>
-<li>React with Typescript</li>
-<li>Redux</li>
-<li>Firebase</li>
-<li>PostCSS</li>
-<li>Twilio API</li>
-</ul>
-
-<p>First, we needed to come up with an idea. With COVID-19 being relatively new and unknown in our community, we wanted to create an app that will make use of Twilio communications and bot API and be delightful and helpful to use. So we went with an app that motivates its users to have regular, healthy daily activities through gamification, help them keep track of their close contacts, and have a information bot.</p>
+<p>There are two tools that set apart this paint app from the others, it's what you'd call a "magic part". First tool is a "Magic Brush" which paints a beautiful stream of every available color (with a fixed saturation and lightness) in a gradient. This allows users to create magical and dream-like art.</p>
 
 <p>
-If you are interested in full breakdown of features and development approach, you can <a href="https://dev.to/adrianbdesigns/homebound-my-submission-to-the-twilio-x-dev-hackathon-4a22" 
-target="_blank" rel="noopener noreferrer" >read the full article here</a>.
+The second tool is the "Dynamic Width" tool which changes the paint tool brush radius from a minimum to a maximum value pixel by pixel, creating a beautiful flow of paint. When combined with the Magic Brush tool, it yields some astonishing results.
 </p>
 
+</article>
+
+<figure class="block block--image">
+<img  
+    class="lazyload block__image"
+    loading="lazy"
+src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
+data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1611415417/work/
+magic.gif" />
+<figcaption>Magic brush with dynamic width creates beautiful art</figcaption>
+</figure>
+
+<article class="block block--text">
+<p>Other tools include:</p>
+<ul>
+<li>
+Brush preview (color and size)
+</li>
+<li>
+Standard solid color brush
+</li>
+<li>
+Eraser
+</li>
+<li>
+Color picker
+</li>
+<li>
+Image downloader (download images as png)
+</li>
+<li>
+Manual brush size control
+</li>
+<li>
+Magic brush color saturation and lightness controls
+</li>
+</ul>
 </article>
 
 <article class="block block--text">
@@ -61,43 +98,21 @@ target="_blank" rel="noopener noreferrer" >read the full article here</a>.
 <div class="project__headingWrapper">
 <h2 class="title--secondary project__heading">Grand prize winner</h2>
 </div>
-<p>After 3 weeks of non-stop work on the Homebound app, we've submitted it a day or two before the deadline. A week after, the results came in, and we've won the grand prize.</p>
-
+<p>My project was one of the 5 grand prize winner projects, picked out from 100 awesome project submissions. I was awarded an Amazon giftcard in $500 dollar value, which is great considering I've worked on it just a few days.</p>
 </article>
 
 <blockquote class="blockquote--default blockquote block">
 <div class="blockquote__wrapper">
 <div class="blockquote__text blockquote__text--default">
-<h6>HomeBound (COVID-19 Communications Winner)</h6>
-<br/>
-The HomeBound project was developed by a team of 5 and aims to improve your life in self-isolation through a mix of functionality. It offers a gamified activity tracker to encourage you to stick to the activities and goals you set for yourself, and a chat bot powered by Programmable Chat and Twilio Autopilot to get answers to common questions. Finally, they added a voluntary close contact tracker. You can use it to keep track of when you saw people last, and reach out to them directly from within the app using Programmable SMS.
+Hashnode's Christmas Hackathon was one of the most successful developer hackathons during the holidays last month. Over 113 submissions from developers around the world in just 12 days.
+
+To select just 5 winners from 113 was difficult. After a lot of debate internally, our team has decided to choose 5 winners for the Amazon Gift cards 💳 (worth USD 500) and 10 special mentions.
 </div>
-<div class="blockquote__author blockquote__author--default">- Twilio Blog post <br/><small>(Congratulations to the winners of the Twilio x DEV hackathon)</small></div>
+<div class="blockquote__author blockquote__author--default">- Hashnode blog post</div>
 </div>
 </blockquote>
 
 <article class="block block--text">
-
-<p>Twilio team also did a livestream where they showcased the winning projects and we were delighted to be featured. They talked about Homebound, the idea about it and what they liked about it the most.</p>
-
+<p>
+You can view the complete list of winning projects in the <a href="https://townhall.hashnode.com/hashnode-christmas-hackathon-winners">Hashnode Christmas hackathon winners announcement</a> blog post.</p>
 </article>
-
-<article class="block block--image">
-<div class="video">
-<div class="icon icon__video image--placeholder"></div>
-<iframe loading="lazy" class="video__content lazyload" 
-src="https://www.youtube-nocookie.com/embed/AAZdOylfqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</article>
-<article class="block block--text">
-<p>Twilio asked me for an interview in their <a rel="noopener noreferrer nofollow" target="_blank" href="https://www.twilio.com/blog/developers-build-new-normal-adrian-bece">Twilio developers spotlight</a>, so I was featured developer for a week.</p>
-<p>Few weeks after, I've received a swag pack from Twilio which was part of the grand prize. Additionally, I was also invited to Twilio's SIGNAL conference which was held online in October 2020.</p>
-</article>
-<figure class="block block--image">
-<img  
-    class="lazyload block__image"
-    loading="lazy"
-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:low/v1546683551/devstar/placeholder.png"
-data-src="https://res.cloudinary.com/dazdt97d3/image/upload/q_auto:good/v1606579687/work/twilio_swag.jpg" />
-<figcaption>Twilio swag pack - charger, blanket and t-shirt</figcaption>
-</figure>
