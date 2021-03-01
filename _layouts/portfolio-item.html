@@ -36,29 +36,52 @@ layout: default
         </div>
     </section>
     <section class="project__info">
-        <div><strong>Platform: </strong>{{ page.platform }}</div>
-        <div><strong>Type:</strong> {{ page.contribution }}</div>
         <div>
-            <strong>View project:</strong>
-            <a target="_blank" rel="noopener noreferrer" href="{{ page.link }}"
-                >Project website</a
-            >
+            <small><strong>Platform: </strong>{{ page.platform }}</small>
         </div>
-    </section>
-    <section class="project__content">
-        {{ content | markdownify }}
-
-        <div class="banner--center">
-            <p>
+        <div>
+            <small><strong>Type:</strong> {{ page.contribution }}</small>
+        </div>
+        <div>
+            <small>
+                <strong>View project:</strong>
                 <a
-                    class="button button--cta"
                     target="_blank"
                     rel="noopener noreferrer"
                     href="{{ page.link }}"
+                    >Project website</a
                 >
-                    View project
-                </a>
-            </p>
+            </small>
+        </div>
+    </section>
+    <section class="project__content">
+        {{ content | markdownify }} {% if page.previous %} {% assign previous =
+        page.previous %} {% else %} {% assign previous = site.posts[0] %} {%
+        endif %} {% assign last lastPostIndex = site.portfolio | size | minus: 1
+        %} {% if page.previous %} {% assign previous = page.previous %} {% else
+        %} {% assign previous = site.portfolio[lastPostIndex] %} {% endif %} {%
+        if page.next %} {% assign next = page.next %} {% else %} {% assign next
+        = site.portfolio[0] %} {% endif %}
+
+        <div class="block block--image project__pager">
+            <nav class="project__pager-wrapper">
+                <small>
+                    <a href="{{previous.url}}">{{previous.title}}</a>
+                </small>
+                <div class="banner--center">
+                    <a
+                        class="button button--cta"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="{{ page.link }}"
+                    >
+                        View project
+                    </a>
+                </div>
+                <small>
+                    <a href="{{next.url}}"> {{next.title}} </a>
+                </small>
+            </nav>
         </div>
     </section>
 </main>

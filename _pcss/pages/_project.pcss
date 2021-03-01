@@ -1,5 +1,5 @@
 .project__cardImage {
-    max-width: var(--container__width--wide);
+    max-width: var(--container__width--medium);
     margin-left: auto;
     margin-right: auto;
 }
@@ -26,11 +26,36 @@
 .project__info {
     padding-left: var(--spacing__default--horizontal);
     padding-right: var(--spacing__default--horizontal);
-    max-width: var(--container__width--wide);
+    max-width: var(--container__width--medium);
     margin-left: auto;
     margin-right: auto;
     padding-bottom: var(--spacing__vertical--1);
     text-align: center;
+}
+
+.project__pager {
+    & small {
+        display: none;
+    }
+
+    & .button--cta {
+        margin: 0 var(--spacing__horizontal--n2);
+    }
+
+    & .button--default {
+        width: var(--spacing__horizontal--2);
+        padding: var(--spacing__vertical--n1) 0;
+        text-align: center;
+        font-size: var(--typography__ms--0);
+    }
+}
+
+.project__pager-wrapper {
+    padding-top: var(--spacing__vertical--1);
+    border-top: var(--border__width--light) solid var(--color__grayscale--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (--mq__phabletCustom--min) {
@@ -57,5 +82,27 @@
         font-size: var(--typography__ms--4);
         line-height: var(--spacing__vertical--3);
         padding-bottom: var(--spacing__vertical--1);
+    }
+
+    .project__pager {
+        & small {
+            display: inline-block;
+        }
+    }
+
+    .project__pager-wrapper {
+        justify-content: space-between;
+
+        & > * {
+            flex-basis: 25%;
+
+            &:last-child {
+                text-align: right;
+            }
+        }
+
+        & .banner--center {
+            flex-basis: 50%;
+        }
     }
 }

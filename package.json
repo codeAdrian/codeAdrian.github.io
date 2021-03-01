@@ -1,6 +1,6 @@
 {
-    "name": "codeAdrian",
-    "version": "1.0.0",
+    "name": "code-adrian",
+    "version": "1.1.0",
     "description": "codeAdrian Jekyll theme",
     "scripts": {
         "setup": "npm install",
