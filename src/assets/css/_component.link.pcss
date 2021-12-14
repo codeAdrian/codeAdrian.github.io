@@ -1,0 +1,16 @@
+.link {
+  color: var(--color-gray-medium);
+  transition: color 0.25s var(--transition-easing);
+
+  &:hover,
+  &:active {
+    color: var(--color-primary);
+  }
+
+  &--underline {
+    &:hover,
+    &:active {
+      text-decoration: underline;
+    }
+  }
+}

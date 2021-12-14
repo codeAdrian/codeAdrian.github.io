@@ -1,0 +1,31 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1;
+  font-family: var(--font-family-primary);
+  text-transform: uppercase;
+  gap: var(--spacing-n2);
+
+  &--primary {
+    background-color: var(--color-primary);
+    color: var(--color-gray-lightest);
+    transition: background-color 0.25s var(--transition-easing);
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var(--color-primary-tint);
+    }
+  }
+
+  &--small {
+    font-size: var(--font-size-0);
+    padding: var(--spacing-n1) var(--spacing-1);
+  }
+
+  &--link {
+    text-decoration: none;
+  }
+}

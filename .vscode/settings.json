@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.html": "njk"
+  },
+  "emmet.includeLanguages": {
+    "njk": "html"
+  },
+  "html.format.wrapLineLength": 120,
+  "vsicons.associations.files": [
+    { "icon": "nunjucks", "extensions": ["njk"], "format": "svg" }
+  ],
+  "material-icon-theme.files.associations": {
+    "*.html": "nunjucks"
+  }
+}
