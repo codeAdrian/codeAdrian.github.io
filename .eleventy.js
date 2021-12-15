@@ -6,7 +6,7 @@ const Image = require("@11ty/eleventy-img");
 const purgeCssPlugin = require("eleventy-plugin-purgecss");
 const pluginBabel = require("eleventy-plugin-babel");
 
-async function imageShortcode(src, alt, sizes) {
+async function imageShortcode(src, alt, className = "image", sizes) {
   let srcPrefix = `./src/assets/images/`;
   // ... so you don't have to enter path info for each ref,
   //     but also means you have to store them there
@@ -18,7 +18,7 @@ async function imageShortcode(src, alt, sizes) {
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
   }
   let metadata = await Image(src, {
-    widths: [568, 768, null],
+    widths: [720, 1024, 1440],
     formats: ["avif", "webp", "jpeg"],
     urlPath: "/images/",
     outputDir: "./_site/images/",
@@ -31,7 +31,7 @@ async function imageShortcode(src, alt, sizes) {
   });
   let lowsrc = metadata.jpeg[0];
   let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
-  return `<picture>
+  return `<picture class="${className}">
     ${Object.values(metadata)
       .map((imageFormat) => {
         return `  <source type="${
@@ -67,7 +67,8 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({
-    "node_modules/@glidejs/glide/dist/glide.min.js": "assets/js/glide.min.js",
+    "node_modules/swiper/swiper-bundle.min.js":
+      "assets/js/swiper-bundle.min.js",
   });
 
   eleventyConfig.addPlugin(pluginBabel, {
@@ -124,7 +125,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(ErrorOverlay);
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (outputPath.endsWith(".html")) {
+    if (outputPath && outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -149,9 +150,18 @@ module.exports = function (eleventyConfig) {
     return coll;
   });
 
-  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+  eleventyConfig.addCollection("about", function (collection) {
+    const coll = collection.getFilteredByTag("about");
+    return coll;
+  });
+
+  eleventyConfig.addCollection("portfolio", function (collection) {
+    const coll = collection.getFilteredByTag("portfolio");
+    return coll;
+  });
 
   /* === END, prev/next posts stuff === */
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
 
   /* pathPrefix: "/"; */
   return {

@@ -1,7 +1,7 @@
 module.exports = {
   // Content files referencing CSS classes
-  content: ["./_site/**/*.html"],
-
+  //content: ["./_site/**/*.html"],
+  //whitelistPatterns: ["/^swiper/"],
   // CSS files to be purged in-place
-  css: ["./_site/**/*.css"],
+  //css: ["./_site/**/*.css"],
 };

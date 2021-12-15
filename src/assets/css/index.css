@@ -3,6 +3,8 @@
 @import "_variables.spacing.pcss";
 @import "_variables.levels.pcss";
 
+@import "_vendor.swiper-bundle.pcss";
+
 @import "_setup.page.pcss";
 @import "_setup.icons.pcss";
 @import "_setup.typography.pcss";
@@ -21,3 +23,5 @@
 @import "_block.linklist.pcss";
 @import "_block.banner.pcss";
 @import "_block.about.pcss";
+@import "_block.featured.pcss";
+@import "_block.project-card.pcss";
