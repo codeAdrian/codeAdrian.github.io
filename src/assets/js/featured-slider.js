@@ -3,7 +3,7 @@ var featuredImages = new Swiper("#js-featured-images", {
   slidesPerView: 1.5,
   spaceBetween: 0,
   centeredSlides: true,
-  touchRatio: 0.8,
+  touchRatio: 0.4,
   longSwipes: false,
   loop: true,
   navigation: {

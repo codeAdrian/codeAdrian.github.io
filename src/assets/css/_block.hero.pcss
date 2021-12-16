@@ -17,14 +17,13 @@
     height: calc(100% - var(--spacing-2));
     backface-visibility: hidden;
     transform: translateZ(0);
-    filter: blur(2px);
 
     & circle {
       animation: fadeOut 10s var(--transition-easing) alternate infinite;
       opacity: 0.8;
 
       &:nth-child(2n) {
-        transform: scale3d(0.8, 0.8, 0.8);
+        transform: scale3d(0.75, 0.75, 0.75);
         animation-name: fadeIn;
         opacity: 0.3;
         animation-duration: 6s;
@@ -98,13 +97,13 @@
   }
   100% {
     opacity: 0.3;
-    transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.75, 0.75, 0.75);
   }
 }
 
 @keyframes fadeIn {
   0% {
-    transform: scale3d(0.8, 0.8, 0.8);
+    transform: scale3d(0.75, 0.75 0.75);
     opacity: 0.3;
   }
   100% {

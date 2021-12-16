@@ -1,8 +1,12 @@
 <section class="u-container-spacing">
     <div class="featured-projects u-container u-container--larger">
         <article>
-            <span class="featured-projects__control featured-projects__control--disabled" id="js-featured-control-prev">Previous</span>
-            <span class="featured-projects__control" id="js-featured-control-next">Next</span>
+            <span class="featured-projects__control featured-projects__control--disabled" id="js-featured-control-prev">
+                <span class="icon icon--arrow-up"></span>
+            </span>
+            <span class="featured-projects__control" id="js-featured-control-next">
+                <span class="icon icon--arrow-down"></span>
+            </span>
             <ul class="u-list-reset">
                 {% for project in collections.portfolio %}
                     {% if loop.index === 1 %}
