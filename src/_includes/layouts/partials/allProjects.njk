@@ -1,0 +1,10 @@
+<section class="u-container u-container-spacing u-container--larger projects">
+    <h1 class="projects__title">All personal projects</h1>
+    <ul class="u-list-reset projects__list">
+        {% for project in collections.portfolio %}
+            <li>
+                <a class="link link--color link--underline" href="{{ project.url }}" title="{{ project.data.title }}">{{ project.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

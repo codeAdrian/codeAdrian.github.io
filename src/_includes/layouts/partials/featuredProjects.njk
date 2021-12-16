@@ -1,21 +1,57 @@
 <section class="u-container-spacing">
     <div class="featured-projects u-container u-container--larger">
-        <article>
-            <span class="featured-projects__control featured-projects__control--disabled" id="js-featured-control-prev">
-                <span class="icon icon--arrow-up"></span>
-            </span>
-            <span class="featured-projects__control" id="js-featured-control-next">
-                <span class="icon icon--arrow-down"></span>
-            </span>
+        <article class="featured-projects__info">
+            <nav class="featured-projects__controls">
+                <button
+                    disabled
+                    class="button button-outline button--rounded button-outline--primary featured-projects__control
+                        featured-projects__control--disabled"
+                    id="js-featured-control-prev">
+                    <span class="icon icon--arrow-up"></span>
+                </button>
+                <button
+                    class="button button-outline button--rounded button-outline--primary featured-projects__control"
+                    id="js-featured-control-next">
+                    <span class="icon icon--arrow-down"></span>
+                </button>
+            </nav>
             <ul class="u-list-reset">
-                {% for project in collections.portfolio %}
+                {% for project in collections.featured %}
                     {% if loop.index === 1 %}
                         <li class="project-card project-card--active" id="js-featured-content-{{ loop.index }}">
-                            {{ project.data.title }}
+                            <div class="project-card__inner">
+                                <span>
+                                    {{ project.data.type }}
+                                </span>
+                                <span>
+                                    {{ project.data.tech }}
+                                </span>
+                                <h2>{{ project.data.title }}</h2>
+                                <p>
+                                    {{ project.data.description }}
+                                </p>
+                                <a href="{{ project.url }}">
+                                    View Project
+                                </a>
+                            </div>
                         </li>
                     {% else %}
                         <li class="project-card" id="js-featured-content-{{ loop.index }}">
-                            {{ project.data.title }}
+                            <div class="project-card__inner">
+                                <span>
+                                    {{ project.data.type }}
+                                </span>
+                                <span>
+                                    {{ project.data.tech }}
+                                </span>
+                                <h2>{{ project.data.title }}</h2>
+                                <p>
+                                    {{ project.data.description }}
+                                </p>
+                                <a href="{{ project.url }}">
+                                    View Project
+                                </a>
+                            </div>
                         </li>
                     {% endif %}
                 {% endfor %}
@@ -23,7 +59,7 @@
         </article>
         <article class="swiper" id="js-featured-images">
             <ul class="u-list-reset swiper-wrapper">
-                {% for project in collections.portfolio %}
+                {% for project in collections.featured %}
                     <li class="swiper-slide featured-projects__slide--images">
                         <figure class="featured-projects__figure">
                             {% image "project-bg.png", "", "featured-projects__image--bg" %}

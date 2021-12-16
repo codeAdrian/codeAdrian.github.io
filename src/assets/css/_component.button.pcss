@@ -4,18 +4,42 @@
   align-items: center;
   text-align: center;
   line-height: 1;
+  cursor: pointer;
   font-family: var(--font-family-primary);
   text-transform: uppercase;
   gap: var(--spacing-n2);
+  transition: color 0.25s var(--transition-easing),
+    border-color 0.25s var(--transition-easing),
+    background-color 0.25s var(--transition-easing);
+
+  &-outline {
+    background-color: transparent;
+    border: 2px solid currentColor;
+
+    &--primary {
+      color: var(--color-primary);
+
+      &:not(:disabled):hover,
+      &:not(:disabled):active,
+      &:not(:disabled):focus {
+        color: var(--color-gray-lightest);
+        border-color: var(--color-primary);
+        background-color: var(--color-primary);
+      }
+    }
+  }
+
+  &--rounded {
+    border-radius: 4px;
+  }
 
   &--primary {
     background-color: var(--color-primary);
     color: var(--color-gray-lightest);
-    transition: background-color 0.25s var(--transition-easing);
 
-    &:hover,
-    &:active,
-    &:focus {
+    &:not(:disabled):hover,
+    &:not(:disabled):active,
+    &:not(:disabled):focus {
       background-color: var(--color-primary-tint);
     }
   }

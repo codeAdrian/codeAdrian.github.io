@@ -1,14 +1,26 @@
 .link {
   color: var(--color-gray-medium);
   transition: color 0.25s var(--transition-easing);
+  text-decoration: none;
 
   &:hover,
   &:active {
     color: var(--color-primary);
   }
 
+  &--color {
+    color: var(--color-primary);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-primary-tint);
+    }
+  }
+
   &--underline {
     &:hover,
+    &:focus,
     &:active {
       text-decoration: underline;
     }

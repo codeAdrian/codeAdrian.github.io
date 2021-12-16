@@ -36,7 +36,31 @@
   opacity: 0.04;
 }
 
-.featured-projects__control--disabled {
-  pointer-events: none;
-  opacity: 0.5;
+.featured-projects__info {
+  position: relative;
+}
+
+.featured-projects__control {
+  display: block;
+  aspect-ratio: 1;
+  font-size: var(--font-size-1);
+  padding: var(--spacing-n2);
+  margin: var(--spacing-n2) 0;
+
+  &:disabled {
+    pointer-events: none;
+    color: var(--color-gray-medium);
+    opacity: 0.5;
+  }
+}
+
+.featured-projects__controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: var(--spacing-n1);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: var(--level-2);
 }

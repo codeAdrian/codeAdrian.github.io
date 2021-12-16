@@ -6,6 +6,11 @@ var featuredImages = new Swiper("#js-featured-images", {
   touchRatio: 0.4,
   longSwipes: false,
   loop: true,
+  on: {
+    init: function afterInit() {
+      document.getElementById("js-featured-control-prev").disabled = true;
+    },
+  },
   navigation: {
     nextEl: "#js-featured-control-next",
     prevEl: "#js-featured-control-prev",
@@ -22,25 +27,9 @@ featuredImages.on(
     currentSwiper.allowSlidePrev = canMovePrevious;
     currentSwiper.allowSlideNext = canMoveNext;
 
-    if (canMovePrevious) {
-      document
-        .getElementById("js-featured-control-prev")
-        .classList.remove("featured-projects__control--disabled");
-    } else {
-      document
-        .getElementById("js-featured-control-prev")
-        .classList.add("featured-projects__control--disabled");
-    }
-
-    if (canMoveNext) {
-      document
-        .getElementById("js-featured-control-next")
-        .classList.remove("featured-projects__control--disabled");
-    } else {
-      document
-        .getElementById("js-featured-control-next")
-        .classList.add("featured-projects__control--disabled");
-    }
+    document.getElementById("js-featured-control-prev").disabled =
+      !canMovePrevious;
+    document.getElementById("js-featured-control-next").disabled = !canMoveNext;
   }
 );
 

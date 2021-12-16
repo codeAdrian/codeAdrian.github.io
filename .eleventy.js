@@ -155,6 +155,11 @@ module.exports = function (eleventyConfig) {
     return coll;
   });
 
+  eleventyConfig.addCollection("featured", function (collection) {
+    const coll = collection.getFilteredByTag("featured");
+    return coll;
+  });
+
   eleventyConfig.addCollection("portfolio", function (collection) {
     const coll = collection.getFilteredByTag("portfolio");
     return coll;

@@ -13,7 +13,6 @@
 
 @import "_component.button.pcss";
 @import "_component.link.pcss";
-@import "_component.carousel.pcss";
 @import "_component.card.pcss";
 
 @import "_layout.footer.pcss";
@@ -23,5 +22,6 @@
 @import "_block.linklist.pcss";
 @import "_block.banner.pcss";
 @import "_block.about.pcss";
+@import "_block.projects.pcss";
 @import "_block.featured.pcss";
 @import "_block.project-card.pcss";
