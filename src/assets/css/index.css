@@ -19,6 +19,7 @@
 @import "_layout.header.pcss";
 
 @import "_block.hero.pcss";
+@import "_block.testimonials.pcss";
 @import "_block.linklist.pcss";
 @import "_block.banner.pcss";
 @import "_block.about.pcss";

@@ -8,15 +8,12 @@ const pluginBabel = require("eleventy-plugin-babel");
 
 async function imageShortcode(src, alt, className = "image", sizes) {
   let srcPrefix = `./src/assets/images/`;
-  // ... so you don't have to enter path info for each ref,
-  //     but also means you have to store them there
-  //     --- which probably is best (IMHO)
   src = srcPrefix + src;
   console.log(`Generating image(s) from:  ${src}`);
   if (alt === undefined) {
-    // Throw an error on missing alt (alt="" works okay)
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
   }
+
   let metadata = await Image(src, {
     widths: [720, 1024, 1440],
     formats: ["avif", "webp", "jpeg"],
@@ -152,6 +149,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("about", function (collection) {
     const coll = collection.getFilteredByTag("about");
+    return coll;
+  });
+
+  eleventyConfig.addCollection("testimonials", function (collection) {
+    const coll = collection.getFilteredByTag("testimonials");
     return coll;
   });
 

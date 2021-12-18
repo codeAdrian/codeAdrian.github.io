@@ -1,3 +1,28 @@
-<section>
-    <h1>Testimonials</h1>
+<section class="testimonials">
+    <div class="testimonials__title-wrapper u-container-spacing">
+        <h1 class="testimonials__title u-t-center">Kind words from clients and colleagues</h1>
+    </div>
+    <article class="swiper testimonials__content u-container u-container--large" id="js-testimonials">
+        <ul class="u-list-reset swiper-wrapper">
+            {% for item in collections.testimonials %}
+                <li class="swiper-slide card testimonials__item">
+                    <figure class="card__figure testimonials__image">
+                        {% image "testimonials/"+item.data.image, "", "card__image", "180" %}
+                    </figure>
+                    <blockquote class="testimonials__quote card__content" cite="https://www.linkedin.com/in/adrianbece/">
+                        {{ item.templateContent| safe }}
+                    </blockquote>
+                    <div class="testimonials__credits u-t-right">
+                        <h2 class="testimonials__author">
+                            {{ item.data.name }}
+                        </h2>
+                        {{ item.data.role }} at<br/>
+                        <strong>
+                            {{ item.data.company }}
+                        </strong>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </article>
 </section>
