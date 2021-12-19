@@ -20,17 +20,16 @@
                     {% if loop.index === 1 %}
                         <li class="project-card project-card--active" id="js-featured-content-{{ loop.index }}">
                             <div class="project-card__inner">
-                                <span>
-                                    {{ project.data.type }}
-                                </span>
-                                <span>
-                                    {{ project.data.tech }}
-                                </span>
-                                <h2>{{ project.data.title }}</h2>
-                                <p>
+                                <h2 class="project-card__title">{{ project.data.title }}</h2>
+                                <aside class="project-card__tags">
+                                    <span class="project-card__tag">
+                                        {{ project.data.type }} - {{ project.data.tech }}
+                                    </span>
+                                </aside>
+                                <p class="project-card__content">
                                     {{ project.data.description }}
                                 </p>
-                                <a href="{{ project.url }}">
+                                <a class="button button--primary button--rounded button--link button--medium" href="{{ project.url }}">
                                     View Project
                                 </a>
                             </div>
@@ -38,17 +37,16 @@
                     {% else %}
                         <li class="project-card" id="js-featured-content-{{ loop.index }}">
                             <div class="project-card__inner">
-                                <span>
-                                    {{ project.data.type }}
-                                </span>
-                                <span>
-                                    {{ project.data.tech }}
-                                </span>
-                                <h2>{{ project.data.title }}</h2>
-                                <p>
+                                <h2 class="project-card__title">{{ project.data.title }}</h2>
+                                <aside class="project-card__tags">
+                                    <span class="project-card__tag">
+                                        {{ project.data.type }} - {{ project.data.tech }}
+                                    </span>
+                                </aside>
+                                <p class="project-card__content">
                                     {{ project.data.description }}
                                 </p>
-                                <a href="{{ project.url }}">
+                                <a class="button button--primary button--rounded button--link button--medium" href="{{ project.url }}">
                                     View Project
                                 </a>
                             </div>
@@ -61,10 +59,12 @@
             <ul class="u-list-reset swiper-wrapper">
                 {% for project in collections.featured %}
                     <li class="swiper-slide featured-projects__slide--images">
-                        <figure class="featured-projects__figure">
-                            {% image "project-bg.png", "", "featured-projects__image--bg" %}
-                            {% image "portfolio/"+project.data.image, "", "featured-projects__image--main" %}
-                        </figure>
+                        <a tabindex="-1" href="{{ project.url }}">
+                            <figure class="featured-projects__figure">
+                                {% image "project-bg.png", "", "featured-projects__image--bg" %}
+                                {% image "portfolio/"+project.data.image, "", "featured-projects__image--main" %}
+                            </figure>
+                        </a>
                     </li>
                 {% endfor %}
             </ul>

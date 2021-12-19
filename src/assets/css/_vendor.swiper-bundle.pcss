@@ -237,17 +237,17 @@
   display: none;
 }
 :root {
-  /*
   --swiper-pagination-color: var(--swiper-theme-color);
-  --swiper-pagination-bullet-size: 8px;
-  --swiper-pagination-bullet-width: 8px;
-  --swiper-pagination-bullet-height: 8px;
-  --swiper-pagination-bullet-inactive-color: #000;
-  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-size: var(--spacing-n1);
+  --swiper-pagination-bullet-width: calc(var(--spacing-n1) + var(--spacing-n3));
+  --swiper-pagination-bullet-height: calc(
+    var(--spacing-n1) + var(--spacing-n3)
+  );
+  --swiper-pagination-bullet-inactive-color: var(--color-gray-light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
   --swiper-pagination-bullet-opacity: 1;
-  --swiper-pagination-bullet-horizontal-gap: 4px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
-  */
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  --swiper-pagination-bullet-vertical-gap: 0.5rem;
 }
 .swiper-pagination {
   position: absolute;
@@ -264,9 +264,8 @@
 .swiper-pagination-custom,
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 10px;
-  left: 0;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
@@ -296,18 +295,19 @@
   transform: scale(0.33);
 }
 .swiper-pagination-bullet {
-  width: var(
-    --swiper-pagination-bullet-width,
-    var(--swiper-pagination-bullet-size, 8px)
-  );
-  height: var(
-    --swiper-pagination-bullet-height,
-    var(--swiper-pagination-bullet-size, 8px)
-  );
+  width: var(--swiper-pagination-bullet-width);
+  height: var(--swiper-pagination-bullet-height);
   display: inline-block;
   border-radius: 50%;
-  background: var(--swiper-pagination-bullet-inactive-color, #000);
-  opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
+  background: var(--swiper-pagination-bullet-inactive-color);
+  opacity: var(--swiper-pagination-bullet-inactive-opacity);
+  transition: background-color 0.25s var(--transition-easing);
+
+  &:not(.swiper-pagination-bullet-active):hover,
+  &:not(.swiper-pagination-bullet-active):focus,
+  &:not(.swiper-pagination-bullet-active):active {
+    background: var(--color-gray-medium);
+  }
 }
 button.swiper-pagination-bullet {
   border: none;
@@ -476,9 +476,8 @@ button.swiper-pagination-bullet {
 }
 /* Preloader */
 :root {
-  /*
-  --swiper-preloader-color: var(--swiper-theme-color);
-  */
+  --swiper-theme-color: var(--color-primary);
+  --swiper-preloader-color: var(--color-primary);
 }
 .swiper-lazy-preloader {
   width: 42px;

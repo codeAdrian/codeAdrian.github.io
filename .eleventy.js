@@ -81,6 +81,7 @@ module.exports = function (eleventyConfig) {
 
   // https://www.11ty.dev/docs/layouts/
   eleventyConfig.addLayoutAlias("base", "layouts/_default/base.njk");
+  eleventyConfig.addLayoutAlias("portfolio", "layouts/_default/portfolio.njk");
   eleventyConfig.addLayoutAlias("homepage", "layouts/_default/homepage.njk");
   eleventyConfig.addLayoutAlias("singlepost", "layouts/posts/singlepost.njk");
   eleventyConfig.addLayoutAlias("index", "layouts/_default/index.njk");

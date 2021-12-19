@@ -25,4 +25,5 @@
 @import "_block.about.pcss";
 @import "_block.projects.pcss";
 @import "_block.featured.pcss";
+@import "_block.portfolio.pcss";
 @import "_block.project-card.pcss";

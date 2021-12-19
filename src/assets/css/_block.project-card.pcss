@@ -4,13 +4,32 @@
   top: 50%;
   transform: translate3d(0, -50%, 0);
   padding-left: var(--spacing-4);
-}
 
-.project-card:not(.project-card--active) {
-  opacity: 0;
-  pointer-events: none;
-}
+  &:not(.project-card--active) {
+    opacity: 0;
+    pointer-events: none;
+  }
 
-.project-card--active {
-  opacity: 1;
+  &--active {
+    opacity: 1;
+  }
+
+  &__tags {
+    margin-bottom: var(--spacing-1);
+  }
+
+  &__title {
+    font-size: var(--font-size-2);
+  }
+
+  &__content {
+    margin-bottom: var(--spacing-1);
+    line-height: 1.75;
+  }
+
+  &__tag {
+    color: var(--color-primary);
+    font-size: var(--font-size-n1);
+    letter-spacing: 0.01rem;
+  }
 }

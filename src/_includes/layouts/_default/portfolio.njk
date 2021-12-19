@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+{% include 'layouts/partials/header.njk' %}
+
+<main class="portfolio">
+    <header class="portfolio__header u-t-center u-container-spacing ">
+    <h1 class="portfolio__title u-container u-container--medium-large">
+    {{ title }}
+    </h1>
+    <section class="u-container u-container--large"><figure class="featured-projects__figure portfolio__figure">{% image "project-bg.png", "", "featured-projects__image--bg" %} {% image "portfolio/"+image, "", "featured-projects__image--main" %}</figure> </section>
+    </header>
+    <section class="u-container u-container--larger portfolio__description-container">
+        <article>
+            {{description}}
+            </article>
+            <aside>
+                <dl>
+                    <dt>Project type:</dt>
+                    <dd>{{type}}</dd>
+                    <dt>Tech stack:</dt>
+                    <dd>{{tech}}</dd>
+                    </dl>
+                </aside>
+        </section>
+     {{ content | safe }}
+</main>
+
+{% include 'layouts/partials/footer.njk' %}
