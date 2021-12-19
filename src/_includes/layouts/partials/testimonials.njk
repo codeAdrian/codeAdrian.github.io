@@ -1,4 +1,4 @@
-<section class="testimonials">
+<section class="testimonials" id="js-testimonials">
   <div class="banner u-container-spacing">
     <h1 class="testimonials__title u-t-center">Kind words from clients and colleagues</h1>
   </div>
@@ -15,9 +15,9 @@
         <span class="icon icon--arrow-right"></span>
       </button>
     </nav>
-    <ul class="u-list-reset swiper-wrapper">
+    <div class="swiper-wrapper">
       {% for item in collections.testimonials %}
-        <li class="swiper-slide card testimonials__item">
+        <div class="swiper-slide card testimonials__item">
           <figure class="card__figure testimonials__image">
             <span class="card__figure-placeholder icon icon--image"></span>
             {% image "testimonials/"+item.data.image, "", "card__image", "180" %}
@@ -34,8 +34,8 @@
               {{ item.data.company }}
             </strong>
           </div>
-        </li>
+        </div>
       {% endfor %}
-    </ul>
+    </div>
   </article>
 </section>

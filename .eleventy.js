@@ -83,7 +83,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addLayoutAlias("base", "layouts/_default/base.njk");
   eleventyConfig.addLayoutAlias("portfolio", "layouts/_default/portfolio.njk");
   eleventyConfig.addLayoutAlias("homepage", "layouts/_default/homepage.njk");
-  eleventyConfig.addLayoutAlias("singlepost", "layouts/posts/singlepost.njk");
   eleventyConfig.addLayoutAlias("index", "layouts/_default/index.njk");
 
   /* Markdown plugins */
@@ -136,7 +135,7 @@ module.exports = function (eleventyConfig) {
 
   /* === START, prev/next posts stuff === */
   // https://github.com/11ty/eleventy/issues/529#issuecomment-568257426
-
+  /*
   eleventyConfig.addCollection("posts", function (collection) {
     const coll = collection.getFilteredByTag("post");
     for (let i = 0; i < coll.length; i++) {
@@ -147,6 +146,7 @@ module.exports = function (eleventyConfig) {
     }
     return coll;
   });
+  */
 
   eleventyConfig.addCollection("about", function (collection) {
     const coll = collection.getFilteredByTag("about");
@@ -165,10 +165,24 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("portfolio", function (collection) {
     const coll = collection.getFilteredByTag("portfolio");
+    for (let i = 0; i < coll.length; i++) {
+      let prevPost = coll[i - 1];
+      let nextPost = coll[i + 1];
+      if (i === 0) {
+        prevPost = coll[coll.length - 1];
+      }
+
+      if (i === coll.length - 1) {
+        nextPost = coll[0];
+      }
+
+      coll[i].data["prevPost"] = prevPost;
+      coll[i].data["nextPost"] = nextPost;
+      console.log(prevPost);
+    }
     return coll;
   });
 
-  /* === END, prev/next posts stuff === */
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
 
   /* pathPrefix: "/"; */

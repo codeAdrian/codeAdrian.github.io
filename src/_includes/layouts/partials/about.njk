@@ -1,7 +1,7 @@
 <section class="u-container u-container--larger about swiper" id="js-about">
-    <ul class="u-list-reset about__list swiper-wrapper">
+    <article class="about__list swiper-wrapper">
         {% for about in collections.about %}
-            <li class="swiper-slide card">
+            <div class="swiper-slide card">
                 <div class="card__wrapper">
                     <figure class="card__figure card__figure--icon">
                         <span class="icon icon--{{ about.data.icon }}"></span>
@@ -13,7 +13,7 @@
                         {{ about.data.description }}
                     </p>
                 </div>
-            </li>
+            </div>
         {% endfor %}
-    </ul>
+    </article>
 </section>

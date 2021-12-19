@@ -1,4 +1,4 @@
-{% set fallbackImg = "typewriter-monochrome_2242164_6260x4374.jpg" %}
+{% set fallbackImg = "socials-default.jpg" %}
 {% set eleventyVersion = pkg.devDependencies['@11ty/eleventy'] | replace("^", "") %}
 {% set eleventyEnv = projEnv.environment %}
 <head>
@@ -14,7 +14,8 @@
       {% endif %}
       <meta
         property="og:image"
-        content="/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}"/>
+        content="https://codeadrian.github.io/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{%
+          endif %}"/>
       {% if page.url == "/" %}
         <meta name="description" content="{{ siteparams.siteDescription }}"/>
         <meta property="og:description" content="{{ siteparams.siteDescription }}"/>
@@ -29,7 +30,8 @@
           <meta name="twitter:card" content="summary_large_image"/>
           <meta
             name="twitter:image"
-            content="/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{% endif %}"/>
+            content="https://codeadrian.github.io/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{%
+              endif %}"/>
           {% if page.url !== "/" %}
             <meta name="twitter:description" content="{{ description }}"/>
             <meta name="twitter:title" content="{{ title }}"/>

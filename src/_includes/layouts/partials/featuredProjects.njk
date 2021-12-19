@@ -1,4 +1,4 @@
-<section class="u-container-spacing">
+<section class="u-container-spacing" id="js-portfolio">
     <div class="featured-projects u-container u-container--larger">
         <article class="featured-projects__info">
             <nav class="featured-projects__controls">
@@ -15,10 +15,10 @@
                     <span class="icon icon--arrow-down"></span>
                 </button>
             </nav>
-            <ul class="u-list-reset">
+            <div>
                 {% for project in collections.featured %}
                     {% if loop.index === 1 %}
-                        <li class="project-card project-card--active" id="js-featured-content-{{ loop.index }}">
+                        <div class="project-card project-card--active" id="js-featured-content-{{ loop.index }}">
                             <div class="project-card__inner">
                                 <h2 class="project-card__title">{{ project.data.title }}</h2>
                                 <aside class="project-card__tags">
@@ -33,9 +33,9 @@
                                     View Project
                                 </a>
                             </div>
-                        </li>
+                        </div>
                     {% else %}
-                        <li class="project-card" id="js-featured-content-{{ loop.index }}">
+                        <div class="project-card" id="js-featured-content-{{ loop.index }}">
                             <div class="project-card__inner">
                                 <h2 class="project-card__title">{{ project.data.title }}</h2>
                                 <aside class="project-card__tags">
@@ -50,24 +50,25 @@
                                     View Project
                                 </a>
                             </div>
-                        </li>
+                        </div>
                     {% endif %}
                 {% endfor %}
-            </ul>
+            </div>
         </article>
         <article class="swiper" id="js-featured-images">
-            <ul class="u-list-reset swiper-wrapper">
+            <div class="u-list-reset swiper-wrapper">
                 {% for project in collections.featured %}
-                    <li class="swiper-slide featured-projects__slide--images">
+                    <div class="swiper-slide featured-projects__slide--images">
                         <a tabindex="-1" href="{{ project.url }}">
+                            <span class="visually-hidden">{{ project.data.title }}</span>
                             <figure class="featured-projects__figure">
                                 {% image "project-bg.png", "", "featured-projects__image--bg" %}
                                 {% image "portfolio/"+project.data.image, "", "featured-projects__image--main" %}
                             </figure>
                         </a>
-                    </li>
+                    </div>
                 {% endfor %}
-            </ul>
+            </div>
         </article>
     </div>
 </section>

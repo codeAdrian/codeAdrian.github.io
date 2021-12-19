@@ -6,25 +6,45 @@ layout: base
 
 <main class="portfolio">
     <header class="portfolio__header u-t-center u-container-spacing ">
-    <h1 class="portfolio__title u-container u-container--medium-large">
-    {{ title }}
-    </h1>
     <section class="u-container u-container--large"><figure class="featured-projects__figure portfolio__figure">{% image "project-bg.png", "", "featured-projects__image--bg" %} {% image "portfolio/"+image, "", "featured-projects__image--main" %}</figure> </section>
     </header>
     <section class="u-container u-container--larger portfolio__description-container">
+                        <h1 class="portfolio__title u-container u-container--medium-large">
+    {{ title }}
+    </h1>
+    <div class="portfolio__description-layout">
         <article>
             {{description}}
             </article>
             <aside>
-                <dl>
-                    <dt>Project type:</dt>
-                    <dd>{{type}}</dd>
-                    <dt>Tech stack:</dt>
-                    <dd>{{tech}}</dd>
+                <dl class="project-summary">
+                    <dt class="project-summary__title">
+                        <strong>
+                        Project type</strong></dt>
+                    <dd class="project-summary__content">{{type}}</dd>
+                    <dt class="project-summary__title"><strong>Tech stack</strong></dt>
+                    <dd class="project-summary__content">{{tech}}</dd>
                     </dl>
+                    <a href="/" class="button button--link button--primary button--rounded button--medium">View project</a>
                 </aside>
+                </div>
         </section>
+        <section class="portfolio__content u-container u-container--medium u-container-spacing">
      {{ content | safe }}
+     </section>
+     <footer class="u-container u-container-spacing u-container--medium-large">
+         <nav class="portfolio__bottom-nav">
+             <span>
+             <a class="link link--color link--underline" title="{{prevPost.data.title}}" href="{{ prevPost.url }}"><span class="icon icon--arrow-left"></span>&nbsp;Previous project</a>
+             </span>
+             <span class="u-t-center">
+             <a class="button button--primary button--link button--rounded button--medium " href="/">View project</a>
+                          </span>
+             <span class=" u-t-right">
+             <a  class="link link--color link--underline" title="{{nextPost.data.title}}" href="{{ nextPost.url }}">Next project&nbsp;<span class="icon icon--arrow-right"></span></a>
+                          </span>
+         </nav>
+         </footer>
 </main>
 
 {% include 'layouts/partials/footer.njk' %}
