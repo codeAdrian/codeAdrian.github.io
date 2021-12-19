@@ -44,6 +44,7 @@
   "dependencies": {
     "eleventy-plugin-babel": "^1.0.1",
     "eleventy-plugin-purgecss": "^0.2.0",
+    "eleventy-plugin-pwa": "^1.0.8",
     "postcss-nested": "^5.0.6",
     "swiper": "^7.3.2"
   }

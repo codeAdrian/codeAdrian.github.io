@@ -5,6 +5,7 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const purgeCssPlugin = require("eleventy-plugin-purgecss");
 const pluginBabel = require("eleventy-plugin-babel");
+const pluginPWA = require("eleventy-plugin-pwa");
 
 async function imageShortcode(src, alt, className = "image", sizes) {
   let srcPrefix = `./src/assets/images/`;
@@ -178,12 +179,16 @@ module.exports = function (eleventyConfig) {
 
       coll[i].data["prevPost"] = prevPost;
       coll[i].data["nextPost"] = nextPost;
-      console.log(prevPost);
     }
     return coll;
   });
 
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+
+  eleventyConfig.addPlugin(pluginPWA, {
+    swDest: "./_site/sw.js",
+    globDirectory: "./_site",
+  });
 
   /* pathPrefix: "/"; */
   return {
