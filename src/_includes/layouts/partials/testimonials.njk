@@ -7,11 +7,13 @@
       <button
         class="button button--rounded button-outline button-outline--primary testimonials__control"
         id="js-testimonials-control-prev">
+        <span class="visually-hidden">Previous</span>
         <span class="icon icon--arrow-left"></span>
       </button>
       <button
         class="button button--rounded button-outline button-outline--primary testimonials__control"
         id="js-testimonials-control-next">
+        <span class="visually-hidden">Next</span>
         <span class="icon icon--arrow-right"></span>
       </button>
     </nav>
@@ -20,7 +22,7 @@
         <div class="swiper-slide card testimonials__item">
           <figure class="card__figure testimonials__image">
             <span class="card__figure-placeholder icon icon--image"></span>
-            {% image "testimonials/"+item.data.image, "", "card__image", "180" %}
+            {% image "testimonials/"+item.data.image, "{{ item.data.name }} photo", "card__image" %}
           </figure>
           <blockquote class="testimonials__quote card__content" cite="https://www.linkedin.com/in/adrianbece/">
             {{ item.templateContent| safe }}

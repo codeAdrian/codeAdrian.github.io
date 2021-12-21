@@ -1,11 +1,19 @@
 var featuredImages = new Swiper("#js-featured-images", {
-  direction: "vertical",
-  slidesPerView: 1.5,
+  slidesPerView: 1.01,
   spaceBetween: 0,
   centeredSlides: true,
   touchRatio: 0.4,
   longSwipes: false,
   loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 1.5,
+    },
+    1360: {
+      slidesPerView: 1.5,
+      direction: "vertical",
+    },
+  },
   on: {
     init: function afterInit() {
       document.getElementById("js-featured-control-prev").disabled = true;

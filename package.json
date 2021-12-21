@@ -7,10 +7,12 @@
     "clean": "rm -rf _site",
     "hasher": "node csshash.js",
     "start": "npm-run-all clean hasher --parallel dev:*",
+    "dev:postcss-swiper": "postcss src/assets/css/swiper.css -o _site/css/swiper.css --config ./postcss.config.js -w",
     "dev:postcss": "postcss src/assets/css/index.css -o _site/css/index.css --config ./postcss.config.js -w",
     "dev:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --serve --quiet --incremental",
     "build": "NODE_ENV=production npm-run-all clean hasher --parallel prod:*",
     "prod:postcss": "postcss src/assets/css/index.css -o _site/css/$(cat csshash) --config ./postcss.config.js",
+    "prod:postcss-swiper": "postcss src/assets/css/swiper.css -o _site/css/swiper.css --config ./postcss.config.js",
     "prod:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy --output=./_site"
   },
   "keywords": [],
@@ -37,6 +39,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
+    "postcss-extract-media-query": "^3.0.0",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.0.1",
     "rimraf": "^3.0.2"

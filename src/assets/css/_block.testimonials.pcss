@@ -1,5 +1,7 @@
 .testimonials {
-  margin-bottom: var(--spacing-3);
+  @media (--screen-tablet-small) {
+    margin-bottom: var(--spacing-3);
+  }
 
   &__title {
     font-size: clamp(var(--font-size-2), 3vw + 1rem, var(--font-size-4));
@@ -8,8 +10,11 @@
   &__item {
     display: flex;
     flex-direction: column;
-    padding-left: var(--spacing-5);
-    padding-right: var(--spacing-5);
+
+    @media (--screen-tablet-small) {
+      padding-left: var(--spacing-5);
+      padding-right: var(--spacing-5);
+    }
   }
 
   &__content {
@@ -19,14 +24,19 @@
   }
 
   &__controls {
-    position: absolute;
-    top: 50%;
-    transform: translate3d(0, -200%, 0);
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
     z-index: var(--level-2);
+    position: absolute;
+    transform: translate3d(0, 200%, 0);
+    top: 0;
+
+    @media (--screen-tablet-small) {
+      transform: translate3d(0, -200%, 0);
+      top: 50%;
+    }
   }
 
   &__control {

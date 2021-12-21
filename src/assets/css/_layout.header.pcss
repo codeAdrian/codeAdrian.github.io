@@ -4,17 +4,30 @@
 
   &__wrapper {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-end;
+    column-gap: var(--spacing-3);
+    flex-direction: column;
+    align-items: center;
+
+    @media (--screen-tablet-small) {
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-direction: row;
+    }
   }
 
   &__title {
-    font-size: clamp(var(--font-size-2), 3vw + 1rem, var(--font-size-3));
     color: var(--color-primary);
     font-family: var(--font-family-primary);
-    padding-bottom: calc(var(--spacing-n1) + var(--spacing-n2));
     transition: color 0.25s var(--transition-easing);
+    font-size: clamp(var(--font-size-2), 3vw + 1rem, var(--font-size-3));
+    padding-top: var(--spacing-n1);
+    padding-bottom: var(--spacing-n1);
+
+    @media (--screen-tablet-small) {
+      padding-top: 0;
+      padding-bottom: calc(var(--spacing-n1) + var(--spacing-n2));
+    }
 
     &:hover,
     &:active {
@@ -27,12 +40,26 @@
   }
 
   &__link {
-    padding: calc(var(--spacing-1) + var(--spacing-n1))
-      calc(var(--spacing-1) + var(--spacing-n3))
-      calc(var(--spacing-n1) + var(--spacing-n2));
+    padding: var(--spacing-n1) var(--spacing-n1);
     display: block;
     box-shadow: inset 0 0 0 0 var(--color-primary);
     transition: box-shadow 0.25s var(--transition-easing);
+    font-size: var(--font-size-n1);
+
+    @media (--screen-phone-large) {
+      font-size: var(--font-size-0);
+    }
+
+    @media (--screen-tablet-small) {
+      padding: calc(var(--spacing-1) + var(--spacing-n1)) var(--spacing-1)
+        calc(var(--spacing-n1) + var(--spacing-n2));
+    }
+
+    @media (--screen-desktop-small) {
+      padding: calc(var(--spacing-1) + var(--spacing-n1))
+        calc(var(--spacing-1) + var(--spacing-n3))
+        calc(var(--spacing-n1) + var(--spacing-n2));
+    }
 
     &:hover,
     &:active {

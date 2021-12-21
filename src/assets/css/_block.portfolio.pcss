@@ -1,55 +1,14 @@
 .portfolio {
-  line-height: 1.8;
-
-  &__description-container {
-    margin-top: calc(-2 * var(--spacing-5));
-    margin-bottom: var(--spacing-2);
-    background-color: var(--color-gray-light);
-    padding: calc(2 * var(--spacing-4) + var(--spacing-3)) var(--spacing-2)
-      var(--spacing-3);
-  }
-
-  &__description-layout {
-    display: grid;
-    justify-content: center;
-    grid-gap: var(--spacing-4);
-    grid-template-columns: minmax(auto, 568px) 280px;
-  }
-
-  &__title {
-    margin-top: var(--spacing-1);
-    margin-bottom: var(--spacing-2);
-    font-size: var(--font-size-4);
-    line-height: var(--spacing-3);
-    text-align: center;
-  }
-
-  &__figure {
-    position: relative;
-    isolation: isolate;
-
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: calc(var(--spacing-1) + var(--spacing-n3));
-      left: 0;
-      height: 0.5em;
-      margin: 0 auto;
-      box-shadow: 0 var(--spacing-1) var(--spacing-1) 1px
-        var(--color-gray-darkest);
-      border-radius: 100%;
-      width: 100%;
-      z-index: var(--level-n2);
-    }
-  }
-
   &__bottom-nav {
-    display: flex;
     justify-content: space-between;
     margin-bottom: var(--spacing-3);
     margin-top: var(--spacing-3);
     align-items: baseline;
+    display: none;
+
+    @media (--screen-tablet-small) {
+      display: flex;
+    }
 
     > * {
       flex-basis: 33.33%;
@@ -59,10 +18,15 @@
   &__content {
     & figure,
     & .video-wrapper {
-      margin-left: calc(-1 * var(--spacing-4));
-      margin-right: calc(-1 * var(--spacing-4));
       margin-top: var(--spacing-2);
       margin-bottom: var(--spacing-2);
+      margin-left: calc(-1 * var(--spacing-1));
+      margin-right: calc(-1 * var(--spacing-1));
+
+      @media (--screen-desktop-small) {
+        margin-left: calc(-1 * var(--spacing-4));
+        margin-right: calc(-1 * var(--spacing-4));
+      }
     }
 
     & picture {
@@ -90,10 +54,15 @@
     & figcaption {
       text-align: center;
       padding-top: calc(var(--spacing-n1) + var(--spacing-n3));
-      padding-left: var(--spacing-4);
-      padding-right: var(--spacing-4);
+      padding-left: var(--spacing-1);
+      padding-right: var(--spacing-1);
       font-size: var(--font-size-n1);
       color: var(--color-gray-darker);
+
+      @media (--screen-desktop-small) {
+        padding-left: var(--spacing-4);
+        padding-right: var(--spacing-4);
+      }
     }
 
     & p + p {
@@ -108,7 +77,7 @@
       z-index: var(--level-2);
     }
 
-    & blockquote {
+    & blockquote:not(.twitter-tweet) {
       margin-left: calc(-1 * var(--spacing-4));
       margin-right: calc(-1 * var(--spacing-4));
       padding: var(--spacing-4) var(--spacing-4) var(--spacing-3);
@@ -182,5 +151,35 @@
     transform: translate3d(-50%, -50%, 0);
     color: var(--color-gray-medium);
     font-size: var(--font-size-4);
+  }
+}
+
+.twitter-tweet {
+  margin: var(--spacing-2) auto !important; /* Override twitter's inline style */
+  padding: 0 !important; /* Override twitter's inline style */
+  position: relative;
+  isolation: isolate;
+
+  &:not(.twitter-tweet-rendered) {
+    max-width: 516px;
+    margin: var(--spacing-1) auto;
+    aspect-ratio: 1;
+    background-color: var(--color-gray-light);
+    color: rgba(0, 0, 0, 0);
+
+    & > * {
+      visibility: hidden;
+    }
+
+    &::after {
+      content: "\f081";
+      font-family: "devstar";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%, -50%, 0);
+      color: var(--color-gray-medium);
+      font-size: var(--font-size-4);
+    }
   }
 }

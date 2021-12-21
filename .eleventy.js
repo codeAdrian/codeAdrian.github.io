@@ -6,8 +6,16 @@ const Image = require("@11ty/eleventy-img");
 const purgeCssPlugin = require("eleventy-plugin-purgecss");
 const pluginBabel = require("eleventy-plugin-babel");
 const pluginPWA = require("eleventy-plugin-pwa");
+const postcss = require("postcss");
 
-async function imageShortcode(src, alt, className = "image", sizes) {
+async function imageShortcode(
+  src,
+  alt,
+  className = "image",
+  loading = "lazy",
+  decoding = "async"
+) {
+  let sizes = "(min-width: 1024px) 100vw, 50vw";
   let srcPrefix = `./src/assets/images/`;
   src = srcPrefix + src;
   console.log(`Generating image(s) from:  ${src}`);
@@ -16,11 +24,11 @@ async function imageShortcode(src, alt, className = "image", sizes) {
   }
 
   let metadata = await Image(src, {
-    widths: [720, 1024, 1440],
+    widths: [720, 1280],
     formats: ["avif", "webp", "jpeg"],
     urlPath: "/images/",
     outputDir: "./_site/images/",
-    loading: "lazy",
+    loading: loading,
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
       const name = path.basename(src, extension);
@@ -44,8 +52,8 @@ async function imageShortcode(src, alt, className = "image", sizes) {
       width="${highsrc.width}"
       height="${highsrc.height}"
       alt="${alt}"
-      loading="lazy"
-      decoding="async">
+      loading="${loading}"
+      decoding="${decoding}">
   </picture>`;
 }
 
@@ -68,6 +76,31 @@ module.exports = function (eleventyConfig) {
     "node_modules/swiper/swiper-bundle.min.js":
       "assets/js/swiper-bundle.min.js",
   });
+
+  eleventyConfig.addPairedAsyncShortcode(
+    "mycriticalcss",
+    async function (code) {
+      // for relative path CSS imports
+      const filepath = path.join(__dirname, "src/_includes/critical.css");
+
+      const result = await postcss([
+        require("postcss-import"),
+        require("postcss-nested"),
+        require("postcss-preset-env")({
+          stage: 3,
+          features: {
+            "nesting-rules": true,
+            "custom-media-queries": true,
+          },
+        }),
+        require("cssnano"),
+      ])
+        .process(code, { from: filepath })
+        .then((result) => result.css);
+      console.log(typeof result);
+      return result;
+    }
+  );
 
   eleventyConfig.addPlugin(pluginBabel, {
     uglify: true,
@@ -185,10 +218,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
 
+  /*
   eleventyConfig.addPlugin(pluginPWA, {
     swDest: "./_site/sw.js",
     globDirectory: "./_site",
-  });
+  });*/
 
   /* pathPrefix: "/"; */
   return {

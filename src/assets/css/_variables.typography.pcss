@@ -5,7 +5,7 @@
   --font-size-3: calc(var(--font-size-2) * var(--typography-scale));
   --font-size-2: calc(var(--font-size-1) * var(--typography-scale));
   --font-size-1: calc(var(--font-size-0) * var(--typography-scale));
-  --font-size-0: 1.125rem;
+  --font-size-0: 1rem;
   --font-size-n1: calc(var(--font-size-0) / var(--typography-scale));
   --font-size-n2: calc(var(--font-size-n1) / var(--typography-scale));
   --typography-scale: 1.333;
@@ -22,4 +22,8 @@
   --font-weight-bold: 700;
 
   --transition-easing: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+  @media (--screen-phone-large) {
+    --font-size-0: 1.125rem;
+  }
 }

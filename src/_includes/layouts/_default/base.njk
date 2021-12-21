@@ -3,9 +3,5 @@
   {% include 'layouts/partials/head.njk' %}
   <body>
     {{ content | safe }}
-    <script>
-      if ("serviceWorker" in navigator) 
-        navigator.serviceWorker.register("/sw.js");
-    </script>
   </body>
 </html>

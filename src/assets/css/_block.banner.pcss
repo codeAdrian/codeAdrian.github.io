@@ -1,11 +1,20 @@
 .banner {
   background-color: var(--color-gray-light);
-  padding-top: var(--spacing-4);
+  padding-top: var(--spacing-3);
   padding-bottom: var(--spacing-5);
   text-align: center;
 
+  @media (--screen-tablet-small) {
+    padding-top: var(--spacing-4);
+    padding-bottom: var(--spacing-5);
+  }
+
   &__container {
-    font-size: clamp(var(--font-size-2), 2vw + 1rem, var(--font-size-3));
-    line-height: clamp(var(--spacing-2), 4vw + 1rem, var(--spacing-3));
+    font-size: clamp(var(--font-size-1), 2vw + 1rem, var(--font-size-3));
+    line-height: clamp(
+      calc(var(--spacing-1) + var(--spacing-n1)),
+      4vw + 1rem,
+      var(--spacing-3)
+    );
   }
 }

@@ -41,10 +41,16 @@
           {% endif %}
           {% include 'layouts/partials/favicons.njk' %}
           {% include 'layouts/partials/fonts.njk' %}
+          <style>
+            {% mycriticalcss %}
+            {% include 'critical.css' %}
+            {% endmycriticalcss %}
+          </style>
+          <style>
+            {{css | safe}}</style>
           {% if eleventyEnv == "production" %}
-            <link rel="preload" href="/css/{{ csshash.indexCSS }}" as="style"/>
-            <link rel="stylesheet" href="/css/{{ csshash.indexCSS }}" type="text/css"/>
+            <link rel="preload" href="/css/{{ csshash.indexCSS }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
           {% else %}
             <link rel="stylesheet" href="/css/index.css" type="text/css"/>
           {% endif %}
-        </head>
+          <link rel="preload" href="/css/swiper.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/></head>

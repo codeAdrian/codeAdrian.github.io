@@ -6,7 +6,7 @@ layout: base
 
 <main class="portfolio">
     <header class="portfolio__header u-t-center u-container-spacing ">
-    <section class="u-container u-container--large"><figure class="featured-projects__figure portfolio__figure">{% image "project-bg.png", "", "featured-projects__image--bg" %} {% image "portfolio/"+image, "", "featured-projects__image--main" %}</figure> </section>
+    <section class="u-container u-container--large"><figure class="featured-projects__figure portfolio__figure">{% image "project-bg.png", "Laptop screen with project image inside", "featured-projects__image--bg", "eager", "sync" %} {% image "portfolio/"+image, "{{title}} website displayed inside laptop screen", "featured-projects__image--main", "eager", "sync" %}</figure> </section>
     </header>
     <section class="u-container u-container--larger portfolio__description-container">
                         <h1 class="portfolio__title u-container u-container--medium-large">
@@ -46,5 +46,7 @@ layout: base
          </nav>
          </footer>
 </main>
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 {% include 'layouts/partials/footer.njk' %}

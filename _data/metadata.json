@@ -2,8 +2,8 @@
   "title": "Adrian Bece",
   "url": "https://example.com",
   "domain": "example.com",
-  "description": "Your site description.",
+  "description": "Hi! I'm Adrian Bece and I'm a fullstack engineer working on some awesome projects. You can read more about them here. I also write articles on Smashing Magazine and CSS-Tricks.",
   "author": {
-    "name": "Your name"
+    "name": "Adrian Bece"
   }
 }

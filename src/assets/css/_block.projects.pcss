@@ -1,15 +1,32 @@
 .projects {
-  padding-top: var(--spacing-5);
-  padding-bottom: var(--spacing-5);
+  padding-top: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+
+  @media (--screen-tablet-small) {
+    padding-top: var(--spacing-5);
+    padding-bottom: var(--spacing-5);
+  }
 
   &__title {
     font-size: clamp(var(--font-size-2), 3vw + 1rem, var(--font-size-4));
-    padding-bottom: var(--spacing-2);
+    padding-bottom: var(--spacing-1);
+
+    @media (--screen-tablet-small) {
+      padding-bottom: var(--spacing-2);
+    }
   }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: var(--spacing-2);
+    grid-gap: var(--spacing-1);
+
+    @media (--screen-tablet-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (--screen-desktop-small) {
+      grid-gap: var(--spacing-2);
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

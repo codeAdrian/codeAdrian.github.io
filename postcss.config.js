@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   plugins: [
     require("postcss-import"),
@@ -6,6 +8,7 @@ module.exports = {
       stage: 3,
       features: {
         "nesting-rules": true,
+        "custom-media-queries": true,
       },
     }),
     require("cssnano"),
