@@ -1,0 +1,19 @@
+<script onload="init()" async="async" src="/assets/js/splide.min.js"></script>
+<script>
+    function init() {
+        new Splide('#js-about').mount();
+        new Splide('#js-featured-images', {
+            updateOnMove: true,
+            type: "loop",
+            perPage: 1.5,
+            heightRatio: 1,
+            direction: "ttb",
+            focus: "center",
+            perMove: 1
+        }).mount();
+        new Splide('#js-testimonials', {
+            type: "fade",
+            rewind: true
+        }).mount();
+    }
+</script>

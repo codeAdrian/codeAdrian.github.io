@@ -1,19 +1,21 @@
-<section class="u-container u-container--larger about swiper" id="js-about">
-    <article class="about__list swiper-wrapper">
-        {% for about in collections.about %}
-            <div class="swiper-slide card">
-                <div class="card__wrapper">
-                    <figure class="card__figure card__figure--icon">
-                        <span class="icon icon--{{ about.data.icon }}"></span>
-                    </figure>
-                    <h2 class="card__title">
-                        {{ about.data.title }}
-                    </h2>
-                    <p class="card__content">
-                        {{ about.data.description }}
-                    </p>
+<section class="u-container u-container--larger about splide" data-splide='{"perPage":1}' id="js-about">
+    <div class="splide__track">
+        <article class="about__list splide__list">
+            {% for about in collections.about %}
+                <div class="splide__slide card">
+                    <div class="splide__slide__container card__wrapper ">
+                        <figure class="card__figure card__figure--icon">
+                            <span class="icon icon--{{ about.data.icon }}"></span>
+                        </figure>
+                        <h2 class="card__title">
+                            {{ about.data.title }}
+                        </h2>
+                        <p class="card__content">
+                            {{ about.data.description }}
+                        </p>
+                    </div>
                 </div>
-            </div>
-        {% endfor %}
-    </article>
+            {% endfor %}
+        </article>
+    </div>
 </section>

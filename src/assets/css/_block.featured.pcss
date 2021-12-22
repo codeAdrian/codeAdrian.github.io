@@ -30,7 +30,7 @@
     opacity 0.35s var(--transition-easing);
 }
 
-.featured-projects__slide--images:not(.swiper-slide-active) {
+.featured-projects__slide--images:not(.is-active) {
   filter: grayscale(100%);
   opacity: 0.35;
 }
@@ -77,7 +77,7 @@
 
   @media (--screen-desktop-medium) {
     right: initial;
-    left: var(--spacing-n1);
+    left: -65%;
     display: flex;
     top: 50%;
     transform: translateY(-50%);
