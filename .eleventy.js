@@ -97,7 +97,6 @@ module.exports = function (eleventyConfig) {
       ])
         .process(code, { from: filepath })
         .then((result) => result.css);
-      console.log(typeof result);
       return result;
     }
   );
@@ -218,16 +217,24 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
 
-  /*
   eleventyConfig.addPlugin(pluginPWA, {
     swDest: "./_site/sw.js",
-    globDirectory: "./_site",
-  });*/
+    globPatterns: ["**/*.{html,css,js,woff2,woff}"],
+    runtimeCaching: [
+      {
+        urlPattern: /^.*\.(html|woff2|woff)$/,
+        handler: `staleWhileRevalidate`,
+      },
+      {
+        urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
+        handler: `staleWhileRevalidate`,
+      },
+    ],
+  });
 
-  /* pathPrefix: "/"; */
   return {
     dir: {
-      input: "src", // <--- everything else in 'dir' is relative to this directory! https://www.11ty.dev/docs/config/#directory-for-includes
+      input: "src",
       data: "../_data",
       includes: "_includes",
     },
