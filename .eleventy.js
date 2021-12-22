@@ -5,7 +5,6 @@ const path = require("path");
 const Image = require("@11ty/eleventy-img");
 const purgeCssPlugin = require("eleventy-plugin-purgecss");
 const pluginBabel = require("eleventy-plugin-babel");
-const pluginPWA = require("eleventy-plugin-pwa");
 const postcss = require("postcss");
 
 async function imageShortcode(
@@ -70,11 +69,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(purgeCssPlugin, {
     config: "./purgecss.config.js",
     quiet: false,
-  });
-
-  eleventyConfig.addPassthroughCopy({
-    "node_modules/swiper/swiper-bundle.min.js":
-      "assets/js/swiper-bundle.min.js",
   });
 
   eleventyConfig.addPairedAsyncShortcode(
@@ -216,21 +210,6 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
-
-  eleventyConfig.addPlugin(pluginPWA, {
-    swDest: "./_site/sw.js",
-    globPatterns: ["**/*.{html,css,js,woff2,woff}"],
-    runtimeCaching: [
-      {
-        urlPattern: /^.*\.(html|woff2|woff)$/,
-        handler: `staleWhileRevalidate`,
-      },
-      {
-        urlPattern: /^https?:\/\/fonts\.googleapis\.com\/css/,
-        handler: `staleWhileRevalidate`,
-      },
-    ],
-  });
 
   return {
     dir: {
