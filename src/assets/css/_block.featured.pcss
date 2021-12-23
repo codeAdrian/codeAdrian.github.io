@@ -2,7 +2,7 @@
   overflow: hidden;
   border-radius: var(--spacing-n1);
   grid-gap: var(--spacing-1);
-  padding: var(--spacing-1) 0;
+  padding: var(--spacing-1) 0 var(--spacing-2);
   border: 2px solid var(--color-gray-light);
 
   @media (--screen-desktop-medium) {
@@ -26,6 +26,8 @@
 }
 
 .featured-projects__slide--images {
+  will-change: filter, opacity;
+  backface-visibility: hidden;
   transition: filter 0.35s var(--transition-easing),
     opacity 0.35s var(--transition-easing);
 }
@@ -65,14 +67,18 @@
 .featured-projects__controls {
   justify-content: center;
   z-index: var(--level-2);
-  transform: rotateZ(-90deg);
   display: inline-flex;
   flex-direction: column;
+  transform: translate3d(-50%, 0, 0) rotateZ(-90deg);
+  position: absolute;
+  bottom: calc(-1 * var(--spacing-2));
+  left: 50%;
 
   @media (--screen-phone-large) {
-    transform: translateY(calc(-1 * var(--spacing-1))) rotateZ(-90deg);
-    position: absolute;
-    right: var(--spacing-2);
+    transform: translateY(-75%) rotateZ(-90deg);
+    left: auto;
+    bottom: initial;
+    right: var(--spacing-3);
   }
 
   @media (--screen-desktop-medium) {

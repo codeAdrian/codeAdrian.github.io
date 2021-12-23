@@ -14,7 +14,7 @@ async function imageShortcode(
   loading = 'lazy',
   decoding = 'async'
 ) {
-  let sizes = '(min-width: 1024px) 100vw, 50vw';
+  let sizes = '(min-width: 768px) 100vw, 50vw';
   let srcPrefix = `./src/assets/images/`;
   src = srcPrefix + src;
   console.log(`Generating image(s) from:  ${src}`);
@@ -23,7 +23,7 @@ async function imageShortcode(
   }
 
   let metadata = await Image(src, {
-    widths: [720, 1280],
+    widths: [768, 1280],
     formats: ['avif', 'webp', 'jpeg'],
     urlPath: '/images/',
     outputDir: './_site/images/',

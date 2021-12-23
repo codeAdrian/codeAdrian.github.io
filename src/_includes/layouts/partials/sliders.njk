@@ -1,19 +1,75 @@
 <script onload="init()" async="async" src="/assets/js/splide.min.js"></script>
 <script>
     function init() {
-        new Splide('#js-about').mount();
-        new Splide('#js-featured-images', {
-            updateOnMove: true,
-            type: "loop",
-            perPage: 1.5,
-            heightRatio: 1,
-            direction: "ttb",
-            focus: "center",
-            perMove: 1
+        new Splide('#js-about', {
+            mediaQuery: "min",
+            arrows: false,
+            breakpoints: {
+                1280: {
+                    perPage: 3
+                }
+            }
         }).mount();
+        const featured = new Splide('#js-featured-images', {
+            mediaQuery: "min",
+            type: "loop",
+            perPage: 1,
+            heightRatio: 0.75,
+            focus: "center",
+            pagination: false,
+            perMove: 1,
+            updateOnMove: true,
+            breakpoints: {
+                768: {
+                    updateOnMove: true,
+                    type: "loop",
+                    perPage: 1.5,
+                    heightRatio: 0.4,
+                    focus: "center",
+                    perMove: 1
+                },
+                1360: {
+                    updateOnMove: true,
+                    type: "loop",
+                    perPage: 1.5,
+                    heightRatio: 1,
+                    direction: "ttb",
+                    focus: "center",
+                    perMove: 1
+                }
+            }
+        }).mount();
+        featured.on("move", function (newIndex) {
+            document
+                .querySelector(".featured-projects .project-card.project-card--active")
+                .classList
+                .remove("project-card--active");
+            document
+                .getElementById("js-featured-content-" + (
+                    newIndex + 1
+                ))
+                .classList
+                .add("project-card--active");
+        });
         new Splide('#js-testimonials', {
+            mediaQuery: "min",
+            pagination: false,
             type: "fade",
-            rewind: true
+            rewind: true,
+            breakpoints: {
+                768: {
+                    pagination: false,
+                    type: "fade",
+                    rewind: true,
+                    heightRatio: 0.92
+                },
+                880: {
+                    pagination: false,
+                    type: "fade",
+                    rewind: true,
+                    heightRatio: 0.7
+                }
+            }
         }).mount();
     }
 </script>
