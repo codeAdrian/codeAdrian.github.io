@@ -2,6 +2,10 @@
   isolation: isolate;
   overflow: hidden;
 
+  @media (--screen-desktop-small) {
+    max-height: 100vh;
+  }
+
   &__wrapper {
     display: grid;
     position: relative;
@@ -104,6 +108,11 @@
     @media (--screen-desktop-small) {
       max-width: none;
       padding-top: var(--spacing-4);
+
+      & img {
+        max-height: 100vh;
+        width: auto;
+      }
     }
   }
 

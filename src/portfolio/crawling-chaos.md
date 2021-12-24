@@ -6,5 +6,5 @@ image: crawling-chaos-1.jpg
 featured_image: crawling-chaos-1-1024w.jpeg
 type: Code contribution
 tech: HTML, CSS
-tags: ['featured', 'portfolio']
+tags: ['portfolio']
 ---

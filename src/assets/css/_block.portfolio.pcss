@@ -40,8 +40,8 @@
       }
 
       &::before {
-        content: "\f03e";
-        font-family: "devstar";
+        content: '\f03e';
+        font-family: 'devstar';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -103,8 +103,8 @@
       }
 
       &::before {
-        content: "\e977";
-        font-family: "devstar";
+        content: '\e977';
+        font-family: 'devstar';
         position: absolute;
         top: var(--spacing-1);
         left: var(--spacing-4);
@@ -115,10 +115,21 @@
 
     & ul {
       margin-top: var(--spacing-1);
+      margin-bottom: var(--spacing-1);
       padding-left: var(--spacing-1);
 
       & > li + li {
-        margin-top: var(--spacing-1);
+        margin-top: var(--spacing-n1);
+      }
+    }
+
+    & a {
+      color: var(--color-primary);
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        text-decoration: underline;
       }
     }
 
@@ -143,8 +154,8 @@
   isolation: isolate;
 
   &::after {
-    content: "\f16a";
-    font-family: "devstar";
+    content: '\f16a';
+    font-family: 'devstar';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,8 +183,8 @@
     }
 
     &::after {
-      content: "\f081";
-      font-family: "devstar";
+      content: '\f081';
+      font-family: 'devstar';
       position: absolute;
       top: 50%;
       left: 50%;

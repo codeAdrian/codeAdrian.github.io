@@ -8,3 +8,7 @@ type: Personal project
 tech: React, Edamam API
 tags: portfolio
 ---
+
+<div class="video-wrapper">
+<iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/AAZdOylfqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>

@@ -44,8 +44,13 @@
     position: relative;
     isolation: isolate;
 
+    & img,
+    & picture {
+      width: 100%;
+    }
+
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       right: 0;
       bottom: calc(var(--spacing-1) + var(--spacing-n3));

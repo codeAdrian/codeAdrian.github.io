@@ -12,7 +12,9 @@ async function imageShortcode(
   alt,
   className = 'image',
   loading = 'lazy',
-  decoding = 'async'
+  decoding = 'async',
+  sizeMin = 768,
+  sizeMax = 1280
 ) {
   let sizes = '(min-width: 768px) 100vw, 50vw';
   let srcPrefix = `./src/assets/images/`;
@@ -23,8 +25,8 @@ async function imageShortcode(
   }
 
   let metadata = await Image(src, {
-    widths: [768, 1280],
-    formats: ['avif', 'webp', 'jpeg'],
+    widths: [parseInt(sizeMin), parseInt(sizeMax)],
+    formats: ['avif', 'webp', 'jpg'],
     urlPath: '/images/',
     outputDir: './_site/images/',
     loading: loading,
