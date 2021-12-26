@@ -3,7 +3,7 @@ layout: portfolio
 title: Adrian's music collection
 description: I wanted to keep track of my music collection with a detailed info for each album, so  I've created this simple Svelte app to do just that. It uses Discogs API for album data. Each album page has meta data (title, description, image) generated on the fly. This was also the first project where I implemented a light/dark theme switcher.
 image: adrians-music-collection-1.jpg
-featured_image: adrians-music-collection-1-1024w.jpeg
+featured_image: adrians-music-collection-1-1280w.jpeg
 type: Personal project
 tech: React, Discogs API
 tags: ['featured', 'portfolio']
@@ -31,7 +31,7 @@ Album details page shows much more information than previous version. I really l
 </figcaption>
 </figure>
 
-I also remembered that I never worked on a project that featured a light/dark theme switche, so I've added it to the app. Since the app uses a simple theme and CSS custom properties, it was easy to add a dark mode just by switching the CSS color variables and fine-tuning a few items.
+I also remembered that I never worked on a project that had a light/dark theme switche, so I've added it to the app. Since the app uses a simple theme and CSS custom properties, it was easy to add a dark mode just by switching the CSS color variables and fine-tuning a few items.
 
 <figure>
 {% image "portfolio/adrians-music-collection-4.jpg", "Album items list page, dark theme" %}

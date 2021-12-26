@@ -3,7 +3,7 @@ layout: portfolio
 title: Modern fluid typography editor
 description: Web app created in Svelte for editing and keeping track of fluid typography values in web development projects. It took the Internet by storm on the launch day - it was acknowledged and shared by many notable figures in the web development community. It reached over 8,000 visitors and over 100 stars on GitHub in the first week since launch.
 image: modern-fluid-typography-1.jpg
-featured_image: modern-fluid-typography-1-1024w.jpeg
+featured_image: modern-fluid-typography-1-1280w.jpeg
 type: Personal project
 tech: Svelte, chart.js
 tags: ['featured', 'portfolio']

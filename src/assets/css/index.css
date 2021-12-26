@@ -1,8 +1,11 @@
+@import "_setup.keyframes.pcss";
+
 @import "_variables.media.pcss";
 @import "_layout.footer.pcss";
 
 @import "_component.card.pcss";
 @import "_component.slider.pcss";
+@import "_component.scrollbar.pcss";
 
 @import "_block.about.pcss";
 @import "_block.portfolio.pcss";
