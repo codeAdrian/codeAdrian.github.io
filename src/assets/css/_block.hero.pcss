@@ -1,8 +1,11 @@
 .hero {
   isolation: isolate;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 880px;
 
   @media (--screen-desktop-small) {
+    contain-intrinsic-size: 1280px;
     max-height: 100vh;
   }
 
@@ -14,6 +17,15 @@
     @media (--screen-desktop-small) {
       grid-gap: clamp(var(--spacing-3), 7vw, var(--spacing-6));
       grid-template-columns: auto 50%;
+    }
+  }
+
+  &__image {
+    display: none;
+    aspect-ratio: 387/472;
+
+    @media (--screen-phone-large) {
+      display: initial;
     }
   }
 
@@ -79,14 +91,19 @@
   }
 
   &__content {
-    padding-top: var(--spacing-1);
     display: flex;
     flex-direction: column;
     text-align: center;
+    min-height: calc(100vh - 94px);
+    justify-content: center;
+
+    @media (--screen-phone-large) {
+      padding-top: var(--spacing-2);
+      min-height: 0;
+    }
 
     @media (--screen-desktop-small) {
       padding-top: 0;
-      justify-content: center;
       text-align: right;
     }
   }
@@ -102,8 +119,11 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-top: var(--spacing-1);
     max-width: 360px;
+
+    @media (--screen-phone-large) {
+      padding-top: var(--spacing-2);
+    }
 
     @media (--screen-desktop-small) {
       max-width: none;
