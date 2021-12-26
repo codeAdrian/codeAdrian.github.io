@@ -57,6 +57,7 @@
   width: 0;
 }
 .splide {
+  isolation: isolate;
   outline: none;
   position: relative;
   visibility: hidden;
