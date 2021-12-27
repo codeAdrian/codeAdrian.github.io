@@ -44,8 +44,6 @@
             {% include 'critical.css' %}
             {% endinlinecriticalcss %}
           </style>
-          <style>
-            {{css | safe}}</style>
           {% if eleventyEnv == "production" %}
             <link rel="preload" href="/css/{{ csshash.indexCSS }}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
           {% else %}

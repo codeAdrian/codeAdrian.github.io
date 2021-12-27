@@ -25,7 +25,7 @@ async function imageShortcode(
 
   let metadata = await Image(src, {
     widths: [parseInt(sizeMin), parseInt(sizeMax)],
-    formats: ['avif', 'webp', 'jpg'],
+    formats: ['avif', 'png'],
     urlPath: '/images/',
     outputDir: './_site/images/',
     loading: loading,
@@ -35,8 +35,8 @@ async function imageShortcode(
       return `${name}-${width}w.${format}`;
     }
   });
-  let lowsrc = metadata.jpeg[0];
-  let highsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  let lowsrc = metadata.png[0];
+  let highsrc = metadata.png[metadata.png.length - 1];
   return `<picture class="${className}">
     ${Object.values(metadata)
       .map(imageFormat => {
