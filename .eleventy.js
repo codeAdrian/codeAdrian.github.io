@@ -13,9 +13,9 @@ async function imageShortcode(
   loading = 'lazy',
   decoding = 'async',
   sizeMin = 768,
-  sizeMax = 1280
+  sizeMax = 1280,
+  sizes = '(min-width: 768px) 100vw, 50vw'
 ) {
-  let sizes = '(min-width: 768px) 100vw, 50vw';
   let srcPrefix = `./src/assets/images/`;
   src = srcPrefix + src;
   console.log(`Generating image(s) from:  ${src}`);

@@ -47,6 +47,6 @@ I also remembered that I never worked on a project that had a light/dark theme s
 <li>Completely rewrote a React project in Svelte.</li>
 <li>Streamlined the design and app structure and improved performance.</li>
 <li>App is easier to update and maintain. </li>
-<li>Album details page features unique metadata foe each album.</li>
+<li>Album details page features unique metadata for each album.</li>
 </ul>
 </aside>
