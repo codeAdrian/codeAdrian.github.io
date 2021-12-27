@@ -25,6 +25,9 @@
     "not op_mini all",
     "not op_mob > 1"
   ],
+  "engines": {
+    "node": ">=16"
+  },
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
