@@ -25,7 +25,7 @@
     "not op_mini all",
     "not op_mob > 1"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
     "cssnano": "^5.0.14",
@@ -41,9 +41,7 @@
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
     "postcss-preset-env": "^7.1.0",
-    "rimraf": "^3.0.2"
-  },
-  "dependencies": {
+    "rimraf": "^3.0.2",
     "@splidejs/splide": "^3.6.9",
     "eleventy-plugin-babel": "^1.0.1",
     "postcss-nested": "^5.0.6"
