@@ -1,4 +1,5 @@
 {
   "tags": ["about"],
-  "permalink": false
+  "permalink": false,
+  "excludeFromSitemap": true
 }

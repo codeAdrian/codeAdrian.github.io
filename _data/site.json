@@ -1,9 +1,8 @@
 {
-  "title": "Adrian Bece",
+  "name": "codeAdrian",
   "url": "https://codeadrian.github.io",
-  "domain": "codeadrian.github.io",
+  "authorName": "Adrian Bece",
+  "authorUrl": "https://twitter.com/AdrianBeceDev",
   "description": "Hi! I'm Adrian Bece and I'm a fullstack engineer working on some awesome projects. You can read more about them here. I also write articles on Smashing Magazine and CSS-Tricks.",
-  "author": {
-    "name": "Adrian Bece"
-  }
+  "favicon": "https://codeadrian.github.io/images/icons/favicon-32x32.png"
 }
