@@ -3,7 +3,6 @@ const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const svgContents = require('eleventy-plugin-svg-contents');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
-const purgeCssPlugin = require('eleventy-plugin-purgecss');
 const pluginBabel = require('eleventy-plugin-babel');
 const postcss = require('postcss');
 
@@ -68,13 +67,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setQuietMode(true);
 
-  eleventyConfig.addPlugin(purgeCssPlugin, {
-    config: './purgecss.config.js',
-    quiet: false
-  });
-
   eleventyConfig.addPairedAsyncShortcode(
-    'mycriticalcss',
+    'inlinecriticalcss',
     async function (code) {
       // for relative path CSS imports
       const filepath = path.join(__dirname, 'src/_includes/critical.css');

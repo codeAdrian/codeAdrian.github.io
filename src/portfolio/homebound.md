@@ -7,6 +7,7 @@ featured_image: homebound-1-1280w.jpeg
 type: Award-winning project
 tech: React, Twilio API
 tags: ['featured', 'portfolio']
+url: https://github.com/codeAdrian/homeBound
 ---
 
 During the April of 2020, COVID-19 spread accross the world at the rapid pace. The COVID-19 tidalwave hit Croatia in February so we were working from home at the time.
@@ -74,3 +75,12 @@ Few weeks after I've received a swag pack from Twilio along with the cash prize.
 Twilio swag pack - charger, blanket and t-shirt
 </figcaption>
 </figure>
+
+<aside>
+<h2>Notable results &amp; achievements</h2>
+<ul>
+<li>Successfully lead the team and completed the project two days before the three-week deadline.</li>
+<li>Created a highly-polished and streamlined vertical slice of the app that won us a grand prize.</li>
+<li>I was a featured in a Twilio developer spotlight and gave an interview.</li>
+</ul>
+</aside>

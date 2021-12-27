@@ -1,10 +1,8 @@
 {% set fallbackImg = "socials-default.jpg" %}
-{% set eleventyVersion = pkg.devDependencies['@11ty/eleventy'] | replace("^", "") %}
 {% set eleventyEnv = projEnv.environment %}
 <head>
   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="generator" content="Eleventy v{{ eleventyVersion }}"/>
       {% if page.url == "/" %}
         <title>{{ siteparams.siteTitle }}</title>
         <meta property="og:title" content="{{ siteparams.siteTitle }}"/>
@@ -42,9 +40,9 @@
           {% include 'layouts/partials/favicons.njk' %}
           {% include 'layouts/partials/fonts.njk' %}
           <style>
-            {% mycriticalcss %}
+            {% inlinecriticalcss %}
             {% include 'critical.css' %}
-            {% endmycriticalcss %}
+            {% endinlinecriticalcss %}
           </style>
           <style>
             {{css | safe}}</style>

@@ -28,7 +28,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
-    "cssnano": "^5.0.12",
+    "cssnano": "^5.0.14",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "glob": "^7.2.0",
@@ -39,15 +39,13 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
-    "postcss-extract-media-query": "^3.0.0",
     "postcss-import": "^14.0.2",
-    "postcss-preset-env": "^7.0.1",
+    "postcss-preset-env": "^7.1.0",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
     "@splidejs/splide": "^3.6.9",
     "eleventy-plugin-babel": "^1.0.1",
-    "eleventy-plugin-purgecss": "^0.2.0",
     "postcss-nested": "^5.0.6"
   }
 }

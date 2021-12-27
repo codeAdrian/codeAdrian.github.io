@@ -19,13 +19,13 @@
     &--primary {
       color: var(--color-primary);
 
-      &:not(:disabled):hover {
+      &:hover {
         color: var(--color-gray-lightest);
         border-color: var(--color-primary);
         background-color: var(--color-primary);
       }
 
-      &:not(:disabled):active {
+      &:active {
         color: var(--color-gray-lightest);
         border-color: var(--color-primary-tint);
         background-color: var(--color-primary-tint);
@@ -41,8 +41,8 @@
     background-color: var(--color-primary);
     color: var(--color-gray-lightest);
 
-    &:not(:disabled):hover,
-    &:not(:disabled):active {
+    &:hover,
+    &:active {
       background-color: var(--color-primary-tint);
     }
   }

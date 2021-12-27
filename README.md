@@ -1,5 +1,5 @@
           <style>
-            {% mycriticalcss %}
+            {% inlinecriticalcss %}
             {% include 'critical.css' %}
-            {% endmycriticalcss %}
+            {% endinlinecriticalcss %}
           </style>

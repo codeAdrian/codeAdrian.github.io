@@ -7,6 +7,7 @@ featured_image: adrians-music-collection-1-1280w.jpeg
 type: Personal project
 tech: React, Discogs API
 tags: ['featured', 'portfolio']
+url: https://adrians-music-collection.vercel.app/
 ---
 
 
