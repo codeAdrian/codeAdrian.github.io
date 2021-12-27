@@ -13,9 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.1
-        with:
-          install_dependencies: true
+        uses: mfyz/actions-eleventy@master
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
