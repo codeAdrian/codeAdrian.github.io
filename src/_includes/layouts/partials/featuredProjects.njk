@@ -61,8 +61,8 @@
                             <a tabindex="-1" href="{{ project.url }}">
                                 <span class="visually-hidden">{{ project.data.title }}</span>
                                 <figure class="featured-projects__figure">
-                                    {% image "project-bg.png", "", "featured-projects__image--bg", "eager", "sync",568, 1024 %}
-                                    {% image "portfolio/"+project.data.image, "", "featured-projects__image--main",568, 1024 %}
+                                    {% image "project-bg.png", "", "featured-projects__image--bg", "lazy", "async",568, 1024 %}
+                                    {% image "portfolio/"+project.data.image, "", "featured-projects__image--main","lazy","async",568, 1024 %}
                                 </figure>
                             </a>
                         </div>
