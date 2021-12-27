@@ -38,52 +38,60 @@
     margin-left: auto;
     margin-right: auto;
 
+    & g {
+      transform: scale3d(0.773, 0.773, 1);
+    }
+
+    @media (--screen-phone-large) {
+      & circle {
+        opacity: 0.8;
+
+        animation: a 10s var(--transition-easing) alternate infinite;
+
+        &:nth-child(2n) {
+          transform: scale3d(0.75, 0.75, 0.75);
+          opacity: 0.3;
+
+          animation-name: b;
+          animation-duration: 6s;
+          animation-delay: 0.5s;
+        }
+
+        &:nth-child(3n) {
+          animation-duration: 4s;
+          animation-delay: 0.25s;
+        }
+
+        &:nth-child(4n) {
+          animation-delay: 1s;
+        }
+
+        &:nth-child(5n) {
+          animation-duration: 8s;
+          animation-delay: 0.6s;
+        }
+
+        &:nth-child(7n) {
+          animation-duration: 7s;
+          animation-delay: 0.4s;
+        }
+
+        &:nth-child(8n) {
+          animation-delay: 0.75s;
+        }
+
+        &:nth-child(9n) {
+          animation-duration: 5s;
+          animation-delay: 1.4s;
+        }
+      }
+    }
+
     @media (--screen-desktop-small) {
       right: calc(var(--spacing-1) * -1);
       left: auto;
       height: calc(100% - var(--spacing-2));
       margin: initial;
-    }
-
-    & circle {
-      animation: a 10s var(--transition-easing) alternate infinite;
-      opacity: 0.8;
-
-      &:nth-child(2n) {
-        transform: scale3d(0.75, 0.75, 0.75);
-        animation-name: b;
-        opacity: 0.3;
-        animation-duration: 6s;
-        animation-delay: 0.5s;
-      }
-
-      &:nth-child(3n) {
-        animation-duration: 4s;
-        animation-delay: 0.25s;
-      }
-
-      &:nth-child(4n) {
-        animation-delay: 1s;
-      }
-
-      &:nth-child(5n) {
-        animation-duration: 8s;
-        animation-delay: 0.6s;
-      }
-
-      &:nth-child(7n) {
-        animation-duration: 7s;
-        animation-delay: 0.4s;
-      }
-
-      &:nth-child(8n) {
-        animation-delay: 0.75s;
-      }
-
-      &:nth-child(9n) {
-        animation-duration: 5s;
-        animation-delay: 1.4s;
-      }
     }
   }
 
