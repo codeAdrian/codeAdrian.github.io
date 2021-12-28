@@ -1,5 +1,1 @@
-          <style>
-            {% inlinecriticalcss %}
-            {% include 'critical.css' %}
-            {% endinlinecriticalcss %}
-          </style>
+Created by Adrian Bece with Eleventy
