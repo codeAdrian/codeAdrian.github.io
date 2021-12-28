@@ -5,14 +5,9 @@
   "private": true,
   "scripts": {
     "clean": "rm -rf _site",
-    "hasher": "node csshash.js",
-    "start": "npm-run-all clean hasher --parallel dev:*",
-    "dev:postcss-splide": "postcss src/assets/css/splide.css -o _site/css/splide.css --config ./postcss.config.js -w",
-    "dev:postcss": "postcss src/assets/css/index.css -o _site/css/index.css --config ./postcss.config.js -w",
+    "start": "npm-run-all clean --parallel dev:*",
     "dev:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --serve --quiet --incremental",
-    "build": "NODE_ENV=production npm-run-all clean hasher --parallel prod:*",
-    "prod:postcss": "postcss src/assets/css/index.css -o _site/css/$(cat csshash) --config ./postcss.config.js",
-    "prod:postcss-splide": "postcss src/assets/css/splide.css -o _site/css/splide.css --config ./postcss.config.js",
+    "build": "NODE_ENV=production npm-run-all clean --parallel prod:*",
     "prod:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy --output=./_site"
   },
   "keywords": [],
@@ -31,6 +26,7 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
+    "@splidejs/splide": "^3.6.9",
     "cssnano": "^5.0.14",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "eleventy-plugin-svg-contents": "^0.7.0",
@@ -43,10 +39,8 @@
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
+    "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.1.0",
-    "rimraf": "^3.0.2",
-    "@splidejs/splide": "^3.6.9",
-    "eleventy-plugin-babel": "^1.0.1",
-    "postcss-nested": "^5.0.6"
+    "rimraf": "^3.0.2"
   }
 }

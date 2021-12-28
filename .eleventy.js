@@ -3,7 +3,6 @@ const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const svgContents = require('eleventy-plugin-svg-contents');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
-const pluginBabel = require('eleventy-plugin-babel');
 const postcss = require('postcss');
 
 async function imageShortcode(
@@ -90,12 +89,6 @@ module.exports = function (eleventyConfig) {
       return result;
     }
   );
-
-  eleventyConfig.addPlugin(pluginBabel, {
-    uglify: true,
-    watch: 'src/assets/js/**/*.js',
-    outputDir: '_site/assets/js'
-  });
 
   eleventyConfig.addPassthroughCopy('robots.txt');
   eleventyConfig.addPassthroughCopy('favicon.ico');
