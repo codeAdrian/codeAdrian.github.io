@@ -4,9 +4,6 @@
 @import "../assets/css/_variables.spacing.pcss";
 @import "../assets/css/_variables.levels.pcss";
 
-@import "../assets/css/_vendor.splide.pcss";
-
-@import "../assets/css/_setup.keyframes.pcss";
 @import "../assets/css/_setup.page.pcss";
 @import "../assets/css/_setup.icons.pcss";
 @import "../assets/css/_setup.typography.pcss";
@@ -17,20 +14,8 @@
 @import "../assets/css/_component.link.pcss";
 
 @import "../assets/css/_layout.header.pcss";
-@import "../assets/css/_layout.footer.pcss";
-
-@import "../assets/css/_component.card.pcss";
-@import "../assets/css/_component.slider.pcss";
-@import "../assets/css/_component.scrollbar.pcss";
 
 @import "../assets/css/_block.hero.pcss";
 @import "../assets/css/_block.linklist.pcss";
 @import "../assets/css/_block.banner.pcss";
 @import "../assets/css/_block.portfolio-critical.pcss";
-@import "../assets/css/_block.about.pcss";
-@import "../assets/css/_block.portfolio.pcss";
-@import "../assets/css/_block.testimonials.pcss";
-@import "../assets/css/_block.projects.pcss";
-@import "../assets/css/_block.featured.pcss";
-@import "../assets/css/_block.project-summary.pcss";
-@import "../assets/css/_block.project-card.pcss";

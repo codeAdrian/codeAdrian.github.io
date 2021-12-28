@@ -6,8 +6,10 @@
   "scripts": {
     "clean": "rm -rf _site",
     "start": "npm-run-all clean --parallel dev:*",
+    "dev:postcss": "postcss src/assets/css/index.css -o _site/css/index.css --config ./postcss.config.js -w",
     "dev:eleventy": "ELEVENTY_ENV=development npx @11ty/eleventy --serve --quiet --incremental",
     "build": "NODE_ENV=production npm-run-all clean --parallel prod:*",
+    "prod:postcss": "postcss src/assets/css/index.css -o _site/css/index.css --config ./postcss.config.js",
     "prod:eleventy": "ELEVENTY_ENV=production npx @11ty/eleventy --output=./_site"
   },
   "keywords": [],
@@ -26,17 +28,22 @@
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-img": "^1.0.0",
-    "@splidejs/splide": "^3.6.9",
     "cssnano": "^5.0.14",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "eleventy-plugin-svg-contents": "^0.7.0",
+    "glob": "^7.2.0",
+    "glob-all": "^3.2.1",
     "html-minifier": "^4.0.0",
     "markdown-it": "^12.3.0",
+    "md5": "^2.3.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.5",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.0.2",
-    "postcss-nested": "^5.0.6",
-    "postcss-preset-env": "^7.1.0"
+    "postcss-preset-env": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "@splidejs/splide": "^3.6.9",
+    "eleventy-plugin-babel": "^1.0.1",
+    "postcss-nested": "^5.0.6"
   }
 }

@@ -1,7 +1,9 @@
-/*
+@import "_variables.media.pcss";
+
 @import "_setup.keyframes.pcss";
 
-@import "_variables.media.pcss";
+@import "_vendor.splide.pcss";
+
 @import "_layout.footer.pcss";
 
 @import "_component.card.pcss";
@@ -15,4 +17,3 @@
 @import "_block.featured.pcss";
 @import "_block.project-summary.pcss";
 @import "_block.project-card.pcss";
-*/
