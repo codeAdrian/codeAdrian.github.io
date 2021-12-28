@@ -13,7 +13,11 @@
         </article>
         <figure class="hero__figure">
             {% image "hero-homepage.png", "Adrian Bece portrait image", "hero__image", "eager", "auto",1,780,"(min-width: 568px) 100vw, 0vw" %}
-            {{ '/src/assets/svg/pattern-bg.svg' | svgContents("hero__pattern") | safe }}
+            <svg
+                class="hero__pattern"
+                preserveAspectRatio="xMaxYMax slice"
+                viewBox="0 0 800 800"
+                data-src="/assets/svg/pattern-bg.svg"></svg>
         </figure>
     </div>
 </section>

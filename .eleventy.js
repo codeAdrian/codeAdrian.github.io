@@ -1,6 +1,5 @@
 const htmlmin = require('html-minifier');
 const ErrorOverlay = require('eleventy-plugin-error-overlay');
-const svgContents = require('eleventy-plugin-svg-contents');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 const postcss = require('postcss');
@@ -62,8 +61,6 @@ module.exports = function (eleventyConfig) {
   // === Liquid needed if `markdownTemplateEngine` **isn't** changed from Eleventy default
   eleventyConfig.addJavaScriptFunction('image', imageShortcode);
 
-  eleventyConfig.addPlugin(svgContents);
-
   eleventyConfig.setQuietMode(true);
 
   eleventyConfig.addPairedAsyncShortcode(
@@ -97,6 +94,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     'node_modules/@splidejs/splide/dist/js/splide.min.js':
       'assets/js/splide.min.js'
+  });
+  eleventyConfig.addPassthroughCopy({
+    'node_modules/external-svg-loader/svg-loader.min.js':
+      'assets/js/svg-loader.min.js'
   });
 
   // https://www.11ty.dev/docs/layouts/
