@@ -23,6 +23,12 @@ async function imageShortcode(
 
   let metadata = await Image(src, {
     widths: [parseInt(sizeMin), parseInt(sizeMax)],
+    sharpAvifOptions: {
+      quality: 80
+    },
+    sharpWebpOptions: {
+      quality: 80
+    },
     formats: ['avif', 'png'],
     urlPath: '/images/',
     outputDir: './_site/images/',
