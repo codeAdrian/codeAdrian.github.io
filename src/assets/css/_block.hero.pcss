@@ -12,14 +12,14 @@
     justify-content: center;
 
     @media (--screen-desktop-small) {
-      grid-gap: clamp(var(--spacing-n1), 7vw, var(--spacing-2));
-      grid-template-columns: auto 60%;
+      grid-gap: var(--spacing-n1);
+      grid-template-columns: auto 50%;
     }
   }
 
   &__image {
     display: none;
-    aspect-ratio: 195/166;
+    aspect-ratio: 1;
 
     @media (--screen-phone-large) {
       display: initial;
@@ -128,7 +128,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    max-width: 360px;
+    max-width: 480px;
 
     @media (--screen-phone-large) {
       padding-top: var(--spacing-2);
