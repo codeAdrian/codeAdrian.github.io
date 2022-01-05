@@ -3,7 +3,7 @@ layout: portfolio
 title: Homebound
 description: Hackathon project and a grand-prize winner, created with React, Firebase and Twilio API in three weeks by a team of five. This project was challenging for me not because of the three-week deadline and the tech required to create it, it was challenging because I was both a team lead and a lead developer on this project.
 image: homebound-1.jpg
-featured_image: homebound-1-1280w.jpeg
+featured_image: homebound-1-1280w.png
 type: Award-winning project
 tech: React, Twilio API
 tags: ['featured', 'portfolio']

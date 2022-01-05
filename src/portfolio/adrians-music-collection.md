@@ -3,7 +3,7 @@ layout: portfolio
 title: Adrian's music collection
 description: I wanted to keep track of my music collection with a detailed info for each album, so  I've created this simple Svelte app to do just that. It uses Discogs API for album data. Each album page has meta data generated on the fly. This was also the first project where I implemented a light/dark theme switcher.
 image: adrians-music-collection-1.jpg
-featured_image: adrians-music-collection-1-1280w.jpeg
+featured_image: adrians-music-collection-1-1280w.png
 type: Personal project
 tech: React, Discogs API
 tags: ['featured', 'portfolio']
