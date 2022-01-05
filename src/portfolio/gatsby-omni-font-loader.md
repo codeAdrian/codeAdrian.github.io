@@ -3,7 +3,7 @@ layout: portfolio
 title: Gatsby omni font loader
 description: Open-source font loading plugin for Gatsby, a popular React-based framework, with over 76,000 downloads in the first year and a massive community support. Gatsby team has praised the plugin and even assisted with maintaining it and bringing it to the next major version of Gatsby.
 image: gatsby-font-loader-1.jpg
-featured_image: gatsby-font-loader-1-1280w.png
+featured_image: gatsby-font-loader-1-768w.png
 type: Personal project
 tech: React, Gatsby
 tags: ['featured', 'portfolio']

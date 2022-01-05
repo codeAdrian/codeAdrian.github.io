@@ -3,7 +3,7 @@ layout: portfolio
 title: Magic painter
 description: This is an award-winning project created for Hashnode Christmas hackathon 2020. It was made in just a few days using React and Canvas API. This hackathon was an opportunity for me to play around with new browser features, so I decided to go with the Canvas API and create an awesome painting app with a stunning rainbow brush.
 image: magic-painter-1.jpg
-featured_image: magic-painter-1-1280w.png
+featured_image: magic-painter-1-768w.png
 type: Award-winning project
 tech: React, Canvas API
 tags: ['featured', 'portfolio']
