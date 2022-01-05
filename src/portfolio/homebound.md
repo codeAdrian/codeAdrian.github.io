@@ -8,6 +8,7 @@ type: Award-winning project
 tech: React, Twilio API
 tags: ['featured', 'portfolio']
 url: https://github.com/codeAdrian/homeBound
+date: 2022-01-02
 ---
 
 During the April of 2020, COVID-19 spread accross the world at the rapid pace. The COVID-19 tidalwave hit Croatia in February so we were working from home at the time.

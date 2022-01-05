@@ -8,6 +8,7 @@ type: Personal project
 tech: React, Discogs API
 tags: ['featured', 'portfolio']
 url: https://adrians-music-collection.vercel.app/
+date: 2022-01-03
 ---
 
 

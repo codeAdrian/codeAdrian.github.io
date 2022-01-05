@@ -8,6 +8,7 @@ type: Personal project
 tech: React, Gatsby
 tags: ['featured', 'portfolio']
 url: https://github.com/codeAdrian/gatsby-omni-font-loader
+date: 2022-01-04
 ---
 
 Fonts and typography in general are an important aspect of any website. However, loading font files can be an expensive operation as the website content is not displayed until all font files are downloaded, parsed and applied by the browser. This can cause a noticeable delay in the loading of the website if user is browsing the site on a slower Internet connection.

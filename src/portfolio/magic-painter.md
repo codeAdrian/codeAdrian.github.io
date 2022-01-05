@@ -8,6 +8,7 @@ type: Award-winning project
 tech: React, Canvas API
 tags: ['featured', 'portfolio']
 url: https://magic-painter.netlify.app/
+date: 2022-01-05
 ---
 
 I remember when I was buying paint sets for school, I was impressed by the images on the boxes. They showed a beautiful painting and were basically communicating "You can paint this beautiful image with this set". So I wanted to mimic that feeling with the splash screen.

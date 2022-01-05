@@ -8,6 +8,7 @@ type: Personal project
 tech: Svelte, chart.js
 tags: ['featured', 'portfolio']
 url: https://modern-fluid-typography.vercel.app/
+date: 2022-01-01
 ---
 
 As I was going over "CSS for JS devs" course by Josh Comeau, I came accross his implementation of fluid typography graph. Although it was made for demo purposes, it inspired me to build upon his work and create a fully-fledged tool that developers could use in their day-to-day work.
