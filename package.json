@@ -16,7 +16,7 @@
   "author": "Adrian Bece <adrianbece@live.com>",
   "license": "MIT",
   "browserslist": [
-    "last 3 versions",
+    "> 1% and last 3 versions",
     "not dead",
     "not ie > 1",
     "not op_mini all",
