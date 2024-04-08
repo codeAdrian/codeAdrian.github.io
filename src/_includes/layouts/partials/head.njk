@@ -1,47 +1,64 @@
-{% set fallbackImg = "socials-default.jpg" %}
-{% set eleventyEnv = projEnv.environment %}
+{% set fallbackImg = "socials-default.jpg" %} {% set eleventyEnv =
+projEnv.environment %}
 <head>
-  <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      {% if page.url == "/" %}
-        <title>{{ siteparams.siteTitle }}</title>
-        <meta property="og:title" content="{{ siteparams.siteTitle }}"/>
-      {% else %}
-        <title>{{ title }} | {{ siteparams.siteTitle }}</title>
-        <meta property="og:title" content="{{ title }} | {{ siteparams.siteTitle }}"/>
-      {% endif %}
-      <meta
-        property="og:image"
-        content="https://codeadrian.github.io/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{%
-          endif %}"/>
-      {% if page.url == "/" %}
-        <meta name="description" content="{{ siteparams.siteDescription }}"/>
-        <meta property="og:description" content="{{ siteparams.siteDescription }}"/>
-        <meta property="og:url" content="{{ siteparams.siteURLforOG }}/"/>
-      {% else %}
-        <meta name="description" content="{{ description }}"/>
-        <meta property="og:description" content="{{ description }}"/>
-        <meta property="og:url" content="{{ siteparams.siteURLforOG }}{{ page.url }}"/>
-      {% endif %}
-      <meta name="twitter:site" content="@AdrianBeceDev">
-        <meta name="twitter:creator" content="@AdrianBeceDev">
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta
-            name="twitter:image"
-            content="https://codeadrian.github.io/images/{% if featured_image %}{{ featured_image }}{% else %}{{ fallbackImg }}{%
-              endif %}"/>
-          {% if page.url !== "/" %}
-            <meta name="twitter:description" content="{{ description }}"/>
-            <meta name="twitter:title" content="{{ title }}"/>
-          {% else %}
-            <meta name="twitter:description" content="{{ siteparams.siteDescription }}"/>
-            <meta name="twitter:title" content="{{ siteparams.siteTitle }}"/>
-          {% endif %}
-          {% include 'layouts/partials/favicons.njk' %}
-          {% include 'layouts/partials/fonts.njk' %}
-          <style>
-            {% inlinecriticalcss %}
-            {% include 'critical.css' %}
-            {% endinlinecriticalcss %}
-          </style>
-          <link rel="preload" href="/css/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% if page.url == "/" %}
+  <title>{{ siteparams.siteTitle }}</title>
+  <meta property="og:title" content="{{ siteparams.siteTitle }}" />
+  {% else %}
+  <title>{{ title }} | {{ siteparams.siteTitle }}</title>
+  <meta
+    property="og:title"
+    content="{{ title }} | {{ siteparams.siteTitle }}"
+  />
+  {% endif %}
+  <meta
+    property="og:image"
+    content="https://codeadrian.github.io/images/{% if featured_image %}{{
+      featured_image
+    }}{% else %}{{ fallbackImg }}{%
+          endif %}"
+  />
+  {% if page.url == "/" %}
+  <meta name="description" content="{{ siteparams.siteDescription }}" />
+  <meta property="og:description" content="{{ siteparams.siteDescription }}" />
+  <meta property="og:url" content="{{ siteparams.siteURLforOG }}/" />
+  {% else %}
+  <meta name="description" content="{{ description }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta
+    property="og:url"
+    content="{{ siteparams.siteURLforOG }}{{ page.url }}"
+  />
+  {% endif %}
+  <meta name="twitter:site" content="@AdrianBeceDev" />
+  <meta name="twitter:creator" content="@AdrianBeceDev" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:image"
+    content="https://codeadrian.github.io/images/{% if featured_image %}{{
+      featured_image
+    }}{% else %}{{ fallbackImg }}{%
+              endif %}"
+  />
+  {% if page.url !== "/" %}
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="twitter:title" content="{{ title }}" />
+  {% else %}
+  <meta name="twitter:description" content="{{ siteparams.siteDescription }}" />
+  <meta name="twitter:title" content="{{ siteparams.siteTitle }}" />
+  {% endif %} {% include 'layouts/partials/favicons.njk' %} {% include
+  'layouts/partials/fonts.njk' %}
+  <style>
+    {% inlinecriticalcss %}
+    {% include 'critical.css' %}
+    {% endinlinecriticalcss %}
+  </style>
+  <link
+    rel="preload"
+    href="/css/index.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+</head>
