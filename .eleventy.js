@@ -1,5 +1,4 @@
 const htmlmin = require('html-minifier');
-const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 const postcss = require('postcss');
@@ -142,8 +141,6 @@ module.exports = function (eleventyConfig) {
     ghostMode: false,
     port: 3000
   });
-
-  eleventyConfig.addPlugin(ErrorOverlay);
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (outputPath && outputPath.endsWith('.html')) {

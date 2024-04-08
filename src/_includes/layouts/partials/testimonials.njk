@@ -1,16 +1,23 @@
 <section class="testimonials">
   <div class="banner u-container-spacing">
-    <h1 class="testimonials__title u-t-center">Kind words from clients and colleagues</h1>
+    <h1 class="testimonials__title u-t-center">
+      Kind words from clients and colleagues
+    </h1>
   </div>
-  <article class="splide testimonials__content u-container u-container--medium-large" id="js-testimonials">
+  <article
+    class="splide testimonials__content u-container u-container--medium-large"
+    id="js-testimonials"
+  >
     <nav class="splide__arrows testimonials__controls u-container-spacing">
-      <button class="splide__arrow splide__arrow--prev button button--rounded button-outline button-outline--primary
-          testimonials__control">
+      <button
+        class="splide__arrow splide__arrow--prev button button--rounded button-outline button-outline--primary testimonials__control"
+      >
         <span class="visually-hidden">Previous</span>
         <span class="icon icon--arrow-left"></span>
       </button>
-      <button class="splide__arrow splide__arrow--next button button--rounded button-outline button-outline--primary
-          testimonials__control">
+      <button
+        class="splide__arrow splide__arrow--next button button--rounded button-outline button-outline--primary testimonials__control"
+      >
         <span class="visually-hidden">Next</span>
         <span class="icon icon--arrow-right"></span>
       </button>
@@ -18,26 +25,30 @@
     <div class="splide__track">
       <div class="splide__list">
         {% for item in collections.testimonials %}
-          <div class="splide__slide card testimonials__item">
-            <div class="splide__slide__container">
-              <figure class="card__figure testimonials__image">
-                <span class="card__figure-placeholder icon icon--image"></span>
-                {% image "testimonials/"+item.data.image, "{{ item.data.name }} photo", "card__image" %}
-              </figure>
-              <blockquote class="testimonials__quote card__content" cite="https://www.linkedin.com/in/adrianbece/">
-                {{ item.templateContent| safe }}
-              </blockquote>
-              <div class="testimonials__credits u-t-right">
-                <h2 class="testimonials__author">
-                  {{ item.data.name }}
-                </h2>
-                {{ item.data.role }} at<br/>
-                <strong>
-                  {{ item.data.company }}
-                </strong>
-              </div>
+        <div class="splide__slide card testimonials__item">
+          <div class="splide__slide__container">
+            <figure class="card__figure testimonials__image">
+              <span class="card__figure-placeholder icon icon--image"></span>
+              {% image "testimonials/"+item.data.image, "{{ item.data.name }}
+              photo", "card__image" %}
+            </figure>
+            <blockquote
+              class="testimonials__quote card__content"
+              cite="https://www.linkedin.com/in/adrianbece/"
+            >
+              {{ item.templateContent | safe }}
+            </blockquote>
+            <div class="testimonials__credits u-t-right">
+              <h2 class="testimonials__author">
+                {{ item.data.name }}
+              </h2>
+              {{ item.data.role }} at<br />
+              <strong>
+                {{ item.data.company }}
+              </strong>
             </div>
           </div>
+        </div>
         {% endfor %}
       </div>
     </div>

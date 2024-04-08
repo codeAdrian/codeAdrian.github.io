@@ -1,23 +1,10 @@
-.splide--draggable > .splide__slider > .splide__track,
-.splide--draggable > .splide__track {
-  user-select: none;
-}
-.splide--fade > .splide__slider > .splide__track > .splide__list,
-.splide--fade > .splide__track > .splide__list {
-  display: block;
-}
-.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide,
-.splide--fade > .splide__track > .splide__list > .splide__slide {
-  left: 0;
+.splide__track--fade > .splide__list > .splide__slide {
+  margin: 0 !important;
   opacity: 0;
-  position: absolute;
-  top: 0;
   z-index: 0;
 }
-.splide--fade > .splide__slider > .splide__track > .splide__list > .splide__slide.is-active,
-.splide--fade > .splide__track > .splide__list > .splide__slide.is-active {
+.splide__track--fade > .splide__list > .splide__slide.is-active {
   opacity: 1;
-  position: relative;
   z-index: 1;
 }
 .splide--ttb.is-active > .splide__slider > .splide__track > .splide__list,
@@ -87,4 +74,7 @@
   overflow: hidden;
   position: relative;
   z-index: 0;
+}
+.splide__sr {
+  display: none;
 }
