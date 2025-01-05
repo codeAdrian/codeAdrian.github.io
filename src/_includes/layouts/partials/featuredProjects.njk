@@ -1,74 +1,85 @@
 <section class="u-container-spacing" id="js-portfolio">
-    <div class="featured-projects u-container u-container--larger">
-        <article class="featured-projects__info">
-            <div>
-                {% for project in collections.featured %}
-                    {% if loop.index === 1 %}
-                        <div class="project-card project-card--active" id="js-featured-content-{{ loop.index }}">
-                            <div class="project-card__inner">
-                                <h2 class="project-card__title">{{ project.data.title }}</h2>
-                                <aside class="project-card__tags">
-                                    <span class="project-card__tag">
-                                        {{ project.data.type }} - {{ project.data.tech }}
-                                    </span>
-                                </aside>
-                                <p class="project-card__content">
-                                    {{ project.data.description }}
-                                </p>
-                                <a class="button button--primary button--rounded button--link button--medium" href="{{ project.url }}">
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
-                    {% else %}
-                        <div class="project-card" id="js-featured-content-{{ loop.index }}">
-                            <div class="project-card__inner">
-                                <h2 class="project-card__title">{{ project.data.title }}</h2>
-                                <aside class="project-card__tags">
-                                    <span class="project-card__tag">
-                                        {{ project.data.type }} - {{ project.data.tech }}
-                                    </span>
-                                </aside>
-                                <p class="project-card__content">
-                                    {{ project.data.description }}
-                                </p>
-                                <a class="button button--primary button--rounded button--link button--medium" href="{{ project.url }}">
-                                    View Project
-                                </a>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </article>
-        <article class="splide" id="js-featured-images">
-            <nav class="featured-projects__controls splide__arrows">
-                <button class="splide__arrow splide__arrow--prev button button-outline button--rounded button-outline--primary
-                        featured-projects__control">
-                    <span class="visually-hidden">Previous project</span>
-                    <span class="icon icon--arrow-up"></span>
-                </button>
-                <button class="splide__arrow splide__arrow--next button button-outline button--rounded button-outline--primary
-                        featured-projects__control">
-                    <span class="visually-hidden">Next project</span>
-                    <span class="icon icon--arrow-down"></span>
-                </button>
-            </nav>
-            <div class="splide__track">
-                <div class="u-list-reset splide__list">
-                    {% for project in collections.featured %}
-                        <div class="splide__slide featured-projects__slide--images">
-                            <a tabindex="-1" href="{{ project.url }}">
-                                <span class="visually-hidden">{{ project.data.title }}</span>
-                                <figure class="featured-projects__figure">
-                                    {% image "project-bg.png", "", "featured-projects__image--bg", "lazy", "async",568, 1024 %}
-                                    {% image "portfolio/"+project.data.image, "", "featured-projects__image--main","lazy","async",568, 1024 %}
-                                </figure>
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </article>
-    </div>
+  <div class="featured-projects u-container u-container--larger">
+    <article class="featured-projects__info">
+      <div>
+        {% for project in collections.featured %} {% if loop.index === 1 %}
+        <div
+          class="project-card project-card--active"
+          id="js-featured-content-{{ loop.index }}"
+        >
+          <div class="project-card__inner">
+            <h2 class="project-card__title">{{ project.data.title }}</h2>
+            <aside class="project-card__tags">
+              <span class="project-card__tag">
+                {{ project.data.type }} - {{ project.data.tech }}
+              </span>
+            </aside>
+            <p class="project-card__content">
+              {{ project.data.description }}
+            </p>
+            <a
+              class="button button--primary button--rounded button--link button--medium"
+              href="{{ project.url }}"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        {% else %}
+        <div class="project-card" id="js-featured-content-{{ loop.index }}">
+          <div class="project-card__inner">
+            <h2 class="project-card__title">{{ project.data.title }}</h2>
+            <aside class="project-card__tags">
+              <span class="project-card__tag">
+                {{ project.data.type }} - {{ project.data.tech }}
+              </span>
+            </aside>
+            <p class="project-card__content">
+              {{ project.data.description }}
+            </p>
+            <a
+              class="button button--primary button--rounded button--link button--medium"
+              href="{{ project.url }}"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
+        {% endif %} {% endfor %}
+      </div>
+    </article>
+    <article class="splide" id="js-featured-images">
+      <nav class="featured-projects__controls splide__arrows">
+        <button
+          class="splide__arrow splide__arrow--prev button button-outline button--rounded button-outline--primary featured-projects__control"
+        >
+          <span class="visually-hidden">Previous project</span>
+          <span class="icon icon--arrow-up"></span>
+        </button>
+        <button
+          class="splide__arrow splide__arrow--next button button-outline button--rounded button-outline--primary featured-projects__control"
+        >
+          <span class="visually-hidden">Next project</span>
+          <span class="icon icon--arrow-down"></span>
+        </button>
+      </nav>
+      <div class="splide__track">
+        <div class="u-list-reset splide__list">
+          {% for project in collections.featured %}
+          <div class="splide__slide featured-projects__slide--images">
+            <a tabindex="-1" href="{{ project.url }}">
+              <span class="visually-hidden">{{ project.data.title }}</span>
+              <figure class="featured-projects__figure">
+                {% image "project-bg.png", "", "featured-projects__image--bg",
+                "lazy", "async",568, 1024 %} {% image
+                "portfolio/"+project.data.image, "",
+                "featured-projects__image--main","lazy","async",568, 1024 %}
+              </figure>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+  </div>
 </section>

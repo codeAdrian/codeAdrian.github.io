@@ -58,6 +58,10 @@ async function imageShortcode(
 }
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection('testimonials', function (collection) {
+    const coll = collection.getFilteredByTag('testimonials');
+    return coll;
+  });
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
   eleventyConfig.addLiquidShortcode('image', imageShortcode);
   // === Liquid needed if `markdownTemplateEngine` **isn't** changed from Eleventy default
@@ -171,11 +175,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection('about', function (collection) {
     const coll = collection.getFilteredByTag('about');
-    return coll;
-  });
-
-  eleventyConfig.addCollection('testimonials', function (collection) {
-    const coll = collection.getFilteredByTag('testimonials');
     return coll;
   });
 

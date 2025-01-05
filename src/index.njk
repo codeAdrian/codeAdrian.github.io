@@ -1,13 +1,14 @@
 ---
 layout: homepage
-title: "Your UNIQUE title here"
-description: "Your UNIQUE description here."
+title: 'Your UNIQUE title here'
+description: 'Your UNIQUE description here.'
 author: Your name here
+eleventyImport:
+  collections: ['testimonials']
 ---
-{% include 'layouts/partials/hero.njk' %}
-{% include 'layouts/partials/fullBanner.njk' %}
-{% include 'layouts/partials/about.njk' %}
-{% include 'layouts/partials/featuredProjects.njk' %}
-{% include 'layouts/partials/allProjects.njk' %}
-{% include 'layouts/partials/testimonials.njk' %}
 
+{% include 'layouts/partials/hero.njk' %} {% include
+'layouts/partials/fullBanner.njk' %} {% include 'layouts/partials/about.njk' %}
+{% include 'layouts/partials/featuredProjects.njk' %} {% include
+'layouts/partials/allProjects.njk' %} {% include
+'layouts/partials/testimonials.njk' %}

@@ -1,5 +1,4 @@
 .featured-projects {
-  overflow: hidden;
   border-radius: var(--spacing-n1);
   grid-gap: var(--spacing-1);
   padding: var(--spacing-1) 0 var(--spacing-2);
@@ -71,8 +70,12 @@
   }
 
   @media (--screen-desktop-medium) {
+    padding: var(--spacing-n3) var(--spacing-n2);
+    background: var(--color-gray-lightest);
+    border: 2px solid var(--color-gray-light);
+    border-radius: var(--spacing-n2);
     right: initial;
-    left: -65%;
+    left: -73%;
     display: flex;
     top: 50%;
     transform: translateY(-50%);
