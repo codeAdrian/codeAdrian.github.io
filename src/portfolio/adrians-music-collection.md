@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: Adrian's music collection
-description: I wanted to keep track of my music collection with a detailed info for each album, so  I've created this simple Svelte app to do just that. It uses Discogs API for album data. Each album page has meta data generated on the fly. This was also the first project where I implemented a light/dark theme switcher.
+description: I wanted to keep track of my music collection with detailed information for each album, so I created this simple Svelte app to do just that. It leverages the Discogs API to fetch album data, and each album page dynamically generates its metadata. This project also marked my first implementation of a light/dark theme switcher.
 image: adrians-music-collection-1.jpg
 featured_image: adrians-music-collection-1-768w.png
 type: Personal project
@@ -11,11 +11,9 @@ url: https://adrians-music-collection.vercel.app/
 date: 2022-01-03
 ---
 
+I’ve always had a passion for music, particularly rock and metal genres. My journey started in my teenage years when I began collecting music CDs, often buying them from antique shops and pawn shops with the little money I had. Over time, I was able to buy CDs more regularly and track down some rare releases. As my collection grew to over 60 CDs, I began thinking about creating a website to organize and showcase it. Today, my collection has expanded to over 250 CDs and more than 110 vinyl records.
 
-I'm passionate about music, especially rock and metal genres. I started collecting music CDs when I was a teenager, buying CDs from an antique shops and pawn shops with the little money I had at the time. Later on I was able to buy CDs on a regular basis and find some rare releases. When my collection grew over 60 CDs, I was thinking about creating a website to keep track and show off my collection. Today, I have more than 240 CDs and over 30 vinyl records in my collection.
-
-
-I've initally built this site in React and it used three data sources for a single item. The app fetched the collection list from Firebase, album data from Discogs API and the album cover image from Cloudinary. After some time, it became difficult to maintain and cumbersome to update everything for each new record. After I learned Svelte, I decided to rewrite this app and streamline it.
+I originally built this site using React, drawing data from three different sources: the collection list from Firebase, album data from the Discogs API, and album cover images from Cloudinary. However, as the collection grew, it became increasingly difficult to maintain and cumbersome to update everything with each new record. After learning Svelte, I decided to rewrite and streamline the app for better performance and easier maintenance.
 
 <figure>
 {% image "portfolio/adrians-music-collection-3.jpg", "Music collection items list" %}
@@ -24,7 +22,7 @@ Album listing page with pagination and sorting controls. Collection can be sorte
 </figcaption>
 </figure>
 
-I was happy with the streamlined app and I think that I've managed to improve the UX and add some small quality-of-life features to it. It's lot more focused and easier to use. Album details page shows a lot more information and it features rich meta data so whenever I share the link to a specific item, it shows the metadata for that particular album.
+I’m really pleased with the streamlined version of the app. I’ve successfully improved the UX and added several quality-of-life features that make it more focused and easier to use. The album details page now provides much more comprehensive information and includes rich metadata, ensuring that whenever I share a link to a specific album, the metadata for that album is displayed correctly.
 
 <figure>
 {% image "portfolio/adrians-music-collection-2.jpg", "Album details page with image, video and basic info" %}
@@ -33,7 +31,7 @@ Album details page shows much more information than previous version. I really l
 </figcaption>
 </figure>
 
-I also remembered that I never worked on a project that had a light/dark theme switche, so I've added it to the app. Since the app uses a simple theme and CSS custom properties, it was easy to add a dark mode just by switching the CSS color variables and fine-tuning a few items.
+I also realized that I had never worked on a project with a light/dark theme switcher, so I decided to add one to the app. Since the app uses a simple theme with CSS custom properties, implementing dark mode was straightforward. I just had to toggle the CSS color variables and fine-tune a few elements to ensure everything looked great in both themes.
 
 <figure>
 {% image "portfolio/adrians-music-collection-4.jpg", "Album items list page, dark theme" %}
@@ -41,13 +39,12 @@ I also remembered that I never worked on a project that had a light/dark theme s
 </figcaption>
 </figure>
 
-
 <aside>
-<h2>Notable results &amp; achievements</h2>
+<h2>Notable Results &amp; Achievements</h2>
 <ul>
-<li>Completely rewrote a React project in Svelte.</li>
-<li>Streamlined the design and app structure and improved performance.</li>
-<li>App is easier to update and maintain. </li>
-<li>Album details page features unique metadata for each album.</li>
+  <li>Completely rewrote a React project in Svelte.</li>
+  <li>Streamlined the design and app structure, significantly improving performance.</li>
+  <li>Made the app easier to update and maintain.</li>
+  <li>Enhanced the album details page with unique metadata for each album.</li>
 </ul>
 </aside>

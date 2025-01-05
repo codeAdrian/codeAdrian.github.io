@@ -58,12 +58,13 @@
   display: inline-flex;
   flex-direction: column;
   transform: translate3d(-50%, 0, 0) rotateZ(-90deg);
+  backface-visibility: hidden;
   position: absolute;
   bottom: calc(-1 * var(--spacing-2));
   left: 50%;
 
   @media (--screen-phone-large) {
-    transform: translateY(-75%) rotateZ(-90deg);
+    transform: translate3d(0, -75%, 0) rotateZ(-90deg);
     left: auto;
     bottom: initial;
     right: var(--spacing-3);

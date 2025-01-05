@@ -1,23 +1,25 @@
 <section class="hero">
-    <div class="hero__wrapper u-container u-container-spacing u-container--larger">
-        <article class="hero__content">
-            <div>
-                {% include 'layouts/partials/linkList.njk' %}
-            </div>
-            <h1 class="u-t-uppercase hero__title">Adrian Bece</h1>
-            <ul class="u-list-reset hero__list">
-                <li class="hero__list-item">Fullstack engineer</li>
-                <li class="hero__list-item">Award-winning developer</li>
-                <li class="hero__list-item">Distinguished author</li>
-            </ul>
-        </article>
-        <figure class="hero__figure">
-            {% image "hero-homepage.png", "Adrian Bece portrait image", "hero__image", "eager", "auto",1,800,"(min-width: 568px) 100vw, 0vw" %}
-            <svg
-                class="hero__pattern"
-                preserveAspectRatio="xMaxYMax slice"
-                viewBox="0 0 800 800"
-                data-src="/assets/svg/pattern-bg.svg"></svg>
-        </figure>
-    </div>
+  <div
+    class="hero__wrapper u-container u-container-spacing u-container--larger"
+  >
+    <article class="hero__content">
+      <div>{% include 'layouts/partials/linkList.njk' %}</div>
+      <h1 class="u-t-uppercase hero__title">Adrian Bece</h1>
+      <ul class="u-list-reset hero__list">
+        <li class="hero__list-item">Senior FrontEnd expert</li>
+        <li class="hero__list-item">Award-winning developer</li>
+        <li class="hero__list-item">Distinguished author</li>
+      </ul>
+    </article>
+    <figure class="hero__figure">
+      {% image "hero-homepage.png", "Adrian Bece portrait image", "hero__image",
+      "eager", "auto",1,800,"(min-width: 568px) 100vw, 0vw" %}
+      <svg
+        class="hero__pattern"
+        preserveAspectRatio="xMaxYMax slice"
+        viewBox="0 0 800 800"
+        data-src="/assets/svg/pattern-bg.svg"
+      ></svg>
+    </figure>
+  </div>
 </section>

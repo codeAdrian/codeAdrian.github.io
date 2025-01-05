@@ -1,7 +1,7 @@
 ---
 layout: portfolio
 title: Homebound
-description: Hackathon project and a grand-prize winner, created with React, Firebase and Twilio API in three weeks by a team of five. This project was challenging for me not because of the three-week deadline and the tech required to create it, it was challenging because I was both a team lead and a lead developer on this project.
+description: This hackathon project, which won the grand prize, was created using React, Firebase, and the Twilio API in just three weeks by a team of five. The project was particularly challenging not because of the tight deadline or the technology stack, but because I took on the dual role of both team lead and lead developer. Balancing these responsibilities while ensuring the project’s success pushed me to grow both technically and as a leader.
 image: homebound-1.jpg
 featured_image: homebound-1-768w.png
 type: Award-winning project
@@ -11,19 +11,17 @@ url: https://github.com/codeAdrian/homeBound
 date: 2022-01-02
 ---
 
-During the April of 2020, COVID-19 spread accross the world at the rapid pace. The COVID-19 tidalwave hit Croatia in February so we were working from home at the time.
+In April 2020, as COVID-19 spread rapidly across the globe, the pandemic reached Croatia in February, and we were already working from home. During the lockdown, I was constantly on the lookout for projects and activities to keep myself engaged. When DEV.to announced a hackathon competition in collaboration with Twilio, I was determined to dive in right away. A few of my colleagues from work shared my enthusiasm, and together, we went all in—working on the project after our regular office hours, sometimes late into the night.
 
-I was constantly looking for projects and activities to do during the lockdown and when DEV.to announced the hackathon competition in collaboration with Twilio, I was hell-bent on doing it right away. Few of my colleagues from work got interested in the competition and we went with all guns blazing, working on the project after our regular office hours, sometimes long into the night.
+We decided to use our default development stack alongside the Twilio API, which was a requirement for the competition:
 
-We've decided to use our default dev stack alongside Twilio API which was required for the competition:
+- React with TypeScript
+- Redux
+- Firebase
+- PostCSS
+- Twilio API – SMS and Chatbot
 
-* React with Typescript
-* Redux
-* Firebase
-* PostCSS
-* Twilio API - SMS and Chatbot
-
-First, we needed to come up with an idea. With COVID-19 being a new danger in our community, we wanted to create an app that will make use of Twilio communications and bot API and be delightful and helpful to use. So we went with an app that motivates its users to have regular, healthy daily activities through gamification, help them keep track of their close contacts, and have a information bot.
+The first step was to come up with an idea. With COVID-19 being a new and growing threat, we wanted to create an app that would leverage Twilio's communications and bot API while also being both helpful and enjoyable to use. We landed on the concept of an app that motivates users to engage in regular, healthy daily activities through gamification, helps them keep track of their close contacts, and features an information bot to provide real-time updates.
 
 <figure>
 {% image "portfolio/homebound-2.jpeg", "App features and design" %}
@@ -32,7 +30,7 @@ App features a delightful and colorful design with vibrant colors, clean layout 
 </figcaption>
 </figure>
 
-I've decided that the best course of action was to focus on a mobile screen only and make it as polished as possible and to meet the deadline. This turned out to be a huge success, as we were able to finish the project few days before the deadline and the added polish and completeness gave us an edge over our competitors, regardless of the fact that it was mobile-only.
+I decided that the best approach was to focus solely on optimizing the mobile experience, making it as polished and refined as possible to meet the deadline. This turned out to be a huge success. We managed to finish the project a few days before the deadline, and the extra polish and attention to detail gave us an edge over our competitors, even though the app was mobile-only. This focus on quality over quantity made a significant difference in the final product.
 
 <figure>
 {% image "portfolio/homebound-3.jpeg", "Tracking close contacts functionality" %}
@@ -41,14 +39,14 @@ Tracking close contacts was an important feature of the app, as it allowed to qu
 </figcaption>
 </figure>
 
-I've written a project document and submitted it a day or two before the deadline. A week after, the results came in, and we were both suprised and excited as we were declared the <a href="https://www.twilio.com/blog/announcing-dev-hack-winners-april#:~:text=homebound" target="_blank" rel="noopener noreferrer">grand-prize winners</a> in the COVID-19 communications category.
+I wrote the project document and submitted it a day or two before the deadline. A week later, the results were announced, and we were both surprised and excited to learn that we were declared the <a href="https://www.twilio.com/blog/announcing-dev-hack-winners-april#:~:text=homebound" target="_blank" rel="noopener noreferrer">grand-prize winners</a> in the COVID-19 communications category.
 
-This project taught me how to streamline the features so the app still feels complete and polished, regardless of the missing features. It also showed me how well I can be a project lead and team lead.
+This project taught me how to streamline features so that the app still feels complete and polished, even with some features missing. It also highlighted my ability to successfully take on both a project lead and team lead role.
 
 <figure>
 {% image "portfolio/homebound-4.jpeg", "Counchy the chatbot " %}
 <figcaption>
-Counchy is a chatbot that uses Twilio API to inform users how to keep their close contacts informed if they tested positive for COVID-19 and how to approach the topic.
+Couchy is a chatbot that uses Twilio API to inform users how to keep their close contacts informed if they tested positive for COVID-19 and how to approach the topic.
 </figcaption>
 </figure>
 
@@ -60,15 +58,15 @@ Counchy is a chatbot that uses Twilio API to inform users how to keep their clos
 </div>
 </blockquote>
 
-Twilio team also did a livestream where they showcased the winning projects and we were delighted to be featured. They talked about Homebound, the idea about it and what they liked about it the most.
+Twilio team also did a livestream where they showcased the winning projects and we were delighted to be featured. They talked about Homebound, the idea behind it, and what they liked about it the most.
 
 <div class="video-wrapper">
 <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/AAZdOylfqHs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
-The week after, Twilio reached out and asked me for an <a href="https://www.twilio.com/blog/developers-build-new-normal-adrian-bece" target="_blank" rel="noopener noreferrer"> interview in their Twilio developers spotlight</a>, so I was featured developer for a week.
+The week after, Twilio reached out and asked me for an <a href="https://www.twilio.com/blog/developers-build-new-normal-adrian-bece" target="_blank" rel="noopener noreferrer">interview in their Twilio developers spotlight</a>, so I was featured as a developer for a week.
 
-Few weeks after I've received a swag pack from Twilio along with the cash prize. Additionally, I was also invited to Twilio's SIGNAL conference which was held online in October 2020.
+A few weeks later, I received a swag pack from Twilio along with the cash prize. Additionally, I was invited to Twilio's SIGNAL conference, which was held online in October 2020.
 
 <figure>
 {% image "portfolio/homebound-5.jpg", "Twilio swag pack - charger, blanket and t-shirt" %}
@@ -78,10 +76,10 @@ Twilio swag pack - charger, blanket and t-shirt
 </figure>
 
 <aside>
-<h2>Notable results &amp; achievements</h2>
-<ul>
-<li>Successfully lead the team and completed the project two days before the three-week deadline.</li>
-<li>Created a highly-polished and streamlined vertical slice of the app that won us a grand prize.</li>
-<li>I was a featured in a Twilio developer spotlight and gave an interview.</li>
-</ul>
+  <h2>Notable Results &amp; Achievements</h2>
+  <ul>
+    <li>Successfully led the team and completed the project two days before the three-week deadline.</li>
+    <li>Created a highly-polished and streamlined vertical slice of the app that won us a grand prize.</li>
+    <li>I was featured in a Twilio developer spotlight and gave an interview.</li>
+  </ul>
 </aside>

@@ -2,6 +2,7 @@ const htmlmin = require('html-minifier');
 const path = require('path');
 const Image = require('@11ty/eleventy-img');
 const postcss = require('postcss');
+const lucideIcons = require('@grimlink/eleventy-plugin-lucide-icons');
 
 async function imageShortcode(
   src,
@@ -58,6 +59,12 @@ async function imageShortcode(
 }
 
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(lucideIcons, {
+    class: 'icon-lucide',
+    stroke: 'currentColor',
+    'stroke-width': 2
+  });
+
   eleventyConfig.addCollection('testimonials', function (collection) {
     const coll = collection.getFilteredByTag('testimonials');
     return coll;

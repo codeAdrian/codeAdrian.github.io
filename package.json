@@ -26,17 +26,18 @@
     "node": ">=16.0.0"
   },
   "dependencies": {
+    "@grimlink/eleventy-plugin-lucide-icons": "^2.1.1",
     "@splidejs/splide": "^4.1.4",
     "external-svg-loader": "^1.7.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "markdown-it": "^14.1.0",
     "@11ty/eleventy-img": "^5.0.0",
-    "cssnano": "^7.0.6",
-    "npm-run-all": "^4.1.5",
-    "html-minifier": "^4.0.0",
     "cross-env": "^7.0.3",
+    "cssnano": "^7.0.6",
+    "html-minifier": "^4.0.0",
+    "markdown-it": "^14.1.0",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",

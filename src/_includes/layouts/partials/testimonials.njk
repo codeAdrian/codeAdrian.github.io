@@ -13,13 +13,13 @@
         class="splide__arrow splide__arrow--prev button button--rounded button-outline button-outline--primary testimonials__control"
       >
         <span class="visually-hidden">Previous</span>
-        <span class="icon icon--arrow-left"></span>
+        {% lucide "arrow-left", { "size": "24", "stroke-width": "2" } %}
       </button>
       <button
         class="splide__arrow splide__arrow--next button button--rounded button-outline button-outline--primary testimonials__control"
       >
         <span class="visually-hidden">Next</span>
-        <span class="icon icon--arrow-right"></span>
+        {% lucide "arrow-right", { "size": "24", "stroke-width": "2" } %}
       </button>
     </nav>
     <div class="splide__track">
@@ -28,7 +28,9 @@
         <div class="splide__slide card testimonials__item">
           <div class="splide__slide__container">
             <figure class="card__figure testimonials__image">
-              <span class="card__figure-placeholder icon icon--image"></span>
+              <span class="card__figure-placeholder">
+                {% lucide "file-image", { "size": "63", "stroke-width": "2" } %}
+              </span>
               {% image "testimonials/"+item.data.image, "{{ item.data.name }}
               photo", "card__image" %}
             </figure>
