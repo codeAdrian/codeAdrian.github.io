@@ -76,6 +76,22 @@
       position: relative;
       isolation: isolate;
 
+      &:before {
+        content: '❝';
+        position: absolute;
+        color: var(--color-gray-lightest);
+        font-size: var(--font-size-6);
+        line-height: 1;
+        font-family: var(--font-family-primary);
+        top: 0.5rem;
+        left: 6rem;
+        opacity: 0.7;
+
+        @media (--screen-desktop-small) {
+          left: 2rem;
+        }
+      }
+
       & div {
         text-align: right;
       }
