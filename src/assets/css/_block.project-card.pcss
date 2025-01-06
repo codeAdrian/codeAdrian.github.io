@@ -14,6 +14,7 @@
   &:not(.project-card--active) {
     display: none;
     pointer-events: none;
+
     @media (--screen-desktop-medium) {
       display: block;
       opacity: 0;
@@ -49,6 +50,12 @@
   &__content {
     margin-bottom: var(--spacing-1);
     line-height: 1.75;
+    max-height: 14em;
+    overflow-y: auto;
+
+    @media (--screen-phone-large) {
+      max-height: none;
+    }
   }
 
   &__tag {

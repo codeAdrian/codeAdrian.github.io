@@ -29,8 +29,8 @@
   }
 
   &__title {
-    margin-top: var(--spacing-1);
-    margin-bottom: var(--spacing-2);
+    margin-top: var(--spacing-n2);
+    margin-bottom: var(--spacing-1);
     font-size: clamp(var(--font-size-2), 3vw + 1rem, var(--font-size-4));
     line-height: clamp(
       calc(var(--spacing-1) + var(--spacing-n1)),
@@ -38,6 +38,11 @@
       var(--spacing-3)
     );
     text-align: center;
+
+    @media (--screen-phone-large) {
+      margin-top: var(--spacing-1);
+      margin-bottom: var(--spacing-2);
+    }
   }
 
   &__figure {

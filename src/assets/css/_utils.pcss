@@ -63,3 +63,27 @@
 .c-primary {
   color: var(--color-primary);
 }
+
+.u-scroll-shadows {
+  background: linear-gradient(
+      var(--color-gray-lightest) 33%,
+      hsla(0, 0%, 100%, 0)
+    ),
+    linear-gradient(hsla(0, 0%, 100%, 0), var(--color-gray-lightest) 66%) 0 100%,
+    radial-gradient(
+      farthest-side at 50% 0,
+      hsla(0, 0%, 0%, 0.3),
+      hsla(0, 0%, 0%, 0)
+    ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        hsla(0, 0%, 0%, 0.3),
+        hsla(0, 0%, 0%, 0)
+      )
+      0 100%;
+  background-color: var(--color-gray-lightest);
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  background-size: 100% var(--spacing-3), 100% var(--spacing-3),
+    100% var(--spacing-1), 100% var(--spacing-1);
+}
