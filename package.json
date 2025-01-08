@@ -1,7 +1,7 @@
 {
   "name": "codeadrian",
-  "version": "2.0.0",
-  "description": "",
+  "version": "2.1.0",
+  "description": "Personal site by Adrian Bece",
   "private": true,
   "scripts": {
     "clean": "rm -rf _site",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-img": "^6.0.0",
     "cross-env": "^7.0.3",
     "cssnano": "^7.0.6",
     "html-minifier": "^4.0.0",
