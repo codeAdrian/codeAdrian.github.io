@@ -1,8 +1,10 @@
 Sitemap: https://codeadrian.github.io/sitemap.xml
 
+# Allow regular search engines
 User-agent: *
 Allow: /
 
+# Block AI/ML training crawlers
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: Amazonbot
@@ -45,4 +47,17 @@ User-agent: Timpibot
 User-agent: VelenPublicWebCrawler
 User-agent: Webzio-Extended
 User-agent: YouBot
+# Additional common AI crawlers
+User-agent: anthropic-ai
+User-agent: AwarioSmartBot
+User-agent: Bytespider
+User-agent: ClaudeBot
+User-agent: DataForSeoBot
+User-agent: DeepCrawl
+User-agent: ML-Request
+User-agent: Nutch
+User-agent: SemrushBot
+User-agent: SEOkicks
+User-agent: StabilityAI-Spider
+User-agent: Twitterbot
 Disallow: /
