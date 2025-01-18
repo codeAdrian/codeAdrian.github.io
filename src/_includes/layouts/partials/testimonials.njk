@@ -31,8 +31,8 @@
               <span class="card__figure-placeholder">
                 {% lucide "file-image", { "size": "63", "stroke-width": "2" } %}
               </span>
-              {% image "testimonials/"+item.data.image, "{{ item.data.name }}
-              photo", "card__image" %}
+              {% image "testimonials/"+item.data.image, item.data.name + "
+              photo", "card__image", "lazy", "async", 150, 150, "150px" %}
             </figure>
             <blockquote
               class="testimonials__quote card__content"
