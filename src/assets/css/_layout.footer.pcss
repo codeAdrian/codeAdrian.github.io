@@ -2,6 +2,11 @@
   padding-top: var(--spacing-3);
   padding-bottom: var(--spacing-2);
   border-top: 1px solid var(--color-gray-light);
+  position: relative;
+
+  @media (--screen-tablet-small) {
+    padding-top: var(--spacing-4);
+  }
 
   &__icon {
     color: var(--color-primary);
@@ -17,5 +22,33 @@
     padding-top: var(--spacing-1);
     color: var(--color-primary);
     font-size: var(--font-size-n1);
+  }
+
+  &__marquee {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    user-select: none;
+    pointer-events: none;
+    padding: var(--spacing-n2);
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+
+    @media (--screen-tablet-small) {
+      display: block;
+    }
+  }
+
+  &__marquee-inner {
+    opacity: 0.2;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--spacing-n1);
+    color: var(--color-gray-medium);
+    text-transform: uppercase;
+    font-size: var(--font-size-1);
+    font-family: var(--font-family-primary);
   }
 }
